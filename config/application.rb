@@ -35,7 +35,7 @@ module Icewhistle
      :domain => 'cenotaph.org',
     :authentication => "plain",
     :user_name => 'fail@cenotaph.org',
-  	:password => ENV['mail_password'],
+  	:password => ENV['MAIL_PASSWORD'],
   	:enable_starttls_auto => false
   }
   config.action_mailer.raise_delivery_errors = true

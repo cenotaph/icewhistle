@@ -28,7 +28,7 @@ capybara-*.html
 /tmp/*
 /db/*.sqlite3
 /public/system/*
-.gitignore
+.gitignorecat
 /coverage/
 /spec/*
 /spec/tmp/*
