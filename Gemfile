@@ -45,6 +45,7 @@ gem 'kaminari'
 gem 'metamagic'
 gem 'mini_magick'
 gem 'nested_form'
+gem 'net-ssh', '~> 2.8.1', :git => "https://github.com/net-ssh/net-ssh"
 gem 'oauth-client'
 gem 'omniauth-facebook' #, '1.4.0'
 gem 'omniauth-google-oauth2'

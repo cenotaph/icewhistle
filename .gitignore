@@ -16,7 +16,7 @@
 
 # Ignore application configuration
 /config/application.yml
-
+.DS_Store
 *.rbc
 *.sassc
 .sass-cache
@@ -28,6 +28,7 @@ capybara-*.html
 /tmp/*
 /db/*.sqlite3
 /public/system/*
+.gitignore
 /coverage/
 /spec/*
 /spec/tmp/*
@@ -44,7 +45,7 @@ pickle-email-*.html
 /db/sphinx
 /script/*
 /vendor/*
-/doc
+/docless c
 /test/*
 .svn
 
