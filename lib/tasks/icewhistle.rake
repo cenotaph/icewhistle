@@ -14,10 +14,10 @@ namespace :icewhistle do
       feed.entries.each_with_index do |item, i|
       if ++i < 6  
         if key == 'bookmarks'
-          if strip_tags(item.content).blank?
+          if ActionController::Base.helpers.strip_tags(item.content).blank?
             link_url = item.url
           else
-            link_url = strip_tags(item.content)
+            link_url = ActionController::Base.helpers.strip_tags(item.content)
           end
 
         else
