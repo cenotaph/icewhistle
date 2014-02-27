@@ -1,0 +1,6 @@
+- @projects.each do |project|
+  = link_to(project.name, edit_admin_project_path(project) )
+  %br/
+%br/
+%br/  
+= link_to('new project ', new_admin_project_path)

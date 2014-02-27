@@ -1,0 +1,24 @@
+<h1>Editing category</h1>
+
+<%= error_messages_for :category %>
+
+<% form_for(@category) do |f| %>
+  <p>
+    <b>Link</b><br />
+    <%= f.text_field :link %>
+  </p>
+
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @category %> |
+<%= link_to 'Back', admin_categories_path %>

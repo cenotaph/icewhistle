@@ -1,0 +1,197 @@
+<script language="javascript">
+function getElementsByClass(searchClass,node,tag) {
+	var classElements = new Array();
+	if ( node == null )
+		node = document;
+	if ( tag == null )
+		tag = '*';
+	var els = node.getElementsByTagName(tag);
+	var elsLen = els.length;
+	var pattern = new RegExp("(^|\\\\s)"+searchClass+"(\\\\s|$)");
+	for (i = 0, j = 0; i < elsLen; i++) {
+		if ( pattern.test(els[i].className) ) {
+			classElements[j] = els[i];
+			j++;
+		}
+	}
+	return classElements;
+}
+
+function hideElementsByClass(classray) {
+	var t = new String;
+	
+	for (x in classray) {
+		
+		if (typeof(classray[x]) == 'object') {
+		  	classray[x].style.display = 'none';
+		}
+	}
+}   
+
+function showElementsByClass(classray) {
+	var t = new String;
+	
+	for (x in classray) {
+		
+		if (typeof(classray[x]) == 'object') {
+		  	classray[x].style.display = 'block';
+		}
+	}
+}   
+</script>
+<div id="section-half">
+<div id="cvleft">
+	projects<br>
+	<span id="proj_hide_control" class="controls"><a onclick="new Effect.Fade('proj_section');document.getElementById('proj_hide_control').style.display = 'none';document.getElementById('proj_show_control').style.display = 'inline';">hide</a></span>
+	<span id="proj_show_minor" class="controls"><a onclick="showElementsByClass(getElementsByClass('proj_minor'));document.getElementById('proj_hide_minor').style.display = 'inline';document.getElementById('proj_show_minor').style.display = 'none';">show all</a></span>
+ 	<span id="proj_hide_minor" class="controls" style="display: none;"><a onclick="hideElementsByClass(getElementsByClass('proj_minor'));document.getElementById('proj_show_minor').style.display = 'inline';document.getElementById('proj_hide_minor').style.display = 'none';">hide minor</a></span></div>
+
+
+<div id="proj_section">
+<% for project in @projects %>
+<div id="project" <% if project.major == false %>class="proj_minor"<% end %>>
+ <div id="dateleft-half">
+	<% if project.started == '' %>
+	  <em>Various dates</em>
+	<% else %>
+   	<%= project.started %> to <%= project.finished %>  
+    <% end %>
+ </div>
+ <div id="cvright-half">
+  <span class="projectheading">
+  	<% if project.url1.empty? %><%= project.name %>
+	<% else %>
+	<%= link_to project.name, project.url1 %>
+	<% end %>
+  </span>
+	<% unless project.projecttype == '' %> [ <%= project.projecttype %> ] <% end %>
+	<br />
+	<p class="description"><%= raw project.description %></p>
+ </div>
+</div>
+<% end %>
+</div>
+</div>
+
+
+
+
+
+<div id="section-half">
+ <div id="cvleft">
+	 output, publications and dissemination<br>
+	<span id="publication_hide_control" class="controls"><a onclick="new Effect.Fade('publication_section');document.getElementById('publication_hide_control').style.display = 'none';document.getElementById('publication_show_control').style.display = 'inline';document.getElementById('publication_hide_minor').style.display = 'none';document.getElementById('publication_show_minor').style.display = 'none';">hide</a></span>
+	<span id="publication_show_control" class="controls" style="display: none;"><a onclick="new Effect.Appear('publication_section');document.getElementById('publication_show_control').style.display = 'none';document.getElementById('publication_hide_control').style.display = 'inline';hideElementsByClass(getElementsByClass('publication_minor'));document.getElementById('publication_show_minor').style.display = 'inline';document.getElementById('publication_hide_minor').style.display = 'none';">show</a></span>
+	<span id="publication_show_minor" class="controls"><a onclick="showElementsByClass(getElementsByClass('publication_minor'));document.getElementById('publication_hide_minor').style.display = 'inline';document.getElementById('publication_show_minor').style.display = 'none';">show all</a></span>
+ 	<span id="publication_hide_minor" class="controls" style="display: none;"><a onclick="hideElementsByClass(getElementsByClass('publication_minor'));document.getElementById('publication_show_minor').style.display = 'inline';document.getElementById('publication_hide_minor').style.display = 'none';">hide minor</a></span></div>
+	
+<div id="publication_section">
+	<% for pub in @publications %>
+<div id="publication" <% if pub.major == false %>class="publication_minor"<% end %>>
+
+	 <div id="cvright-half">
+	   <% unless pub.icon.blank? %>
+       <%= image_tag(pub.icon, {:align => :left, :height => 50, :style => "margin-right: 5px;"})%>
+      <% end %>
+		<em><%= pub.title %></em> (<%= pub.format %>) <%= pub.try(:publisher) %>, <%= pub.date %><br />
+		<span class="pubdescription"><%= raw pub.description %></span>
+	</div>
+</div>
+  <% end %>
+</div>
+</div>
+
+<div id="section">
+<div id="cvleft">
+	professional experience<br>
+	<span id="job_hide_control" class="controls"><a onclick="new Effect.Fade('job_section');document.getElementById('job_hide_control').style.display = 'none';document.getElementById('job_show_control').style.display = 'inline';document.getElementById('job_hide_minor').style.display = 'none';document.getElementById('job_show_minor').style.display = 'none';">hide</a></span>
+	<span id="job_show_control" class="controls" style="display: none;"><a onclick="new Effect.Appear('job_section');document.getElementById('job_show_control').style.display = 'none';document.getElementById('job_hide_control').style.display = 'inline';hideElementsByClass(getElementsByClass('job_minor'));document.getElementById('job_show_minor').style.display = 'inline';document.getElementById('job_hide_minor').style.display = 'none';">show</a></span>	
+	<span id="job_show_minor" class="controls"><a onclick="showElementsByClass(getElementsByClass('job_minor'));document.getElementById('job_hide_minor').style.display = 'inline';document.getElementById('job_show_minor').style.display = 'none';">show all</a></span>
+ 	<span id="job_hide_minor" class="controls" style="display: none;"><a onclick="hideElementsByClass(getElementsByClass('job_minor'));document.getElementById('job_show_minor').style.display = 'inline';document.getElementById('job_hide_minor').style.display = 'none';">show only recent</a></span>
+</div>
+
+ <div id="job_section">
+<% for job in @jobs %>
+
+<div id="job" <% if job.major == false %>class="job_minor"<% end %>>
+ <div id="dateleft">
+
+	<%= job.started %> to
+	<%= job.finished %>
+ </div>
+  <div id="cvright">
+	<span class="jobheading"><%= job.employer %></span><br />
+	<% unless job.department.empty? %><%= job.department %><br /><% end %>
+	<%= job.address1 %> 
+	<% unless job.address2.empty? %>/ <%= job.address2 %><% end %>
+	<% unless job.city.empty? %> / <%= job.city %> <% end %>
+	<% unless job.state.empty? %>, <%= job.state %> <% end %>
+	<% unless job.postcode.empty? %>/ <%= job.postcode %><% end %>
+	<% unless job.country.empty? %> / <%= job.country %><% end %> <br />
+	<% unless job.title.empty? %> <%= job.title %><br /><% end %>
+	<p class="description"><%= raw job.description %></p>
+  </div>
+</div>
+<% end %>
+</div>
+
+</div>
+
+
+<div id="section">
+<div id="cvleft">
+	skills<br>
+	<span id="sk_hide_control" class="controls"><a onclick="new Effect.Fade('skills_section');document.getElementById('sk_hide_control').style.display = 'none';document.getElementById('sk_show_control').style.display = 'inline';">hide</a></span>
+	<span id="sk_show_control" class="controls" style="display: none;"><a onclick="new Effect.Appear('skills_section');document.getElementById('sk_show_control').style.display = 'none';document.getElementById('sk_hide_control').style.display = 'inline';">show</a></span>
+</div>
+  <div id="skills_section">
+	<% for skill in @skill %>
+  <div id="skill">
+	 <div id="dateleft">
+	    <em><%= skill.skilltype %></em><br />
+	 </div>
+	 <div id="cvright">
+		<%= raw skill.skills %><Br />
+		<br />
+	 </div>
+  </div>
+	<% end %><br />
+</div>
+</div>
+-
+
+<div id="section">
+<div id="cvleft">
+	education<br>
+	<span id="ed_hide_control" class="controls"><a onclick="new Effect.Fade('education_section');document.getElementById('ed_hide_control').style.display = 'none';document.getElementById('ed_show_control').style.display = 'inline';">hide</a></span>
+	<span id="ed_show_control" class="controls" style="display: none;"><a onclick="new Effect.Appear('education_section');document.getElementById('ed_show_control').style.display = 'none';document.getElementById('ed_hide_control').style.display = 'inline';">show</a></span>
+</div>
+  <div id="education_section">
+	<% for school in @schools %>
+  <div id="job">
+	 <div id="dateleft">
+	    <%= school.started %> - <%= school.finished %> 
+	 </div>
+	 <div id="cvright">
+		<%= school.name %><Br />
+		<%= school.degree %> , <%= school.subject %><br /><br />
+	 </div>
+  </div>
+	<% end %><br />
+</div>
+</div>
+
+<br clear="all">
+<br />
+<br />
+<% if params[:full]  %>
+  <script type="text/javascript">
+   showElementsByClass(getElementsByClass('proj_minor'));
+   document.getElementById('proj_hide_minor').style.display = 'inline';
+   document.getElementById('proj_show_minor').style.display = 'none';  
+   
+   showElementsByClass(getElementsByClass('publication_minor'));
+   document.getElementById('publication_hide_minor').style.display = 'inline';
+   document.getElementById('publication_show_minor').style.display = 'none';  
+   </script>
+<% end %>

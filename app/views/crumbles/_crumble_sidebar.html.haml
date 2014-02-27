@@ -1,0 +1,20 @@
+- unless @crumble.related.empty?
+  .row
+    .small-12.columns
+      %h3 Related crumbles:
+  
+  - @crumble.related.sort_by{|x| x.updated_at }.reverse[0..5].in_groups_of(3).each do |group|
+    .row.related_crumbles{:"data-equalizer" => ""}
+      - group.each do |related|
+        - next if related.nil?
+        .small-4.columns{:"data-equalizer-watch" => ""}
+          .related_title= link_to related.title, related
+          - if related.icon?
+            .columns= image_tag related.icon.url(:midsize)
+          %medium= l related.created_at.to_date, :format => :long
+.crumble_tags= raw format_tags(@crumble)          
+.share_this= share_this(@crumble)
+- if current_user
+  = link_to 'edit this crumble', edit_crumble_path(@crumble)
+  %br
+  = link_to 'delete this crumble', @crumble, :confirm => 'Are you sure?', :method => :delete

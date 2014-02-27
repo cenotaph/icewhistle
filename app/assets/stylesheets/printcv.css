@@ -1,0 +1,593 @@
+a {
+  text-decoration: none;
+}
+
+.noprint {
+  display: none;
+}
+
+span.controls {
+  display: none;
+}
+
+.print_only {
+  display: block;
+}
+.print_only  p { margin: 0px; padding: 0px; }
+.publication_minor {
+	display: inline;
+}
+
+.proj_minor {
+  display: inline;
+}
+
+body {
+	background-color: #F0FFF0;
+	
+	font-family: Helvetica, Verdana, arial;
+}
+
+ img  {
+		border: 2px solid #5D6F0C;
+		text-decoration: none;	
+
+}
+
+a {
+		text-decoration: none;	
+	color: #5D6F0C;
+}
+
+
+#linksmenu {
+	background-color: #E0DF85;
+	float: left;
+	width: 100%;
+	margin: 5 5 5 5;
+	padding: 2px;
+	margin: 1px;
+	clear: none;
+	color: #2A3A00;
+	font-family: helvetica;
+	font-size: 9pt;
+
+}
+#linksmenu a {
+	text-decoration: none;
+}
+
+#topwrap {
+	width: 100%;
+	clear: both;
+}
+#bottomwrap { 
+	clear: both;
+}
+#header-cv {
+
+	font-size: 13pt;
+	padding-bottom: 9px;
+	font-family: helvetica;
+	background-image: url("/images/headerline.png");
+	background-repeat: repeat-x;
+}
+#header-cv a {
+	color: #5D6F0C;
+	text-decoration: none;
+	}
+	
+#feeds {
+	padding-top: 8px;
+	font-family: helvetica;
+	font-size: 9pt;
+	float: left;
+	width: 22%;
+	margin-top: 0px;
+	margin-right: 25px;
+	clear: none;
+}
+		
+#yield {
+	margin-top: -10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	
+	font-family: helvetica;
+}
+#frontyield {
+	margin-top: -10px;
+	margin-left: 8px;
+	margin-right: 5px;
+	float: left;
+	clear: none;
+	width: 58%;
+	font-family: helvetica;
+}
+#cvleft {
+	float: left;
+
+	clear: none;
+	font-family: Helvetica, Verdana, futura, palatino;
+	font-weight: normal;
+	letter-spacing: 1px;
+	font-size: 12pt;
+}
+
+#section-half {
+
+  width: 440px;
+  float: left;
+	margin-top: 20px;
+	margin-bottom: 10px;
+  margin-right: 40px;
+
+}
+
+#dateleft {
+	float: left;
+	margin-left: 80px;
+	width: 120px;
+	font-size: 9pt;
+	padding-right: 20px;
+	font-style: italic;
+	margin-top: 15px;
+}
+
+#dateleft-half {
+	float: left;
+	margin-left: 15px;
+	width: 85px;
+	font-size: 8pt;
+  margin-right: 10px;
+	font-style: italic;
+	font-family: Helvetica, Verdana, Arial;
+	margin-top: 15px;
+} 
+
+#cvright {
+	float: left;
+	width: 580px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+#cvright-half {
+  
+  width: 400px;
+}
+
+#job {
+	clear: both;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#skill {
+	clear: both;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#project {
+	clear: both;
+	margin-bottom: 25px;
+}
+
+#publication {
+	clear: both;
+	margin-top: 20px;
+}
+
+
+.publication_minor {
+	display: none;
+}
+
+.proj_minor {
+  display: none;
+}
+.pubdescription {
+  font-size: 9pt;
+}
+.job_minor {
+	display: none;
+}
+#section {
+	width: 900px;
+	clear:both;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#education_section {
+	width: 900px;
+	clear:both;
+}
+
+#proj_section {
+	width: 400px;
+	clear:both;
+	float: left;
+}
+
+#job_section {
+	width: 900px;
+	clear:both;
+}
+#skill_section {
+	width: 900px;
+	clear:both;
+}
+#publication_section {
+	width: 900px;
+	clear:both;
+}
+
+
+.jobheading  {
+	font-size: 1.2em;
+}
+
+.projectheading {
+	font-size: 1.2em;
+}
+
+#linksmenu a {
+	color: #5D6F0C;
+}
+
+.description {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.controls {
+  font-size: 7pt;
+ }
+
+#navtitle {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#navdesc {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+
+
+.channel {
+	text-align: right;
+	font-size: 9pt;
+}
+.items {
+	text-align: left;
+	font-size: 9pt;
+}
+.latest {
+	color: black;
+	text-background: black;
+}
+
+.posttitle {
+	font-weight: bold;
+	font-size: 9pt;
+	margin: 0 0 0 0;
+}
+
+.littledate {
+	text-decoration: italic;
+	font-size: 7pt;
+	margin: 0 0 0 0;
+}
+
+.col1 .tag, .tag {
+	 font-family: Helvetica, Verdana, Arial;
+	 font-size: 7pt;
+	margin-top: 8px;
+	margin-bottom: 9px;
+}
+
+.commentlink {
+	font-family: Helvetica, Verdana, Arial;
+	 font-size: 7pt;
+	margin-top: 4px;
+	margin-bottom: 9px;
+}
+
+.postcontent {
+	background-image: url('/images/sideline.png');
+	background-repeat: repeat-y;
+	padding-left: 25px;
+	font-family: Helvetica, Verdana, arial;
+	margin: 3px 0 0px 0;
+	font-size: 8pt;
+}
+
+#frontmiddlecol .postcontent {
+	background-image: none;
+}
+
+.commentcontent {
+	padding-left: 5px;
+	font-family: Helvetica, Verdana, arial;
+	margin: 3px 0 0px 0;
+	font-size: 8pt;
+}
+.postcontent img {
+	margin: 5px 10px 5px 10px;
+}
+
+#feeds a {
+	color: #5D6F0C;
+	text-decoration: none;
+
+}
+#yield a, #frontyield a {
+	color: #5D6F0C;
+	text-decoration: none;
+	}
+#footer {
+	 background-image: url("/images/feedline.png");
+	         background-repeat: repeat-x;
+		 float: left;
+		 width: 100%;
+		 clear:both;
+}
+/* new stylesheet */
+#header {
+        clear:both;
+        float:left;
+        width:100%;
+    }
+	/* column container */
+		.colmask {
+			position:relative;		/* This fixes the IE7 overflow hidden bug and stops the layout jumping out of place */
+		    clear:both;
+		    float:left;
+	        width:100%;				/* width of whole page */
+			overflow:hidden;		/* This chops off any overhanging divs */
+		}
+		/* holy grail 3 column settings */
+		.holygrail {
+		      	/* Right column background colour */
+		}
+	    .holygrail .colmid {
+	        float:left;
+	        width:200%;
+	        margin-left:-170px; 	/* Width of right column */
+	        position:relative;
+	        right:100%;
+	          	/* Centre column background colour */
+	    }
+	    .holygrail .colleft {
+			margin-top: 5px;
+	        float:left;
+	        width:100%;
+	        margin-left:-50%;
+	        position:relative;
+	        left:300px;         	/* Left column width + right column width */
+	           	/* Left column background colour */
+	    }
+	    .holygrail .col1wrap {
+	        float:left;
+		    width:50%;
+		    position:relative;
+		    right:125px;        	/* Width of left column */
+		    padding-bottom:1em; 	/* Centre column bottom padding. Leave it out if it's zero */
+		}
+		.holygrail .col1 {
+	        margin:0 145px;     	/* Centre column side padding:
+	                            	Left padding = left column width + centre column left padding width
+	                            	Right padding = right column width + centre column right padding width */
+		    padding-right: 50px;
+	        position:relative;
+		    left:200%;
+		    overflow:hidden;
+		}
+	    .holygrail .col2 {
+	        float:left;
+	        float:right;			/* This overrides the float:left above */
+	        width:115px;        	/* Width of left column content (left column width minus left and right padding) */
+	        position:relative;
+	        right:15px;         	/* Width of the left-had side padding on the left column */
+	    }
+	    .holygrail .col3 {
+	        float:left;
+	        float:right;			/* This overrides the float:left above */
+	        width:160px;        	/* Width of right column content (right column width minus left and right padding) */
+	        margin-right: 20px;  	/* Width of right column right-hand padding + left column left and right padding */
+	        position:relative;
+	        left:50%;
+	    }
+		/* Footer styles */
+		#footer {
+	        clear:both;
+	        float:left;
+	        width:100%;
+			border-top:1px solid #000;
+	    }
+
+.col1 .posttitle {
+	font-size: 9pt;
+	font-family: Helvetica, Verdana, Arial;	
+}
+
+.col3 img {
+	border: none;
+}
+.col3 .posttitle a {
+	font-size: 8pt;
+	font-family: Helvetica, Verdana, Arial;	
+	color: #5D6F0C;  
+	text-decoration: none;
+}
+.col3 a:hover {
+	 color: #ADAF3C;
+}
+.col3 .sidetitle a {
+		font-size: 8pt;
+		font-family: Helvetica, Verdana, Arial;
+		color: #5D6F0C;  
+		text-decoration: none;
+}
+
+.col1 .postcontent {
+	font-size: 8pt;
+	line-height: 1.1em;
+	font-family: helvetica;
+}
+.rightcolheading {
+	letter-spacing: 2px;
+	font-family: helvetica, verdana, arial;
+}
+
+.rightcolheading a {
+		text-decoration: none;
+			color: #5D6F0C;  
+}
+
+.rightcolheading a:hover {
+		 color: #ADAF3C;
+}
+.holygrail .col2  a, .holygrail .col1 a {
+	color: #5D6F0C;  
+	text-decoration: none;
+}
+
+.holygrail .col1 a:hover {
+	 color: #ADAF3C;
+}
+
+.bl1 {  background: url('/images/icons/bl1.png') 0 100% no-repeat #D0C72A;
+	 width: 14em;
+}
+.br1 {background: url('/images/icons/br1.png') 100% 100% no-repeat;}
+.tl1 {background: url('/images/icons/tl1.png') 0 0 no-repeat;}
+.tr1 {background: url('/images/icons/tr1.png') 100% 0 no-repeat; padding: 10px;}
+
+.bl2 {  background: url('/images/icons/bl2.png') 0 100% no-repeat #48622D;
+	 width: 14em;
+}
+.br2 {background: url('/images/icons/br2.png') 100% 100% no-repeat;}
+.tl2 {background: url('/images/icons/tl2.png') 0 0 no-repeat;}
+.tr2 {background: url('/images/icons/tr2.png') 100% 0 no-repeat; padding: 10px;}
+
+.bl3 {  background: url('/images/icons/bl3.png') 0 100% no-repeat #6D6928;
+	 width: 14em;
+}
+.br3 {background: url('/images/icons/br3.png') 100% 100% no-repeat;}
+.tl3 {background: url('/images/icons/tl3.png') 0 0 no-repeat;}
+.tr3 {background: url('/images/icons/tr3.png') 100% 0 no-repeat; padding: 10px;}
+
+.frontitembubble {
+	margin: 5px;
+}
+
+.noborder {
+	border: none;
+	margin: 0px;
+}
+#frontwrap {
+	clear:none;
+}
+
+#frontleftcol {
+	padding: 1em;
+	width: 14em;
+	float: left;
+	clear
+} 
+
+#frontmiddlecol {
+	float: left;
+	width: 60%;
+	margin-top: 135px;
+}
+
+#frontrightcol {
+	float: left;
+	width: 10%;
+		margin-top: 135px;
+}
+
+.lefttext {
+	font-size: 8pt;
+}
+
+.frontboxtitle {
+	font-size: 7pt;
+	margin-top: 6px;
+	margin-bottom: 0px;
+}
+
+.frontboxdesc {
+	font-size: 7pt;
+	color: #232323;
+}
+
+.a_post {
+	margin-bottom: 6px;
+	margin-top: 15px;
+}
+
+fieldset {
+	margin-bottom: 10px;
+	margin-top: 8px;
+	border: 0;
+}
+
+legend {
+	font-size: 9pt;
+	color: #5D6F0C;
+}
+
+form label {
+ display: inline-block;
+   line-height: 1.8;
+     vertical-align: top;
+     font-size: 8pt;
+}
+
+form fieldset ol {
+	margin: 0;
+	padding: 0;
+}
+
+form li {
+	list-style: none;
+	padding: 5px;
+	margin: 0;
+}
+
+form fieldset fieldset {
+	 border: none;
+  margin: 3px 0 0;
+}
+
+form label {
+width: 120px;
+}
+
+
+
+	#recaptcha_area {
+	margin-left: 120px;
+	margin-bottom: 15px;
+}
+
+ul.delicious li {
+	margin-bottom: 10px;
+}
+
+.delicious-extended {
+	font-size: 9pt;
+	margin-top: 3px; }
+
+.delicious-tags {
+	font-size: 8pt;
+	margin-top: 3px;
+}

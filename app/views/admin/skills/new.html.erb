@@ -1,0 +1,22 @@
+<h1>New skill</h1>
+
+
+<%= form_for([:admin,@skill]) do |f| %>
+  <p>
+    <b>Type</b><br />
+  
+    <%= f.text_field :skilltype %>
+  </p>
+
+  <p>
+    <b>Skills</b><br />
+    <%= f.text_area :skills %>
+  </p>
+
+  
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', admin_skills_path %>

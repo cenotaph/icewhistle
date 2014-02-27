@@ -1,0 +1,5 @@
+.row.text-center
+  = link_to 'http://blindness.icewhistle.com/' do
+    = image_tag post.image.url(:wide)
+    .inner_text
+      = raw post.title + "..."

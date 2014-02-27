@@ -1,0 +1,33 @@
+
+.post_title= link_to crumble.title, crumble
+%medium
+  = 'posted ' + time_ago_in_words(crumble.created_at) + ' ago; '
+  - unless crumble.datestamp.blank?
+    =  "from " + crumble.datestamp.strftime('%d %B %Y')
+.post_body
+  - if crumble.icon?
+    = image_tag crumble.icon.url(:main)
+  - if crumble.category == 1
+    = image_tag(crumble.attachment.main.url)
+    %br/
+    = link_to '[full size]', crumble.attachment.url
+    %br/
+    
+  - if crumble.category == 2
+    %div= link_to crumble.attachment.url, crumble.attachment.url, :class => :sm2_button, :rel => :nofollow
+  %br    
+
+    
+
+  %p= raw(Nokogiri::HTML.parse(crumble.body.gsub(/\<span\>/, '<p>').gsub(/\<\/span\>/, '</p>')).css('p').first.text) rescue raw(truncate_html(crumble.body, :length => 1500))
+  = link_to 'Read more', crumble, :class => [:button, :tiny]
+
+
+      
+
+
+- if user_signed_in?
+  = link_to 'edit this crumble', edit_crumble_path(crumble)
+  %br
+  = link_to 'delete this crumble', crumble, :confirm => 'Are you sure?', :method => :delete 
+%br{:clear => 'all'}

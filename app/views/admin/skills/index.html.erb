@@ -1,0 +1,21 @@
+<h1>Listing skills</h1>
+
+<table>
+  <tr>
+	<th>type</th>
+    <th>Skills</th>
+
+<% for skill in @skills %>
+  <tr>
+	<td><%= h skill.skilltype %></td>
+    <td><%=h skill.skills %></td>
+    <td><%= link_to 'Show', admin_skill_path(skill) %></td>
+    <td><%= link_to 'Edit', edit_admin_skill_path(skill) %></td>
+    <td><%= link_to 'Destroy', admin_skill_path(skill), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New skill', new_admin_skill_path %>

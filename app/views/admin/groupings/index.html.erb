@@ -1,0 +1,20 @@
+<h1>Listing groupings</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% for grouping in @groupings %>
+  <tr>
+    <td><%=h grouping.name %></td>
+    <td><%= link_to 'Show', grouping %></td>
+    <td><%= link_to 'Edit', edit_grouping_path(grouping) %></td>
+    <td><%= link_to 'Destroy', grouping, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New grouping', new_admin_grouping_path %>

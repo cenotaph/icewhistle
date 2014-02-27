@@ -1,0 +1,33 @@
+<p>
+  <b>Title:</b>
+  <%=h @publication.title %>
+</p>
+
+<p>
+  <b>Format:</b>
+  <%=h @publication.format %>
+</p>
+
+<p>
+  <b>Publisher:</b>
+  <%=h @publication.publisher %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @publication.date %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @publication.description %>
+</p>
+
+<p>
+  <b>Major:</b>
+  <%=h @publication.major %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_publication_path(@publication) %> |
+<%= link_to 'Back', admin_publications_path %>

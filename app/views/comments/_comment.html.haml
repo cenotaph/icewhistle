@@ -1,0 +1,27 @@
+
+= form_for([item, @comment]) do |f|
+  - if @comment.errors.any?   
+    #errorExplanation  
+    %h2= "#{pluralize(@comment.errors.count, "error")} with your comment"
+    %ul
+      - @comment.errors.full_messages.each do |msg| 
+        %li= msg
+
+  #input
+    .row
+      %label{:for => "name"} Your name:
+      = f.text_field :realname, :class => 'formw'
+    .row
+      %label{:for => "email"} Your email address:
+      = f.text_field :email , :class => 'formw'
+    %br
+    .row
+      %label{:for => "comment"} Comment:
+      = f.text_area :body , :class => 'formw'
+    .row
+      .comment_content Please complete the CAPTCHA below to verify your humanity:
+      %label{:for => "captcha"} &nbsp;
+      = recaptcha_tags(:display => {:theme => 'white', :tabindex => 10})
+      %label{:for => "captcha"} &nbsp;
+      = f.submit 'Post'
+

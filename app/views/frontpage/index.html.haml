@@ -1,0 +1,64 @@
+#magellan{:"data-magellan-expedition" => :fixed}
+  .row
+    .small-12.columns
+      %dl.sub-nav
+        %dd.first.active{:"data-magellan-arrival" => "top#{@posts.first.id.to_s}"}= link_to @posts.first.title, "#top#{@posts.first.id.to_s}"
+        %dd{:"data-magellan-arrival" => "activities"}= link_to 'Events/archive', "#activity_front"
+        %dd{:"data-magellan-arrival" => "recent_posts"}= link_to 'Recent posts', "#recent_posts"
+        %dd{:"data-magellan-arrival" => "blindness"}= link_to 'Blindness', '#blindness_container'
+        %dd{:"data-magellan-arrival" => "less_recent"}= link_to 'Less recent posts', '#less_recent'
+
+%a{:name => "top#{@posts.first.id.to_s}"}       
+.full_width_post{:id => "top#{@posts.first.id.to_s}"}= render :partial => 'full_width_post', :locals => {:post => @posts.first }
+    
+
+%div#tweet_front= render :partial => 'tweet'
+
+%a{:name => "activities"}
+#activity_front.row
+  .small-8.columns
+    .row
+      .small-8.columns.text-center
+        %h2 Recent and upcoming
+    .row
+      .small-8.columns.center
+        %ul.activities_front
+          - Cash.where("source = 'pixelache' or source = 'ptarmigan'").order("cashes.order DESC").limit(6).each do |activity|
+            = link_to activity.link_url, :target => :_blank do
+              %li= render :partial => 'activity_feed', :locals => {:activity => activity}
+              
+      .small-2.columns &nbsp;
+      
+  .small-4.columns.panel
+    = render :partial => 'crumbles', :locals => {:crumbles => @crumbles}
+  %div{:"data-magellan-destination" => 'activities'} &nbsp;
+
+#recent_posts.row{:"data-equalizer" => ""}
+  - @posts[1..3].each do |post|
+    .large-4.columns{:"data-equalizer-watch" => ""}= render :partial => 'image_top_post', :locals => {:post => post}
+    %div{:"data-magellan-destination" => 'recent_posts'} &nbsp;
+
+
+- Cash.where(:source => "blindness").where("image_width > 760").limit(1).each do |bp|
+  #blindness_container.blindness_wrapper{:"data-magellan-destination" => "blindness"}= render :partial => 'blindness_image', :locals => {:post => bp}
+
+
+#less_recent.row{:"data-equalizer" => "", :"data-magellan-destination" => "less_recent"}
+  - @posts[4..5].each do |post|
+    .large-6.columns{:"data-equalizer-watch" => ""}= render :partial => 'title_top_post', :locals => {:post => post}
+    
+%div{:style => 'background-color: #F2F27C'}= render :partial => 'bookmark', :locals => {:link => Cash.where(:source => 'bookmarks').order('created_at DESC').limit(7) }
+
+#disclaimer
+  .row
+    .small-9.columns
+      %medium Icewhistle.com is the website of John W. Fail since 2007. 
+      %br/
+      %small Content on icewhistle.com does not necessarily represent the viewpoints of Ptarmigan, Piknik Frequency aka Pixelache, or any other organisations. Contact via email link on site footer.
+= content_for :jquery do
+  :plain
+    $('#magellan a[href*=#]').on('click', function(event){     
+      
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top - 70}, 500);
+    });

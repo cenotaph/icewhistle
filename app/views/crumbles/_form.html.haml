@@ -1,0 +1,30 @@
+= semantic_form_for(@crumble,  :html => {:multipart => true}) do |f| 
+
+  %p
+    = f.label :title 
+    %br
+    = f.input :title 
+  %p
+    = f.label :category 
+    %br
+    = f.select :category, {'image' => 1, 'sound' => 2, 'video' => 3, 'text' => 4, 'archival' => 5}
+  %p
+    = f.label :icon
+    %br
+    = f.input :icon
+  %p
+    = f.label :attachment
+    %br
+    = f.input :attachment
+  %p
+    = f.input :datestamp, :as => :string, :input => {:class => 'date-picker'}
+  %p
+    = f.label :description 
+    %br
+    = f.cktext_area :description, :class => 'rich_text_editor', :cols => 80
+  %p
+    = f.label "tag_with  (separate by commas)"
+    = f.input :tag_list
+  %p
+    = f.submit 'Create' 
+

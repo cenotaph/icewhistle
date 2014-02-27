@@ -1,0 +1,43 @@
+<p>
+  <b>Name:</b>
+  <%=h @project.name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @project.projecttype %>
+</p>
+
+<p>
+  <b>Url1:</b>
+  <%=h @project.url1 %>
+</p>
+
+<p>
+  <b>Started:</b>
+  <%=h @project.started %>
+</p>
+
+<p>
+  <b>Finished:</b>
+  <%=h @project.finished %>
+</p>
+
+<p>
+  <b>Url2:</b>
+  <%=h @project.url2 %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @project.description %>
+</p>
+
+<p>
+  <b>Major:</b>
+  <%=h @project.major %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_project_path(@project) %> |
+<%= link_to 'Back', admin_projects_path %>

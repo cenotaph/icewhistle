@@ -1,0 +1,27 @@
+%h2 editing post
+
+= semantic_nested_form_for [:admin, @post], :html => {:multipart => true} do |f|
+  .row
+    .small-6.columns= f.input :title
+  .row
+    .small-12.columns= f.input :body, :input_html => {:class => :ckeditor}
+  - unless @post.extended.blank?
+    .row
+      .small-6.columns= f.input :extended, :input_html => {:class => :ckeditor}
+  .row
+    .small-8.columns= f.input :tag_list
+  
+  .row
+    .small-5.columns= f.input :image
+  
+  = f.fields_for :photos do |ff|
+    - unless ff.object.filename.blank?
+      = image_tag ff.object.filename.url(:midsize)
+    = ff.input :filename
+  
+  = f.link_to_add 'add one or more images', :photos
+  .row
+    .small-6.columns= f.submit
+  
+  
+    

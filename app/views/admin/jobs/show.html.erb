@@ -1,0 +1,68 @@
+<p>
+  <b>Started:</b>
+  <%=h @job.started %>
+</p>
+
+<p>
+  <b>Finished:</b>
+  <%=h @job.finished %>
+</p>
+
+<p>
+  <b>Employer:</b>
+  <%=h @job.employer %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%=h @job.department %>
+</p>
+
+<p>
+  <b>Address1:</b>
+  <%=h @job.address1 %>
+</p>
+
+<p>
+  <b>Address2:</b>
+  <%=h @job.address2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @job.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @job.state %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%=h @job.postcode %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%=h @job.country %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @job.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @job.description %>
+</p>
+
+<p>
+  <b>Major:</b>
+  <%=h @job.major %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_job_path(@job) %> |
+<%= link_to 'Back', admin_jobs_path %>

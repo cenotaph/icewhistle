@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>curriculum vitae</title>
+  <%= stylesheet_link_tag 'icewhistle-cv' %>
+   <%= stylesheet_link_tag 'icewhistle' %>
+  <%= javascript_include_tag 'application'  %>
+  <link rel="stylesheet" href="/assets/printcv.css" media="print" />
+</head>
+<body>
+
+<div id="header-cv">
+<center>
+John W. Fail 
+<br />
+<span style="font-size: 0.7em;" class="noprint">[ <%= link_to 'contact', '/contact' %> ]</span>
+<div class="print_only">
+<p>Helsinki / Tallinn</p><p>  john@ptarmigan.fi</p>
+
+	 </center>
+</div>
+
+<div id="yield">
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8528360-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

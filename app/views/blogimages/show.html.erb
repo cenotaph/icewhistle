@@ -1,0 +1,15 @@
+
+<p>
+  <strong>Name:</strong>
+  <%=h @blogimage.name %>
+</p>
+<p>
+  <strong>Filename:</strong>
+  <%= image_tag url_for_file_column @blogimage, "filename", "regular" %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_blogimage_path(@blogimage) %> |
+  <%= link_to "Destroy", @blogimage, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", blogimages_path %>
+</p>

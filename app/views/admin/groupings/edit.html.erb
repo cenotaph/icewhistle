@@ -1,0 +1,17 @@
+<h1>Editing grouping</h1>
+
+<%= error_messages_for :grouping %>
+
+<% form_for([:admin,@grouping]) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @grouping %> |
+<%= link_to 'Back', admin_groupings_path %>

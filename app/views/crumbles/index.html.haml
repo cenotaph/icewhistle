@@ -1,0 +1,28 @@
+- meta :title =>  "Crumbles | Icewhistle", :description => "Archives and other randomness from John W. Fail's icewhistle.com"
+.row
+  .small-2.columns
+    %h3 Crumbles
+    %p  
+      Viewing as list.
+      = link_to 'View by date', by_date_crumbles_path  
+  .small-4.columns
+    %p
+      This section is to post sketches, recordings, writings or other odds and ends.  It functions as both a sketchpad and a personal archive. I'm uploading old posters, handbills and other things I've collected here,  for lack of any better place to put it.
+
+  .small-6.columns.text-center
+    = paginate @crumbles
+
+  
+- @crumbles.in_groups_of(3).each do |group|
+  .row{:"data-equalizer" => ""}
+    - group.each do |crumble|
+      - next if crumble.nil?
+      .small-4.columns= render :partial => 'crumble', :locals => {:crumble => crumble}
+      
+.row
+  .small-4.columns &nbsp;
+  .small-4.columns.text-center
+    = paginate @crumbles
+  .small-4.columns &nbsp;   
+    
+= paginate @crumbles

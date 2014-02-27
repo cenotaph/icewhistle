@@ -1,0 +1,10 @@
+%h3.text-center From the archive
+.text-center
+  %medium (archival and random media)
+%br/
+%ul{:"data-orbit" => "", :'data-options' => 'animation: fade; timer-speed: 3000;'}
+  - crumbles.each do |c|
+    = link_to c do
+      %li
+        = image_tag 'http://icewhistle.com/' + c.icon.url(:main)
+        .orbit-caption= c.title

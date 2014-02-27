@@ -1,0 +1,17 @@
+<% title "Groupings" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for grouping in @groupings %>
+    <tr>
+      <td><%=h grouping.name %></td>
+      <td><%= link_to "Show", grouping %></td>
+      <td><%= link_to "Edit", edit_grouping_path(grouping) %></td>
+      <td><%= link_to "Destroy", grouping, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Grouping", new_grouping_path %></p>

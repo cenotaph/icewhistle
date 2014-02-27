@@ -1,0 +1,18 @@
+.column_header crumbles / archive
+
+%p 
+  Viewing by date.  
+  = link_to 'View as list.', crumbles_path
+  
+%ul
+  - @crumbles.each do |c_group|
+    - if c_group.first.nil?
+      %li undated
+    - else
+      %li= c_group.first
+    %ul
+      - c_group.last.each do |c|
+        %li
+          = link_to c.title, c
+          = c.datestamp.blank? ? '' : c.datestamp.strftime('%d %B')
+          

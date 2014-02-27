@@ -1,0 +1,44 @@
+<h1>Listing jobs</h1>
+
+<table>
+  <tr>
+    <th>Started</th>
+    <th>Finished</th>
+    <th>Employer</th>
+    <th>Department</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Postcode</th>
+    <th>Country</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Major</th>
+  </tr>
+
+<% for job in @jobs %>
+  <tr>
+    <td><%=h job.started %></td>
+    <td><%=h job.finished %></td>
+    <td><%=h job.employer %></td>
+    <td><%=h job.department %></td>
+    <td><%=h job.address1 %></td>
+    <td><%=h job.address2 %></td>
+    <td><%=h job.city %></td>
+    <td><%=h job.state %></td>
+    <td><%=h job.postcode %></td>
+    <td><%=h job.country %></td>
+    <td><%=h job.title %></td>
+    <td><%=h job.description %></td>
+    <td><%=h job.major %></td>
+    <td><%= link_to 'Show', admin_job_path(job) %></td>
+    <td><%= link_to 'Edit', edit_admin_job_path(job) %></td>
+    <td><%= link_to 'Destroy', admin_job_path(job), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New job', new_admin_job_path %>

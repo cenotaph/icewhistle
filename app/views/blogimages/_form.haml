@@ -1,0 +1,13 @@
+- form_for (@blogimage, :html => {:multipart => true})  do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :filename
+    %br
+    = file_column_field "blogimage", "filename"
+  %p
+    = f.submit "Submit"
+

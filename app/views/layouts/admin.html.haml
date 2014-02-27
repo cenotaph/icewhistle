@@ -1,0 +1,87 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "Icewhistle"
+    %link{:href => 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin-ext', :rel => 'stylesheet', :type => 'text/css'}
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "vendor/modernizr" 
+    = csrf_meta_tags 
+  %body
+    = javascript_include_tag "application" 
+    .new_header
+      .row
+        .large-4.columns
+          %h1
+            -# = link_to image_tag('jape.png'), '/'
+            -# = link_to image_tag('johnfailicewhistle.jpg'), '/'
+            = link_to image_tag('/images/icons/logo.png'), '/'
+        .large-8.columns
+          %ul.button-group.right
+            %li
+              %a.button.dropdown.small{:href => "#", :"data-dropdown" => "who"} Who?
+              %ul#who.f-dropdown{:"data-dropdown-content" => ""}
+                %li= link_to 'CV', '/cv'
+                %li= link_to 'Discography', 'http://static.icewhistle.com/discog/'
+            %li
+              %a.button.dropdown.small{:href => "#", :"data-dropdown" => "what"} Projects
+              %ul#what.f-dropdown{:"data-dropdown-content" => ""}
+                %li= link_to 'Ptarmigan', 'http://ptarmigan.ee/'
+                %li= link_to 'Pixelache', 'http://pixelache.ac/'
+                %li= link_to 'Lied Music', 'http://liedmusic.co.uk/'
+                %li= link_to 'Cenotaph', 'http://cenotaph.org/'
+                %li= link_to 'Slothrop\'s', 'http://slothrops.ee/'
+              
+            %li
+              %a.button.dropdown.small{:href => "#", :"data-dropdown" => "archive"} Archive
+              %ul#archive.f-dropdown{:"data-dropdown-content" => ""}
+                %li= link_to 'All posts', posts_path
+                %li= link_to 'Blindness', 'http://blindness.icewhistle.com/'
+                %li= link_to 'Crumbles', crumbles_path
+                %li= link_to 'Bookmarks', 'http://icewhistle.postach.io'
+            %li.scale
+              = link_to image_tag 'jape.png', :height => 51
+            %li.scale= link_to image_tag 'johnfailicewhistle.jpg', :height => 51
+            
+            
+            
+    %main
+      .footer-shadow= yield
+    %footer#main_footer
+      .row
+        .small-3.columns
+          = link_to image_tag('jape.png'), 'javascript:$("html, body").animate({ scrollTop: 0 }, "slow");'
+          = link_to image_tag('johnfailicewhistle.jpg'), 'javascript:$("html, body").animate({ scrollTop: 0 }, "fast");'
+        .small-3.columns
+          %ul
+            %li= link_to 'All posts', posts_path
+            %li= link_to 'Blindness', 'http://blindness.icewhistle.com'
+            %li= link_to 'Archival/crumbles', crumbles_path
+            %li= link_to 'John W. Fail CV', '/cv'
+            %li= link_to 'Discography', 'http://static.icewhistle.com/discog/'
+        .small-3.columns
+          %ul
+            %li= link_to 'Ptarmigan Tallinn', 'http://ptarmigan.ee', :target => :_blank
+            %li= link_to 'Ptarmigan Helsinki', 'http://ptarmigan.fi', :target => :_blank
+            %li= link_to 'Pixelache', 'http://pixelache.ac', :target => :_blank
+            %li= link_to 'Project Blood Team', 'http://bloodteam.com', :target => :_blank
+            %li= link_to 'Cenotaph', 'http://cenotaph.org', :target => :_blank
+            %li= link_to 'Lied Music', 'http://liedmusic.co.uk', :target => :_blank
+        .small-3.columns
+          %ul
+            %li= link_to 'Twitter', 'http://twitter.com/hyksos', :target => :_blank
+            %li= link_to 'RSS', 'http://feeds.feedburner.com/IcewhistleAll/'
+            %li= link_to 'GitHub', 'http://github.com/cenotaph', :target => :_blank
+            %li
+              %a{:href =>"#",  :"data-dropdown"=> "other_projects",  :class => "dropdown tiny"} Other projects
+              %ul#other_projects.f-dropdown{:"data-dropdown-content" => ""}
+                %li= link_to 'Tiib', 'http://tiib.net', :target => :_blank
+                %li= link_to 'Triple Canopy', 'http://canopycanopycanopy.com/', :target => :_blank
+                %li= link_to 'Supermarket Art Fair', 'http://supermarketartfair.com', :target => :_blank
+                %li= link_to 'Version', 'http://version.com', :target => :_blank
+            %li= link_to 'Email', ' john (@) ptarmigan (piste) (two-letter-country-code, either one that has a ptarmigan)'
+    :javascript
+      $(document).ready(function() {
+        #{yield :jquery}
+      });

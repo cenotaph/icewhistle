@@ -1,0 +1,7 @@
+.row
+  .small-3.columns.text-center
+    - if activity.image?
+      = image_tag activity.image.url(:midsize)
+  .small-9.columns.text-left
+    %h6.subheading= activity.title
+    .project_name= activity.source.humanize

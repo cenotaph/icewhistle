@@ -1,0 +1,30 @@
+<h1>Listing publications</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Format</th>
+    <th>Publisher</th>
+    <th>Date</th>
+    <th>Description</th>
+    <th>Major</th>
+  </tr>
+
+<% for publication in @publications %>
+  <tr>
+    <td><%=h publication.title %></td>
+    <td><%=h publication.format %></td>
+    <td><%=h publication.publisher %></td>
+    <td><%=h publication.date %></td>
+    <td><%=h publication.description %></td>
+    <td><%=h publication.major %></td>
+    <td><%= link_to 'Show', admin_publication_path(publication) %></td>
+    <td><%= link_to 'Edit', edit_admin_publication_path(publication) %></td>
+    <td><%= link_to 'Destroy', admin_publication_path(publication), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New publication', new_admin_publication_path %>

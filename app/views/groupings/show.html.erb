@@ -1,0 +1,12 @@
+<% title "Grouping" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @grouping.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_grouping_path(@grouping) %> |
+  <%= link_to "Destroy", @grouping, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", groupings_path %>
+</p>

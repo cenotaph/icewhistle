@@ -1,0 +1,24 @@
+.row
+  .small-10.columns
+    %h1 posts
+    = link_to 'New post', new_admin_post_path
+    =paginate @posts   
+.row
+  .small-12.columns
+    %table
+      %thead
+        %tr 
+          %th Title
+          %th Date
+          %th Actions
+      %tbody
+        - @posts.each do |post|
+          %tr
+            %td= post.title
+            %td= l post.created_at.to_date, :format => :long
+            %td.action
+              = link_to 'Show', post, :target => :_blank, :class => [:button, :round, :tiny]
+              = link_to 'Edit', edit_admin_post_path(post), :class => [:button, :round, :tiny]
+              = link_to 'Destroy', [:admin, post], :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => [:button, :round, :tiny]
+.row
+  .small-10.columns= paginate @posts          

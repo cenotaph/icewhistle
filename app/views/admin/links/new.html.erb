@@ -1,0 +1,28 @@
+<h1>New links</h1>
+
+
+<% form_for([:admin, @link]) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Description</b><br />
+    <%= f.text_area :description %>
+  </p>
+  <p><b>sort order</b><br />
+    <%= f.text_field :sortorder %>
+</p>
+  <p>
+    <b>Url</b><br />
+    <%= f.text_field :url %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Back', admin_links_path %>
