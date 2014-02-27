@@ -10,12 +10,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
   
-  def new
-    @post = Post.new
-    render :layout => 'admin'
-    # @blogimages = Blogimage.find(:all, :order => 'created_at DESC', :limit => 15)
-  end
-  
+
   def create
     @post = Post.new(params[:post])
     if @post.save
@@ -26,10 +21,7 @@ class PostsController < ApplicationController
     end
   end
   
-  def edit
-    @post = Post.find(params[:id])
-    # @blogimages = Blogimage.find(:all)
-  end
+
   
   def update
     @post = Post.find(params[:id])
