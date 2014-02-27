@@ -8,6 +8,8 @@
     .small-2.columns &nbsp;
     .small-8.columns.text-justify
       = raw post.body
+      - if post.extended
+        = link_to 'Read more', post, :class => [:button, :tiny]
     .small-2.columns &nbsp;  
     
 - elsif post.image?
@@ -18,7 +20,10 @@
 
       .row
         .small-12.columns.text-justify
-          .readmore= raw post.body      
+          .readmore
+            = raw post.body      
+            - if post.extended
+              = link_to 'Read more', post, :class => [:button, :tiny]
 -else
   .row
     .large-4.columns.text-center
@@ -35,7 +40,8 @@
         .small-12.columns.text-justify.readmore
           = raw post.body
           -#%p= raw Nokogiri::HTML.parse(post.body).css('p').first.text
-          -# = link_to 'Read more', post, :class => [:button, :tiny, :expand]
+          - if post.extended
+            = link_to 'Read more', post, :class => [:button, :tiny]
 
 
 

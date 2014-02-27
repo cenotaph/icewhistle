@@ -9,12 +9,12 @@
 
   - if @post.photos.empty?
     .row
-      .small-6.columns.text-left.post_body
+      .small-7.columns.text-left.post_body
         = raw @post.body
         - if @post.extended?
           %br/
           = raw @post.extended
-      .small-6.columns.sidebar= render :partial => 'post_sidebar'
+      .small-5.columns.sidebar= render :partial => 'post_sidebar'
         
 
   - elsif @post.image?
@@ -23,12 +23,12 @@
         = image_tag @post.image.url(:main)
 
     .row
-      .small-6.columns.text-left.post_body
+      .small-7.columns.text-left.post_body
         = raw @post.body      
         - if @post.extended?
           %br/
           = raw @post.extended
-      .small-6.columns.sidebar= render :partial => 'post_sidebar'
+      .small-5.columns.sidebar= render :partial => 'post_sidebar'
   -else
     .row
       .large-12.columns.text-left

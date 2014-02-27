@@ -67,11 +67,11 @@
           .row
             .small-12.columns
               - if flash[:error]
-                .error= flash[:error]
+                .error= raw flash[:error]
               - if flash[:notice]
-                .error= flash[:notice]
+                .error= raw flash[:notice]
               - if flash[:alert]
-                .error= flash[:alert]              
+                .error= raw flash[:alert]              
       .footer-shadow= yield
     %footer#main_footer
       .row
