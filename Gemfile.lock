@@ -489,6 +489,7 @@ DEPENDENCIES
   haml-rails
   handles_sortable_columns
   has_scope
+  hpricot
   html2haml
   http_accept_language
   hub
