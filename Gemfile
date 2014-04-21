@@ -15,6 +15,10 @@ gem 'therubyracer', :group => :production
 
 gem 'acts-as-taggable-on'
 gem 'cancan'
+gem 'capistrano', '~> 3.1.0'
+gem 'capistrano-rails', '~> 1.1.0'
+gem 'capistrano-rvm'
+gem 'capistrano-bundler'
 gem 'carrierwave'
 gem 'closure_tree'
 gem 'ckeditor', github: 'galetahub/ckeditor', branch: 'master'
