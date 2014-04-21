@@ -10,7 +10,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
   
-
+  def new
+    redirect_to new_admin_post_path
+  end
+  
   def create
     @post = Post.new(params[:post])
     if @post.save
