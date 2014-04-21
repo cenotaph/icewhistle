@@ -8,7 +8,7 @@ class Admin::PostsController < Admin::BaseController
   protected
   
   def permitted_params
-    params.permit(:post => [:title, :body, :tag_list, :image, :extended, photos_attributes: [:id, :filename]])
+    params.permit(:post => [:title, :body, :tag_list, :image, :extended, :published, photos_attributes: [:id, :filename]])
   end
   
 end
