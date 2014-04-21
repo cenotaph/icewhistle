@@ -39,7 +39,7 @@
     %div{:"data-magellan-destination" => 'recent_posts'} &nbsp;
 
 
-- Cash.where(:source => "blindness").where("image_width > 760").limit(1).each do |bp|
+- Cash.where(:source => "blindness").where("image_width > 760").order('created_at DESC').limit(1).each do |bp|
   #blindness_container.blindness_wrapper{:"data-magellan-destination" => "blindness"}= render :partial => 'blindness_image', :locals => {:post => bp}
 
 

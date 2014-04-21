@@ -272,19 +272,23 @@ form {
 }
 
 .bookmarks {
+  font-weight: bold;
   li {
     float: left;
     margin-right: 10px;
     list-style-type: none;
   }
   span.bookmark {
+    font-weight: 300;
     a {
       font-size: 16px;
     }
     margin-right: 10px;
     margin-left: 10px;
     line-height: 23px;
-    
+    &.first {
+      margin-left: 0px;
+    }
   }
 }
 .blindness_wrapper {

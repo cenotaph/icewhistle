@@ -19,6 +19,6 @@
             %td.action
               = link_to 'Show', post, :target => :_blank, :class => [:button, :round, :tiny]
               = link_to 'Edit', edit_admin_post_path(post), :class => [:button, :round, :tiny]
-              = link_to 'Destroy', [:admin, post], :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => [:button, :round, :tiny]
+              = link_to 'Destroy', [:admin, post], :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => [:button, :round, :tiny, :alert]
 .row
   .small-10.columns= paginate @posts          

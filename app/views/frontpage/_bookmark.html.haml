@@ -1,7 +1,10 @@
 .row.bookmarks
   .small-2.columns 
     %h4.subheading Recently bookmarked:
-  .small-10.columns.text-left
-    = raw link[0..6].map{|x| "<span class='bookmark'><a href=\"#{x.link_url}\">#{x.title}</a></span>" }.join(' / ')
+    = link_to "All bookmarks", 'http://icewhistle.postach.io/',:class => [:button, :tiny]
+  .small-10.columns.text-left.bookmark_list
+    %span.bookmark.first= link_to raw(link[0].title), link[0].link_url
+    = " / "
+    = raw link[1..8].map{|x| "<span class='bookmark'><a href=\"#{x.link_url}\">#{x.title}</a></span>" }.join(' / ')
 
 
