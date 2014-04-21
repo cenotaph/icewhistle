@@ -266,7 +266,19 @@ form {
     list-style-type: none;
   }
 }
+a.readmore-js-toggle {
+  display: inline !important;
+  width: inherit !important;
+ 
+}
 
+.full_width_post a.readmore-js-toggle {
+   margin-left: 15px;
+}
+.readmore {
+  margin-bottom: 15px;
+  
+}
 #twitter-widget-0 {
   margin-top: 8px;
 }
