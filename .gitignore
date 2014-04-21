@@ -47,4 +47,6 @@ pickle-email-*.html
 /docless c
 /test/*
 .svn
-
+Capfile
+config/deploy/*
+*.sql
