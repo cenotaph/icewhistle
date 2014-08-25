@@ -1,27 +1,28 @@
-- meta :title =>  "Icewhistle", :description => "Posts on John W. Fail's icewhistle.com"
-.row
-  .small-2.columns
-    %h3 Posts
-  .small-4.columns
-    = form_tag(search_index_path, :method => :get) do
-      = text_field_tag("search", params[:search].blank? ? 'Search...' : params[:search], :size => 10)
+.posts
+  - meta :title =>  "Icewhistle", :description => "Posts on John W. Fail's icewhistle.com"
+  .row
+    .small-2.columns
+      %h3 Posts
+    .small-4.columns
+      = form_tag(search_index_path, :method => :get) do
+        = text_field_tag("search", params[:search].blank? ? 'Search...' : params[:search], :size => 10)
   
-  .small-6.columns.text-center
-    = paginate @posts
+    .small-6.columns.text-center
+      = paginate @posts
 
     
-- @posts.in_groups_of(3).each do |group|
-  .row.post_row{:"data-equalizer" => ""}
-    - group.each do |post|
-      - next if post.nil?
-      .small-4.columns= render :partial => 'posts/post_excerpt', :locals => {:post => post}
+  - @posts.in_groups_of(3).each do |group|
+    .row.post_row{:"data-equalizer" => ""}
+      - group.each do |post|
+        - next if post.nil?
+        .small-4.columns= render :partial => 'posts/post_excerpt', :locals => {:post => post}
       
-.row
-  .small-4.columns &nbsp;
-  .small-4.columns.text-center
-    = paginate @posts
-  .small-4.columns &nbsp;   
+  .row
+    .small-4.columns &nbsp;
+    .small-4.columns.text-center
+      = paginate @posts
+    .small-4.columns &nbsp;   
   
-= content_for :jquery do
-  :plain
-    $("input#search").clearField();
+  = content_for :jquery do
+    :plain
+      $("input#search").clearField();

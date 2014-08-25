@@ -360,10 +360,25 @@ a.readmore-js-toggle {
   }
 }
 
+#recent_posts, #less_recent, .posts {
+  p {
+
+   font-size: 1rem;
+   line-height: 1.5rem;
+   font-weight: 300;
+  }
+}
+
 .full_width_post {
   padding: 4em 0px;
   .date {
     margin-bottom: 15px;
+  }
+  p {
+
+   font-size: 1rem;
+   line-height: 1.5rem;
+   font-weight: 300;
   }
 }
   
@@ -440,10 +455,12 @@ medium.date {
   display: block;
 }
 .post {
+  
   .sidebar {
     border-left: 1px solid #999;
     padding-left: 25px;
   }
+
 }
 
 .medium_text {
@@ -470,10 +487,17 @@ medium.date {
 .post_body, .crumble_body {
   margin-top: 15px;
   font-family: inherit;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.3;
   margin-bottom: 1.25rem;
+
+  p {
+
+   font-size: 1rem;
+   line-height: 1.5rem;
+   font-weight: 300;
+  }
   text-rendering: optimizeLegibility;
 }
 
