@@ -10,7 +10,7 @@
       - group.each do |related|
         - next if related.nil?
         .small-4.columns{:"data-equalizer-watch" => ""}
-          .related_title= link_to related.title, related
+          .related_title= link_to raw(related.title), related
           - if related.image? && related.photos.empty?
             = image_tag related.image.url(:midsize)
           - elsif !related.photos.empty?

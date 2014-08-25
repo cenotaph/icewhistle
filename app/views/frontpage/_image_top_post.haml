@@ -1,6 +1,6 @@
 .row
   .small-12.columns.text-center
-    %h3.subheading= link_to post.title, post
+    %h3.subheading= link_to raw(post.title), post
     
 - if post.image? && post.photos.empty?
   .row

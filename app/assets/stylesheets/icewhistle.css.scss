@@ -527,6 +527,17 @@ medium.date {
   }
 }
 
+.prev_next {
+  h6 { float: left;
+  }
+  .link {
+    float: left;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+  }
+}
+
 .crumble {
  
   float: left;

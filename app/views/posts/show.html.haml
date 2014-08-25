@@ -3,7 +3,7 @@
 .post
   .row
     .columns.text-left
-      %h1= @post.title
+      %h1= raw @post.title
       %em
         %medium= "posted: " + l(@post.updated_at, :format => :long   )
 
@@ -54,6 +54,19 @@
           = raw @post.extended
       .small-4.small-offset-1.columns.sidebar{:"data-equalizer-watch" => ""}= render :partial => 'post_sidebar'
 
-
+  .row.prev_next
+    .small-5.columns
+      - unless @post.previous_post.nil?
+        %h6 Previous post:
+        .link
+          = link_to @post.previous_post.title, @post.previous_post
+          .date= @post.previous_post.created_at.strftime('%d %B %Y')
+        
+    .small-5.columns.small-offset-2.text-right
+      - unless @post.next_post.nil?
+        %h6 Next post:
+        .link
+          = link_to @post.next_post.title, @post.next_post
+          .date= @post.next_post.created_at.strftime('%d %B %Y')
   %br{:clear => 'all'}
     

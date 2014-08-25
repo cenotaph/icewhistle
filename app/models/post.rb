@@ -25,6 +25,14 @@ class Post < ActiveRecord::Base
     title
   end
   
+  def previous_post
+    Post.where(["id < ?", id]).published.last
+  end
+
+  def next_post
+    Post.where(["id > ?", id]).published.first
+  end
+  
   def related
     out = []
     tags.each do |tag|
