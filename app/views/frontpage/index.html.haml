@@ -44,7 +44,8 @@
 #less_recent.row{:"data-equalizer" => "", :"data-magellan-destination" => "less_recent"}
   - @posts[4..5].each do |post|
     .large-6.columns{:"data-equalizer-watch" => ""}= render :partial => 'title_top_post', :locals => {:post => post}
-    
+  .columns.text-center
+    %h6= link_to 'Older posts', posts_path(:page => 2)
 %div{:style => 'background-color: #F2F27C'}= render :partial => 'bookmark', :locals => {:link => Cash.where(:source => 'bookmarks').order('created_at DESC').limit(10) }
 
 #disclaimer

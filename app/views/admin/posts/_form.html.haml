@@ -11,13 +11,15 @@
   
   .row
     .small-5.columns= f.input :image
+  .row
+    = f.fields_for :photos do |ff|
+
+      - unless ff.object.filename.blank?
+        = image_tag ff.object.filename.url(:midsize)
+      = ff.input :filename
+      = ff.link_to_remove 'Remove this'
   
-  = f.fields_for :photos do |ff|
-    - unless ff.object.filename.blank?
-      = image_tag ff.object.filename.url(:midsize)
-    = ff.input :filename
-  
-  = f.link_to_add 'add one or more images', :photos
+    = f.link_to_add 'add one or more images', :photos
   .row
     .small-6.columns= f.input :published
       
