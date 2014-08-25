@@ -41,6 +41,7 @@ Icewhistle::Application.routes.draw do
   resources :search
   namespace :admin do 
     resources :crumbles
+    resources :cashes
     resources :schools
     resources :jobs
     resources :links

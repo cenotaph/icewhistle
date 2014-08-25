@@ -2,7 +2,7 @@ class Cash < ActiveRecord::Base
   mount_uploader :image, ImageUploader
   before_save :update_image_attributes
 
-  
+  scope :visible, -> { where(hidden: false)}
   def update_image_attributes
     if image.present?
       self.image_content_type = image.file.content_type

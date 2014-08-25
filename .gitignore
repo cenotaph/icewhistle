@@ -48,5 +48,6 @@ pickle-email-*.html
 /test/*
 .svn
 Capfile
+sync_db
 config/deploy/*
 *.sql

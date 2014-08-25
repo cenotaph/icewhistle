@@ -1,0 +1,29 @@
+.row
+  .small-10.columns
+    %h2 cached items
+
+.row
+  .columns
+    %p Here you can modify/hide/delete certain items in the cache.
+    
+.row
+  = paginate @cashes
+  %table
+    %thead
+      %th Type
+      %th Title
+      %th Actions
+    %tbody
+      - @cashes.each do |cash|
+        %tr
+          %td= cash.source
+          %td
+            = raw cash.title
+            - if cash.hidden?
+              %p
+                %i HIDDEN
+          %td.actions
+            = link_to 'Edit', edit_admin_cash_path(cash), :class => [:button, :round, :tiny]
+            = link_to 'Destroy', [:admin, cash] , :method => :delete, :data => {:confirm => 'Are you sure? This may reappear in the future'  }, :class => [:button, :round, :alert, :tiny]
+
+.row= paginate @cashes

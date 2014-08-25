@@ -20,7 +20,7 @@
     .columns.text-center
       %h2 Projects: news and events
     .activities_front
-      - Cash.where("source = 'pixelache' or source = 'ptarmigan'").order("cashes.order DESC").limit(6).each do |activity|
+      - Cash.visible.where("source = 'pixelache' or source = 'ptarmigan'").order("cashes.order DESC").limit(6).each do |activity|
         = link_to activity.link_url, :target => :_blank do
           .small-4.columns.item= render :partial => 'activity_feed', :locals => {:activity => activity}
               
@@ -37,7 +37,7 @@
       %div{:"data-magellan-destination" => 'recent_posts'} &nbsp;
 
 
-- Cash.where(:source => "blindness").where("image_width > 760").order('created_at DESC').limit(1).each do |bp|
+- Cash.visible.where(:source => "blindness").where("image_width > 760").order('created_at DESC').limit(1).each do |bp|
   #blindness_container.blindness_wrapper{:"data-magellan-destination" => "blindness"}= render :partial => 'blindness_image', :locals => {:post => bp}
 
 

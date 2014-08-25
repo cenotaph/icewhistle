@@ -1,0 +1,23 @@
+.row
+  .small-12.columns 
+    %h2 Edit cached item
+    
+  = semantic_form_for([:admin, @cash]) do |f|
+    .row
+      .columns.small-8= f.input :title
+    .row
+      .columns.small-8= f.input :link_url
+    .row
+      .columns.small-8= f.input :content
+    .row
+      .columns.small-8= f.input :order
+    .row
+      .columns.small-8
+        - unless f.object.image.blank?
+          = image_tag f.object.image.url(:small)
+        = f.input :image
+    .row
+      .columns.small-8= f.input :hidden
+    .row
+      .columns.small-8= f.submit 'Save'
+      

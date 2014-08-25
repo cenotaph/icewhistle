@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140209202912) do
+ActiveRecord::Schema.define(version: 20140825082741) do
 
   create_table "blogimages", force: true do |t|
     t.string   "name"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20140209202912) do
     t.integer  "image_width"
     t.integer  "image_height"
     t.string   "image_content_type"
+    t.boolean  "hidden",             default: false, null: false
   end
 
   create_table "categories", force: true do |t|
@@ -158,7 +159,7 @@ ActiveRecord::Schema.define(version: 20140209202912) do
     t.string   "enclosure_url"
     t.string   "enclosure_type"
     t.integer  "enclosure_length",   limit: 8
-    t.boolean  "published",                    null: false
+    t.boolean  "published",                    default: false
     t.string   "image"
     t.integer  "image_size"
     t.string   "image_content_type"

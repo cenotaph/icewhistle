@@ -10,7 +10,7 @@ module ApplicationHelper
     # require 'open-uri'
     out = Array.new
     now = Time.now.to_i
-    cached = Cash.where(:source => key)
+    cached = Cash.where(:source => key).visible
     cached_first = cached.first unless cached.empty?
     if cached.empty? 
 
@@ -194,7 +194,7 @@ module ApplicationHelper
   end
   
   def twitter_status
-    saved_tweet = Cash.where(:source => 'twitter')
+    saved_tweet = Cash.where(:source => 'twitter').visible
     last_tweet = saved_tweet.first unless saved_tweet.empty?
     now = Time.now.to_i
     if saved_tweet.empty?
