@@ -1,7 +1,9 @@
+.post_tags= raw format_tags(@post)      
+
 - unless @post.related.empty?
   .row
     .small-12.columns
-      %h3 Related posts:
+      %h4 Related posts:
   
   - @post.related.sort_by{|x| x.updated_at }.reverse[0..5].in_groups_of(3).each do |group|
     .row.related_posts{:"data-equalizer" => ""}
@@ -9,10 +11,12 @@
         - next if related.nil?
         .small-4.columns{:"data-equalizer-watch" => ""}
           .related_title= link_to related.title, related
-          - if related.image?
+          - if related.image? && related.photos.empty?
             = image_tag related.image.url(:midsize)
-          %medium= l related.created_at.to_date, :format => :long
-.post_tags= raw format_tags(@post)          
+          - elsif !related.photos.empty?
+            = image_tag related.photos.first.filename.url(:midsize)
+          %medium.date= l related.created_at.to_date, :format => :long
+    
 .share_this= share_this(@post)
 - if current_user
   = link_to 'edit this post', edit_post_path(@post)

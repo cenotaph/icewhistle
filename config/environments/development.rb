@@ -33,13 +33,13 @@ Icewhistle::Application.configure do
   #   Bullet.rails_logger = true
   #   Bullet.disable_browser_cache = true
   # end 
-  # config.asset_host = Proc.new {|source| 
-  #   if source.starts_with?('/images') || source.starts_with?('/blogimage')
-  #     "http://icewhistle.com"
-  #   else
-  #     "http://localhost:3000"
-  #   end
-  #   }
+  config.asset_host = Proc.new {|source|
+    if source.starts_with?('/images') || source.starts_with?('/blogimage')
+      "http://icewhistle.com"
+    else
+      "http://localhost:3000"
+    end
+    }
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
 end

@@ -2,7 +2,7 @@
 .row{:"data-magellan-destination" => "top#{post.id.to_s}"}
   .small-12.columns.text-center
     %h2.subheader= link_to post.title, post
-    %medium= l post.updated_at, :format => :long   
+    %medium.date= l post.updated_at, :format => :long   
 - if post.photos.empty?
   .row
     .small-2.columns &nbsp;
@@ -14,9 +14,9 @@
     
 - elsif post.image?
   .row
-    .large-4.columns.text-center
+    .small-6.columns.text-center
       = image_tag post.image.url(:main)
-    .large-8.columns
+    .small-6.columns
 
       .row
         .small-12.columns.text-justify
@@ -26,7 +26,7 @@
               = link_to 'Read more', post, :class => [:button, :tiny]
 -else
   .row
-    .large-4.columns.text-center
+    .small-6.columns.text-center
       - if post.photos.size == 1
         = image_tag post.photos.first.filename.url(:main)
       - elsif post.photos.size > 1
@@ -34,7 +34,7 @@
           - post.photos.each do |p|
             %li
               = image_tag p.filename.url(:main)  
-    .large-8.columns
+    .small-6.columns
 
       .row
         .small-12.columns.text-justify.readmore

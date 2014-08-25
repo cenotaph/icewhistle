@@ -33,7 +33,7 @@ p {
 }
 
 body {
-  background-color: #FDFFFD;
+  background-color: #FFF;
 
   font-family: Helvetica, Verdana, Arial, sans-serif;
   font-size: 10pt;
@@ -127,11 +127,13 @@ img {
   }
 }
 #activity_front {
-  background: radial-gradient(circle, #C7D67E, #3C5A76) repeat scroll 0% 0% transparent; 
-  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#C7D67E), to(#3C5A76)); 
-  background: -webkit-radial-gradient(circle, #C7D67E, #F7F7F7); 
-  background: -moz-radial-gradient(circle, #C7D67E, #F7F7F7); 
-  background: -ms-radial-gradient(circle, #C7D67E, #F7F7F7); 
+//  background: radial-gradient(circle, #C7D67E, #3C5A76) repeat scroll 0% 0% transparent;
+//  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#C7D67E), to(#3C5A76));
+//  background: -webkit-radial-gradient(circle, #C7D67E, #F7F7F7);
+//  background: -moz-radial-gradient(circle, #C7D67E, #F7F7F7);
+//  background: -ms-radial-gradient(circle, #C7D67E, #F7F7F7);
+  background-color: #f5f2ed;
+   border-bottom: 1px solid #9BBC06;
   h6 {
     margin-bottom: 0px;
     line-height: 1.1;
@@ -148,7 +150,7 @@ img {
   width: 100%;
   border-bottom: 1px dotted #9BBC06;
   position: fixed;
-  background-color: #FDFFFD;
+  background-color: #FFF;
   padding-bottom: 5px;
   z-index: 99;
   h1 {
@@ -219,9 +221,9 @@ img {
 main {
   padding:  0px;
   width: 100%;
-  background: #f5f2ed;  
+  background: #FFF;  
   .footer-shadow {
-    background: #f5f2ed;  
+    background: #FFF;  
     z-index: 3;
     position: relative;
     -webkit-box-shadow: 0 0 25px -25px rgba(20,20,30,0.5);
@@ -251,12 +253,38 @@ input#search {
   height: 27px;
   margin-bottom:0px;
 }
-ul.activities_front {
-  li {
+.activities_front {
+
+  h4, h6 {
+    margin-top: 0px;
+  }
+  .item {
+
+    float: left;
+    min-height: 150px;
     margin-bottom: 15px;
-    list-style-type: none;
-    h4, h6 {
-      margin-top: 0px;
+    .activity_image {
+      float: left;
+
+    }
+    .activity_info {
+      float: left;
+      width: 50%;
+      padding-left: 10px;
+    }
+    .activity_info, .activity_info_noimg {
+      h6 {
+        font-size: 1.4em;
+      }
+      .project_name {
+        margin: 5px 0px;
+        font-size: 1.2em;
+      }
+      medium {
+        font-size: 0.9em;
+        margin: 5px 0px;
+        color: #666;
+      }
     }
   }
 }
@@ -334,6 +362,9 @@ a.readmore-js-toggle {
 
 .full_width_post {
   padding: 4em 0px;
+  .date {
+    margin-bottom: 15px;
+  }
 }
   
 
@@ -486,6 +517,9 @@ medium.date {
 
 .related_posts {
   margin-bottom: 20px !important;
+  .date {
+    margin: 5px 0px;
+  }
   .related_title {
     font-size: 16px;
     line-height: 18px;

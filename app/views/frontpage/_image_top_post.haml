@@ -1,3 +1,7 @@
+.row
+  .small-12.columns.text-center
+    %h3.subheading= link_to post.title, post
+    
 - if post.image? && post.photos.empty?
   .row
     .small-12.columns
@@ -12,9 +16,7 @@
           - post.photos.each do |p|
             %li
               = image_tag p.filename.url(:main) 
-.row
-  .small-12.columns.text-center
-    %h3.subheading= link_to post.title, post
+
     %medium= l post.updated_at, :format => :long    
 .row          
   .small-12.columns.text-center

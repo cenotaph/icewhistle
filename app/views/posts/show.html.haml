@@ -14,7 +14,7 @@
         - if @post.extended?
           %br/
           = raw @post.extended
-      .small-5.columns.sidebar= render :partial => 'post_sidebar'
+      .small-4.small-offset-1.columns.sidebar= render :partial => 'post_sidebar'
         
 
   - elsif @post.image?
@@ -28,7 +28,7 @@
         - if @post.extended?
           %br/
           = raw @post.extended
-      .small-5.columns.sidebar= render :partial => 'post_sidebar'
+      .small-4.small-offset-1.columns.sidebar= render :partial => 'post_sidebar'
   -else
     .row
       .large-12.columns.text-left
@@ -52,7 +52,7 @@
         - if @post.extended?
           %br/
           = raw @post.extended
-      .small-5.columns.sidebar{:"data-equalizer-watch" => ""}= render :partial => 'post_sidebar'
+      .small-4.small-offset-1.columns.sidebar{:"data-equalizer-watch" => ""}= render :partial => 'post_sidebar'
 
 
   %br{:clear => 'all'}

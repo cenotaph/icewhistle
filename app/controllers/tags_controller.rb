@@ -4,7 +4,7 @@ class TagsController < ApplicationController
   # GET /tags/1
   # GET /tags/1.xml
   def show
-    @posts = Post.tagged_with(params[:id])
+    @posts = Post.published.tagged_with(params[:id])
     @posts += Crumble.tagged_with(params[:id])
     if @posts.nil?
         @posts = []

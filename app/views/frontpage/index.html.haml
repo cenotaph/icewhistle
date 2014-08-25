@@ -3,7 +3,7 @@
     .small-12.columns
       %dl.sub-nav
         %dd.first.active{:"data-magellan-arrival" => "top#{@posts.first.id.to_s}"}= link_to @posts.first.title, "#top#{@posts.first.id.to_s}"
-        %dd{:"data-magellan-arrival" => "activities"}= link_to 'Events/archive', "#activity_front"
+        %dd{:"data-magellan-arrival" => "activities"}= link_to 'Project news and events', "#activity_front"
         %dd{:"data-magellan-arrival" => "recent_posts"}= link_to 'Recent posts', "#recent_posts"
         %dd{:"data-magellan-arrival" => "blindness"}= link_to 'Blindness', '#blindness_container'
         %dd{:"data-magellan-arrival" => "less_recent"}= link_to 'Less recent posts', '#less_recent'
@@ -15,28 +15,26 @@
 %div#tweet_front= render :partial => 'tweet'
 
 %a{:name => "activities"}
-#activity_front.row
-  .small-8.columns
-    .row
-      .small-8.columns.text-center
-        %h2 Recent and upcoming
-    .row
-      .small-8.columns.center
-        %ul.activities_front
-          - Cash.where("source = 'pixelache' or source = 'ptarmigan'").order("cashes.order DESC").limit(6).each do |activity|
-            = link_to activity.link_url, :target => :_blank do
-              %li= render :partial => 'activity_feed', :locals => {:activity => activity}
+#activity_front
+  .row
+    .columns.text-center
+      %h2 Projects: news and events
+    .activities_front
+      - Cash.where("source = 'pixelache' or source = 'ptarmigan'").order("cashes.order DESC").limit(6).each do |activity|
+        = link_to activity.link_url, :target => :_blank do
+          .small-4.columns.item= render :partial => 'activity_feed', :locals => {:activity => activity}
               
-      .small-2.columns &nbsp;
       
-  .small-4.columns.panel
-    = render :partial => 'crumbles', :locals => {:crumbles => @crumbles}
-  %div{:"data-magellan-destination" => 'activities'} &nbsp;
+    / .small-4.columns.panel
+    /   = render :partial => 'crumbles', :locals => {:crumbles => @crumbles}
+    %div{:"data-magellan-destination" => 'activities'} &nbsp;
 
 #recent_posts.row{:"data-equalizer" => ""}
-  - @posts[1..3].each do |post|
-    .large-4.columns{:"data-equalizer-watch" => ""}= render :partial => 'image_top_post', :locals => {:post => post}
-    %div{:"data-magellan-destination" => 'recent_posts'} &nbsp;
+  .columns.text-center
+    %h2 Recent posts
+    - @posts[1..3].each do |post|
+      .large-4.columns{:"data-equalizer-watch" => ""}= render :partial => 'image_top_post', :locals => {:post => post}
+      %div{:"data-magellan-destination" => 'recent_posts'} &nbsp;
 
 
 - Cash.where(:source => "blindness").where("image_width > 760").order('created_at DESC').limit(1).each do |bp|
@@ -47,14 +45,14 @@
   - @posts[4..5].each do |post|
     .large-6.columns{:"data-equalizer-watch" => ""}= render :partial => 'title_top_post', :locals => {:post => post}
     
-%div{:style => 'background-color: #F2F27C'}= render :partial => 'bookmark', :locals => {:link => Cash.where(:source => 'bookmarks').order('created_at DESC').limit(7) }
+%div{:style => 'background-color: #F2F27C'}= render :partial => 'bookmark', :locals => {:link => Cash.where(:source => 'bookmarks').order('created_at DESC').limit(10) }
 
 #disclaimer
   .row
     .small-9.columns
-      %medium Icewhistle.com is the website of John W. Fail since 2007. 
-      %br/
-      %small Content on icewhistle.com does not necessarily represent the viewpoints of Ptarmigan, Piknik Frequency aka Pixelache, or any other organisations. Contact via email link on site footer.
+      %p Icewhistle.com is the website of John W. Fail since 2007. 
+
+      %medium Content on icewhistle.com does not necessarily represent the viewpoints of Ptarmigan, Piknik Frequency aka Pixelache, or any other organisations. Contact via email link on site footer.
 = content_for :jquery do
   :plain
     $('#magellan a[href*=#]').on('click', function(event){     

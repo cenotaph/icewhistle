@@ -5,6 +5,6 @@
   .small-10.columns.text-left.bookmark_list
     %span.bookmark.first= link_to raw(link[0].title), link[0].link_url
     = " / "
-    = raw link[1..8].map{|x| "<span class='bookmark'><a href=\"#{x.link_url}\">#{x.title}</a></span>" }.join(' / ')
+    = raw link[1..9].map{|x| "<span class='bookmark'><a href=\"#{x.link_url}\">#{x.title}</a></span>" }.join(' / ')
 
 
