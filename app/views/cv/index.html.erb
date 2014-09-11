@@ -42,15 +42,15 @@ function showElementsByClass(classray) {
 <div id="section-half">
 <div id="cvleft">
 	projects<br>
-	<span id="proj_hide_control" class="controls"><a onclick="new Effect.Fade('proj_section');document.getElementById('proj_hide_control').style.display = 'none';document.getElementById('proj_show_control').style.display = 'inline';">hide</a></span>
-	<span id="proj_show_minor" class="controls"><a onclick="showElementsByClass(getElementsByClass('proj_minor'));document.getElementById('proj_hide_minor').style.display = 'inline';document.getElementById('proj_show_minor').style.display = 'none';">show all</a></span>
+	<span id="proj_hide_control" class="controls"><a onclick="$('#proj_section').fadeOut();document.getElementById('proj_hide_control').style.display = 'none';document.getElementById('proj_show_control').style.display = 'inline';">hide</a></span>
+	<span id="proj_show_minor" class="controls"><a onclick="$('#proj_section').fadeIn();showElementsByClass(getElementsByClass('proj_minor'));document.getElementById('proj_hide_minor').style.display = 'inline';document.getElementById('proj_show_minor').style.display = 'none';">show all</a></span>
  	<span id="proj_hide_minor" class="controls" style="display: none;"><a onclick="hideElementsByClass(getElementsByClass('proj_minor'));document.getElementById('proj_show_minor').style.display = 'inline';document.getElementById('proj_hide_minor').style.display = 'none';">hide minor</a></span></div>
 
 
 <div id="proj_section">
 <% for project in @projects %>
 <div id="project" <% if project.major == false %>class="proj_minor"<% end %>>
- <div id="dateleft-half">
+ <div class="dateleft-half">
 	<% if project.started == '' %>
 	  <em>Various dates</em>
 	<% else %>
@@ -114,7 +114,7 @@ function showElementsByClass(classray) {
 <% for job in @jobs %>
 
 <div id="job" <% if job.major == false %>class="job_minor"<% end %>>
- <div id="dateleft">
+ <div class="dateleft">
 
 	<%= job.started %> to
 	<%= job.finished %>
@@ -147,7 +147,7 @@ function showElementsByClass(classray) {
   <div id="skills_section">
 	<% for skill in @skill %>
   <div id="skill">
-	 <div id="dateleft">
+	 <div class="dateleft">
 	    <em><%= skill.skilltype %></em><br />
 	 </div>
 	 <div id="cvright">
@@ -169,7 +169,7 @@ function showElementsByClass(classray) {
   <div id="education_section">
 	<% for school in @schools %>
   <div id="job">
-	 <div id="dateleft">
+	 <div class="dateleft">
 	    <%= school.started %> - <%= school.finished %> 
 	 </div>
 	 <div id="cvright">

@@ -105,7 +105,7 @@ a {
 
 }
 
-#dateleft {
+.dateleft {
 	float: left;
 	margin-left: 80px;
 	width: 120px;
@@ -115,15 +115,13 @@ a {
 	margin-top: 15px;
 }
 
-#dateleft-half {
+.dateleft-half {
 	float: left;
-	margin-left: 15px;
 	width: 85px;
 	font-size: 8pt;
-  margin-right: 10px;
 	font-style: italic;
 	font-family: Helvetica, Verdana, Arial;
-	margin-top: 15px;
+	margin: 15px 0px;
 } 
 
 #cvright {
@@ -225,6 +223,7 @@ a {
 
 .controls {
   font-size: 7pt;
+  cursor: pointer;
  }
 
 #navtitle {
