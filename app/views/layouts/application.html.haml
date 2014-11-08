@@ -5,7 +5,7 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     -# %title= content_for?(:title) ? yield(:title) : "Icewhistle"
-    = metamagic
+    = metamagic site: "Icewhistle"
     %link{:href => 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin-ext', :rel => 'stylesheet', :type => 'text/css'}
     = stylesheet_link_tag    "application"
     = javascript_include_tag "vendor/modernizr" 
@@ -16,7 +16,7 @@
     :javascript
       stLight.options({publisher: "fec021ac-bd8c-4517-b7db-cd4a0d0ad212", doNotHash: false, doNotCopy: false, hashAddressBar: false});
       
-  %body
+  %body{:class => controller.controller_name}
     = javascript_include_tag "application"
     .new_header.fixed.contain-to-grid
       %nav.top-bar{:"data-topbar" => ""}

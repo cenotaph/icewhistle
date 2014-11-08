@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   
   def load_sidebars
-    @links = Link.find(:all, :order => 'sortorder, category_id, name')
+    # @links = Link.all.order(:sortorder, :category_id, :name)
     @news = Post.tagged_with('frontpage').order('created_at DESC').page(params[:page]).per(3)
   end
   

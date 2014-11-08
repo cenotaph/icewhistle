@@ -42,7 +42,9 @@ body {
 }
 
 #disclaimer {
-  padding-top: 30px;
+  padding: 1.2rem 0px 3rem 0px;
+  background-color: #EEE;
+  border-top: 1px dotted green;
 }
 .post_body p img {
   padding: 10px;
@@ -151,7 +153,7 @@ img {
   border-bottom: 1px dotted #9BBC06;
   position: fixed;
   background-color: #FFF;
-  padding-bottom: 5px;
+  padding: 7px 0px;
   z-index: 99;
   h1 {
     margin: 0px;
@@ -192,7 +194,7 @@ img {
   border-bottom: 1px solid #c7d67e;
   color: #c7d67e;
   padding: 0px;
-  top: 56px !important;
+  top: 64px !important;
   position: fixed;
   .row {
     padding: 0px;
@@ -217,6 +219,14 @@ img {
   }
 }
 
+body.frontpage {
+  main {
+    .footer-shadow {
+      padding-top: 0.2em;
+      padding-bottom: 0px;
+    }
+  }
+}
 
 main {
   padding:  0px;
@@ -230,7 +240,8 @@ main {
     -moz-box-shadow: 0 0 25px -25px rgba(20,20,30,0.5);
     box-shadow: 0 0 25px -25px rgba(20,20,30,0.5);
     margin-bottom: 18em;
-    padding-bottom: 3em;
+    padding-bottom: 2rem;
+    padding-top: 2.2em;
   }
 }
 li.scale {  
@@ -370,7 +381,7 @@ a.readmore-js-toggle {
 }
 
 .full_width_post {
-  padding: 4em 0px;
+  padding: 1.75em 0px;
   .date {
     margin-bottom: 15px;
   }
@@ -455,12 +466,17 @@ medium.date {
   display: block;
 }
 .post {
-  
+  h1 {
+    color: #333;
+  }
   .sidebar {
     border-left: 1px solid #999;
     padding-left: 25px;
   }
-
+  .metadata {
+    color: #555;
+    margin-bottom: 1em;
+  }
 }
 
 .medium_text {
@@ -547,10 +563,12 @@ medium.date {
   margin-bottom: 20px !important;
   .date {
     margin: 5px 0px;
+    color: #777;
   }
   .related_title {
     font-size: 16px;
-    line-height: 18px;
+    line-height: 20px;
+    font-weight: 300;
     margin-bottom: 5px;
   }
 }
