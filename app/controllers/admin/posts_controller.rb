@@ -5,6 +5,14 @@ class Admin::PostsController < Admin::BaseController
     @posts = Post.order("created_at DESC").page(params[:page]).per(30)
   end
   
+  def create
+    create! { admin_posts_path }
+  end
+  
+  def update
+    update! { admin_posts_path }
+  end
+  
   protected
   
   def permitted_params
