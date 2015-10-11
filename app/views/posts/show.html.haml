@@ -54,10 +54,22 @@
           = raw @post.extended
         - unless @post.videos.empty?
           - @post.videos.each do |video|
-            %video{src: video.url}
+            .videocontainer
+              %video{style: "width: 100%; height: 100%", width: "100%", height: "100%" , src: video.url}
+
           = content_for :jquery do
             :plain
-              $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});
+              $('video,audio').mediaelementplayer({defaultVideoWidth: "100%",
+                    flashStreamer: "rtmp://170.93.143.150/rtplive/000109f6004b00a6004af03676235daa",
+                            plugins: ['flash', 'silverlight'],
+                            alwaysShowControls: false,
+                            success: function (mediaElement, domObject) {
+                                if (mediaElement.pluginType == 'flash') {
+                                    mediaElement.play();
+                                }
+                            },
+                        }
+                );
               
       .small-4.small-offset-1.columns.sidebar{:"data-equalizer-watch" => ""}= render :partial => 'post_sidebar'
 
