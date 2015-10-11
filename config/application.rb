@@ -29,6 +29,7 @@ module Icewhistle
     # you must remove the Active Record framework.
     # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
     config.action_mailer.delivery_method = :smtp
+    config.active_record.raise_in_transactional_callbacks = true
     config.action_mailer.smtp_settings = {
       :address => 'mail.cenotaph.org',
       :port => 587,
@@ -42,7 +43,7 @@ module Icewhistle
   config.action_mailer.perform_deliveries = true
   config.assets.enabled = true
   # config.action_mailer.default_charset = 'utf-8'
-  
+
   config.assets.precompile += %w(soundmanager2.swf soundmanager2_flash9.swf)
     # Activate observers that should always be running
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer

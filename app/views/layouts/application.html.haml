@@ -18,7 +18,7 @@
       
   %body{:class => controller.controller_name}
     = javascript_include_tag "application"
-    .new_header.fixed.contain-to-grid
+    .new_header.fixed
       %nav.top-bar{:"data-topbar" => ""}
         %ul.title-area
           %li.name
@@ -72,7 +72,8 @@
                 .error= raw flash[:notice]
               - if flash[:alert]
                 .error= raw flash[:alert]              
-      .footer-shadow= yield
+      .footer-shadow
+        = yield
     %footer#main_footer
       .row
         .small-3.columns

@@ -4,15 +4,16 @@ class Post < ActiveRecord::Base
 
   acts_as_taggable_on :tags
   extend FriendlyId
-  friendly_id :title, :use => [:finders, :slugged]
+  friendly_id :title, :use => [:history, :slugged, :finders]
   has_many :photos, as: :item
-    
+  has_many :videos, as: :item
   mount_uploader :image, ImageUploader
   before_save :update_image_attributes
+  validates_presence_of :title, :body
   
   scope :published, -> () { where(published: true) }    
   accepts_nested_attributes_for :photos, :reject_if => proc {|x| x['filename'].blank? }
-  
+  accepts_nested_attributes_for :videos, :reject_if => proc {|x| x['url'].blank? }
   def fulltext
   	if self.extended.blank?
 		  return self.body
@@ -42,7 +43,7 @@ class Post < ActiveRecord::Base
   end
   
   def update_image_attributes
-    if image.present?
+    if image.present? && image_changed?
       if image.file.exists?
         self.image_content_type = image.file.content_type
         self.image_size = image.file.size

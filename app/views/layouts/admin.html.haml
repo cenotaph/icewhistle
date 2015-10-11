@@ -5,7 +5,8 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %title= content_for?(:title) ? yield(:title) : "Icewhistle"
     %link{:href => 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin-ext', :rel => 'stylesheet', :type => 'text/css'}
-    = stylesheet_link_tag    "application"
+    = stylesheet_link_tag  :application
+    = stylesheet_link_tag  :cms
     = javascript_include_tag "vendor/modernizr" 
     = csrf_meta_tags 
   %body

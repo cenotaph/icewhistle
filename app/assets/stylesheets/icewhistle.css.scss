@@ -308,11 +308,11 @@ form {
 a.readmore-js-toggle {
   display: inline !important;
   width: inherit !important;
- 
+  margin-left: 0;
 }
 
 .full_width_post a.readmore-js-toggle {
-   margin-left: 15px;
+   margin-left: 0px;
 }
 .readmore {
   margin-bottom: 15px;
@@ -371,6 +371,10 @@ a.readmore-js-toggle {
   }
 }
 
+.post_content {
+  margin-top: 1.5rem;
+}
+
 #recent_posts, #less_recent, .posts {
   p {
 
@@ -381,7 +385,7 @@ a.readmore-js-toggle {
 }
 
 .full_width_post {
-  padding: 1.75em 0px;
+  padding: 0 0 1.75em 0px;
   .date {
     margin-bottom: 15px;
   }
@@ -627,27 +631,30 @@ li.side_title  {
 	margin-right: 10px;
 }
 
+.twitter_column {
+  padding-top: 0.5rem;
+}
+
+.post_with_topspace {
+  margin-top: 1.5rem;
+}
+
+a.twitter-follow-button {
+  border: 1px solid #9BBC06;
+  background-color: white;
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+}
 div.input {
   clear: both;
   padding-top: 5px;     
 }
-div.input label {
-        float: left;
-  width: 100px;
-  text-align: right;
-        margin-right: 10px;
-}
+
 
 div.row {
   padding-top: 5px;
  }
 
-div.row label {
-  float: left;
-  width: 100px;
-  text-align: right;
-        margin-right: 10px;
-  }
 
 div.input .formw {
   float: right;

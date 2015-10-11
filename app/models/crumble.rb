@@ -1,7 +1,7 @@
 class Crumble < ActiveRecord::Base
   require 'carrierwave/orm/activerecord'
   extend FriendlyId
-  friendly_id :title, :use => [:finders, :slugged]
+  friendly_id :title, :use => [:finders, :history, :slugged]
  
   mount_uploader :icon, ImageUploader
   

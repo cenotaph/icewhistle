@@ -7,16 +7,16 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  storage :aws
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     if model.class == Crumble
-      "crumble_files/#{model.id}/#{mounted_as}"
+      "#{Rails.env.to_s}/crumble_files/#{model.id}/#{mounted_as}"
     else
-      "images/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+      "#{Rails.env.to_s}/images/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
     end
   end
 

@@ -1,4 +1,35 @@
 namespace :icewhistle do
+  
+  desc 'migrate slugs'
+  task :migrate_slugs => :environment do
+    Post.all.each.each {|x| x.save(validate: false) }
+    Crumble.all.each {|x| x.save(validate: false) }
+  end
+  
+  
+  desc 'migrate to s3'
+  task :migrate_to_s3 => :environment do
+    Post.where("image is not null").each do |pp|
+      pp.remote_image_url = ("http://icewhistle.com/" + pp.image.store_dir + "/" + pp[:image]).gsub(/development\//, '').gsub(/production\//, '')
+      pp.save
+    end
+    Crumble.all.each do |c|
+      unless c.icon.blank?
+        c.remote_icon_url = ("http://icewhistle.com/" + c.icon.store_dir + "/" + c[:icon]).gsub(/development\//, '').gsub(/production\//, '')
+      end
+      c.remote_attachment_url = ("http://icewhistle.com/" + c.attachment.store_dir + "/" + c[:attachment]).gsub(/development\//, '').gsub(/production\//, '')
+      c.save
+    end
+    Ckeditor::Picture.all.each do |ck|
+      ck.remote_data_url = ("http://icewhistle.com/" + ck.data.store_dir + "/" + ck[:data_file_name]).gsub(/development\//, '').gsub(/production\//, '')
+      ck.save
+    end
+    Photo.all.each do |pp|
+      pp.remote_filename_url = ("http://icewhistle.com/" + pp.filename.store_dir + "/" + pp[:filename]).gsub(/development\//, '').gsub(/production\//, '')
+      pp.save
+    end
+  end
+  
   desc 'Get cached content'
   task :get_cache => :environment do
     now = Time.now.to_i

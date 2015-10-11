@@ -25,6 +25,8 @@ capybara-*.html
 /vendor/bundle
 /log/*
 /tmp/*
+config/secrets.yml
+README.rdoc
 /db/*.sqlite3
 /public/system/*
 .gitignorecat
@@ -37,8 +39,10 @@ pickle-email-*.html
 /config/database.yml
 /config/deploy.rb
 /public/ckeditor_assets
+.keep
 /public/blogimage
 /public/images/*
+/public/uploads/*
 /public/assets
 /public/crumble_files
 /db/sphinx

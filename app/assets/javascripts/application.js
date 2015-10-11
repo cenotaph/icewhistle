@@ -5,5 +5,6 @@
 //= require readmore.min
 //= require jquery_nested_form
 //= require jquery.clearfield
-//= require soundmanager2
+//= require mediaelement_rails
+
 $(function(){ $(document).foundation( ); });

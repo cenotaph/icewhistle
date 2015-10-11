@@ -1,57 +1,76 @@
 
 .row{:"data-magellan-destination" => "top#{post.id.to_s}"}
-  .small-12.columns.text-center
+- if post.image?
+  - if post.image_width > 1200
+    = image_tag post.image.url
+  - else
+    .row    
+      .small-10.medium-7.columns.small-centered.post_with_topspace= image_tag post.image.url
+- elsif !post.photos.empty?
+  %ul{:"data-orbit" => ""}
+    - post.photos.each do |p|
+      %li
+        = image_tag p.filename.url
+.row    
+  .small-10.medium-7.columns.small-centered.post_content
     %h2.subheader= link_to raw(post.title), post
-    %medium.date= l post.updated_at, :format => :long   
-- if post.photos.empty?
-  .row
-    .small-2.columns &nbsp;
-    .small-8.columns.text-justify
-      = raw post.body
+    %medium.date= l post.updated_at, :format => :long
+    .post_body.text-justify.readmore
+      = raw post.body      
       - if post.extended
         = link_to 'Read more', post, :class => [:button, :tiny]
-    .small-2.columns &nbsp;  
-    
-- elsif post.image?
+- if post.videos.empty?
+  = content_for :jquery do
+    :plain
+      $('.readmore').readmore({
+        speed: 75,
+        moreLink: '<a style="margin-top: 10px" class="button tiny" href="#">Read more</a>',
+        lessLink: '<a class="button tiny" href="#">Close</a>',
+        maxHeight: 600
+        });
+- else
   .row
-    .small-6.columns.text-center
-      = image_tag post.image.url(:main)
-    .small-6.columns
+    .small-12.columns
+      - post.videos.each do |video|
+        %video{src: video.url}
+      = content_for :jquery do
+        :plain
+          $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});        
+/
+/ - if post.photos.empty?
+/   .row
+/     .small-2.columns &nbsp;
+/     .small-8.columns.text-justify
+/       = raw post.body
+/       - if post.extended
+/         = link_to 'Read more', post, :class => [:button, :tiny]
+/     .small-2.columns &nbsp;
+/
+/ - elsif post.image?
+/   = image_tag post.image.url(:wide)
+/   .row
+/     .small-6.columns
+/
+/       .row
+/         .small-12.columns.text-justify
+/
+/ -else
+/   .row
+/     .small-6.columns.text-center
+/       - if post.photos.size == 1
+/         = image_tag post.photos.first.filename.url(:main)
+/       - elsif post.photos.size > 1
 
-      .row
-        .small-12.columns.text-justify
-          .readmore
-            = raw post.body      
-            - if post.extended
-              = link_to 'Read more', post, :class => [:button, :tiny]
--else
-  .row
-    .small-6.columns.text-center
-      - if post.photos.size == 1
-        = image_tag post.photos.first.filename.url(:main)
-      - elsif post.photos.size > 1
-        %ul{:"data-orbit" => ""}
-          - post.photos.each do |p|
-            %li
-              = image_tag p.filename.url(:main)  
-    .small-6.columns
-
-      .row
-        .small-12.columns.text-justify.readmore
-          = raw post.body
-          -#%p= raw Nokogiri::HTML.parse(post.body).css('p').first.text
-          - if post.extended
-            = link_to 'Read more', post, :class => [:button, :tiny]
+/     .small-6.columns
+/
+/       .row
+/         .small-12.columns.text-justify.readmore
+/           = raw post.body
+/           -#%p= raw Nokogiri::HTML.parse(post.body).css('p').first.text
+/           - if post.extended
+/             = link_to 'Read more', post, :class => [:button, :tiny]
 
 
 
 
-= content_for :jquery do
-  :plain
-    $('.readmore').readmore({
-      speed: 75,
-      moreLink: '<a style="margin-top: 10px" class="button tiny" href="#">Read more</a>',
-      lessLink: '<a class="button tiny" href="#">Close</a>',
-      maxHeight: 600
-      });
 

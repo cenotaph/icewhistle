@@ -53,6 +53,13 @@
         - if @post.extended?
           %br/
           = raw @post.extended
+        - unless @post.videos.empty?
+          - @post.videos.each do |video|
+            %video{src: video.url}
+          = content_for :jquery do
+            :plain
+              $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});
+              
       .small-4.small-offset-1.columns.sidebar{:"data-equalizer-watch" => ""}= render :partial => 'post_sidebar'
 
   .row.prev_next

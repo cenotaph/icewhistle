@@ -2,7 +2,7 @@
   .row
     .small-6.columns= f.input :title
   .row
-    .small-12.columns= f.input :body, :input_html => {:class => :ckeditor}
+    .small-11.columns= f.input :body, :input_html => {:class => :ckeditor}
   - unless @post.extended.blank?
     .row
       .small-6.columns= f.input :extended, :input_html => {:class => :ckeditor}
@@ -10,7 +10,10 @@
     .small-8.columns= f.input :tag_list
   
   .row
-    .small-5.columns= f.input :image
+    .small-7.columns
+      - unless f.object.image.blank?
+        = image_tag f.object.image.url(:wide)
+      = f.input :image
   .row
     = f.fields_for :photos do |ff|
 
@@ -21,7 +24,15 @@
   
     = f.link_to_add 'add one or more images', :photos
   .row
+    = f.fields_for :videos do |ff|
+      - unless ff.object.blank?
+        = image_tag ff.object.url
+        = ff.input :url
+  
+    = f.link_to_add 'add one or more videos', :videos
+          
+  .row
     .small-6.columns= f.input :published
       
   .row
-    .small-6.columns= f.submit
+    .small-6.columns= f.submit 'Save', class: [:small, :round, :button] 

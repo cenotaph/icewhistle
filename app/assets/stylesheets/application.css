@@ -2,5 +2,6 @@
  *= require_self
  *= require foundation_and_overrides
  *= require icewhistle
- *= require mp3
+ *= require mediaelement_rails
+
  */
