@@ -61,7 +61,7 @@ gem 'rails4-autocomplete'
 gem 'randumb'
 gem 'recaptcha'
 gem 'rolify'
-gem 'soundmanager2-rails'
+
 # gem 'thinking-sphinx', '3.1.0'
 gem 'truncate_html'
 gem 'twitter', '5.6.0'
