@@ -44,7 +44,8 @@ module Icewhistle
   config.assets.enabled = true
   # config.action_mailer.default_charset = 'utf-8'
 
-  config.assets.precompile += %w(soundmanager2.swf soundmanager2_flash9.swf)
+  config.assets.precompile += %w(cms.css)
+  config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
     # Activate observers that should always be running
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
   
