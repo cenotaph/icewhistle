@@ -7,7 +7,7 @@
     .row
       .small-6.columns= f.input :extended, :input_html => {:class => :ckeditor}
   .row
-    .small-8.columns= f.input :tag_list
+    .small-8.columns= f.input :tag_list, input_html: {value: f.object.tag_list.blank? ? '' : f.object.tags.join(',')}
   
   .row
     .small-7.columns

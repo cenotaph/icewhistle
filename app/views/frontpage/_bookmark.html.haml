@@ -1,10 +1,11 @@
-.row.bookmarks
-  .small-2.columns 
-    %h4.subheading Recently bookmarked:
-    = link_to "All bookmarks", 'http://icewhistle.postach.io/',:class => [:button, :tiny]
-  .small-10.columns.text-left.bookmark_list
-    %span.bookmark.first= link_to raw(link[0].title), link[0].link_url
-    = " / "
-    = raw link[1..9].map{|x| "<span class='bookmark'><a href=\"#{x.link_url}\">#{x.title}</a></span>" }.join(' / ')
+- unless link[0].nil?
+  .row.bookmarks
+    .small-2.columns 
+      %h4.subheading Recently bookmarked:
+      = link_to "All bookmarks", 'http://icewhistle.postach.io/',:class => [:button, :tiny]
+    .small-10.columns.text-left.bookmark_list
+      %span.bookmark.first= link_to raw(link[0].title), link[0].link_url
+      = " / "
+      = raw link[1..9].map{|x| "<span class='bookmark'><a href=\"#{x.link_url}\">#{x.title}</a></span>" }.join(' / ')
 
 

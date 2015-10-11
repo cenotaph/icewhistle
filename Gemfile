@@ -47,7 +47,7 @@ gem 'http_accept_language'
 # gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'kaminari'
 gem "mediaelement_rails"
-gem 'metamagic'
+gem 'meta-tags', require: 'meta_tags'
 gem 'mini_magick'
 gem 'nested_form'
 # gem 'net-ssh', '~> 2.8.1', :git => "https://github.com/net-ssh/net-ssh"

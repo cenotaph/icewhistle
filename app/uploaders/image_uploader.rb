@@ -37,7 +37,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   process :scale => [50, 50]
   # end
   version :wide do
-    process :resize_to_fill => [960, 400]
+    process :resize_to_fill => [2000, 500]
   end
   
   version :main do
@@ -45,7 +45,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
   
   version :midsize do
-    process :resize_to_fit => [150, 150]
+    process :resize_to_fit => [350, 350]
   end
   
   version :thumbnail do 

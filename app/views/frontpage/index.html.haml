@@ -2,7 +2,7 @@
 
   %dl.sub-nav
     %dd.first.active{:"data-magellan-arrival" => "top#{@posts.first.id.to_s}"}= link_to @posts.first.title, "#top#{@posts.first.id.to_s}"
-    %dd{:"data-magellan-arrival" => "activities"}= link_to 'Project news and events', "#activity_front"
+    -# %dd{:"data-magellan-arrival" => "activities"}= link_to 'Project news and events', "#activity_front"
     %dd{:"data-magellan-arrival" => "recent_posts"}= link_to 'Recent posts', "#recent_posts"
     %dd{:"data-magellan-arrival" => "blindness"}= link_to 'Blindness', '#blindness_container'
     %dd{:"data-magellan-arrival" => "bookmarks_front"}= link_to 'Recently read', '#bookmarks_front'
@@ -36,7 +36,7 @@
       .small-10.medium-6.columns{:"data-equalizer-watch" => ""}= render :partial => 'image_top_post', :locals => {:post => post}
 
 
-- Cash.visible.where(:source => "blindness").where("image_width > 760").order('created_at DESC').limit(1).each do |bp|
+- Cash.visible.where(:source => "blindness").where("image_width > 760").order(order: :desc).limit(1).each do |bp|
   #blindness_container.blindness_wrapper{:"data-magellan-destination" => "blindness"}= render :partial => 'blindness_image', :locals => {:post => bp}
 
 #bookmarks_front{:style => 'background-color: #F2F27C'}= render :partial => 'bookmark', :locals => {:link => Cash.where(:source => 'bookmarks').order('created_at DESC').limit(25) }
