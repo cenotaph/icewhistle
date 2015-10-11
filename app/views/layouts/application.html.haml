@@ -28,11 +28,7 @@
     = stylesheet_link_tag    "application"
     = javascript_include_tag "vendor/modernizr" 
     = csrf_meta_tags 
-    :javascript
-      var switchTo5x=true;
-    %script{:src => "http://w.sharethis.com/button/buttons.js", :type => "text/javascript"}
-    :javascript
-      stLight.options({publisher: "fec021ac-bd8c-4517-b7db-cd4a0d0ad212", doNotHash: false, doNotCopy: false, hashAddressBar: false});
+
       
   %body{:class => controller.controller_name}
     = javascript_include_tag "application"

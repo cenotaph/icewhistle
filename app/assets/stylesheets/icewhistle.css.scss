@@ -100,7 +100,7 @@ img {
 
 .cropped {
  
-  height: 175px;
+  min-height: 175px;
   overflow: hidden; 
   img { width: 100%; }
 }
