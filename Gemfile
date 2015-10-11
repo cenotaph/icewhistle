@@ -11,7 +11,7 @@ gem 'jquery-ui-rails', '4.1.0'
 gem 'jquery-ui-themes'
 gem 'jbuilder', '~> 2.0'
 gem 'execjs', :group => :production
-gem 'therubyracer', :group => :production
+
 
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'cancan'

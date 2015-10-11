@@ -14,7 +14,12 @@
     %br/
     
   - if crumble.category == 2
-    %div= link_to crumble.attachment.url, crumble.attachment.url, :class => :sm2_button, :rel => :nofollow
+    .videocontent
+      %audio{src: crumble.attachment.url, style: 'width: 100%'} 
+      -#, crumble.attachment.url, :class => :sm2_button, :rel => :nofollow
+    = content_for :jquery do
+      :plain
+        $('video,audio').mediaelementplayer({defaultVideoWidth: "90%"});
   %br    
 
     

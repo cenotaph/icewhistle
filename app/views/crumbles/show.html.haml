@@ -1,4 +1,4 @@
-- meta :title =>  @crumble.title + " | Icewhistle", :description => truncate(strip_tags(@crumble.description), :length => 250)
+
 .post
   .row
     .columns.text-left
@@ -17,9 +17,14 @@
         = link_to '[full size]', @crumble.attachment.url
         %br/
       - if @crumble.category == 2
-        %div= link_to @crumble.attachment.url, @crumble.attachment.url, :class => :sm2_button
+        .videocontent
+          %audio{src: @crumble.attachment.url, style: 'width: 100%'} 
+          -#, crumble.attachment.url, :class => :sm2_button, :rel => :nofollow
+        = content_for :jquery do
+          :plain
+            $('video,audio').mediaelementplayer({defaultVideoWidth: "90%"});
 
-      - if @crumble.attachment.file.file =~ /pdf$/i
+      - if @crumble.attachment_content_type =~ /pdf$/i
         %br/
         = link_to '[download PDF]', @crumble.attachment.url
         %br/     

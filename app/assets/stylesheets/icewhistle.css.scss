@@ -369,6 +369,10 @@ a.readmore-js-toggle {
   }
 
 }
+.crumble_row {
+  padding: 3.25rem 0 1.5rem 0;
+}
+
 .orbit-bullets-container {display: none;}
 h3.subheading {
   line-height: 2.1rem;
@@ -655,10 +659,11 @@ div.input {
 }
 
 
-div.row {
-  padding-top: 5px;
- }
-
+@media only screen and (min-width: 40.0625em) {
+  .top-bar .title-area {
+    max-width: 40%;
+  }
+}
 
 div.input .formw {
   float: right;

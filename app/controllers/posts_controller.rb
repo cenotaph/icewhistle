@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     @post = Post.friendly.find(params[:id])
     set_meta_tags :title => @post.title, 
                   canonical: url_for(@post),
-                  og: {image: (@post.image? ?  [ @post.image.url(:midsize).gsub(/^https/, 'http'), { secure_url: @post.image.url(:midsize) } ] : 'http://icewhistle.com/assets/icewhistle_combined-0d25282030b3a76a6bf4eb06b685f17a.png'), 
+                  og: {image: (@post.image? ?  [ @post.image.url(:midsize).gsub(/^https/, 'http'), { secure_url: @post.image.url(:midsize) } ] : 'http://icewhistle.com/icewhistle.jpg'), 
                         title: @post.title, type: 'website', url: url_for(@post)
                       }, 
                   twitter: {card: 'summary', site: '@hyksos'}

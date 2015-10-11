@@ -1,5 +1,5 @@
 class CrumblesController < ApplicationController
-  
+  respond_to :html
   before_filter :authenticate_user!, :only => [:new, :create, :edit, :update, :delete]
 
   def by_date
@@ -16,12 +16,13 @@ class CrumblesController < ApplicationController
   end
 
   def show
-    @crumble = Crumble.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @crumble }
-    end
+    @crumble = Crumble.friendly.find(params[:id])
+    set_meta_tags :title => @crumble.title, 
+                  canonical: url_for(@crumble),
+                  og: {image: (@crumble.icon? ?  [ @crumble.icon.url(:midsize).gsub(/^https/, 'http'), { secure_url: @crumble.icon.url(:midsize) } ] : 'http://icewhistle.com/icewhistle.jpg'), 
+                        title: @crumble.title, type: 'website', url: url_for(@crumble)
+                      }, 
+                  twitter: {card: 'summary', site: '@hyksos'}
   end
 
   # GET /crumbles/new
@@ -37,7 +38,7 @@ class CrumblesController < ApplicationController
 
   # GET /crumbles/1/edit
   def edit
-    @crumble = Crumble.find(params[:id])
+    @crumble = Crumble.friendly.find(params[:id])
   end
 
   # POST /crumbles
