@@ -22,7 +22,7 @@ gem 'capistrano-bundler', '1.1.4'
 gem 'carrierwave'
 gem 'carrierwave-aws'
 gem 'closure_tree'
-gem 'ckeditor'
+gem 'ckeditor', '4.1.2'
 gem 'country_select'
 gem 'devise', github: 'plataformatec/devise', branch: :master
 gem 'devise-encryptable'
