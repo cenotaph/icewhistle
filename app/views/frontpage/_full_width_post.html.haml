@@ -33,10 +33,12 @@
     .small-12.columns
       - post.videos.each do |video|
         .videocontent
-          %video{src: video.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
+          %video{src: video.url, controls: "true", style: "width: 100%; height: 100%", height: "100%", width: "100%"}
       = content_for :jquery do
         :plain
-          $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});        
+          if ((navigator.platform.indexOf("iPhone") == -1) && (navigator.platform.indexOf("iPad") == -1)) {
+            $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});        
+          }
 /
 / - if post.photos.empty?
 /   .row
