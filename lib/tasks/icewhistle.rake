@@ -34,8 +34,8 @@ namespace :icewhistle do
   task :get_cache => :environment do
     now = Time.now.to_i
     [ ['http://feeds.feedburner.com/Blindness', 'blindness'],
-      ['http://ptarmigan.ee/feed.rss', 'ptarmigan'],
-      ['http://www.pixelache.ac/feed/', 'pixelache'],
+      # ['http://ptarmigan.ee/feed.rss', 'ptarmigan'],
+      # ['http://www.pixelache.ac/feed/', 'pixelache'],
       ['https://zapier.com/engine/rss/783441/bookmarks/', 'bookmarks']
     ].each do |site|
       key = site.last
@@ -46,15 +46,25 @@ namespace :icewhistle do
         feed.entries.each_with_index do |item, i|
           if ++i < 6  
             if key == 'bookmarks'
-              if ActionController::Base.helpers.strip_tags(item.content).blank?
+              
+              if ActionController::Base.helpers.strip_tags(item.summary).blank?
                 link_url = item.url
+             
+           
               else
-                link_url = ActionController::Base.helpers.strip_tags(item.content)
+                link_url = ActionController::Base.helpers.strip_tags(item.summary)
+           
+           
+                
               end
 
+
             else
+             
+          
               link_url = item.url
             end
+             # puts "link_url is " + link_url#
             link_url = link_url.gsub(/^Original Page:\s*/, '').gsub('Shared from Pocket', '')
         
             # skip if already in cache
