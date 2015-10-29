@@ -86,7 +86,7 @@
                 .error= raw flash[:notice]
               - if flash[:alert]
                 .error= raw flash[:alert]              
-      .footer-shadow
+      .footer-shadow{class: controller.controller_name }
         = yield
     %footer#main_footer
       .row

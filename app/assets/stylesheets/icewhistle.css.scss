@@ -251,6 +251,9 @@ main {
     margin-bottom: 18em;
     padding-bottom: 2rem;
     padding-top: 2.2em;
+    &.posts {
+      padding-top: 0;
+    }
   }
 }
 li.scale {  
@@ -487,6 +490,7 @@ medium.date {
   display: block;
 }
 .post {
+  padding-top: 1.4rem;
   h1 {
     color: #333;
   }

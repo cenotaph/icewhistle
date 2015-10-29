@@ -1,5 +1,12 @@
-
+- if @post.image?
+  - if @post.image_width > 1200
+    = image_tag @post.image.url
+  - else 
+    .row
+      .small-12.columns.text-left.post_body
+        = image_tag @post.image.url
 .post
+
   .row
     .columns.text-left
       %h1= raw @post.title
@@ -7,7 +14,8 @@
         %em
           %medium= "posted: " + l(@post.updated_at, :format => :long   )
 
-  - if @post.photos.empty?
+  - if @post.photos.empty? 
+  
     .row
       .small-7.columns.text-left.post_body
         = raw @post.body
