@@ -1,11 +1,12 @@
 - if post.image? && post.photos.empty?
-  .row
+  .row{:"data-equalizer" => 'inner'}
     .small-12.columns
-      .cropped= image_tag post.image.url(:main)
+      .cropped{:"data-equalizer-watch" => 'inner'}= image_tag post.image.url(:main).gsub('development', 'production')
 .row
   .small-12.columns.text-center
     %h3.subheading= link_to post.title, post
-    %medium= l post.updated_at, :format => :long
+    %medium
+      %em= "posted " +  l(post.updated_at, :format => :long)
 
 - unless post.photos.empty?
   .row

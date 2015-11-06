@@ -14,7 +14,8 @@
 .row    
   .small-10.medium-.large-7.columns.small-centered.post_content
     %h2.subheader= link_to raw(post.title), post
-    %medium.date= l post.updated_at, :format => :long
+    %medium.date
+      %em= "posted " +  l(post.updated_at, :format => :long)
     .post_body.text-justify.readmore
       = raw post.body      
       - if post.extended

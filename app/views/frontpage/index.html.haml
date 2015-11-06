@@ -30,10 +30,10 @@
 /     /   = render :partial => 'crumbles', :locals => {:crumbles => @crumbles}
 /     %div{:"data-magellan-destination" => 'activities'} &nbsp;
 
-#recent_posts.row{:"data-equalizer" => ""}
+#recent_posts.row{:"data-equalizer" => "outer"}
   .columns.text-center{:"data-magellan-destination" => 'recent_posts'}
     - @posts[1..2].each do |post|
-      .small-10.medium-6.columns{:"data-equalizer-watch" => ""}= render :partial => 'image_top_post', :locals => {:post => post}
+      .small-10.medium-6.columns{:"data-equalizer-watch" => "outer"}= render :partial => 'image_top_post', :locals => {:post => post}
 
 
 - Cash.visible.where(:source => "blindness").where("image_width > 760").order(order: :desc).limit(1).each do |bp|
@@ -41,9 +41,9 @@
 
 #bookmarks_front{:style => 'background-color: #F2F27C'}= render :partial => 'bookmark', :locals => {:link => Cash.where(:source => 'bookmarks').order('created_at DESC').limit(25) }
 
-#less_recent.row{:"data-equalizer" => "", :"data-magellan-destination" => "less_recent"}
+#less_recent.row{:"data-equalizer" => "outer2", :"data-magellan-destination" => "less_recent"}
   - @posts[3..4].each do |post|
-    .large-6.columns{:"data-equalizer-watch" => ""}= render :partial => 'title_top_post', :locals => {:post => post}
+    .large-6.columns{:"data-equalizer-watch" => "outer2"}= render :partial => 'title_top_post', :locals => {:post => post}
   .columns.text-center
     %h6= link_to 'Older posts', posts_path(:page => 2), class: [:button, :tiny]
 
@@ -56,8 +56,10 @@
       %medium Content on icewhistle.com does not necessarily represent the viewpoints of Ptarmigan, Piknik Frequency aka Pixelache, or any other organisations. Contact via email link on site footer.
 = content_for :jquery do
   :plain
+
     $('#magellan a[href*=#]').on('click', function(event){     
       
         event.preventDefault();
         $('html,body').animate({scrollTop:$(this.hash).offset().top - 70}, 500);
     });
+

@@ -194,6 +194,13 @@ img {
   background-color: #EEF;
   border-top: 1px solid #c7d67e;
   border-bottom: 1px solid #c7d67e;
+  width: 100%;
+  float: left;
+  
+  .twitter_column {
+    float: left;
+    margin-top: 3px;
+  }
   h6.subheading {
     padding-top: 8px;
     font-size:13px;
@@ -397,12 +404,21 @@ h3.subheading {
 #recent_posts, #less_recent, .posts {
   padding: 3.25rem 0 1.5rem 0;
   p {
-
+    padding-top: 0.9rem;
    font-size: 1rem;
    line-height: 1.5rem;
    font-weight: 300;
   }
+  .cropped {
+    img {
+      height: 335px;
+    }
+    margin-bottom: 1rem;
+  }
+  
 }
+
+
 
 .full_width_post {
   padding: 0 0 1.75em 0px;

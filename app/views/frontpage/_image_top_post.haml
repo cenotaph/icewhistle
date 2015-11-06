@@ -1,10 +1,9 @@
-.text-center
-  %h3.subheading= link_to raw(post.title), post
+
     
 - if post.image? && post.photos.empty?
-  .row
+  .row{:"data-equalizer" => 'inner'}
     .small-12.columns
-      .cropped= image_tag post.image.url(:main)
+      .cropped{:"data-equalizer-watch" => 'inner'}= image_tag post.image.url(:main).gsub('development', 'production')
 - elsif !post.photos.empty?
   .row
     .small-12.columns.text-center
@@ -15,9 +14,15 @@
           - post.photos.each do |p|
             %li
               = image_tag p.filename.url(:main) 
-
-    %medium= l post.updated_at, :format => :long    
+.text-center
+  %h3.subheading= link_to raw(post.title), post
+.row
+  .columns.small-12
+    %medium
+      %em= "posted " +  l(post.updated_at, :format => :long)
+        
 .row          
   .small-12.columns.text-center
     %p= raw Nokogiri::HTML.parse(post.body).css('p').first.text
     = link_to 'Read more', post, :class => [:button, :tiny]
+    
