@@ -10,13 +10,15 @@ xml.rss :version => "2.0" do
       xml.item do
         xml.title article.title
         xml.description article.fulltext
-        unless article.enclosure_url.blank?
-          e = {:url => article.enclosure_url, :length => article.enclosure_length, :type => article.enclosure_type }
-          xml.enclosure e
+        article.audiopodcasts.each do |a|
+          xml.enclosure :url => a.url, :length => a.bytes, :type => a.content_type
+        end
+        article.videos.each do |a|
+          xml.enclosure :url => a.url, :length => a.bytes, :type => a.content_type
         end
         xml.pubDate article.created_at.to_s(:rfc822)
         xml.link post_url(article)
-        xml.guid posts_url(:format => :rss)
+        xml.guid post_url(article, :format => :rss)
       end
     end
   end

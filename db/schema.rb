@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151011114660) do
+ActiveRecord::Schema.define(version: 20151108114757) do
+
+  create_table "audiopodcasts", force: :cascade do |t|
+    t.string   "url",          limit: 255
+    t.integer  "item_id",      limit: 4
+    t.string   "item_type",    limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "bytes",        limit: 4
+    t.string   "content_type", limit: 255
+  end
+
+  add_index "audiopodcasts", ["item_type", "item_id"], name: "index_audiopodcasts_on_item_type_and_item_id", using: :btree
 
   create_table "blogimages", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -291,11 +303,13 @@ ActiveRecord::Schema.define(version: 20151011114660) do
   add_index "users", ["username"], name: "index_users_on_login", unique: true, using: :btree
 
   create_table "videos", force: :cascade do |t|
-    t.string   "url",        limit: 255
-    t.string   "item_type",  limit: 255
-    t.integer  "item_id",    limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "url",          limit: 255
+    t.string   "item_type",    limit: 255
+    t.integer  "item_id",      limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "bytes",        limit: 4
+    t.string   "content_type", limit: 255
   end
 
 end

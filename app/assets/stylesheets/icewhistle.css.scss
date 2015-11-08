@@ -98,6 +98,11 @@ img {
   margin: 0 auto;
 }
 
+.audiocontent {
+  float: left;
+  clear: both;
+  margin: 1.5rem auto;
+}
 .header_left {
 	float: left;
 	margin-top: 15px;
@@ -674,7 +679,9 @@ li.side_title  {
 
 .post_with_topspace {
   margin-top: 1.5rem;
+
 }
+
 
 a.twitter-follow-button {
   border: 1px solid #9BBC06;

@@ -28,8 +28,20 @@
       - unless ff.object.blank?
         = image_tag ff.object.url
         = ff.input :url
+        = ff.input :bytes
+        = ff.input :content_type
   
     = f.link_to_add 'add one or more videos', :videos
+
+  .row
+    = f.fields_for :audiopodcasts do |ff|
+      - unless ff.object.blank?
+        = image_tag ff.object.url
+        = ff.input :url
+        = ff.input :bytes
+        = ff.input :content_type
+  
+    = f.link_to_add 'add one or more audio attachments', :audiopodcasts
           
   .row
     .small-6.columns= f.input :published

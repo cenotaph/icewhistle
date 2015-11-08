@@ -18,6 +18,11 @@
   
     .row
       .small-7.columns.text-left.post_body
+        - unless @post.audiopodcasts.empty?
+          - @post.audiopodcasts.each do |podcast|
+            .audiocontent
+              %audio{src: podcast.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
+        
         = raw @post.body
         - if @post.extended?
           %br/
@@ -26,7 +31,7 @@
           - @post.videos.each do |video|
             .videocontent
               %video{src: video.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
-
+        - unless @post.videos.empty? && @post.audiopodcasts.empty?
           = content_for :jquery do
             :plain
               $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});   

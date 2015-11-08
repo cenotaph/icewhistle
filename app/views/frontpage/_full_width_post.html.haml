@@ -17,6 +17,10 @@
     %medium.date
       %em= "posted " +  l(post.updated_at, :format => :long)
     .post_body.text-justify.readmore
+      - unless post.audiopodcasts.empty?
+        - post.audiopodcasts.each do |podcast|
+          .audiocontent
+            %audio{src: podcast.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
       = raw post.body      
       - if post.extended
         = link_to 'Read more', post, :class => [:button, :tiny]
@@ -35,11 +39,12 @@
       - post.videos.each do |video|
         .videocontent
           %video{src: video.url, controls: "true", style: "width: 100%; height: 100%", height: "100%", width: "100%"}
-      = content_for :jquery do
-        :plain
-          if ((navigator.platform.indexOf("iPhone") == -1) && (navigator.platform.indexOf("iPad") == -1)) {
-            $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});        
-          }
+- unless post.videos.empty? && post.audiopodcasts.empty?
+  = content_for :jquery do
+    :plain
+      if ((navigator.platform.indexOf("iPhone") == -1) && (navigator.platform.indexOf("iPad") == -1)) {
+        $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});        
+      }
 /
 / - if post.photos.empty?
 /   .row
