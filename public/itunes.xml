@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  
+  <channel>
+
+    <title>Serious Introspection</title>
+    <description>Serious Introspection with John W. Fail, live Tuesday at Mad House Helsinki.</description>
+    <link>https://www.facebook.com/seriousintrospectionwithjohnwfail/</link>
+    <language>en-gb</language>
+    <copyright>Copyright 2007</copyright>
+    <lastBuildDate>Sun, 08 Nov 2015 14:18:07 +0200/lastBuildDate>
+    <pubDate>Sun, 08 Nov 2015 14:18:07 +0200</pubDate>
+    <docs>http://www.johnw.fail/</docs>
+    <webMaster>john@ptarmigan.fi</webMaster>
+
+    <itunes:author>John W. Fail</itunes:author>
+    <itunes:subtitle>Serious Introspection is a weekly live show at Mad House Helsinki that attempts to uncover the motivations and processes of the creative act.</itunes:subtitle>
+    <itunes:summary>Put the brakes on the avant-garde with Serious Introspection, a weekly live show hosted by John W. Fail (Ptarmigan, Pixelache, etc.). Each week, John will talk to performers, organisers, curators and producers from Mad House’s activities and beyond. The goal is to peel back the layers on the creative process, while seeking direct, human communication. It’s intended to be a space for total honesty, and topics may be germane or pleasantly irrelevant. In addition to invited guests and rotating co-hosts, audience members may be invited on stage to discuss their feelings and reactions to what’s being discussed. </itunes:summary>
+
+    <itunes:owner>
+           <itunes:name>John W. Fail</itunes:name>
+           <itunes:email>john@ptarmigan.fi</itunes:email>
+    </itunes:owner>
+
+<itunes:explicit>No</itunes:explicit>
+
+<itunes:image href="http://www.johnw.fail/itunes_logo.png"/>
+    
+<itunes:category text="Arts">
+     
+</itunes:category>
