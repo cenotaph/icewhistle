@@ -29,3 +29,52 @@
 <itunes:category text="Arts">
      
 </itunes:category>
+<item>
+<title>SI audio extra: Lin Hixson & Matthew Goulish</title>
+<link>http://johnw.fail/posts/si-extra-lin-hixson-matthew-goulish-audio-podcast</link>
+<guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/si_extra_001.m4a</guid>
+<description>Those of you who saw Matthew Goulish on my show last week (or on the video here) know how much I admire his writing and approach to art and performance. I wanted to talk further with him (and with Lin Hixson, who didn't come on stage during episode 5) while they were in Helsinki, so we recorded a conversation which is presented here in podcast format. Among the topics discussed were interruptions, reversing course, limitations, permission, fear, comfort zones, walking across the room 10000 times, respect, skepticism, dogma, generosity, and peripheral consciousness.</description>
+
+<category>Podcasts</category>
+<enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/si_extra_001.m4a" length="107943698" type="audio/m4a"/>
+     <pubDate>Sun, 08 Nov 2015 13:57:09 +0000</pubDate>
+
+<itunes:author>John W. Fail</itunes:author>
+
+<itunes:explicit>No</itunes:explicit>
+<itunes:subtitle>Lin Hixson & Matthew Goulish join John for a nice conversation.</itunes:subtitle>
+<itunes:summary>Those of you who saw Matthew Goulish on my show last week (or on the video here) know how much I admire his writing and approach to art and performance. I wanted to talk further with him (and with Lin Hixson, who didn't come on stage during episode 5) while they were in Helsinki, so we recorded a conversation which is presented here in podcast format. Among the topics discussed were interruptions, reversing course, limitations, permission, fear, comfort zones, walking across the room 10000 times, respect, skepticism, dogma, generosity, and peripheral consciousness.</itunes:summary>
+<itunes:duration>01:12:22</itunes:duration>
+<itunes:keywords>Matthew Goulish,Lin Hixson,Goat Island,Every house has a door,Helsinki,performance,art,interviews</itunes:keywords>
+
+</item>
+
+<item>
+<title>Serious Introspection S01E05: Matthew Goulish, Ernest Truely, Megan Snowe</title>
+<link>http://johnw.fail/posts/serious-introspection-episode-5</link>
+<guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e05.mp4</guid>
+<description>It's the TECHNICAL DIFFICULTIES episode! With our trusted sound man in Estonia we had to figure it out ourselves, mainly, 'where do they store the microphones?' and thus we started a half-hour late, and I was agitated throughout. It's also the AMERICA episode! With guests Megan Snowe (USA), Ernest Truely (USA), Matthew Goulish (USA) and myself and Justin as always. Special thanks to Ilpo Heikkinen for stepping in and being a pop-up sound guy/saviour. I love him, even if he isn't American.</description>
+
+<category>Podcasts</category>
+<enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e05.mp4" length="2269799811" type="video/mp4"/>
+<pubDate>Fri, 06 Nov 2015 08:42:19 +0000</pubDate>
+
+<itunes:author>John W. Fail</itunes:author>
+
+<itunes:explicit>Yes</itunes:explicit>
+<itunes:subtitle>Four and a half Americans on stage at once -- can Helsinki handle it?</itunes:subtitle>
+<itunes:summary>It's the TECHNICAL DIFFICULTIES episode! With our trusted sound man in Estonia we had to figure it out ourselves, mainly, 'where do they store the microphones?' and thus we started a half-hour late, and I was agitated throughout. It's also the AMERICA episode! With guests Megan Snowe (USA), Ernest Truely (USA), Matthew Goulish (USA) and myself and Justin as always. Special thanks to Ilpo Heikkinen for stepping in and being a pop-up sound guy/saviour. I love him, even if he isn't American.
+
+Despite the slow start I think this was our best episode yet, and I was thrilled to have Matthew on the show as his work has influenced me a great deal. And I wish Megan could be on the show every week. Here's the video, with live tweets by Ernest (@room4error) superimposed where appropriate. Sorry the lighting isn't as pleasant and before; I guess our sound man usually handles that too. It's the DARK episode!
+
+Next week (10 November) is episiode 6 - the ANTEPENULTIMATE episode! -  starting at 18:00 as always at Ihana Baari/Mad House Helsinki. Guests will include Jaakko Blomberg from Yhteismaa and several representatives of the Post-MJ Era Institute of Consciousness. And if you can't make it, you can still follow us on Facebook (send in those mailbag questions!) and check the hashtag #SeriousIntrospection for future livetweets and other interactions.</itunes:summary>
+<itunes:duration>01:06:30</itunes:duration>
+<itunes:keywords>Mad House,John W. Fail,Matthew Goulish,Ernest Truely,Justin Tyler Tate,Megan Snowe,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews</itunes:keywords>
+
+</item>
+
+
+
+</channel>
+
+</rss>
