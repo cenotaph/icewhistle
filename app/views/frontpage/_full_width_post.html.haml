@@ -21,6 +21,7 @@
         - post.audiopodcasts.each do |podcast|
           .audiocontent
             %audio{src: podcast.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
+      %br{clear: :all}
       = raw post.body      
       - if post.extended
         = link_to 'Read more', post, :class => [:button, :tiny]
