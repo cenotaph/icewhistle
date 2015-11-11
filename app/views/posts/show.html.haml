@@ -34,7 +34,7 @@
         - unless @post.videos.empty? && @post.audiopodcasts.empty?
           = content_for :jquery do
             :plain
-              $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});   
+              $('video,audio').mediaelementplayer({defaultVideoWidth: "100%", alwaysShowHours: true});   
           
       .small-4.small-offset-1.columns.sidebar= render :partial => 'post_sidebar'
         
