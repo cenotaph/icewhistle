@@ -185,10 +185,10 @@ module ApplicationHelper
   end
   
   def share_this(item)
-    out = "<span class='st_sharethis' st_title='" + item.name + "' st_url='http://#{request.host}" + url_for(item) + "' displayText=''></span><span class='st_twitter' st_title='" + item.name + "' st_url='http://#{request.host}" + url_for(item) + "'  displayText=''></span><span class='st_facebook' st_title='" + item.name + "' st_url='http://#{request.host}" + url_for(item) + "'  displayText=''></span>"
-    out += "<span class='st_reddit' st_title='" + item.name + "' st_url='http://#{request.host}" + url_for(item) + "'  displayText=''></span>"
-    out += "<span class='st_plusone' st_title='" + item.name + "' st_url='http://#{request.host}" + url_for(item) + "'  displayText=''></span>"
-    out += "<span class='st_email' st_title='" + item.name + "' st_url='http://#{request.host}" + url_for(item) + "'  displayText=''></span>"
+    out = "<span class='st_sharethis' st_title='" + escape_javascript(item.name) + "' st_url='http://#{request.host}" + url_for(item) + "' displayText=''></span><span class='st_twitter' st_title='" + escape_javascript(item.name) + "' st_url='http://#{request.host}" + url_for(item) + "'  displayText=''></span><span class='st_facebook' st_title='" + escape_javascript(item.name) + "' st_url='http://#{request.host}" + url_for(item) + "'  displayText=''></span>"
+    out += "<span class='st_reddit' st_title='" + escape_javascript(item.name) + "' st_url='http://#{request.host}" + url_for(item) + "'  displayText=''></span>"
+    out += "<span class='st_plusone' st_title='" + escape_javascript(item.name) + "' st_url='http://#{request.host}" + url_for(item) + "'  displayText=''></span>"
+    out += "<span class='st_email' st_title='" + escape_javascript(item.name) + "' st_url='http://#{request.host}" + url_for(item) + "'  displayText=''></span>"
     #out = "<span class='st_sharethis' displayText='ShareThis'></span><span class='st_twitter' displayText='Tweet'></span><span class='st_facebook' displayText='Facebook'></span><span class='st_googleplus' displayText='Google +'></span><span class='st_reddit' displayText='Reddit'></span><span class='st_email' displayText='Email'></span>"
     return out.html_safe
   end

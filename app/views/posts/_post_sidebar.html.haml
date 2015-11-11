@@ -17,7 +17,9 @@
             = image_tag related.photos.first.filename.url(:midsize)
           %medium.date= l related.created_at.to_date, :format => :long
     
-.share_this= share_this(@post)
+.share_this= render partial: 'shared/share_buttons', locals: {url:  CGI::escape("http://#{request.host}#{request.port != 80 ? ":" + request.port.to_s : ''}#{url_for(@post)}"), title: CGI::escape(@post.title)}
+
+
 - if current_user
   = link_to 'edit this post', edit_admin_post_path(@post)
   %br

@@ -13,7 +13,8 @@
             .columns= image_tag related.icon.url(:midsize)
           %medium= l related.created_at.to_date, :format => :long
 .crumble_tags= raw format_tags(@crumble)          
-.share_this= share_this(@crumble)
+.share_this= render partial: 'shared/share_buttons', locals: {url:  CGI::escape("http://#{request.host}#{request.port != 80 ? ":" + request.port.to_s : ''}#{url_for(@crumble)}"), title: CGI::escape(@crumble.title)}
+
 - if current_user
   = link_to 'edit this crumble', edit_crumble_path(@crumble)
   %br
