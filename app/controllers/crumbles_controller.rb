@@ -90,6 +90,6 @@ class CrumblesController < ApplicationController
   protected
   
   def crumble_params
-    params.require(:crumble).permit(:title, :category, :icon, :attachment, :descreiption, :slug, :datestamp)
+    params.require(:crumble).permit(:title, :category, :icon, :attachment, :description, :slug, :datestamp)
   end
 end
