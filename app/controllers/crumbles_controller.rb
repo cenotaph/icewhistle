@@ -61,7 +61,7 @@ class CrumblesController < ApplicationController
   # PUT /crumbles/1
   # PUT /crumbles/1.xml
   def update
-    @crumble = Crumble.find(params[:id])
+    @crumble = Crumble.friendly.find(params[:id])
 
     respond_to do |format|
       if @crumble.update_attributes(crumble_params)
@@ -78,7 +78,7 @@ class CrumblesController < ApplicationController
   # DELETE /crumbles/1
   # DELETE /crumbles/1.xml
   def destroy
-    @crumble = Crumble.find(params[:id])
+    @crumble = Crumble.friendly.find(params[:id])
     @crumble.destroy
 
     respond_to do |format|
