@@ -13,6 +13,12 @@ class FrontpageController < ApplicationController
                       }, 
                   twitter: {card: 'summary', site: '@hyksos'}
     if get_layout == 'services'
+      set_meta_tags :title => 'SI Services', 
+                    canonical: 'http://services.johnw.fail/',
+                    og: {image: ( 'http://services.johnw.fail/assets/services/ernest.jpg'), 
+                          title: 'SI Services', type: 'website', url:  'http://services.johnw.fail/'
+                        }, 
+                    twitter: {card: 'summary', site: '@hyksos'}
       render template: 'frontpage/services'
     end
       
