@@ -1,6 +1,6 @@
 
-%article#main
-  %header{style: @page.image.nil? ? false : 'background-image:  url("' + @page.image.url(:main) + '");'}
+%article#main.page_show
+  %header{class: @page.image.nil? ? false : (@page.image_width < 980 ? 'small' : false), style: @page.image.nil? ? false : 'background-image:  url("' + @page.image.url(:main) + '");'}
     %h2= @page.title
     %p= @page.subtitle
   %section.wrapper.style5.page

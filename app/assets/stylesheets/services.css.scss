@@ -3886,3 +3886,9 @@ form {
     max-width: 65%;
   }
 }
+
+article.page_show {
+  header.small {
+    background-size: initial !important;
+  }
+}
