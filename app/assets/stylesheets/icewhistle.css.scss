@@ -116,7 +116,7 @@ img {
  
   min-height: 175px;
   overflow: hidden; 
-  img { width: 100%; }
+  img { max-width: 100%; }
 }
 #main_footer {
   padding:45px 0px 49.5em 0px;
