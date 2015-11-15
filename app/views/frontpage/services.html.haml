@@ -1,0 +1,113 @@
+%section#banner
+  .inner
+    %h2 SI Services
+    %p
+      The 
+      %em Serious Introspection
+      %br/
+      experience, brought to your
+      %br/
+      event by our specialised team.
+
+    %ul.actions
+      %li
+        %a.button.special{:href => "#"} GET SERIOUS
+  %a.more.scrolly{:href => "#one"} Learn More
+/ One
+%section#one.wrapper.style1.special
+  .inner
+    %header.major
+      %h2
+        What we do best.
+        %br/
+        Brought to your events & activities.
+      %p
+        Our three-man team provides a full-fledged experience to spice up
+        %br/
+        your parties, weddings, bar mitzvahs or other activities.
+    %ul.icons.major
+      %li
+        %span.icon.fa-microphone.major.style1
+          %span.label Hosting
+      %li
+        %span.icon.fa-thumbs-up.major.style2
+          %span.label Hype
+      %li          
+        %span.icon.fa-twitter.major.style3
+          %span.label Media
+/ Two
+%section#two.wrapper.alt.style2
+  %section.spotlight
+    .image
+      %img{:alt => "", :src => "/assets/services/jwf.jpg"}/
+    .content
+      %h2
+        The Host
+
+      %p John W. Fail adds an inviting, welcoming presence to your event. He does interviews, karaoke, panel moderating and more with warmth, grace and humility.
+  %section.spotlight
+    .image
+      %img{:alt => "", :src => "/assets/services/jtt.jpg"}/
+    .content
+      %h2
+        The Hype Man
+
+      %p Canada's brightest export, Justin Tyter Tate, delivers the hype and so much more. He'll energise your audience and enliven your staff!
+  %section.spotlight
+    .image
+      %img{:alt => "", :src => "/assets/services/ernest.jpg"}/
+    .content
+      %h2
+        The Media Specialist
+
+      %p Ernest Truely brings a lengthy career in the media arts to SI-Services, where he will live tweet your event, post-process visual documentation, and otherwise augment reality.
+/ Three
+%section#four.wrapper.style4
+  .inner
+    %header.major
+      %h2 See for yourself!
+      %p All episode of Serious Introspection are available to watch online.
+      %video{controls: '', height: '100%', style: 'width: 100%; height: 100%', width: '100%'}
+        %source{ src: 'https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e05.mp4'}
+            
+%section#three.wrapper.style3.special
+  .inner
+    %header.major
+      %h2 Introspective testimonials
+      %p
+        The SI-Services team leaves a trail of satisfaction wherever we go. Through
+        %br/
+        our weekly live show, we have built a dedicated group of fans and followers.
+    %ul.features
+      %li
+        .icon_box= image_tag 'services/mikko.jpg'
+        .testimonial
+          %h3 Mikko Laajola
+          %p "my favorite part of the week ... Great talk show in Ihana Baari, Suvilahti ...i am serious about this. i really enjoy listening to your serious introspections."
+      %li
+        .icon_box= image_tag 'services/toni.png'
+        .testimonial
+          %h3 Toni Ledentsa
+          %p "Appreciating these community feels. :) Hopefully this develops further."
+      %li
+        .icon_box= image_tag 'services/heidi.jpg'
+        .testimonial
+          %h3 Heidi Backström
+          %p "... hauska ..."
+      %li
+        .icon_box= image_tag 'services/annika.jpg'
+        .testimonial
+          %h3 Annika Tudeer
+          %p "This is just such a cool show! Thank you John W. Fail."
+        
+
+/ CTA
+%section#cta.wrapper.style4
+  .inner
+    %header
+      %h2 Take the plunge!
+      %p Basic pricing starts at 45€/hour, with special packages tailored to your request.
+    %ul.actions.vertical
+      %li
+        %a.button.fit.special{:href => "#"} CONTACT
+      %li= link_to 'Learn More', page_path('pricing'), class: [:button, :fit]

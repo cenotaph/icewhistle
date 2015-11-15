@@ -2,10 +2,6 @@ class FrontpageController < ApplicationController
 
   layout :get_layout
 
-  def get_layout
-    hostname = request.host.gsub(/\..*/, '')
-    return (hostname == 'services' ? 'services' : 'application')
-  end
   
   def index
     @posts = Post.published.order('created_at DESC').page(params[:page]).per(10)
@@ -16,6 +12,10 @@ class FrontpageController < ApplicationController
                         title: 'John W. Fail', type: 'website', url:  'http://icewhistle.com/'
                       }, 
                   twitter: {card: 'summary', site: '@hyksos'}
+    if get_layout == 'services'
+      render template: 'frontpage/services'
+    end
+      
   end
   
 end

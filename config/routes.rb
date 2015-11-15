@@ -30,6 +30,7 @@ Icewhistle::Application.routes.draw do
   # match '/contact' => 'contact#create', :as => 'contact', :via => :post
   match '/cv', :controller => 'cv', :action => :index, via: :get
   root :controller => :frontpage, :action => :index
+  resources :pages
   resources :posts do 
     resources :comments
   end
@@ -49,6 +50,7 @@ Icewhistle::Application.routes.draw do
     resources :projects
     resources :posts
     resources :publications
+    resources :pages
     resources :groupings
   end
 

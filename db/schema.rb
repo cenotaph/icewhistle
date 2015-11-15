@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151108114757) do
+ActiveRecord::Schema.define(version: 20151115112543) do
 
   create_table "audiopodcasts", force: :cascade do |t|
     t.string   "url",          limit: 255
@@ -155,6 +155,21 @@ ActiveRecord::Schema.define(version: 20151108114757) do
     t.integer  "category_id",   limit: 4
     t.string   "imagefilename", limit: 60
     t.integer  "sortorder",     limit: 4
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "title",              limit: 255
+    t.string   "subtitle",           limit: 255
+    t.text     "body",               limit: 65535
+    t.boolean  "published"
+    t.string   "image",              limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_height",       limit: 4
+    t.integer  "image_width",        limit: 4
+    t.integer  "image_size",         limit: 4
+    t.string   "slug",               limit: 255
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
   create_table "photos", force: :cascade do |t|

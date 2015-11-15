@@ -4,8 +4,13 @@
 class ApplicationController < ActionController::Base
 
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  before_filter :load_sidebars
+  #before_filter :load_sidebars
 
+
+  def get_layout
+    hostname = request.host.gsub(/\..*/, '')
+    return (hostname == 'services' ? 'services' : 'application')
+  end
   
   def load_sidebars
     # @links = Link.all.order(:sortorder, :category_id, :name)

@@ -1,0 +1,8 @@
+
+%article#main
+  %header{style: @page.image.nil? ? false : 'background-image:  url("' + @page.image.url(:main) + '");'}
+    %h2= @page.title
+    %p= @page.subtitle
+  %section.wrapper.style5.page
+    .inner
+      = raw @page.body
