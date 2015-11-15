@@ -2967,7 +2967,7 @@
 			background-color: #ffffff;
 			color: #4E4852;
       &.page {
-        opacity: 0.84;
+        opacity: 0.88;
       }
 		}
 
@@ -3138,7 +3138,10 @@
 
     #four {
       background-color: grey;
-      opacity: 0.8;
+      opacity: 0.85;
+      video {
+        opacity: 1;
+      }
       .inner {
         text-align: center;
       }

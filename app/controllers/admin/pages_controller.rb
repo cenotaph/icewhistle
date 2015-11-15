@@ -17,6 +17,9 @@ class Admin::PagesController < Admin::BaseController
     redirect_to admin_pages_path
   end
   
+  def edit
+    @page = Page.friendly.find(params[:id])
+  end
   def new
     @page = Page.new
   end
@@ -32,7 +35,7 @@ class Admin::PagesController < Admin::BaseController
   end
   
   def update
-    @page = Page.find(params[:id])
+    @page = Page.friendly.find(params[:id])
     if @page.update_attributes(page_params)
       respond_with @page, location: -> { admin_pages_path }
     end
