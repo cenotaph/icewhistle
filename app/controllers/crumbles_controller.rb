@@ -44,7 +44,7 @@ class CrumblesController < ApplicationController
   # POST /crumbles
   # POST /crumbles.xml
   def create
-    @crumble = Crumble.new(params[:crumble])
+    @crumble = Crumble.new(crumble_params)
 
     respond_to do |format|
       if @crumble.save
@@ -64,7 +64,7 @@ class CrumblesController < ApplicationController
     @crumble = Crumble.find(params[:id])
 
     respond_to do |format|
-      if @crumble.update_attributes(params[:crumble])
+      if @crumble.update_attributes(crumble_params)
         flash[:notice] = 'Crumble was successfully updated.'
         format.html { redirect_to(@crumble) }
         format.xml  { head :ok }
@@ -85,5 +85,11 @@ class CrumblesController < ApplicationController
       format.html { redirect_to(crumbles_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  protected
+  
+  def crumble_params
+    params.require(:crumble).permit(:title, :category, :icon, :attachment, :descreiption, :slug, :datestamp)
   end
 end
