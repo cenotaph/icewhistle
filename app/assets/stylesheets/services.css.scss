@@ -3723,7 +3723,7 @@
 		}
 
 	body.is-mobile #main > header {
-		background-attachment: scroll;
+		background-attachment: scroll !important;
 	}
 
 /* Footer */
@@ -3824,7 +3824,7 @@
 	}
 
 	body.is-mobile.landing #page-wrapper {
-		background: none;
+		background: none !important;
 	}
 
 	body.is-mobile.landing #banner,
