@@ -1,5 +1,11 @@
 class FrontpageController < ApplicationController
 
+  layout :get_layout
+
+  def get_layout
+    hostname = request.host.gsub(/\..*/, '')
+    return (hostname == 'services' ? 'services' : 'application')
+  end
   
   def index
     @posts = Post.published.order('created_at DESC').page(params[:page]).per(10)
