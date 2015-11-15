@@ -3845,13 +3845,13 @@
   
 .contact_form#main {
   header {
-
+    background-size: initial !important;
     background-image: url('/assets/services/stein.jpg');
     p {
 
     }
   }
-  opacity: 0.88;
+  opacity: 0.95;
 }
 
 form {
