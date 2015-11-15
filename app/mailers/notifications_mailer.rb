@@ -1,6 +1,6 @@
 class NotificationsMailer < ActionMailer::Base
-  default from: "from@example.com"
-  default to: "fail@cenotaph.org"
+  default from: "john@cenotaph.org"
+  default to: "john@cenotaph.org"
   
   def new_message(message)
     @message = message
