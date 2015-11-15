@@ -1,13 +1,23 @@
 class ContactController < ApplicationController
-
+  layout :get_layout
+  
   def new
     @message = Message.new
+     set_meta_tags title: 'Contact'
+     if get_layout == 'services'
+       render template: 'contact/services'
+     end
   end
 
 
   def index
     @message = Message.new
-    render :template => 'contact/new'
+    set_meta_tags title: 'Contact'
+    if get_layout == 'services'
+      render template: 'contact/services'
+    else
+      render :template => 'contact/new'
+    end
   end
   
   def create

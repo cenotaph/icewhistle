@@ -35,7 +35,7 @@ module Icewhistle
       :port => 587,
      :domain => 'cenotaph.org',
     :authentication => "plain",
-    :user_name => 'fail@cenotaph.org',
+    :user_name => 'john@cenotaph.org',
   	:password => ENV['MAIL_PASSWORD'],
   	:enable_starttls_auto => false
   }

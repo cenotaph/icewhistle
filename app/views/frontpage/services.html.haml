@@ -11,7 +11,7 @@
 
     %ul.actions
       %li
-        %a.button.special{:href => "#"} GET SERIOUS
+        %a.button.special.scrolly{:href => "#one"} GET SERIOUS
   %a.more.scrolly{:href => "#one"} Learn More
 / One
 %section#one.wrapper.style1.special
@@ -45,6 +45,7 @@
         The Host
 
       %p John W. Fail adds an inviting, welcoming presence to your event. He does interviews, karaoke, panel moderating and more with warmth, grace and humility.
+      %p= link_to 'Learn more...', page_path('the-host')
   %section.spotlight
     .image
       %img{:alt => "", :src => "/assets/services/jtt.jpg"}/
@@ -53,6 +54,7 @@
         The Hype Man
 
       %p Canada's brightest export, Justin Tyler Tate, delivers the hype and so much more. He'll energise your audience and enliven your staff!
+      %p= link_to 'Learn more...', page_path('hype-man')
   %section.spotlight
     .image
       %img{:alt => "", :src => "/assets/services/ernest.jpg"}/
@@ -61,6 +63,7 @@
         The Media Specialist
 
       %p Ernest Truely brings a lengthy career in the media arts to SI-Services, where he will live tweet your event, post-process visual documentation, and otherwise augment reality.
+      %p= link_to 'Learn more...', page_path('media-specialist')
 / Three
 %section#four.wrapper.style4
   .inner
@@ -109,5 +112,5 @@
       %p Basic pricing starts at 45€/hour, with special packages tailored to your request.
     %ul.actions.vertical
       %li
-        %a.button.fit.special{:href => "#"} CONTACT
+        %a.button.fit.special{:href => "/contact"} CONTACT
       %li= link_to 'Learn More', page_path('pricing'), class: [:button, :fit]

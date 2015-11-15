@@ -1,54 +1,55 @@
-.row
-  .columns
-    %h2 Contact
+.contact_form
+  .row
+    .columns
+      %h2 Contact
 
-= form_for @message, :url => contact_path, :html => {:"data-abide" => ""} do |form|
-  #input
-    .row
-      .small-6.columns
-        .row
-          .small-2.columns
-            %label{:for => "name"} Your name:
-          .small-9.columns
-            %small.error You must enter your name.
-            = form.text_field :name,  :required => ""
-    .row
-      .small-6.columns
-        .row
-          .small-2.columns
-            %label{:for => "email"} Your email address:
-          .small-9.columns
-            %small.error A valid email address is required.
-            = form.text_field :email,  :required => "", :pattern => "[a-zA-Z]+"
-    .row
-      .small-6.columns
-        .row
-          .small-2.columns
-            %label{:for => "subject"} Subject:
-          .small-9.columns
-            %small.error You must enter a subject.
-            = form.text_field :subject,   :required => ""
-    .row
-      .small-6.columns
-        .row
-          .small-2.columns
-            %label{:for => "message"} Your message:
-          .small-9.columns= form.text_area :body,  {:class => 'formw', :size => "50x30"}
-    .row
-      .small-6.columns
-        .row
-          .small-2.columns
-            .comment_content To verify that you are a human, please enter the text found in the CAPTCHA below:
-            %label{:for => "captcha"} &nbsp;
-          .small-9.columns
-            - if @message.errors.messages[:base]
-              %small.error{:style => "display: block"}= @message.errors.messages[:base].join('; ')
-            = recaptcha_tags(:display => {:theme => 'clean', :tabindex => 10})
-    .row
-      .small-6.columns
-        .row
-          .small-2.columns &nbsp;
-          .small-9.columns= submit_tag 'Send', :class => [:button, :small, :round]
-= content_for :jquery do
-  :plain
+  = form_for @message, :url => contact_path, :html => {:"data-abide" => ""} do |form|
+    #input
+      .row
+        .small-6.columns
+          .row
+            .small-2.columns
+              %label{:for => "name"} Your name:
+            .small-9.columns
+              %small.error You must enter your name.
+              = form.text_field :name,  :required => ""
+      .row
+        .small-6.columns
+          .row
+            .small-2.columns
+              %label{:for => "email"} Your email address:
+            .small-9.columns
+              %small.error A valid email address is required.
+              = form.text_field :email,  :required => "", :pattern => "[a-zA-Z]+"
+      .row
+        .small-6.columns
+          .row
+            .small-2.columns
+              %label{:for => "subject"} Subject:
+            .small-9.columns
+              %small.error You must enter a subject.
+              = form.text_field :subject,   :required => ""
+      .row
+        .small-6.columns
+          .row
+            .small-2.columns
+              %label{:for => "message"} Your message:
+            .small-9.columns= form.text_area :body,  {:class => 'formw', :size => "50x30"}
+      .row
+        .small-6.columns
+          .row
+            .small-2.columns
+              .comment_content To verify that you are a human, please enter the text found in the CAPTCHA below:
+              %label{:for => "captcha"} &nbsp;
+            .small-9.columns
+              - if @message.errors.messages[:base]
+                %small.error{:style => "display: block"}= @message.errors.messages[:base].join('; ')
+              = recaptcha_tags(:display => {:theme => 'clean', :tabindex => 10})
+      .row
+        .small-6.columns
+          .row
+            .small-2.columns &nbsp;
+            .small-9.columns= submit_tag 'Send', :class => [:button, :small, :round]
+  = content_for :jquery do
+    :plain
     

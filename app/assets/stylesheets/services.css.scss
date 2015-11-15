@@ -1698,7 +1698,7 @@
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			box-shadow: 0 0 0 2px #21b2a6;
+			box-shadow: 0 0 0 2px #3EB221;
 		}
 
 	.select-wrapper {
@@ -1809,7 +1809,7 @@
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			box-shadow: 0 0 0 2px #21b2a6;
+			box-shadow: 0 0 0 2px #3EB221;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2383,12 +2383,15 @@
 			position: relative;
 			text-align: left;
 			width: 50%;
-      .icon_box { float: left;
+      .icon_box { 
+        max-width: 140px;
+        width: 40%;
+        float: left;
         
       }
       .testimonial {
         float: left;
-        width: 69%;
+        width: 60%;
         padding-left: 3rem;
       }
 		}
@@ -2500,6 +2503,11 @@
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+    p {
+      a {
+        &:hover { color: #3EB221; }
+      }
+    }
 	}
 
 		.spotlight .image {
@@ -2713,7 +2721,7 @@
 			.wrapper.style1 input[type="checkbox"]:checked + label:before,
 			.wrapper.style1 input[type="radio"]:checked + label:before {
 				background: #ffffff;
-				color: #21b2a6;
+				color: #3EB221;
 			}
 
 			.wrapper.style1 ::-webkit-input-placeholder {
@@ -3180,7 +3188,7 @@
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #3EB221;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3230,7 +3238,7 @@
 					}
 
 		#menu .close {
-			background-image: url("images/close.svg");
+			background-image: url("/assets/services/close.svg");
 			background-position: 4.85em 1em;
 			background-repeat: no-repeat;
 			border: 0;
@@ -3347,7 +3355,7 @@
 						}
 
 							#header nav > ul > li > a.menuToggle:after {
-								background-image: url("images/bars.svg");
+								background-image: url("/assets/services/bars.svg");
 								background-position: right center;
 								background-repeat: no-repeat;
 								content: '';
@@ -3502,7 +3510,7 @@
 		}
 
 			#banner .more:after {
-				background-image: url("images/arrow.svg");
+				background-image: url("/assets/services/arrow.svg");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
@@ -3833,3 +3841,48 @@
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+  
+  
+.contact_form#main {
+  header {
+
+    background-image: url('/assets/services/stein.jpg');
+    p {
+
+    }
+  }
+  opacity: 0.88;
+}
+
+form {
+  #input {
+    padding: 2rem;
+    opacity: 1;
+    background-color: #D3FEC8;
+    p {
+   
+      clear: both;
+    }
+    label {
+      width: 30%;
+      text-align: right;
+      float: left;
+    }
+    input, textarea {
+      float: left;
+      margin-left: 1rem;
+      background-color: white;
+      max-width: 65%;
+      margin-bottom: 1.2rem;
+    }
+
+  }
+  small.error {
+    display: none;
+  }
+  #recaptcha_widget_div {
+    margin-left: 30%;
+    padding-left: 1rem;
+    max-width: 65%;
+  }
+}

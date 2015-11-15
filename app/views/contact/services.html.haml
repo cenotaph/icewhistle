@@ -1,0 +1,35 @@
+
+%article#main.contact_form
+  %header
+    %h2 Contact
+    %p Get in touch with for pricing or services!
+  %section.wrapper.style5
+    .inner
+      %h3 We're only an email away!
+      %p Please complete this form to contact SI Services. We will answer in a timely fashion.
+      = form_for @message, :url => contact_path, :html => {:"data-abide" => ""} do |form|
+        #input
+          %p
+            %label{:for => "name"} Your name:
+            %small.error You must enter your name.
+            = form.text_field :name,  :required => ""
+          %p
+            %label{:for => "email"} Your email address:
+            %small.error A valid email address is required.
+            = form.text_field :email,  :required => "", :pattern => "[a-zA-Z]+"
+          %p
+            %label{:for => "subject"} Subject:
+            %small.error You must enter a subject.
+            = form.text_field :subject,   :required => ""
+          %p
+            %label{:for => "message"} Your message:
+            = form.text_area :body,  {:class => 'formw', :size => "50x15"}
+          %p
+            To verify that you are a human, please enter the text found in the CAPTCHA below:
+            %label{:for => "captcha"} &nbsp;
+            - if @message.errors.messages[:base]
+              %small.error{:style => "display: block"}= @message.errors.messages[:base].join('; ')
+            = recaptcha_tags(:display => {:theme => 'clean', :tabindex => 10})
+          %p
+            %label &nbsp;
+            = submit_tag 'Send', :class => [:button, :small, :round]
