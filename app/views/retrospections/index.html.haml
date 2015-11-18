@@ -4,60 +4,66 @@
     
 .row
   .small-10.medium-8.columns.small-centered
-    %p= request.remote_ip
+
     %p We here at Serious Introspection are deeply concerned with your thoughts and feelings regarding our programming.
     %p We ask you to answer honestly and candidly. Your input is important to us! We desperately seek to improve and deliver the best experience possible to you each week.
 
-= semantic_form_for @retrospection = Retrospection.new, html: {:"data-abide" => ''}, class: :retrospection do |f|
+- if @already_in_db == 1
   .row
     .small-10.medium-8.columns.small-centered
-      %h3.si_heading Demographics
-      = f.input :name, label: 'Your name (can be fake)', input_html: {required: 'required'}
+      %h3.si_heading Sorry...
+      %p Only one feedback form per IP address per day, please. If you are eager to submit additional feedback please wait until tomorrow.
+- else
+  = semantic_form_for @retrospection = Retrospection.new, html: {:"data-abide" => ''}, class: :retrospection do |f|
+    .row
+      .small-10.medium-8.columns.small-centered
+        %h3.si_heading Demographics
+        = f.input :name, label: 'Your name (can be fake)', input_html: {required: 'required'}
     
-      = f.input :age, as: :select, collection: [['0-17', 1], ['18-25', 2], ['26-40', 3], ['40+', 4]], include_blank: false
+        = f.input :age, as: :select, collection: [['0-17', 1], ['18-25', 2], ['26-40', 3], ['40+', 4]], include_blank: false
       
-      = f.input :episodes_attended, label: 'Number of episodes you attended', input_html: {required: 'required'}
-      = f.input :episodes_watched, label: 'Number of episodes watched online', input_html: {required: 'required'}
-      = f.input :best_cast, label: 'Best cast member?', as: :select, collection: [['John', 1], ['Justin', 2]], include_blank: false
-      = f.input :best_guest, label: 'Best guest?'
-      = f.input :nationality, as: :select, collection: [ ['Finnish', 1], ['Native English-speaking country', 2], ['Other', 3] ] , include_blank: false
-  .row
-    .small-10.medium-8.columns.small-centered
-      %h3.si_heading Your desires
-      %p Does the show need more or less of the following? Please choose a value from each desire-axis: to the right if you want MORE and to the left if you want LESS (and right in the middle if you are satisfied).
+        = f.input :episodes_attended, label: 'Number of episodes you attended', input_html: {required: 'required'}
+        = f.input :episodes_watched, label: 'Number of episodes watched online', input_html: {required: 'required'}
+        = f.input :best_cast, label: 'Best cast member?', as: :select, collection: [['John', 1], ['Justin', 2]], include_blank: false
+        = f.input :best_guest, label: 'Best guest?'
+        = f.input :nationality, as: :select, collection: [ ['Finnish', 1], ['Native English-speaking country', 2], ['Other', 3] ] , include_blank: false
+    .row
+      .small-10.medium-8.columns.small-centered
+        %h3.si_heading Your desires
+        %p Does the show need more or less of the following? Please choose a value from each desire-axis: to the right if you want MORE and to the left if you want LESS (and right in the middle if you are satisfied).
       
-      = f.input :humour, as: :range
-      = f.input :karaoke, as: :range
-      = f.input :music, as: :range, label: 'Non-karaoke music'
-      = f.input :introspection, label: 'Actual introspection', as: :range
+        = f.input :humour, as: :range
+        = f.input :karaoke, as: :range
+        = f.input :music, as: :range, label: 'Non-karaoke music'
+        = f.input :introspection, label: 'Actual introspection', as: :range
       
-  .row
-    .small-10.medium-8.columns.small-centered.segments
-      %h3.si_heading Segments
-      %p Please rank the segments in your order of preference. 1 is your favourite, 2 your second favourite, and so on down to 'please, never again'. Use each ranking once and only rank the segments you have actually seen (leave the others blank)
+    .row
+      .small-10.medium-8.columns.small-centered.segments
+        %h3.si_heading Segments
+        %p Please rank the segments in your order of preference. 1 is your favourite, 2 your second favourite, and so on down to 'please, never again'. Use each ranking once and only rank the segments you have actually seen (leave the others blank)
       
-      = f.input :segment_1_culture, as: :select, collection: (1..11).to_a, label: 'Culture beat!'
-      = f.input :segment_2_dance, as: :select, collection: (1..11).to_a, label: 'Dance lessons'
-      = f.input :segment_3_distribution, as: :select, collection: (1..11).to_a, label: 'Distribution of feedback questionnaires'
-      = f.input :segment_4_mailbag, as: :select, collection: (1..11).to_a, label: 'Mailbag'
-      = f.input :segment_5_mjtrivia, as: :select, collection: (1..11).to_a, label: 'Michael Jackson trivia'
-      = f.input :segment_6_showtell, as: :select, collection: (1..11).to_a, label: 'Show & Tell/Hear & Tell'
-      = f.input :segment_11_sigame, as: :select, collection: (1..11).to_a, label: 'SI: The game'
-      = f.input :segment_7_siivous, as: :select, collection: (1..11).to_a, label: 'Siivoushetki'
-      = f.input :segment_8_trivia, as: :select, collection: (1..11).to_a, label: 'Subjective trivia game'
-      = f.input :segment_9_visitortasks, as: :select, collection: (1..11).to_a, label: 'Visitor tasks'
-      = f.input :segment_10_justin, as: :select, collection: (1..11).to_a, label: 'What is Justin learning in art school?'
+        = f.input :segment_1_culture, as: :select, collection: (1..11).to_a, label: 'Culture beat!'
+        = f.input :segment_2_dance, as: :select, collection: (1..11).to_a, label: 'Dance lessons'
+        = f.input :segment_3_distribution, as: :select, collection: (1..11).to_a, label: 'Distribution of feedback questionnaires'
+        = f.input :segment_4_mailbag, as: :select, collection: (1..11).to_a, label: 'Mailbag'
+        = f.input :segment_5_mjtrivia, as: :select, collection: (1..11).to_a, label: 'Michael Jackson trivia'
+        = f.input :segment_6_showtell, as: :select, collection: (1..11).to_a, label: 'Show & Tell/Hear & Tell'
+        = f.input :segment_11_sigame, as: :select, collection: (1..11).to_a, label: 'SI: The game'
+        = f.input :segment_7_siivous, as: :select, collection: (1..11).to_a, label: 'Siivoushetki'
+        = f.input :segment_8_trivia, as: :select, collection: (1..11).to_a, label: 'Subjective trivia game'
+        = f.input :segment_9_visitortasks, as: :select, collection: (1..11).to_a, label: 'Visitor tasks'
+        = f.input :segment_10_justin, as: :select, collection: (1..11).to_a, label: 'What is Justin learning in art school?'
 
-  .row
-    .small-10.medium-8.columns.small-centered.segments
-      %h3.si_heading Additional comments
-      %p Please enter any additional comments.
-      = f.input :additional_comments
+    .row
+      .small-10.medium-8.columns.small-centered.segments
+        %h3.si_heading Additional comments
+        %p Please enter any additional comments.
+        = f.input :additional_comments
       
-  .row
-    .small-10.medium-8.columns.small-centered.segments
-      %h3.si_heading Thank you!
-      %p You may enter your email address if you would like to be contacted, but this is optional. 
-      = f.input :email
-      = recaptcha_tags display: { theme: "clean" }
-      = f.submit 'Submit!'
+    .row
+      .small-10.medium-8.columns.small-centered.segments
+        %h3.si_heading Thank you!
+        %p You may enter your email address if you would like to be contacted, but this is optional. 
+        = f.input :email
+        = recaptcha_tags display: { theme: "clean" }
+        = f.submit 'Submit!', class: [:button]
