@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115112543) do
+ActiveRecord::Schema.define(version: 20151118110616) do
 
   create_table "audiopodcasts", force: :cascade do |t|
     t.string   "url",          limit: 255
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20151115112543) do
     t.string   "item_type",    limit: 255
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-    t.integer  "bytes",        limit: 4
+    t.integer  "bytes",        limit: 8
     t.string   "content_type", limit: 255
   end
 
@@ -249,6 +249,36 @@ ActiveRecord::Schema.define(version: 20151115112543) do
     t.datetime "updated_at"
   end
 
+  create_table "retrospections", force: :cascade do |t|
+    t.string   "ip_address",             limit: 255
+    t.string   "name",                   limit: 255
+    t.integer  "age",                    limit: 4
+    t.integer  "episodes_attended",      limit: 4
+    t.integer  "episodes_watched",       limit: 4
+    t.integer  "best_cast",              limit: 4
+    t.string   "best_guest",             limit: 255
+    t.integer  "nationality",            limit: 4
+    t.integer  "humour",                 limit: 4
+    t.integer  "karaoke",                limit: 4
+    t.integer  "music",                  limit: 4
+    t.integer  "introspection",          limit: 4
+    t.integer  "segment_1_culture",      limit: 4
+    t.integer  "segment_2_dance",        limit: 4
+    t.integer  "segment_3_distribution", limit: 4
+    t.integer  "segment_4_mailbag",      limit: 4
+    t.integer  "segment_5_mjtrivia",     limit: 4
+    t.integer  "segment_6_showtell",     limit: 4
+    t.integer  "segment_7_siivous",      limit: 4
+    t.integer  "segment_8_trivia",       limit: 4
+    t.integer  "segment_9_visitortasks", limit: 4
+    t.integer  "segment_10_justin",      limit: 4
+    t.integer  "segment_11_sigame",      limit: 4
+    t.text     "additional_comments",    limit: 65535
+    t.string   "email",                  limit: 255
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
+
   create_table "schools", force: :cascade do |t|
     t.string   "started",    limit: 24
     t.string   "finished",   limit: 24
@@ -323,7 +353,7 @@ ActiveRecord::Schema.define(version: 20151115112543) do
     t.integer  "item_id",      limit: 4
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-    t.integer  "bytes",        limit: 4
+    t.integer  "bytes",        limit: 8
     t.string   "content_type", limit: 255
   end
 

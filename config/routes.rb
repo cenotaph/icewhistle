@@ -40,6 +40,7 @@ Icewhistle::Application.routes.draw do
   resources :groupings, :has_many => 'posts'
   resources :tags, :has_many => 'posts'
   resources :search
+  resources :retrospections
   namespace :admin do 
     resources :crumbles
     resources :cashes

@@ -192,7 +192,7 @@ img {
 #flash {
   background-color: #FFCD9B;
 
-  padding: 6px;
+  padding: 2rem 10px 10px 10px;
 }
 
 #tweet_front {
@@ -828,4 +828,27 @@ span.system_link a {
 }
 .pagination-right {
   text-align: right;
+}
+
+h2, h3 {
+  &.si_heading {
+    font-family: 'Arial Black', sans-serif;
+  }
+  
+}
+
+h2.si_heading {
+  color: #1EC600;
+  
+}
+
+form.retrospection {
+  label {
+    background-color: transparent;
+    color: #1EC600;
+    font-size: 0.8rem;
+  }
+  select {
+    width: 150px;
+  }
 }
