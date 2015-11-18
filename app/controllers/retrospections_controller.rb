@@ -18,12 +18,12 @@ class RetrospectionsController < ApplicationController
   def index
     user_ip = request.remote_ip
     @existing = Retrospection.where(ip_address: user_ip)
-    unless @existing.empty?
-      if @existing.map{|x| x.created_at.to_date }.include?(Time.now.to_date)
-        @already_in_db = 1
-      end
-      
-    end
+    # unless @existing.empty?
+    #   if @existing.map{|x| x.created_at.to_date }.include?(Time.now.to_date)
+    #     @already_in_db = 1
+    #   end
+    #
+    # end
     set_meta_tags title: 'Serious Retrospection', canonical: 'http://johnw.fail/retrospections',
                   og: {image: 'http://icewhistle.com/assets/si_box.jpg', 
                         title: 'Serious Retrospection', type: 'website',
