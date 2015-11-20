@@ -1,0 +1,5 @@
+.cms_content
+  .row
+    .small-12.columns
+      - @retrospections.each do |ret|
+        %li= link_to ret.name, [:admin, ret]

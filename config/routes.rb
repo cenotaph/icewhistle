@@ -52,6 +52,7 @@ Icewhistle::Application.routes.draw do
     resources :posts
     resources :publications
     resources :pages
+    resources :retrospections
     resources :groupings
   end
 

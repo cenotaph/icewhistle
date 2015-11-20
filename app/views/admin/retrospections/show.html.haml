@@ -1,0 +1,50 @@
+.cms_content
+  .row
+    .small-12.large-8.columns.small-centered
+      %p
+        %b Name
+        = @retrospection.name
+      %p
+        %b Email  
+        = @retrospection.email
+      %p
+        %b Age
+        = @retrospection.age == 1 ? "0-17" : (@retrospection.age == 2 ? "18-25" : (@retrospection.age == 3 ? "26-40" : "40+") ) 
+      %p
+        %b Episodes attended 
+        = @retrospection.episodes_attended
+      %p
+        %b Episodes watched
+        = @retrospection.episodes_watched
+      %p
+        %b Best cast member
+        = @retrospection.best_cast == 1 ? 'John' : 'Justin'
+      %p
+        %b Best guest
+        = @retrospection.best_guest
+      %p
+        %b Nationality
+        = @retrospection.nationality == 1 ? "Suomi" : (@retrospection.nationality == 2 ? "Native-English speaker" :  "Other")
+      %p
+        %b Desire-axis humour
+        = @retrospection.humour
+      %p
+        %b Desire-axis karaoke
+        = @retrospection.karaoke
+      %p
+        %b Desire-axis non-karaoke music
+        = @retrospection.music
+      %p
+        %b Desire-axis actual introspection
+        = @retrospection.introspection
+
+      -# gather segments and order
+      - segments = [['Culture beat!', @retrospection.segment_1_culture], ['Dance lessons', @retrospection.segment_2_dance], ['Distribution of questionnaires', @retrospection.segment_3_distribution], ['Mailbag', @retrospection.segment_4_mailbag], ['Michael Jackson trivia', @retrospection.segment_5_mjtrivia], ['Show & Tell/Hear & Tell', @retrospection.segment_6_showtell], ['Siivoushetki', @retrospection.segment_7_siivous], ['Subjective trivia game', @retrospection.segment_8_trivia], ['Visitor tasks', @retrospection.segment_9_visitortasks], ['What is Justin Learning in Art School?', @retrospection.segment_10_justin], ['SI: The Game', @retrospection.segment_11_sigame]].delete_if{|x| x.last.blank?}.sort_by{|x| x.last}
+      %p
+        %b Segments ranked:
+        %ol
+          - segments.each do |s|
+            %li= s.first + " (#{s.last.to_s})"
+      %p
+        %b Additional comments
+        = raw @retrospection.additional_comments
