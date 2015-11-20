@@ -618,6 +618,7 @@ medium.date {
   margin-bottom: 40px;
   &.index {
     .cropped {
+      height: auto;
       max-height: 300px;
     }
   }
