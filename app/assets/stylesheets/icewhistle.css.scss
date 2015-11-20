@@ -414,13 +414,23 @@ h3.subheading {
    line-height: 1.5rem;
    font-weight: 300;
   }
+  margin-top: 2rem;
+  
   .cropped {
-    img {
-      height: 335px;
-    }
-    margin-bottom: 1rem;
+    vertical-align: bottom;
+    display: table-cell;
+    height: 300px;
+    overflow: hidden;
+  }
+  .post {
+    padding-top: 1.5rem;
   }
   
+  
+}
+
+.post_outer {
+  margin-bottom: 2.5rem;
 }
 
 

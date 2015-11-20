@@ -33,7 +33,7 @@
 #recent_posts.row{:"data-equalizer" => "outer"}
   .columns.text-center{:"data-magellan-destination" => 'recent_posts'}
     - @posts[1..2].each do |post|
-      .small-10.medium-6.columns{:"data-equalizer-watch" => "outer"}= render :partial => 'image_top_post', :locals => {:post => post}
+      .small-12.medium-12.large-6.columns.post_outer{:"data-equalizer-watch" => "outer"}= render :partial => 'image_top_post', :locals => {:post => post}
 
 
 - Cash.visible.where(:source => "blindness").where("image_width > 760").order(order: :desc).limit(1).each do |bp|

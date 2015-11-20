@@ -3,7 +3,7 @@
 - if post.image? && post.photos.empty?
   .row{:"data-equalizer" => 'inner'}
     .small-12.columns
-      .cropped{:"data-equalizer-watch" => 'inner'}= image_tag post.image.url(:main).gsub('development', 'production')
+      .cropped= image_tag post.image.url(:main).gsub('development', 'production')
 - elsif !post.photos.empty?
   .row
     .small-12.columns.text-center
@@ -14,7 +14,7 @@
           - post.photos.each do |p|
             %li
               = image_tag p.filename.url(:main) 
-.text-center
+.text-center.post
   %h3.subheading= link_to raw(post.title), post
 .row
   .columns.small-12

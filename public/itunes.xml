@@ -8,8 +8,8 @@
     <link>https://www.facebook.com/seriousintrospectionwithjohnwfail/</link>
     <language>en-gb</language>
     <copyright>Copyright 2007</copyright>
-    <lastBuildDate>Sun, 08 Nov 2015 14:18:07 +0200</lastBuildDate>
-    <pubDate>Sun, 08 Nov 2015 14:18:07 +0200</pubDate>
+    <lastBuildDate>Fri, 20 Nov 2015 08:37:07 +0200</lastBuildDate>
+    <pubDate>Fri, 20 Nov 2015 08:37:07 +0200</pubDate>
     <docs>http://www.johnw.fail/</docs>
     <webMaster>john@ptarmigan.fi</webMaster>
 
@@ -29,6 +29,31 @@
 <itunes:category text="Arts">
      
 </itunes:category>
+
+<item>
+  <title>Serious Introspection S01E07: Tero Nauha, Milla Koistinen</title>
+  <link>http://johnw.fail/posts/serious-introspection-episode-7</link>
+  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e07.mp4</guid>
+  <description>Here is this week's episode, with Tero Nauha, Milla Koistinen, Salka Gudmundsdóttir and impromptu guest Tuukka Asplund. We passed out feedback forms to the audience and presented the new for-profit wing of Serious Introspection, SI Services (found at http://services.johnw.fail). 
+
+We were without a sound man for the third consecutive week but did not have Ilpo to save the day, so all of the mics are really hot and the soundboard mix sounds terrible. I tried the best I could with post-processing but this episode is again really hard to listen to. I apologise immensely and almost didn't post this video at all, but figured some bad-sounding documentation is better than nothing.</description>
+
+  <category>Podcasts</category>
+  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e07.mp4" length="1958079380" type="video/mp4"/>
+  <pubDate>Fri, 20 Nov 2015 10:00:19 +0000</pubDate>
+
+  <itunes:author>John W. Fail</itunes:author>
+
+  <itunes:explicit>No</itunes:explicit>
+  <itunes:subtitle>We ran out of show but learned about Trinidad.</itunes:subtitle>
+  <itunes:summary>Here is this week's episode, with Tero Nauha, Milla Koistinen, Salka Gudmundsdóttir and impromptu guest Tuukka Asplund. We passed out feedback forms to the audience and presented the new for-profit wing of Serious Introspection, SI Services (found at http://services.johnw.fail). 
+
+We were without a sound man for the third consecutive week but did not have Ilpo to save the day, so all of the mics are really hot and the soundboard mix sounds terrible. I tried the best I could with post-processing but this episode is again really hard to listen to. I apologise immensely and almost didn't post this video at all, but figured some bad-sounding documentation is better than nothing.</itunes:summary>
+  <itunes:duration>00:50:29</itunes:duration>
+  <itunes:keywords>Mad House,John W. Fail,Justin Tyler Tate,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews,Tero Nauha,Milla Koistinen,Trinidad</itunes:keywords>
+
+</item>
+
 
 <item>
 <title>Serious Introspection S01E06: Jaakko Blomberg &amp; the Post-MJ Era Institute of Consciousness</title>
