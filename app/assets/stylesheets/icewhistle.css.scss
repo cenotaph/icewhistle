@@ -616,6 +616,11 @@ medium.date {
 
 .post_row {
   margin-bottom: 40px;
+  &.index {
+    .cropped {
+      max-height: 300px;
+    }
+  }
 }
 
 .related_posts {
