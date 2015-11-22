@@ -24,7 +24,7 @@
       
         = f.input :episodes_attended, label: 'Number of episodes you attended', input_html: {required: 'required'}
         = f.input :episodes_watched, label: 'Number of episodes watched online', input_html: {required: 'required'}
-        = f.input :best_cast, label: 'Best cast member?', as: :select, collection: [['John', 1], ['Justin', 2], ['Both', 3]], include_blank: false
+        = f.input :best_cast, label: 'Best cast member?', as: :select, collection: [['John', 1], ['Justin', 2], ['Both', 3], ['Neither', 4]], include_blank: false
         = f.input :best_guest, label: 'Best guest?'
         = f.input :nationality, as: :select, collection: [ ['Finnish', 1], ['Native English-speaking country', 2], ['Other', 3] ] , include_blank: false
     .row
