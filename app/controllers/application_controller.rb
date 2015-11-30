@@ -9,7 +9,14 @@ class ApplicationController < ActionController::Base
 
   def get_layout
     hostname = request.host.gsub(/\..*/, '')
-    return (hostname == 'services' ? 'services' : 'application')
+    domain = request.domain
+    if domain =~ /seriousintrospection/
+      return hostname
+    else
+      return 'application'
+    end
+
+      # return (hostname == 'services' ? 'services' : 'application')
   end
   
   def load_sidebars

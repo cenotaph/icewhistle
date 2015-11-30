@@ -1,0 +1,168 @@
+/*
+ *= require foundation
+ *= require_self
+ *= require mediaelement_rails
+*/
+
+$sigreen: #53a842;
+$sigreen2: #18ea22;
+
+body {
+  background-color: $sigreen;
+}
+
+a {
+  color: $sigreen;
+  &:hover {
+    color: $sigreen2;
+  }
+}
+
+a.readmore-js-toggle {
+  display: inline !important;
+  width: inherit !important;
+  margin: 0.9375rem 0;
+  font-family: 'Arial Black', 'Arial', sans-serif;
+  background-color: $sigreen;
+ 
+  &:hover {
+    color: $sigreen;
+    background-color: white;
+    border: 1px solid $sigreen;
+  }
+}
+.readmore-js-section {
+  margin-bottom: 5px;
+}
+
+.left_container {
+  width: 60%;
+  float: left;
+  .menu {
+    margin: 0 1rem;
+    float: left;
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+    margin-bottom: 1.4rem;
+    ul {
+     
+      font-family: 'Arial Black', 'Arial', sans-serif;
+      list-style-type: none;
+      li {
+        padding-right: 1.5vw;
+            font-size: 1.55vw;
+        &.last {
+          padding-right: none;
+        }
+        a {
+          color: white;
+          &:hover {
+            color: $sigreen2;
+          }
+        }
+        float: left;
+
+      }
+    }
+  }
+  .title_container {
+    float: right;
+    padding-right: 1rem;
+    text-align: right;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 3.9vw;
+    text-align: right;
+    font-family: 'Arial Black', 'Arial', sans-serif;
+    color: white;
+
+
+  }
+  .post_container {
+    background-color: #FFFFFF;
+    opacity: 0.9;
+    padding: 0.5rem 2rem;
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: right;
+    width: 96%;
+    margin-right: 2%;
+    h3 {
+      margin-bottom: 0.2rem;
+      line-height: 2rem;
+      font-family: 'Arial Black', 'Arial', sans-serif;
+    }
+    h6 {
+      color: #888;
+      font-size: 0.6rem;
+      font-style: italic;
+    }
+    .post {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px dotted $sigreen2;
+      
+      .post_description {
+        margin-top: 0.4rem;
+        font-size: 0.85rem;
+        line-height: 1.4rem;
+        p, ul, li {
+          line-height: 1.4rem;
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+}
+.variable {
+  font-family: 'Arial Black', 'Arial', sans-serif;
+  color: white;
+  width: 40%;
+  padding-top: 2.8rem;
+
+  float: left;
+  font-size: 1.1rem;
+  a {
+    color: $sigreen2;
+    &:hover {
+      text-transform: underline;
+    }
+  }
+
+}
+
+
+.videocontent {
+  float: left;
+  clear: both;
+  margin: 0 auto;
+}
+
+.audiocontent {
+  float: left;
+  clear: both;
+  margin: 1.5rem auto;
+}
+
+
+footer {
+  clear: both;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  color: white;
+  ul {
+    list-style-type: none;
+    li {
+      float: left;
+      font-size: 1.4rem;
+      
+      a {
+        span.label {
+          background: none;
+        }
+      }
+    }
+  }
+}
