@@ -1,6 +1,6 @@
 - if @post.image?
   - if @post.image_width > 1200
-    = image_tag @post.image.url
+    .post_banner= image_tag @post.image.url
   - else 
     .row
       .small-12.columns.text-left.post_body

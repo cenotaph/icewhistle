@@ -76,7 +76,12 @@ a.readmore-js-toggle {
     text-align: right;
     font-family: 'Arial Black', 'Arial', sans-serif;
     color: white;
-
+    a {
+      color: white;
+      &:hover {
+        color: $sigreen2;
+      }
+    }
 
   }
   .post_container {
@@ -133,11 +138,50 @@ a.readmore-js-toggle {
 
 }
 
+// standalone post
+
+.post_banner {
+  float: right;
+  width: 96%;
+  margin-right: 2%;
+}
+.post {
+  background-color: #FFFFFF;
+  opacity: 0.9;
+  padding: 0.5rem 2rem;
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  float: right;
+  width: 96%;
+  margin-right: 2%;
+  h1 {
+    font-size: 2rem;
+    color: $sigreen;
+    text-align: left;
+  }
+  .metadata {
+    color: #888;
+    font-size: 0.6rem;
+    font-style: italic;
+  }
+  .post_body {
+    width: 100%;
+  }
+  .post_tags, .prev_next {
+    display: none;
+  }
+  .sidebar {
+    clear: left;
+    width: 100%;
+  }
+}
 
 .videocontent {
   float: left;
   clear: both;
   margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
 .audiocontent {
@@ -165,4 +209,76 @@ footer {
       }
     }
   }
+}
+
+
+// mobile considerations
+@media only screen and (max-width: 40.0625em) {
+  
+  .left_container {
+    width: 100%;
+    text-align: center;
+    h1.si_title {
+      font-size: 6vw;
+      float: none;
+    }
+    .menu {
+      ul {
+        li {
+          padding-right: 8.5vw;
+          font-size: 3.55vw;
+        }
+      }
+    }
+    .post {
+      h3 {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        
+      }
+      .videocontent {
+        margin-bottom: 1rem;
+      }
+      .post_description {
+
+        line-height: 1.2rem;
+        p {
+          line-height: 1.2rem;
+        }
+      }
+    }
+  }
+  
+  
+  
+}
+
+
+// tablet considerations
+@media only screen and (min-width: 40.063em) and (max-width:  64em) {
+  .variable {
+    width: 25%;
+    padding-top: 1.8rem;
+    font-size: 0.9rem;
+  }
+  .left_container {
+    width: 75%;
+    h1.si_title {
+      font-size: 4.9vw;
+    }
+    .menu {
+      ul {
+        li {
+          font-size: 3.55vw;
+        }
+      }
+    }
+    .post {
+      .videocontent {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  
+  
 }

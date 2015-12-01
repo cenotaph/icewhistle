@@ -23,7 +23,7 @@
   %body
     .left_container
       .title_container
-        %h1.si_title SERIOUS&nbsp;INTROSPECTION 
+        %h1.si_title= link_to raw('SERIOUS&nbsp;INTROSPECTION'),'/'
       .menu
         %ul.top_menu
           %li= link_to 'Services', 'http://services.seriousintrospection.fi', target: :_blank
@@ -42,7 +42,7 @@
       If you'd like to find out more about Serious Introspection, you can start by watching these episodes and seeing if it's your cup of tea.
       = raw ["We have a <a href='https://www.facebook.com/seriousintrospectionwithjohnwfail/' target='_blank'>Facebook page</a> which we use to post info about the upcoming shows and videos as they are released.", "We have made the show available as a podcast via <a href='https://itunes.apple.com/us/podcast/serious-introspection/id1057015274' target='_blank'>iTunes</a> and <a href='http://www.stitcher.com/podcast/serious-introspection' target='_blank'>Stitcher</a>.", "The hashtag <a href='https://twitter.com/search?f=tweets&vertical=default&q=%23SeriousIntrospection' target='_blank'>#SeriousIntrospection</a> contains the running stream of live tweets from our media specialist Ernest Truely (and anyone else who might contribute)."].shuffle.join(' ')
       So yeah, that's it, pretty much.
-      = raw ["We're trying to keep this page simple, if for no other reason than our cup runneth over with websites already.", "We will announced future events and SI-related matters here so feel free to check back any time."].shuffle.join(' ')
+      = raw ["We're trying to keep this page simple, if for no other reason than our cup runneth over with websites already.", "We will announce future events and SI-related matters here so feel free to check back any time."].shuffle.join(' ')
       
 
     / Footer

@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   end
   
   def show
+
     @post = Post.friendly.find(params[:id])
     set_meta_tags :title => @post.title, 
                   canonical: url_for(@post),
@@ -14,6 +15,7 @@ class PostsController < ApplicationController
                         title: @post.title, type: 'website', url: url_for(@post)
                       }, 
                   twitter: {card: 'summary', site: '@hyksos'}
+    render layout: get_layout
   end
   
   def new
