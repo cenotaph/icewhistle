@@ -346,6 +346,9 @@ a.readmore-js-toggle {
   margin-top: 8px;
 }
 
+#bookmarks_front {
+   border-top: 1px solid #c7d67e;
+}
 .bookmarks {
   font-weight: bold;
   li {
@@ -367,14 +370,14 @@ a.readmore-js-toggle {
   }
 }
 .blindness_wrapper {
-  border-top: 1px dotted #333;
-  border-bottom: 1px dotted #333;
+//  border-top: 1px solid #c7d67e;
+  border-bottom: 2px solid #c7d67e;
   position: relative;
   -webkit-box-shadow: 0 0 0 0 white;
   box-shadow: 0 0 0 0 white;
   filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0, Color='#255255255');
   -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0, Color='#255255255')";
-
+  clear: both;
   width: 100%;
   padding: 0px;
 
@@ -383,7 +386,7 @@ a.readmore-js-toggle {
     color: white;
     font-weight: 300;
     position: absolute;
-    top: 35px;
+    top: 60px;
     font-size: 30px;
     font-size: 2.8rem;
     line-height: 40px;
@@ -407,14 +410,14 @@ h3.subheading {
 }
 
 #recent_posts, #less_recent, .posts {
-  padding: 3.25rem 0 1.5rem 0;
+  padding: 1.25rem 0 1.5rem 0;
   p {
     padding-top: 0.9rem;
    font-size: 1rem;
    line-height: 1.5rem;
    font-weight: 300;
   }
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   
   .cropped {
     vertical-align: bottom;
@@ -871,3 +874,23 @@ form.retrospection {
     width: 150px;
   }
 }
+
+.acedia {
+  padding: 1.5rem 0;
+  border-top: 1px solid #c7d67e;
+  border-bottom: 1px solid #c7d67e;
+  p {
+    font-size: 0.875rem;
+    line-height: 1.3rem;
+  }
+}
+#mc_embed_signup {
+  #mce-EMAIL {
+    height: 2.65rem;
+    float: left;
+    width: 60%;
+  }
+  background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; 
+
+}
+
