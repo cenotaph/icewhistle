@@ -5,14 +5,14 @@
     = image_tag post.image.url
   - else
     .row    
-      .small-10.medium-9.large-7.columns.small-centered.post_with_topspace= image_tag post.image.url
+      .small-12.medium-9.large-7.columns.small-centered.post_with_topspace= image_tag post.image.url
 - elsif !post.photos.empty?
   %ul{:"data-orbit" => ""}
     - post.photos.each do |p|
       %li
         = image_tag p.filename.url
 .row    
-  .small-10.medium-.large-7.columns.small-centered.post_content
+  .small-12.medium-.large-7.columns.small-centered.post_content
     %h2.subheader= link_to raw(post.title), post
     %medium.date
       %em= "posted " +  l(post.updated_at, :format => :long)

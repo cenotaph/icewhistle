@@ -1,9 +1,9 @@
 .row
-  .small-2.columns 
+  .medium-2.small-12.columns 
     %h4.subheading Latest tweet:
-  .small-7.columns.text-left
+  .medium-7.small-12.columns.text-left
     - twit = twitter_status
     %h6.subheading= raw twit.first
-  .small-3.columns.twitter_column.text-right
+  .small-12.medium-3.columns.twitter_column.medium-text-right.small-text-left
     = link_to 'Follow @hyksos', 'http://twitter.com/hyksos', :class => "twitter-follow-button"
     %script{:src => "http://platform.twitter.com/widgets.js", :type => "text/javascript"}

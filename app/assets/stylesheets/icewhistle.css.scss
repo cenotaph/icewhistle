@@ -335,6 +335,9 @@ a.readmore-js-toggle {
   margin-left: 0;
 }
 
+.full_width_post {
+  
+}
 .full_width_post a.readmore-js-toggle {
    margin-left: 0px;
 }
@@ -717,10 +720,12 @@ div.input {
 }
 
 
+
 @media only screen and (min-width: 40.0625em) {
   .top-bar .title-area {
     max-width: 40%;
   }
+
 }
 
 div.input .formw {
@@ -894,3 +899,28 @@ form.retrospection {
 
 }
 
+// mobile considerations
+@media only screen and (max-width: 40.0625em) { 
+ .full_width_post {
+   margin-top: 4rem;
+ } 
+ .subheader {
+   line-height: 1.7rem;
+ }
+ .post_body,.post_body p, .post p,#recent_posts p, #less_recent p {
+   line-height: 1.3rem;
+   font-size: 0.875rem;
+ }
+ #recent_posts .cropped, #less_recent .cropped, .posts .cropped {
+   height: initial;
+ }
+ #tweet_front {
+   padding-bottom: 1.4rem;
+ }
+ .blindness_wrapper {
+   .inner_text {
+     top: 5px;
+     font-size: 1.3rem;
+   }
+ }
+}
