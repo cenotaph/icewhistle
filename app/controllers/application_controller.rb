@@ -11,7 +11,11 @@ class ApplicationController < ActionController::Base
     hostname = request.host.gsub(/\..*/, '')
     domain = request.domain
     if domain =~ /seriousintrospection/
-      return hostname
+      if hostname == 'services' 
+        return 'services'
+      else
+        return 'seriousintrospection'
+      end
     else
       return 'application'
     end
