@@ -10,7 +10,7 @@
 
 
 %a{:name => "top#{@posts.first.id.to_s}"}       
-.full_width_post{:id => "top#{@posts.first.id.to_s}"}= render :partial => 'full_width_post', :locals => {:post => @posts.first }
+.full_width_post.text-center{:id => "top#{@posts.first.id.to_s}"}= render :partial => 'full_width_post', :locals => {:post => @posts.first }
     
 %div#acedia= render :partial => 'acedia'
 
