@@ -30,29 +30,59 @@
      
 </itunes:category>
 
-<item>
-  <title>Serious Introspection S01E08: Season finale with Nikos Doulos and Mad House staff</title>
-  <link>http://johnw.fail/posts/serious-introspection-episode-8</link>
-  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e08.mp4</guid>
-  <description>Here's the last episode of Serious Introspection, which was by far the best one (from my perspective, at least). We had a large and hungry audience and great guests and a real spirit of absurdity. Guests were Nikos Doulous and some of the Mad House working group (Heidi Backström, Mirva Pulkkinen and Annika Tudeer); also included were statistical analysis, Minor Threat karaoke, and the one-time-only appearance of the 'What is John learning in (an) art school?' segment. We closed with a smashing music video/clip show.
+  <item>
+    <title>Serious Introspection S02E01: Welcome back with Marianna Keisalo, Helen Korpak, Iina Esko and Paola de Ramos</title>
+    <link>http://seriousintrospection.fi/posts/serious-introspection-season-2-episode-1</link>
+    <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e01.mp4</guid>
+    <description>We started the new season of Serious Introspection last week at Mad House, and we came back strong (I hope). Guests were standup comedienne/anthropologist Marianna Keisalo, Kosminen and Khaos Publishing's Helen Korpak and Iina Esko, and Brasilian artist Paola de Ramos. We debuted some new segments, enjoyed the strange glow of a 4:3 aspect ratio projector, and enjoyed seeing the audience again. Plus, balls.
+
+Here is the video for your enjoyment, featuring embedded tweets courtesy of Ernest (@room4error).
+
+We're off next week but we'll be back on the 24th for a special #ErrEvening night, and also with guest Juha Valkeapää!</description>
+
+    <category>Podcasts</category>
+    <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e01.mp4" length="2437975027" type="video/mp4"/>
+    <pubDate>Sun, 14 Feb 2016 10:13:19 +0000</pubDate>
+
+    <itunes:author>John W. Fail</itunes:author>
+
+    <itunes:explicit>Yes</itunes:explicit>
+    <itunes:subtitle>Birth of the Strong Five</itunes:subtitle>
+    <itunes:summary>We started the new season of Serious Introspection last week at Mad House, and we came back strong (I hope). Guests were standup comedienne/anthropologist Marianna Keisalo, Kosminen and Khaos Publishing's Helen Korpak and Iina Esko, and Brasilian artist Paola de Ramos. We debuted some new segments, enjoyed the strange glow of a 4:3 aspect ratio projector, and enjoyed seeing the audience again. Plus, balls.
+
+Here is the video for your enjoyment, featuring embedded tweets courtesy of Ernest (@room4error).
+
+We're off next week but we'll be back on the 24th for a special #ErrEvening night, and also with guest Juha Valkeapää!</itunes:summary>
+    <itunes:duration>01:06:22</itunes:duration>
+    <itunes:keywords>Mad House,John W. Fail,Justin Tyler Tate,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews,Ernest Truely,Iina Esko,Khaos Publishing,photo books,Marianna Keisalo,Feminist Comedy Night,Helen Korpak,Paola de Ramos,balls</itunes:keywords>
+
+  </item>
+
+
+
+  <item>
+    <title>Serious Introspection S01E08: Season finale with Nikos Doulos and Mad House staff</title>
+    <link>http://johnw.fail/posts/serious-introspection-episode-8</link>
+    <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e08.mp4</guid>
+    <description>Here's the last episode of Serious Introspection, which was by far the best one (from my perspective, at least). We had a large and hungry audience and great guests and a real spirit of absurdity. Guests were Nikos Doulous and some of the Mad House working group (Heidi Backström, Mirva Pulkkinen and Annika Tudeer); also included were statistical analysis, Minor Threat karaoke, and the one-time-only appearance of the 'What is John learning in (an) art school?' segment. We closed with a smashing music video/clip show.
   
-   Thanks again to everyone at Mad House - those on stage, Juha Valkeapää, and everyone else - and to Kimmo Modig who launched this enterpise in the first place. We'll be back for Mad House's third season, beginning in February, and we'll post more details as we know them. In the meantime, we are available to be hired for parties, bar mitzvahs and other events via the SI Services enterprise, and you can check out our new standalone website for Serious Introspection at seriousintrospection.fi. </description>
+     Thanks again to everyone at Mad House - those on stage, Juha Valkeapää, and everyone else - and to Kimmo Modig who launched this enterpise in the first place. We'll be back for Mad House's third season, beginning in February, and we'll post more details as we know them. In the meantime, we are available to be hired for parties, bar mitzvahs and other events via the SI Services enterprise, and you can check out our new standalone website for Serious Introspection at seriousintrospection.fi. </description>
 
-  <category>Podcasts</category>
-  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e08.mp4" length="2015367816" type="video/mp4"/>
-  <pubDate>Fri, 4 Dec 2015 10:00:19 +0000</pubDate>
+    <category>Podcasts</category>
+    <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e08.mp4" length="2015367816" type="video/mp4"/>
+    <pubDate>Fri, 4 Dec 2015 10:00:19 +0000</pubDate>
 
-  <itunes:author>John W. Fail</itunes:author>
+    <itunes:author>John W. Fail</itunes:author>
 
-  <itunes:explicit>Yes</itunes:explicit>
-  <itunes:subtitle>The big farewell show.</itunes:subtitle>
-  <itunes:summary>Here's the last episode of Serious Introspection, which was by far the best one (from my perspective, at least). We had a large and hungry audience and great guests and a real spirit of absurdity. Guests were Nikos Doulous and some of the Mad House working group (Heidi Backström, Mirva Pulkkinen and Annika Tudeer); also included were statistical analysis, Minor Threat karaoke, and the one-time-only appearance of the 'What is John learning in (an) art school?' segment. We closed with a smashing music video/clip show.
+    <itunes:explicit>Yes</itunes:explicit>
+    <itunes:subtitle>The big farewell show.</itunes:subtitle>
+    <itunes:summary>Here's the last episode of Serious Introspection, which was by far the best one (from my perspective, at least). We had a large and hungry audience and great guests and a real spirit of absurdity. Guests were Nikos Doulous and some of the Mad House working group (Heidi Backström, Mirva Pulkkinen and Annika Tudeer); also included were statistical analysis, Minor Threat karaoke, and the one-time-only appearance of the 'What is John learning in (an) art school?' segment. We closed with a smashing music video/clip show.
   
-   Thanks again to everyone at Mad House - those on stage, Juha Valkeapää, and everyone else - and to Kimmo Modig who launched this enterpise in the first place. We'll be back for Mad House's third season, beginning in February, and we'll post more details as we know them. In the meantime, we are available to be hired for parties, bar mitzvahs and other events via the SI Services enterprise, and you can check out our new standalone website for Serious Introspection at seriousintrospection.fi.</itunes:summary>
-  <itunes:duration>00:51:50</itunes:duration>
-  <itunes:keywords>Mad House,John W. Fail,Justin Tyler Tate,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews,Ernest Truely,Nikos Dolous,Annika Tudeer,Minor Threat, karaoke</itunes:keywords>
+     Thanks again to everyone at Mad House - those on stage, Juha Valkeapää, and everyone else - and to Kimmo Modig who launched this enterpise in the first place. We'll be back for Mad House's third season, beginning in February, and we'll post more details as we know them. In the meantime, we are available to be hired for parties, bar mitzvahs and other events via the SI Services enterprise, and you can check out our new standalone website for Serious Introspection at seriousintrospection.fi.</itunes:summary>
+    <itunes:duration>00:51:50</itunes:duration>
+    <itunes:keywords>Mad House,John W. Fail,Justin Tyler Tate,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews,Ernest Truely,Nikos Dolous,Annika Tudeer,Minor Threat, karaoke</itunes:keywords>
 
-</item>
+  </item>
 
 
 <item>
