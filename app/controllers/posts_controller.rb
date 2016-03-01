@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.includes(:comments).published.order('created_at DESC').page(params[:page]).per(6)
+
   end
   
   def show

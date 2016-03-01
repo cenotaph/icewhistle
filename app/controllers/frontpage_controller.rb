@@ -13,7 +13,7 @@ class FrontpageController < ApplicationController
                     twitter: {card: 'summary', site: '@hyksos'}
       render template: 'frontpage/services'
     elsif get_layout == 'seriousintrospection'
-      @posts = Post.published.tagged_with("serious introspection").order('created_at DESC').page(params[:page]).per(10)
+      @posts = Post.published.tagged_with("serious introspection").order('created_at DESC').all
       set_meta_tags :title => 'Serious Introspection', 
                     canonical: 'http://seriousintrospection.fi/',
                     og: {image: ( 'http://seriousintrospection.fi/itunes_logo.png'), 
