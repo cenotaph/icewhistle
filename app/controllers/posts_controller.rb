@@ -12,7 +12,8 @@ class PostsController < ApplicationController
     set_meta_tags :title => @post.title, 
                   canonical: url_for(@post),
                   og: {image: (@post.image? ?  [ @post.image.url(:midsize).gsub(/^https/, 'http'), { secure_url: @post.image.url(:midsize) } ] : 'http://icewhistle.com/icewhistle.jpg'), 
-                        title: @post.title, type: 'website', url: url_for(@post)
+                        title: @post.title, type: 'website', url: url_for(@post),
+                        description: ActionView::Base.full_sanitizer.sanitize(@post.description[0..500]) + "..."
                       }, 
                   twitter: {card: 'summary', site: '@hyksos'}
     render layout: get_layout

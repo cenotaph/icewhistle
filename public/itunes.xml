@@ -4,18 +4,18 @@
   <channel>
 
     <title>Serious Introspection</title>
-    <description>Serious Introspection with John W. Fail, live Tuesday at Mad House Helsinki.</description>
-    <link>https://www.facebook.com/seriousintrospectionwithjohnwfail/</link>
+    <description>Serious Introspection, live from Mad House Helsinki.</description>
+    <link>http://seriousintrospection.fi/</link>
     <language>en-gb</language>
-    <copyright>Copyright 2007</copyright>
+    <copyright>Copyright 2017</copyright>
     <lastBuildDate>Fri, 20 Nov 2015 08:37:07 +0200</lastBuildDate>
     <pubDate>Fri, 20 Nov 2015 08:37:07 +0200</pubDate>
-    <docs>http://www.johnw.fail/</docs>
+    <docs>http://seriousintrospection.fi/</docs>
     <webMaster>john@ptarmigan.fi</webMaster>
 
     <itunes:author>John W. Fail</itunes:author>
     <itunes:subtitle>Serious Introspection is a weekly live show at Mad House Helsinki that attempts to uncover the motivations and processes of the creative act.</itunes:subtitle>
-    <itunes:summary>Put the brakes on the avant-garde with Serious Introspection, a weekly live show hosted by John W. Fail (Ptarmigan, Pixelache, etc.). Each week, John will talk to performers, organisers, curators and producers from Mad House’s activities and beyond. The goal is to peel back the layers on the creative process, while seeking direct, human communication. It’s intended to be a space for total honesty, and topics may be germane or pleasantly irrelevant. In addition to invited guests and rotating co-hosts, audience members may be invited on stage to discuss their feelings and reactions to what’s being discussed. </itunes:summary>
+    <itunes:summary>Put the brakes on the avant-garde with Serious Introspection, a weekly live show hosted by John W. Fail (Ptarmigan, Pixelache, etc.) with Hype Man Justin Tyler Tate. Each week, John will talk to performers, organisers, curators and producers from Mad House’s activities and beyond. The goal is to peel back the layers on the creative process, while seeking direct, human communication. It’s intended to be a space for total honesty, and topics may be germane or pleasantly irrelevant. In addition to invited guests and rotating co-hosts, audience members may be invited on stage to discuss their feelings and reactions to what’s being discussed. </itunes:summary>
 
     <itunes:owner>
            <itunes:name>John W. Fail</itunes:name>
@@ -29,6 +29,28 @@
 <itunes:category text="Arts">
      
 </itunes:category>
+
+  <item>
+    <title>Serious Introspection S02E02: Juha Valkapää, Malin Gustavsson and John's parents'</title>
+    <link>http://seriousintrospection.fi/posts/serious-introspection-season-2-episode-2</link>
+    <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e02.mp4</guid>
+    <description>This week we had Juha Valkeapää to talk about his production 2341 AD, and Malin Gustavsson who explained a bit about her work as a diversity consultant. We also channeled the spirit of a country and western supergroup, phoned John's parents, and met the Pope Urban VII of Mad House Helsinki. As always, it couldn't happen without Justin Tyler Tate (world's best hype man), Ernest Truely (follow @room4error!), video master Lotta Blomberg, and sound master Joosep Tormis.</description>
+
+    <category>Podcasts</category>
+    <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e02.mp4" length="1907235417" type="video/mp4"/>
+    <pubDate>Tue, 1 Mar 2016 09:13:19 +0000</pubDate>
+
+    <itunes:author>John W. Fail</itunes:author>
+
+    <itunes:explicit>Yes</itunes:explicit>
+    <itunes:subtitle>When the yard broke off they said that I got killed</itunes:subtitle>
+    <itunes:summary>This week we had Juha Valkeapää to talk about his production 2341 AD, and Malin Gustavsson who explained a bit about her work as a diversity consultant. We also channeled the spirit of a country and western supergroup, phoned my parents, and met the Pope Urban VII of Mad House Helsinki. As always, it could happen without Justin Tyler Tate (world's best hype man), Ernest Truely (follow @room4error!), video master Lotta Blomberg, and sound master Joosep Tormis.</itunes:summary>
+    <itunes:duration>00:55:32</itunes:duration>
+    <itunes:keywords>Mad House,John W. Fail,Justin Tyler Tate,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews,Ernest Truely,Juha Valkeapää,Malin Gustavsson,2341 AD,Ekvalita,diversity consulting,The Highwayman,karaoke,Christine Fail,John S. Fail</itunes:keywords>
+
+  </item>
+  
+
 
   <item>
     <title>Serious Introspection S02E01: Welcome back with Marianna Keisalo, Helen Korpak, Iina Esko and Paola de Ramos</title>
