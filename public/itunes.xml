@@ -7,7 +7,7 @@
     <description>Serious Introspection, live from Mad House Helsinki.</description>
     <link>http://seriousintrospection.fi/</link>
     <language>en-gb</language>
-    <copyright>Copyright 2017</copyright>
+    <copyright>no copyright</copyright>
     <lastBuildDate>Fri, 20 Nov 2015 08:37:07 +0200</lastBuildDate>
     <pubDate>Fri, 20 Nov 2015 08:37:07 +0200</pubDate>
     <docs>http://seriousintrospection.fi/</docs>
@@ -29,6 +29,32 @@
 <itunes:category text="Arts">
      
 </itunes:category>
+
+
+  <item>
+    <title>Serious Introspection S02E03: Martina Marti and Juuso Paaso</title>
+    <link>http://seriousintrospection.fi/posts/serious-introspection-season-2-episode-3</link>
+    <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e03.mp4</guid>
+    <description>After some delay (sorry, I am lazy when it comes to my video editing responsibilities), here is season 2, episode 3 from 1 March 2016. Martina Marti was on first to discuss her work Reverie with Gnab Collective, as well as the general balance of being an artirst vs. and administrator, and the different approaches to these topics. Then we had Juuso Paaso, who has been working with the Oranssi Pienlehtiarkisto, here talking about zine culture in Finland and his digitisation efforts.
+
+In addition, Justin and I settled some beef, Juuso and I sang a Daniel Johnston song, and I did a STRONG FIVE about the Uberman Sleep Schedule. Ernest provided his tweets, seen here on-screen and followable @room4error via #SeriousIntrospection.</description>
+
+    <category>Podcasts</category>
+    <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e03.mp4" length="2142371582" type="video/mp4"/>
+    <pubDate>Tue, 15 Mar 2016 15:13:19 +0000</pubDate>
+
+    <itunes:author>John W. Fail</itunes:author>
+
+    <itunes:explicit>Yes</itunes:explicit>
+    <itunes:subtitle>True love will you find you in the end (of the show)</itunes:subtitle>
+    <itunes:summary>After some delay (sorry, I am lazy when it comes to my video editing responsibilities), here is season 2, episode 3 from 1 March 2016. Martina Marti was on first to discuss her work Reverie with Gnab Collective, as well as the general balance of being an artirst vs. and administrator, and the different approaches to these topics. Then we had Juuso Paaso, who has been working with the Oranssi Pienlehtiarkisto, here talking about zine culture in Finland and his digitisation efforts.
+
+In addition, Justin and I settled some beef, Juuso and I sang a Daniel Johnston song, and I did a STRONG FIVE about the Uberman Sleep Schedule. Ernest provided his tweets, seen here on-screen and followable @room4error via #SeriousIntrospection.</itunes:summary>
+    <itunes:duration>00:55:26</itunes:duration>
+    <itunes:keywords>Mad House,John W. Fail,Justin Tyler Tate,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews,Ernest Truely,Martina Marti,Gnab Collective,Juuso Paaso,Oranssi Pienlehtiarkisto</itunes:keywords>
+
+  </item>
+
 
   <item>
     <title>Serious Introspection S02E02: Juha Valkapää, Malin Gustavsson and John's parents'</title>
