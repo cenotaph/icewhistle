@@ -8,7 +8,7 @@
     <link>http://seriousintrospection.fi/</link>
     <language>en-gb</language>
     <copyright>no copyright</copyright>
-    <lastBuildDate>Fri, 20 Nov 2015 08:37:07 +0200</lastBuildDate>
+    <lastBuildDate>Sat Mar 19 08:59:33 +0000</lastBuildDate>
     <pubDate>Fri, 20 Nov 2015 08:37:07 +0200</pubDate>
     <docs>http://seriousintrospection.fi/</docs>
     <webMaster>john@ptarmigan.fi</webMaster>
@@ -30,7 +30,27 @@
      
 </itunes:category>
 
+  <item>
+    <title>Serious Introspection S02E04: Tuukka Asplund and Kira O'Reilly/title>
+    <link>http://seriousintrospection.fi/posts/serious-introspection-season-2-episode-4</link>
+    <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e04.mp4</guid>
+    <description>Serious Introspection season 2, episode 4 took place on Wednesday, 16 March 2016 at Ihana Baari in Helsinki and featured Tuukka Asplund and Kira O'Reilly as guests. We talked about life in Helsinki, ecology and trans-disciplinary approaches to performance, British complaint culture, and the value of making stuff or not. Also, we sang some karaoke, went to Estonia, tried to call Ernest, and spoke again with my parents.</description>
 
+    <category>Podcasts</category>
+    <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e04.mp4" length="2271565233" type="video/mp4"/>
+    <pubDate>	Sat, Mar 19 08:59:33 +0000</pubDate>
+
+    <itunes:author>John W. Fail</itunes:author>
+
+    <itunes:explicit>Yes</itunes:explicit>
+    <itunes:subtitle>You have a hairy-minded pink bare bear</itunes:subtitle>
+    <itunes:summary>Serious Introspection season 2, episode 4 took place on Wednesday, 16 March 2016 at Ihana Baari in Helsinki and featured Tuukka Asplund and Kira O'Reilly as guests. We talked about life in Helsinki, ecology and trans-disciplinary approaches to performance, British complaint culture, and the value of making stuff or not. Also, we sang some karaoke, went to Estonia, tried to call Ernest, and spoke again with my parents.</itunes:summary>
+    <itunes:duration>00:59:18</itunes:duration>
+    <itunes:keywords>Mad House,John W. Fail,Justin Tyler Tate,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews,Ernest Truely,Tuukka Asplund,Boom Edan,Kira O'Reilly</itunes:keywords>
+
+  </item>
+  
+  
   <item>
     <title>Serious Introspection S02E03: Martina Marti and Juuso Paaso</title>
     <link>http://seriousintrospection.fi/posts/serious-introspection-season-2-episode-3</link>
