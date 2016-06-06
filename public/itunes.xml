@@ -8,8 +8,8 @@
     <link>http://seriousintrospection.fi/</link>
     <language>en-gb</language>
     <copyright>no copyright</copyright>
-    <lastBuildDate>Sun, 05 Jun 2016 15:41:24 +0000</lastBuildDate>
-    <pubDate>Sun, 05 Jun 2016 15:41:24 +0000</pubDate>
+    <lastBuildDate>Mon, 06 Jun 2016 07:29:43 +0000</lastBuildDate>
+    <pubDate>Mon, 06 Jun 2016 07:29:43 +0000</pubDate>
     <docs>http://seriousintrospection.fi/</docs>
     <webMaster>john@ptarmigan.fi</webMaster>
 
@@ -28,6 +28,48 @@
     
 <itunes:category text="Arts">
 </itunes:category>
+
+<item>
+  <title>SI IHME special #2: Paula Toppila, Kateřina Šedá</title>
+  <link>http://seriousintrospection.fi/posts/si-at-ihme-episodes-1-and-2</link>
+  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme02.mp4</guid>
+  <description>The second Serious Introspection episode @ IHME 2016 featured festival director Paula Toppila and IHME 2016 artist Kateřina Šedá. It was a cold outdoor show but we talked about the tram busking project, the approach to art in everyday life, and their expectations for the rest of the festival.</description>
+
+  <category>Podcasts</category>
+  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme02.mp4" length="723420388" type="video/mp4"/>
+  <pubDate>Mon, 06 Jun 2016 07:29:43 +0000</pubDate>
+
+  <itunes:author>John W. Fail</itunes:author>
+
+  <itunes:explicit>No</itunes:explicit>
+  <itunes:subtitle>Outdoor interviews with Paul Toppila and Kateřina Šedá</itunes:subtitle>
+  <itunes:summary>The second Serious Introspection episode @ IHME 2016 featured festival director Paula Toppila and IHME 2016 artist Kateřina Šedá. It was a cold outdoor show but we talked about the tram busking project, the approach to art in everyday life, and their expectations for the rest of the festival.</itunes:summary>
+  <itunes:duration>00:18:15</itunes:duration>
+  <itunes:keywords>John W. Fail,Justin Tyler Tate,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews,Ernest Truely,Paula Toppila,Kateřina Šedá,IHME Days,IHME Päivät,community art,Pro Arte Foundation,Finland</itunes:keywords>
+
+</item>
+
+
+<item>
+  <title>SI IHME special #1: Pontus Kyander, Aleksis Salusjärvi</title>
+  <link>http://seriousintrospection.fi/posts/si-at-ihme-episodes-1-and-2</link>
+  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme01.mp4</guid>
+  <description>Here is the first show from the 2016 IHME Päivät festival, which took place on 1 April 2016 at Vanha (Old Student House) in Helsinki. We set up these shows outside, on the 'stage' next to Vanha, and throughout the weekend interviewed a variety of festival participants hoping to promote it to the general public. On Friday, the first show was with Pontus Kyander and Aleksi Salusjärvi, discussing Pontus's forthcoming manifesto and the crisis of Finnish art. We also had a drunken heckler who genuinely believed that Pontus was Elton John.</description>
+
+  <category>Podcasts</category>
+  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme01.mp4" length="2025557839" type="video/mp4"/>
+  <pubDate>Mon, 06 Jun 2016 06:29:43 +0000</pubDate>
+
+  <itunes:author>John W. Fail</itunes:author>
+
+  <itunes:explicit>No</itunes:explicit>
+  <itunes:subtitle>Outdoor interviews with Pontus Kyander and Aleksis Salusjärvi</itunes:subtitle>
+  <itunes:summary>Here is the first show from the 2016 IHME Päivät festival, which took place on 1 April 2016 at Vanha (Old Student House) in Helsinki. We set up these shows outside, on the 'stage' next to Vanha, and throughout the weekend interviewed a variety of festival participants hoping to promote it to the general public. On Friday, the first show was with Pontus Kyander and Aleksi Salusjärvi, discussing Pontus's forthcoming manifesto and the crisis of Finnish art. We also had a drunken heckler who genuinely believed that Pontus was Elton John.</itunes:summary>
+  <itunes:duration>00:33:00</itunes:duration>
+  <itunes:keywords>John W. Fail,Justin Tyler Tate,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews,Ernest Truely,Pontus Kyander,museums,Aleksis Salusjärvi,IHME Days,IHME Päivät,community art,Pro Arte Foundation,Finland</itunes:keywords>
+
+</item>
+
 
 
 <item>
