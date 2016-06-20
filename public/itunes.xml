@@ -8,8 +8,8 @@
     <link>http://seriousintrospection.fi/</link>
     <language>en-gb</language>
     <copyright>no copyright</copyright>
-    <lastBuildDate>Mon, 06 Jun 2016 07:29:43 +0000</lastBuildDate>
-    <pubDate>Mon, 06 Jun 2016 07:29:43 +0000</pubDate>
+    <lastBuildDate>Wed, 08 Jun 2016 07:29:43 +0000</lastBuildDate>
+    <pubDate>Wed, 08 Jun 2016 07:29:43 +0000</pubDate>
     <docs>http://seriousintrospection.fi/</docs>
     <webMaster>john@ptarmigan.fi</webMaster>
 
@@ -28,6 +28,48 @@
     
 <itunes:category text="Arts">
 </itunes:category>
+
+
+<item>
+  <title>SI IHME special #4: Pierre Bastien, Hamza Walker, Päivi Raivio and Robin Ellis</title>
+  <link>http://seriousintrospection.fi/posts/si-at-ihme-episodes-3-and-4</link>
+  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme04.mp4</guid>
+  <description>The fourth Serious Introspection episode @ IHME 2016 featured musician Pierre Bastien, curator Hamza Walker, and artists Päivi Raivio and Robin Ellis.</description>
+
+  <category>Podcasts</category>
+  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme04.mp4" length="2420312768" type="video/mp4"/>
+  <pubDate>Wed, 08 Jun 2016 07:29:43 +0000</pubDate>
+
+  <itunes:author>John W. Fail</itunes:author>
+
+  <itunes:explicit>No</itunes:explicit>
+  <itunes:subtitle>Interviews with Pierre Bastien, Päivi Raivio and Hamza Walker</itunes:subtitle>
+  <itunes:summary>The fourth Serious Introspection episode @ IHME 2016 featured musician Pierre Bastien, curator Hamza Walker, and artists Päivi Raivio and Robin Ellis.</itunes:summary>
+  <itunes:duration>00:18:15</itunes:duration>
+  <itunes:keywords>John W. Fail,Justin Tyler Tate,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews,Ernest Truely,Pierre Bastien,Päivi Raivio,Hamza Walker,Robin Ellis,IHME Days,IHME Päivät,community art,Pro Arte Foundation,Finland</itunes:keywords>
+
+</item>
+
+<item>
+  <title>SI IHME special #3: Jan Verwoert, Stephen Paul Taylor</title>
+  <link>http://seriousintrospection.fi/posts/si-at-ihme-episodes-3-and-4</link>
+  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme03.mp4</guid>
+  <description>The third Serious Introspection episode @ IHME 2016 featured Stephen Paul Taylor and Jan Verwoert and took place on Saturday, 2 April 2016.</description>
+
+  <category>Podcasts</category>
+  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme03.mp4" length="1898151503" type="video/mp4"/>
+  <pubDate>Tue, 07 Jun 2016 07:29:43 +0000</pubDate>
+
+  <itunes:author>John W. Fail</itunes:author>
+
+  <itunes:explicit>Yes</itunes:explicit>
+  <itunes:subtitle>Outdoor interviews with Stephen Paul Taylor and Jan Verwoert</itunes:subtitle>
+  <itunes:summary>The third Serious Introspection episode @ IHME 2016 featured Stephen Paul Taylor and Jan Verwoert and took place on Saturday, 2 April 2016</itunes:summary>
+  <itunes:duration>00:30:29</itunes:duration>
+  <itunes:keywords>John W. Fail,Justin Tyler Tate,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews,Ernest Truely,Stephen Paul Taylor,Jan Verwoert,IHME Days,IHME Päivät,community art,Pro Arte Foundation,Finland</itunes:keywords>
+
+</item>
+
 
 <item>
   <title>SI IHME special #2: Paula Toppila, Kateřina Šedá</title>
