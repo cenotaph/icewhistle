@@ -31,7 +31,7 @@
           - @post.videos.each do |video|
             .videocontent
               %video{src: video.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
-              %br/
+            %br/
         - unless @post.videos.empty? && @post.audiopodcasts.empty?
           = content_for :jquery do
             :plain
