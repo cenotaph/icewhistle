@@ -178,22 +178,31 @@ a.readmore-js-toggle {
 }
 
 .videocontent {
-  float: left;
+//  float: left;
   clear: both;
   margin: 0 auto;
   margin-bottom: 1rem;
   img {
     
   }
+  .play_wrapper {
+    height: 400px;
+    width: auto;
+    &:hover {
+      border: 3px solid #fff;
+      opacity: 0.8;
+      filter: invert(100%);
+    }
+  }
   .play {
     background: url(/assets/play-button-overlay.png) center center no-repeat;
     margin: 0;
-      height: 140px;
-      position: absolute;
+      height: 100%;
+//      position: absolute;
       z-index: 10;
       display: inline-block;
       width: 100%;
-      top: 25%;
+      opacity: 1.0;
   }
 }
 

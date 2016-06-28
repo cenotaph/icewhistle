@@ -1,10 +1,11 @@
 .post_container
   .post
     %h3 Next appearance: 
-    = link_to '6 April at 21:00', 'https://www.facebook.com/events/1556673014663256/'
+    There are no future SI shows currently scheduled at this time. If you'd like to hire Serious Introspection for your wedding, party, bar mitzvah, corporate event or other occasion, please contact us via 
+    = link_to 'SI Services.', 'http://services.seriousintrospection.fi/' 
+
     %br/
-    Season 2, episode 7 with Olaf Möller and Mari Keski-Korsu / 
-    Ihana Baari, Suvilahti, Helsinki  / free admission
+   
     
 .post_container
   - @posts.each do |post|
@@ -19,9 +20,15 @@
         - post.videos.each do |video|
           = link_to '#' do
             .videocontent[video]{rel: video.url}
-              = image_tag post.image.url.gsub('development', 'production')
-              .play &nbsp;
+              - if post.image.blank?  
+                .play_wrapper{style: "background: url(https://icewhistle-content.s3.amazonaws.com/production/images/post/image/568/12719603_500163816842666_8245993295491988405_o.jpg) no-repeat center center; background-size: cover;"}
+                  .play &nbsp;
+              - else
+
+                .play_wrapper{style: "background: url(#{post.image.url.gsub('development', 'production')}) no-repeat center center;  background-size: cover;"}
+                  .play &nbsp;
               -# %video{src: video.url, controls: "true",  style: "width: 100%; height: 100%", height: "100%", width: "100%"}
+          %br{clear: :all}
       - unless post.audiopodcasts.empty?
         - post.audiopodcasts.each do |podcast|
           .audiocontent
