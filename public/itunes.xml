@@ -29,6 +29,47 @@
 <itunes:category text="Arts">
 </itunes:category>
 
+<item>
+  <title>SI IHME special #6: Hannu Väisänen and Inga Lace.</title>
+  <link>http://seriousintrospection.fi/posts/si-at-ihme-episodes-5-and-6</link>
+  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme06.mp4</guid>
+  <description>The final Serious Introspection episode @ IHME 2016 was with manifesto reader Hannu Väisänen and bonus guest Inga Lace.</description>
+
+  <category>Podcasts</category>
+  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme06.mp4" length="760731083" type="video/mp4"/>
+  <pubDate>Fri, 19 Jun 2016 07:29:43 +0000</pubDate>
+
+  <itunes:author>John W. Fail</itunes:author>
+
+  <itunes:explicit>No</itunes:explicit>
+  <itunes:subtitle>Interviews with Hannu Väisänen and Inga Lace</itunes:subtitle>
+  <itunes:summary>The final Serious Introspection episode @ IHME 2016 was with manifesto reader Hannu Väisänen and bonus guest Inga Lace.</itunes:summary>
+  <itunes:duration>00:23:16</itunes:duration>
+  <itunes:keywords>John W. Fail,Justin Tyler Tate,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews,Ernest Truely,Hannu Väisänen,Inga Lace,IHME Days,IHME Päivät,community art,Pro Arte Foundation,Finland</itunes:keywords>
+
+</item>
+
+<item>
+  <title>SI IHME special #5: Seated/roundtable discussion with Nestori Syrjälä, Pekka and Teija Isorättyä, and Eero Yli-Vakkuri</title>
+  <link>http://seriousintrospection.fi/posts/si-at-ihme-episodes-5-and-6</link>
+  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme05.mp4</guid>
+  <description>A seated discussion with a handful of artists who were part of the Marathon event that evening: Nestori Syrjälä, Pekka and Teija Isorättyä, and Eero Yli-Vakkuri.</description>
+
+  <category>Podcasts</category>
+  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme05.mp4" length="916072359" type="video/mp4"/>
+  <pubDate>Thu, 18 Jun 2016 07:29:43 +0000</pubDate>
+
+  <itunes:author>John W. Fail</itunes:author>
+
+  <itunes:explicit>No</itunes:explicit>
+  <itunes:subtitle>Interviews with Nestori Syrjälä, Pekka and Teija Isorättyä, and Eero Yli-Vakkuri</itunes:subtitle>
+  <itunes:summary>A seated discussion with a handful of artists who were part of the Marathon event that evening: Nestori Syrjälä, Pekka and Teija Isorättyä, and Eero Yli-Vakkuri.</itunes:summary>
+  <itunes:duration>00:12:34</itunes:duration>
+  <itunes:keywords>John W. Fail,Justin Tyler Tate,Mad House,Ihana Baari,Suvilahti,Helsinki,performance,art,interviews,Ernest Truely,Nestori Syrjälä,Pekka Isorättyä,Teija Isorättyä,Eero Yli-Vakkuri,IHME Days,IHME Päivät,community art,Pro Arte Foundation,Finland</itunes:keywords>
+
+</item>
+
+
 
 <item>
   <title>SI IHME special #4: Pierre Bastien, Hamza Walker, Päivi Raivio and Robin Ellis</title>
