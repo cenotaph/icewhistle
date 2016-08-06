@@ -8,7 +8,7 @@
     <link>http://seriousintrospection.fi/</link>
     <language>en-gb</language>
     <copyright>no copyright</copyright>
-    <lastBuildDate>Wed, 08 Jun 2016 07:29:43 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Aug 2016 09:57:09 +0000<</lastBuildDate>
     <pubDate>Wed, 08 Jun 2016 07:29:43 +0000</pubDate>
     <docs>http://seriousintrospection.fi/</docs>
     <webMaster>john@ptarmigan.fi</webMaster>
@@ -28,6 +28,30 @@
     
 <itunes:category text="Arts">
 </itunes:category>
+
+
+<item>
+<title>SI podcast #2: Girilal Baars</title>
+<link>http://seriousintrospection.fi/posts/si-audio-podcast-2-girilal-baars</link>
+<guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/si_audio_002.m4a</guid>
+<description>My pal Girilal stopped by Helsinki last month and we recorded this conversation, which touched on science fiction, improvisation, being an audience member, and lots more. This is also an attempt to keep the SI podcast feed alive with some occasional content, as enough interesting people pass through my life that I should try to share their ideas with a larger audience, right??</description>
+
+<category>Podcasts</category>
+<enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/si_audio_002.m4a" length="30267723" type="audio/m4a"/>
+     <pubDate>Sat, 06 Aug 2016 09:57:09 +0000</pubDate>
+
+<itunes:author>John W. Fail</itunes:author>
+
+<itunes:explicit>No</itunes:explicit>
+<itunes:subtitle>Girilal Baars (Uppsala, Sweden) talks improvisation, flow and sci-fi</itunes:subtitle>
+<itunes:summary>My pal Girilal stopped by Helsinki last month and we recorded this conversation, which touched on science fiction, improvisation, being an audience member, and lots more. This is also an attempt to keep the SI podcast feed alive with some occasional content, as enough interesting people pass through my life that I should try to share their ideas with a larger audience, right??</itunes:summary>
+<itunes:duration>01:03:16</itunes:duration>
+<itunes:keywords>Girilal Baars,Uppsala,improvisation,hurdy-gurdy,interviews</itunes:keywords>
+
+</item>
+
+
+
 
 <item>
   <title>Serious Introspection S02E08: Marianna Keisalo, Red Brut, and Mental Alaska</title>
