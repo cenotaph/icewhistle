@@ -37,6 +37,6 @@ class Admin::SkillsController <  Admin::BaseController
 
  private 
   def permitted_params
-    params.permit(:skill => [:skills, :skilltype])
+    params.require(:skill).permit(:skills, :skilltype)
   end
 end

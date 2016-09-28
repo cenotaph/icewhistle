@@ -39,7 +39,7 @@ class Admin::JobsController <  Admin::BaseController
   protected
   
   def permitted_params
-    params.permit(:job => [:started, :finished, :employer, :department, :address1, :address2, :city, :state, :postcode, :country, :title, :description, :major, :realdate, :sortoder])
+    params.require(:job).permit(:started, :finished, :employer, :department, :address1, :address2, :city, :state, :postcode, :country, :title, :description, :major, :realdate, :sortoder)
   end
   
 end
