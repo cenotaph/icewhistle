@@ -1,6 +1,6 @@
-//= require jquery
+//= require jquery2
 //= require readmore.min
-//= require 'foundation/foundation' 
+//= require foundation
 //= require mediaelement_rails
 
 $(function(){ $(document).foundation( ); });

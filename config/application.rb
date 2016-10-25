@@ -44,7 +44,7 @@ module Icewhistle
   config.assets.enabled = true
   # config.action_mailer.default_charset = 'utf-8'
 
-  config.assets.precompile += %w(cms.css cms.js)
+
   config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
     # Activate observers that should always be running
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer

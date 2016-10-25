@@ -3,6 +3,8 @@
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( ckeditor/* )
+Rails.application.config.assets.precompile += %w(cms.css cms.js icewhistle-cv.css icewhistle.css printcv.css services-main.js services.js services.css)
+Rails.application.config.assets.precompile += %w( seriousintrospection.css seriousintrospection.js )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

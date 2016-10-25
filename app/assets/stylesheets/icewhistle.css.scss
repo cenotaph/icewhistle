@@ -173,7 +173,7 @@ img {
     margin: 0px;
     font-size: 1em;
   }
-  ul.right {
+  ul.menu {
     margin-top: 5px;
     li {
       a {
@@ -211,39 +211,43 @@ img {
     font-size:13px;
   }
 }
+
+.is-stuck {
+  #magellan {
+    margin-top: 72px;
+  }
+}
 #magellan {
   border-bottom: 1px solid #c7d67e;
   color: #c7d67e;
   padding: 0px;
-  top: 64px !important;
-  position: fixed;
+  background-color: white;
+  z-index: 42;
+
+
   .row {
     padding: 0px;
   }
-  dl.sub-nav {
-    dd.first {
+  ul.menu {
+    background-color: white;
+    li.first {
       margin-left: 11px;
     }
   }
   a {
-    font-size: 10px;
+    font-size: 0.9rem;
     color: #5D7104;
-  }
-  dd.active {
-    a {
-      color: #FFF;
-      &:hover {
-        background-color: #5D7104;
-      }
+    &.active {
+      background-color: #5D7104;
+      color: white;
     }
-    color: #FFF;
   }
 }
 
 body.frontpage {
   main {
     .footer-shadow {
-      padding-top: 0.2em;
+
       padding-bottom: 0px;
     }
   }
@@ -260,9 +264,9 @@ main {
     -webkit-box-shadow: 0 0 25px -25px rgba(20,20,30,0.5);
     -moz-box-shadow: 0 0 25px -25px rgba(20,20,30,0.5);
     box-shadow: 0 0 25px -25px rgba(20,20,30,0.5);
-    margin-bottom: 18em;
+    margin-bottom: 20em;
     padding-bottom: 2rem;
-    padding-top: 2.2em;
+//    padding-top: 2.2em;
     .post_banner {
       text-align: center;
     }
@@ -722,7 +726,11 @@ div.input {
   padding-top: 5px;     
 }
 
-
+.top-bar {
+  #responsive-menu {
+    float: left;
+  }
+}
 
 @media only screen and (min-width: 40.0625em) {
   .top-bar .title-area {
