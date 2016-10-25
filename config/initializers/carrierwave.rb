@@ -2,7 +2,8 @@ CarrierWave.configure do |config|
     config.storage = :aws
     config.aws_credentials = {
       :access_key_id      => ENV['S3_ACCESS'],
-      :secret_access_key  => ENV['S3_SECRET']
+      :secret_access_key  => ENV['S3_SECRET'], 
+      region: 'eu-west-1'
     }
     config.aws_acl    = :public_read
     # config.s3_region = 'eu-west-1'
