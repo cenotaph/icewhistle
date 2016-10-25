@@ -15,7 +15,7 @@ gem 'execjs', :group => :production
 
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'cancan'
-gem 'capistrano'#, '~> 3.1.0'
+gem 'capistrano', '3.6.1'
 gem 'capistrano-rails'#, '~> 1.1.0'
 gem 'capistrano-rvm'
 gem 'capistrano-bundler'
