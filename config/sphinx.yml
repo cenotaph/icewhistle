@@ -1,4 +1,0 @@
-production:
-  pid_file: /var/www/icewhistle/shared/tmp/searchd.pid
-  searchd_file_path: /var/www/icewhistle/shared/db/sphinx
-  mysql41: 9323

@@ -2,7 +2,8 @@ class SearchController < ApplicationController
  
 
   def index
-    @posts = ThinkingSphinx.search(params[:search],:order => 'created_at DESC').published.page(params[:page]).per(10)
+    @posts = ThinkingSphinx.search(params[:search],:order => 'created_at DESC').to_a.delete_if{|x| !x.published }
+    @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(10)
     if @posts.size == 0
     	flash[:notice] = 'Sorry, no results found for '+params[:search]
     else

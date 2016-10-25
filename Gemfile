@@ -63,7 +63,7 @@ gem 'randumb'
 gem "recaptcha", '3.0', require: "recaptcha/rails"
 gem 'rolify'
 
-# gem 'thinking-sphinx', '3.1.0'
+gem 'thinking-sphinx', '3.2.0'
 gem 'truncate_html'
 gem 'twitter', '5.6.0'
 gem 'unicorn'
