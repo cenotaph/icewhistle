@@ -550,6 +550,9 @@ medium.date {
   .sidebar {
     border-left: 1px solid #999;
     padding-left: 25px;
+    .is-stuck {
+      margin-top: 7rem !important;
+    }
   }
   .metadata {
     color: #555;

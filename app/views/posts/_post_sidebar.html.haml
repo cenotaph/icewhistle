@@ -1,4 +1,4 @@
-.sticky{:'data-sticky' => '', :'data-margin-top' => 7, :'data-sticky-on' => 'large'}
+.sticky.sidebar_offset{:'data-sticky' => '',  :'data-sticky-on' => 'large', :'data-top-anchor' => 'post_top'}
   .post_tags= raw format_tags(@post)      
 
   - unless @post.related.empty?
