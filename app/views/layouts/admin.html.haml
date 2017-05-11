@@ -21,15 +21,15 @@
             -# = link_to image_tag('johnfailicewhistle.jpg'), '/'
             = link_to image_tag('/images/icons/logo.png'), '/'
         .large-8.columns
-          %ul.button-group.right
+          %ul.dropdown.menu{:'data-dropdown-menu' => ""}
             %li
-              %a.button.dropdown.small{:href => "#", :"data-dropdown" => "who"} Who?
-              %ul#who.f-dropdown{:"data-dropdown-content" => ""}
+              %a.button{:href => "#"} Who?
+              %ul.menu#who
                 %li= link_to 'CV', '/cv'
                 %li= link_to 'Discography', 'http://static.icewhistle.com/discog/'
             %li
-              %a.button.dropdown.small{:href => "#", :"data-dropdown" => "what"} Projects
-              %ul#what.f-dropdown{:"data-dropdown-content" => ""}
+              %a.button{:href => "#"} Projects
+              %ul.menu
                 %li= link_to 'Ptarmigan', 'http://ptarmigan.ee/'
                 %li= link_to 'Pixelache', 'http://pixelache.ac/'
                 %li= link_to 'Lied Music', 'http://liedmusic.co.uk/'
@@ -37,15 +37,13 @@
                 %li= link_to 'Slothrop\'s', 'http://slothrops.ee/'
               
             %li
-              %a.button.dropdown.small{:href => "#", :"data-dropdown" => "archive"} Archive
-              %ul#archive.f-dropdown{:"data-dropdown-content" => ""}
+              %a.button{:href => "#"} Archive
+              %ul#archive.menu
                 %li= link_to 'All posts', posts_path
                 %li= link_to 'Blindness', 'http://blindness.icewhistle.com/'
                 %li= link_to 'Crumbles', crumbles_path
                 %li= link_to 'Bookmarks', 'http://icewhistle.postach.io'
-            %li.scale
-              = link_to image_tag 'jape.png', :height => 51
-            %li.scale= link_to image_tag 'johnfailicewhistle.jpg', :height => 51
+  
             
             
             

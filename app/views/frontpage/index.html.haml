@@ -1,13 +1,13 @@
 %div{:"data-sticky-container" => ''}
-  .sticky#example{:'data-sticky'=> '', :'data-margin-top' => '0', style: 'width: 100%', :"data-margin-bottom" => 0}
-    %nav#magellan{:"data-magellan" =>  '', :'data-bar-offset' => 112}
-      %ul.horizontal.menu.expanded
-        %li.first= link_to @posts.first.title, "#top#{@posts.first.id.to_s}"
-        
-        %li= link_to 'Recent posts', "#recent_posts"
-        %li= link_to 'Blindness', '#blindness_container'
-        %li= link_to 'Less recent posts', '#less_recent'
-        %li= link_to 'Recently read', '#bookmarks_front'
+  / %nav.columns.sticky#example{:'data-sticky'=> '', :'data-margin-top' => '0', style: 'width: 100%', :"data-margin-bottom" =>  }
+  %nav#magellan.columns.sticky{:'data-sticky' => '',   :'data-margin-top' => 7}
+    %ul.horizontal.menu.expanded{:"data-magellan" =>  ''}
+      %li.first= link_to @posts.first.title, "#top#{@posts.first.id.to_s}"
+      
+      %li= link_to 'Recent posts', "#recent_posts"
+      %li= link_to 'Blindness', '#blindness_container'
+      %li= link_to 'Less recent posts', '#less_recent'
+      %li= link_to 'Recently read', '#bookmarks_front'
 
 
 
@@ -42,6 +42,6 @@
     .small-9.columns
       %p Icewhistle.com is the website of John W. Fail since 2007. 
 
-      %medium Content on icewhistle.com does not necessarily represent the viewpoints of Ptarmigan, Piknik Frequency aka Pixelache, or any other organisations. Contact via email link on site footer.
+      %medium Contact via email link on site footer.
 
 

@@ -22,7 +22,7 @@
       = ff.input :filename
       = ff.link_to_remove 'Remove this'
   
-    = f.link_to_add 'add one or more images', :photos
+    = f.link_to_add 'add one or more images', :photos, class: [:button, :small]
   .row
     = f.fields_for :videos do |ff|
       - unless ff.object.blank?
@@ -31,7 +31,7 @@
         = ff.input :bytes
         = ff.input :content_type
   
-    = f.link_to_add 'add one or more videos', :videos
+    = f.link_to_add 'add one or more videos', :videos, class: [:button, :small]
 
   .row
     = f.fields_for :audiopodcasts do |ff|
@@ -41,7 +41,7 @@
         = ff.input :bytes
         = ff.input :content_type
   
-    = f.link_to_add 'add one or more audio attachments', :audiopodcasts
+    = f.link_to_add 'add one or more audio attachments', :audiopodcasts, class: [:button, :small]
           
   .row
     .small-6.columns= f.input :published

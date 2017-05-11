@@ -41,11 +41,11 @@
 
       
   %body{:class => controller.controller_name}
-    %header
-      %div{:"data-sticky-container" => '', style: 'z-index: 99;'}
-        .top-bar{:"data-margin-top" => 0, :"data-sticky" => '', style: 'width: 100%'}
+    %header#header
+      %div{:"data-sticky-container" => ''}
+        .top-bar{:"data-margin-top" => 0, :"data-sticky" => '', style: 'width: 100%', :'data-top-anchor' => 1}
           .top-bar-title
-            %span{"data-hide-for" => "medium", "data-responsive-toggle" => "responsive-menu"}
+            %span.menu{"data-hide-for" => "medium", "data-responsive-toggle" => "responsive-menu"}
               %button.menu-icon.dark{"data-toggle" => "", :type => "button"}
             %h1
               = link_to image_tag('icewhistle_combined.png'), '/'
@@ -71,7 +71,7 @@
                   = link_to 'Projects', '#'
                   %ul.menu.vertical
                     %li= link_to 'Temporary', 'https://temporary.fi/'
-                    %li= link_to 'Pixelache', 'http://pixelache.ac/'
+                    %li= link_to 'Pixelache Living Spaces', 'http://livingspaces.pixelache.ac/'
                     %li= link_to 'Ptarmigan', 'http://ptarmigan.ee/'
                 
                     -# %li= link_to 'Lied Music', 'http://liedmusic.co.uk/'
@@ -117,7 +117,7 @@
         .small-3.columns
           %ul
             %li= link_to 'Temporary', 'https://temporary.fi', target: :_blank
-            %li= link_to 'Pixelache', 'http://pixelache.ac', :target => :_blank
+            %li= link_to 'Living Spaces', 'http://livingspaces.pixelache.ac', :target => :_blank
             %li= link_to 'Ptarmigan', 'http://ptarmigan.ee', :target => :_blank
 
             %li= link_to 'Project Blood Team', 'http://bloodteam.com', :target => :_blank

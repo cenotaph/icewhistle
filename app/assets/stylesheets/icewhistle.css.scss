@@ -81,10 +81,10 @@ img {
 	border: none;
 }
 
-#header {
-	margin-bottom: 30px;
-	width: 100%;
-
+header {  
+  .sticky-container {
+    z-index:9999;
+  }
 }
 
 .bookmark_list {
@@ -419,7 +419,7 @@ h3.subheading {
   margin-top: 1.5rem;
 }
 
-#recent_posts, #less_recent, .posts {
+#recent_posts, #less_recent, body .posts {
   padding: 1.25rem 0 1.5rem 0;
   p {
     padding-top: 0.9rem;
@@ -934,4 +934,9 @@ form.retrospection {
      font-size: 1.3rem;
    }
  }
+}
+
+.top-bar-title span.menu {
+  left: 90%; 
+  position: absolute;
 }
