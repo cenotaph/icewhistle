@@ -1,3 +1,5 @@
+@import 'settings';
+
 @media all and (max-width: 959px) {
   .optional { display: none; }
 }
@@ -223,7 +225,9 @@ header {
   padding: 0px;
   background-color: white;
   z-index: 42;
-
+  @include breakpoint(small only) {
+    top: 0px !important;
+  }
 
   .row {
     padding: 0px;

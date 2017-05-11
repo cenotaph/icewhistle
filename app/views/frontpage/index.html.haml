@@ -1,6 +1,5 @@
 %div{:"data-sticky-container" => ''}
-  / %nav.columns.sticky#example{:'data-sticky'=> '', :'data-margin-top' => '0', style: 'width: 100%', :"data-margin-bottom" =>  }
-  %nav#magellan.columns.sticky{:'data-sticky' => '',   :'data-margin-top' => 7}
+  %nav#magellan.columns.sticky{:'data-sticky' => '',   :'data-margin-top' => 7, :'data-sticky-on' => 'medium'}
     %ul.horizontal.menu.expanded{:"data-magellan" =>  ''}
       %li.first= link_to @posts.first.title, "#top#{@posts.first.id.to_s}"
       
