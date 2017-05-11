@@ -424,11 +424,13 @@ h3.subheading {
   p {
     padding-top: 0.9rem;
    font-size: 1rem;
-   line-height: 1.5rem;
+   line-height: 1.6em;
    font-weight: 300;
   }
-  margin-top: 0.5rem;
-  
+
+  ul {
+    margin-top: 1rem;
+  }
   .cropped {
     vertical-align: bottom;
     display: table-cell;
@@ -577,7 +579,7 @@ medium.date {
   font-family: inherit;
   font-weight: 300;
   font-size: 1rem;
-  line-height: 1.3;
+  line-height: 1.57rem;
   margin-bottom: 1.25rem;
 
   p {

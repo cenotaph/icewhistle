@@ -40,7 +40,7 @@ class Admin::PostsController < Admin::BaseController
   protected
   
   def post_params
-    params.require(:post).permit(:title, :body, :tag_list, :image, :extended, :published, videos_attributes: [:id, :bytes, :content_type, :url], audiopodcasts_attributes: [:id, :bytes, :content_type, :url], photos_attributes: [:id, :filename])
+    params.require(:post).permit(:title, :body, :tag_list, :image, :extended, :published, videos_attributes: [:id, :bytes, :content_type, :url, :_destroy], audiopodcasts_attributes: [:id, :bytes, :content_type, :url, :_destroy], photos_attributes: [:id, :filename, :_destroy])
   end
   
 end

@@ -13,9 +13,9 @@ class Post < ActiveRecord::Base
   validates_presence_of :title, :body
   
   scope :published, -> () { where(published: true) }    
-  accepts_nested_attributes_for :photos, :reject_if => proc {|x| x['filename'].blank? }
-  accepts_nested_attributes_for :videos, :reject_if => proc {|x| x['url'].blank? }
-  accepts_nested_attributes_for :audiopodcasts, :reject_if => proc {|x| x['url'].blank? }
+  accepts_nested_attributes_for :photos, :reject_if => proc {|x| x['filename'].blank? }, :allow_destroy => true
+  accepts_nested_attributes_for :videos, :reject_if => proc {|x| x['url'].blank? }, :allow_destroy => true
+  accepts_nested_attributes_for :audiopodcasts, :reject_if => proc {|x| x['url'].blank? }, :allow_destroy => true
   def fulltext
   	if self.extended.blank?
 		  return self.body

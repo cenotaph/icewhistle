@@ -40,10 +40,7 @@
       .small-4.small-offset-1.columns.sidebar= render :partial => 'post_sidebar'
         
 
-  - elsif @post.image?
-    .row
-      .large-12.columns.text-center
-        = image_tag @post.image.url(:main)
+
 
     .row
       .small-7.columns.text-left.post_body
