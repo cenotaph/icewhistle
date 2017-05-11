@@ -1,26 +1,27 @@
-.post_tags= raw format_tags(@post)      
+.sticky{:'data-sticky' => '', :'data-margin-top' => 7, :'data-sticky-on' => 'large'}
+  .post_tags= raw format_tags(@post)      
 
-- unless @post.related.empty?
-  .row
-    .small-12.columns
-      %h4 Related posts:
+  - unless @post.related.empty?
+    .row
+      .small-12.columns
+        %h4 Related posts:
   
-  - @post.related.sort_by{|x| x.updated_at }.reverse[0..5].in_groups_of(3).each do |group|
-    .row.related_posts{:"data-equalizer" => ""}
-      - group.each do |related|
-        - next if related.nil?
-        .small-4.columns{:"data-equalizer-watch" => ""}
-          .related_title= link_to raw(related.title), related
-          - if related.image? && related.photos.empty?
-            = image_tag related.image.url(:midsize)
-          - elsif !related.photos.empty?
-            = image_tag related.photos.first.filename.url(:midsize)
-          %medium.date= l related.created_at.to_date, :format => :long
+    - @post.related.sort_by{|x| x.updated_at }.reverse[0..5].in_groups_of(3).each do |group|
+      .row.related_posts{:"data-equalizer" => ""}
+        - group.each do |related|
+          - next if related.nil?
+          .small-4.columns{:"data-equalizer-watch" => ""}
+            .related_title= link_to raw(related.title), related
+            - if related.image? && related.photos.empty?
+              = image_tag related.image.url(:midsize)
+            - elsif !related.photos.empty?
+              = image_tag related.photos.first.filename.url(:midsize)
+            %medium.date= l related.created_at.to_date, :format => :long
     
-.share_this= render partial: 'shared/share_buttons', locals: {url:  CGI::escape("http://#{request.host}#{request.port != 80 ? ":" + request.port.to_s : ''}#{url_for(@post)}"), title: CGI::escape(@post.title)}
+  .share_this= render partial: 'shared/share_buttons', locals: {url:  CGI::escape("http://#{request.host}#{request.port != 80 ? ":" + request.port.to_s : ''}#{url_for(@post)}"), title: CGI::escape(@post.title)}
 
 
-- if current_user
-  = link_to 'edit this post', edit_admin_post_path(@post)
-  %br
-  = link_to 'delete this post', @post, :confirm => 'Are you sure?', :method => :delete
+  - if current_user
+    = link_to 'edit this post', edit_admin_post_path(@post)
+    %br
+    = link_to 'delete this post', @post, :confirm => 'Are you sure?', :method => :delete

@@ -8,7 +8,7 @@
 .post
 
   .row
-    .columns.text-left
+    .columns.text-left.small-centered.medium-10.large-12.large-offset-0
       %h1= raw @post.title
       .metadata
         %em
@@ -17,7 +17,7 @@
   - if @post.photos.empty? 
   
     .row
-      .small-7.columns.text-left.post_body
+      .small-12.large-7.medium-10.medium-offset-1.columns.text-left.post_body.large-offset-0
         - unless @post.audiopodcasts.empty?
           - @post.audiopodcasts.each do |podcast|
             .audiocontent
@@ -37,27 +37,11 @@
             :plain
               $('video,audio').mediaelementplayer({defaultVideoWidth: "100%", alwaysShowHours: true});   
           
-      .small-4.small-offset-1.columns.sidebar= render :partial => 'post_sidebar'
+      .small-12.medium-10.large-4.medium-offset-1.columns.sidebar{:'data-sticky-container' => ''}= render :partial => 'post_sidebar'
         
 
 
 
-    .row
-      .small-7.columns.text-left.post_body
-        = raw @post.body      
-        - if @post.extended?
-          %br/
-          = raw @post.extended
-        - unless @post.videos.empty?
-          - @post.videos.each do |video|
-            .videocontent
-              %video{src: video.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
-
-          = content_for :jquery do
-            :plain
-              $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});   
-                        
-      .small-4.small-offset-1.columns.sidebar= render :partial => 'post_sidebar'
   -else
     .row
       .large-12.columns.text-left
@@ -76,9 +60,9 @@
                   = image_tag p.filename.url(:main)  
 
     .row{:"data-equalizer" => ""}
-      .small-7.columns.text-left.post_body{:"data-equalizer-watch" => ""}
+      .large-7.small-12.columns.text-left.post_body{:"data-equalizer-watch" => ""}
         = raw @post.body
-        - if @post.extended?
+        - unless @post.extended.blank?
           %br/
           = raw @post.extended
         - unless @post.videos.empty?
@@ -90,17 +74,17 @@
             :plain
               $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});   
               
-      .small-4.small-offset-1.columns.sidebar{:"data-equalizer-watch" => ""}= render :partial => 'post_sidebar'
+      .small-12.large-offset-1.columns.sidebar{:"data-equalizer-watch" => "", :'data-sticky-container' => ''}= render :partial => 'post_sidebar'
 
   .row.prev_next
-    .small-5.columns
+    .large-5.columns
       - unless @post.previous_post.nil?
         %h6 Previous post:
         .link
           = link_to @post.previous_post.title, @post.previous_post
           .date= @post.previous_post.created_at.strftime('%d %B %Y')
         
-    .small-5.columns.small-offset-2.text-right
+    .large-5.columns.large-offset-2.text-right
       - unless @post.next_post.nil?
         %h6 Next post:
         .link

@@ -2,7 +2,7 @@
 .row{:"data-magellan-destination" => "top#{post.id.to_s}"}
 - if post.image?
   - if post.image_width > 1200
-    = image_tag post.image.url.gsub(/development/, 'production')
+    = image_tag post.image.url
   - else
     .row    
       .small-12.medium-9.large-7.columns.small-centered.post_with_topspace= image_tag post.image.url

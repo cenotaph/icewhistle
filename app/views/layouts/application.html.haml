@@ -104,17 +104,17 @@
         = yield
     %footer#main_footer
       .row
-        .small-3.columns
+        .medium-3.small-6.columns
           = link_to image_tag('jape.png'), 'javascript:$("html, body").animate({ scrollTop: 0 }, "slow");'
           = link_to image_tag('johnfailicewhistle.jpg'), 'javascript:$("html, body").animate({ scrollTop: 0 }, "fast");'
-        .small-3.columns
+        .small-6.medium-3.columns
           %ul
             %li= link_to 'All posts', posts_path
             %li= link_to 'Blindness', 'http://blindness.icewhistle.com'
             %li= link_to 'Archival material', crumbles_path
             %li= link_to 'John W. Fail CV', '/cv'
             %li= link_to 'Discography', 'http://static.icewhistle.com/discog/'
-        .small-3.columns
+        .medium-3.small-6.columns
           %ul
             %li= link_to 'Temporary', 'https://temporary.fi', target: :_blank
             %li= link_to 'Living Spaces', 'http://livingspaces.pixelache.ac', :target => :_blank
@@ -123,7 +123,7 @@
             %li= link_to 'Project Blood Team', 'http://bloodteam.com', :target => :_blank
             %li= link_to 'Cenotaph', 'http://cenotaph.org', :target => :_blank
             -#%li= link_to 'Lied Music', 'http://liedmusic.co.uk', :target => :_blank
-        .small-3.columns
+        .small-6.medium-3.columns
           %ul
             %li= link_to 'Twitter', 'http://twitter.com/hyksos', :target => :_blank
             %li= link_to 'RSS', 'http://feeds.feedburner.com/IcewhistleAll/'
