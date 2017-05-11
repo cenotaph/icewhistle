@@ -924,7 +924,8 @@ form.retrospection {
 // mobile considerations
 @media only screen and (max-width: 40.0625em) { 
  .full_width_post {
-   margin-top: 4rem;
+   margin-top: 0;
+
  } 
  .subheader {
    line-height: 1.7rem;
