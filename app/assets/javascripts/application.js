@@ -7,5 +7,3 @@
 //= require mediaelement_rails
 
 $(function(){ $(document).foundation( ); });
-
-$(function(){ $(document).foundation(); });
