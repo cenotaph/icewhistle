@@ -23,6 +23,10 @@
         
 .row          
   .small-12.columns.text-center
-    %p= raw Nokogiri::HTML.parse(post.body).css('p').first.text
+    %p
+      - if Nokogiri::HTML.parse(post.body).css('p').empty?
+        = raw post.body
+      - else
+        = raw Nokogiri::HTML.parse(post.body).css('p').first.text
     = link_to 'Read more', post, :class => [:button, :tiny]
     
