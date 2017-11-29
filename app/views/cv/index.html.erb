@@ -44,7 +44,7 @@ function showElementsByClass(classray) {
 	<div class="cv_title">projects</div>
 	<div class="screen_controls">
 	<!-- span id="proj_hide_control" class="controls"><a onclick="$('#proj_section').fadeOut();document.getElementById('proj_hide_control').style.display = 'none';document.getElementById('proj_show_control').style.display = 'inline';">hide</a></span -->
-	<span id="proj_show_minor" class="controls"><a onclick="$('#proj_section').fadeIn();showElementsByClass(getElementsByClass('proj_minor'));document.getElementById('proj_hide_minor').style.display = 'inline';document.getElementById('proj_show_minor').style.display = 'none';">show all</a></span>
+	<span id="proj_show_minor" class="controls"><a onclick="$('#proj_section').fadeIn();$('.proj_minor').fadeIn();$('#proj_hide_minor').fadeIn();$('#proj_show_minor').fadeOut();return false;">show all</a></span>
  	<span id="proj_hide_minor" class="controls" style="display: none;"><a onclick="hideElementsByClass(getElementsByClass('proj_minor'));document.getElementById('proj_show_minor').style.display = 'inline';document.getElementById('proj_hide_minor').style.display = 'none';">hide minor</a></span></div>
 	</div>
 
@@ -109,15 +109,15 @@ function showElementsByClass(classray) {
 	<div class="screen_controls">
 		<!-- span id="job_hide_control" class="controls"><a onclick="new Effect.Fade('job_section');document.getElementById('job_hide_control').style.display = 'none';document.getElementById('job_show_control').style.display = 'inline';document.getElementById('job_hide_minor').style.display = 'none';document.getElementById('job_show_minor').style.display = 'none';">hide</a></span -->
 		<span id="job_show_control" class="controls" style="display: none;"><a onclick="new Effect.Appear('job_section');document.getElementById('job_show_control').style.display = 'none';document.getElementById('job_hide_control').style.display = 'inline';hideElementsByClass(getElementsByClass('job_minor'));document.getElementById('job_show_minor').style.display = 'inline';document.getElementById('job_hide_minor').style.display = 'none';">show</a></span>
-		<span id="job_show_minor" class="controls"><a onclick="showElementsByClass(getElementsByClass('job_minor'));document.getElementById('job_hide_minor').style.display = 'inline';document.getElementById('job_show_minor').style.display = 'none';">show all</a></span>
-	 	<span id="job_hide_minor" class="controls" style="display: none;"><a onclick="hideElementsByClass(getElementsByClass('job_minor'));document.getElementById('job_show_minor').style.display = 'inline';document.getElementById('job_hide_minor').style.display = 'none';">show only recent</a></span>
+		<span id="job_show_minor" class="controls"><a onclick="$('.job_minor').fadeIn();$('#job_hide_minor').fadeIn();$('#job_show_minor').fadeOut();return false;">show all</a></span>
+	 	<span id="job_hide_minor" class="controls" style="display: none;"><a onclick="$('.job_minor').fadeOut();$('#job_show_minor').fadeIn();$('#job_hide_minor').fadeOut();">show only recent</a></span>
 	</div>
 </div>
 
  <div id="job_section">
 <% for job in @jobs %>
 
-<div class="job" <% if job.major == false %>class="job_minor"<% end %>>
+<div class="job <% if job.major != true %> job_minor<% end %>">
  <div class="dateleft">
 
 	<%= job.started %> to
