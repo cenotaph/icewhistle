@@ -299,7 +299,7 @@ GEM
     multi_json (1.12.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mysql2 (0.4.5)
+    mysql2 (0.4.10)
     naught (1.1.0)
     nenv (0.3.0)
     nested_form (0.3.2)
@@ -560,7 +560,7 @@ DEPENDENCIES
   mediaelement_rails
   meta-tags
   mini_magick
-  mysql2
+  mysql2 (= 0.4.10)
   nested_form
   nifty-generators
   oauth-client

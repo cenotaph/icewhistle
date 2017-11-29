@@ -19,33 +19,34 @@ function getElementsByClass(searchClass,node,tag) {
 
 function hideElementsByClass(classray) {
 	var t = new String;
-	
+
 	for (x in classray) {
-		
+
 		if (typeof(classray[x]) == 'object') {
 		  	classray[x].style.display = 'none';
 		}
 	}
-}   
+}
 
 function showElementsByClass(classray) {
 	var t = new String;
-	
+
 	for (x in classray) {
-		
+
 		if (typeof(classray[x]) == 'object') {
 		  	classray[x].style.display = 'block';
 		}
 	}
-}   
+}
 </script>
-<div id="section-half">
+<div class="section-half">
 <div id="cvleft">
-	projects<br>
-	<span id="proj_hide_control" class="controls"><a onclick="$('#proj_section').fadeOut();document.getElementById('proj_hide_control').style.display = 'none';document.getElementById('proj_show_control').style.display = 'inline';">hide</a></span>
+	<div class="cv_title">projects</div>
+	<div class="screen_controls">
+	<!-- span id="proj_hide_control" class="controls"><a onclick="$('#proj_section').fadeOut();document.getElementById('proj_hide_control').style.display = 'none';document.getElementById('proj_show_control').style.display = 'inline';">hide</a></span -->
 	<span id="proj_show_minor" class="controls"><a onclick="$('#proj_section').fadeIn();showElementsByClass(getElementsByClass('proj_minor'));document.getElementById('proj_hide_minor').style.display = 'inline';document.getElementById('proj_show_minor').style.display = 'none';">show all</a></span>
  	<span id="proj_hide_minor" class="controls" style="display: none;"><a onclick="hideElementsByClass(getElementsByClass('proj_minor'));document.getElementById('proj_show_minor').style.display = 'inline';document.getElementById('proj_hide_minor').style.display = 'none';">hide minor</a></span></div>
-
+	</div>
 
 <div id="proj_section">
 <% for project in @projects %>
@@ -54,7 +55,7 @@ function showElementsByClass(classray) {
 	<% if project.started == '' %>
 	  <em>Various dates</em>
 	<% else %>
-   	<%= project.started %> to <%= project.finished %>  
+   	<%= project.started %> to <%= project.finished %>
     <% end %>
  </div>
  <div id="cvright-half">
@@ -77,14 +78,15 @@ function showElementsByClass(classray) {
 
 
 
-<div id="section-half">
+<div class="section-half">
  <div id="cvleft">
-	 output, publications and dissemination<br>
-	<span id="publication_hide_control" class="controls"><a onclick="new Effect.Fade('publication_section');document.getElementById('publication_hide_control').style.display = 'none';document.getElementById('publication_show_control').style.display = 'inline';document.getElementById('publication_hide_minor').style.display = 'none';document.getElementById('publication_show_minor').style.display = 'none';">hide</a></span>
+	 <div class="cv_title">output, publications and dissemination</div>
+	 <div class="screen_controls">
+	<!-- span id="publication_hide_control" class="controls"><a onclick="new Effect.Fade('publication_section');document.getElementById('publication_hide_control').style.display = 'none';document.getElementById('publication_show_control').style.display = 'inline';document.getElementById('publication_hide_minor').style.display = 'none';document.getElementById('publication_show_minor').style.display = 'none';">hide</a></span -->
 	<span id="publication_show_control" class="controls" style="display: none;"><a onclick="new Effect.Appear('publication_section');document.getElementById('publication_show_control').style.display = 'none';document.getElementById('publication_hide_control').style.display = 'inline';hideElementsByClass(getElementsByClass('publication_minor'));document.getElementById('publication_show_minor').style.display = 'inline';document.getElementById('publication_hide_minor').style.display = 'none';">show</a></span>
 	<span id="publication_show_minor" class="controls"><a onclick="showElementsByClass(getElementsByClass('publication_minor'));document.getElementById('publication_hide_minor').style.display = 'inline';document.getElementById('publication_show_minor').style.display = 'none';">show all</a></span>
  	<span id="publication_hide_minor" class="controls" style="display: none;"><a onclick="hideElementsByClass(getElementsByClass('publication_minor'));document.getElementById('publication_show_minor').style.display = 'inline';document.getElementById('publication_hide_minor').style.display = 'none';">hide minor</a></span></div>
-	
+</div>
 <div id="publication_section">
 	<% for pub in @publications %>
 <div id="publication" <% if pub.major == false %>class="publication_minor"<% end %>>
@@ -101,28 +103,30 @@ function showElementsByClass(classray) {
 </div>
 </div>
 
-<div id="section">
-<div id="cvleft">
-	professional experience<br>
-	<span id="job_hide_control" class="controls"><a onclick="new Effect.Fade('job_section');document.getElementById('job_hide_control').style.display = 'none';document.getElementById('job_show_control').style.display = 'inline';document.getElementById('job_hide_minor').style.display = 'none';document.getElementById('job_show_minor').style.display = 'none';">hide</a></span>
-	<span id="job_show_control" class="controls" style="display: none;"><a onclick="new Effect.Appear('job_section');document.getElementById('job_show_control').style.display = 'none';document.getElementById('job_hide_control').style.display = 'inline';hideElementsByClass(getElementsByClass('job_minor'));document.getElementById('job_show_minor').style.display = 'inline';document.getElementById('job_hide_minor').style.display = 'none';">show</a></span>	
-	<span id="job_show_minor" class="controls"><a onclick="showElementsByClass(getElementsByClass('job_minor'));document.getElementById('job_hide_minor').style.display = 'inline';document.getElementById('job_show_minor').style.display = 'none';">show all</a></span>
- 	<span id="job_hide_minor" class="controls" style="display: none;"><a onclick="hideElementsByClass(getElementsByClass('job_minor'));document.getElementById('job_show_minor').style.display = 'inline';document.getElementById('job_hide_minor').style.display = 'none';">show only recent</a></span>
+<div class="section">
+<div class="cvleft">
+	<div class="cv_title">professional experience</div>
+	<div class="screen_controls">
+		<!-- span id="job_hide_control" class="controls"><a onclick="new Effect.Fade('job_section');document.getElementById('job_hide_control').style.display = 'none';document.getElementById('job_show_control').style.display = 'inline';document.getElementById('job_hide_minor').style.display = 'none';document.getElementById('job_show_minor').style.display = 'none';">hide</a></span -->
+		<span id="job_show_control" class="controls" style="display: none;"><a onclick="new Effect.Appear('job_section');document.getElementById('job_show_control').style.display = 'none';document.getElementById('job_hide_control').style.display = 'inline';hideElementsByClass(getElementsByClass('job_minor'));document.getElementById('job_show_minor').style.display = 'inline';document.getElementById('job_hide_minor').style.display = 'none';">show</a></span>
+		<span id="job_show_minor" class="controls"><a onclick="showElementsByClass(getElementsByClass('job_minor'));document.getElementById('job_hide_minor').style.display = 'inline';document.getElementById('job_show_minor').style.display = 'none';">show all</a></span>
+	 	<span id="job_hide_minor" class="controls" style="display: none;"><a onclick="hideElementsByClass(getElementsByClass('job_minor'));document.getElementById('job_show_minor').style.display = 'inline';document.getElementById('job_hide_minor').style.display = 'none';">show only recent</a></span>
+	</div>
 </div>
 
  <div id="job_section">
 <% for job in @jobs %>
 
-<div id="job" <% if job.major == false %>class="job_minor"<% end %>>
+<div class="job" <% if job.major == false %>class="job_minor"<% end %>>
  <div class="dateleft">
 
 	<%= job.started %> to
 	<%= job.finished %>
  </div>
-  <div id="cvright">
+  <div class="cvright">
 	<span class="jobheading"><%= job.employer %></span><br />
 	<% unless job.department.empty? %><%= job.department %><br /><% end %>
-	<%= job.address1 %> 
+	<%= job.address1 %>
 	<% unless job.address2.empty? %>/ <%= job.address2 %><% end %>
 	<% unless job.city.empty? %> / <%= job.city %> <% end %>
 	<% unless job.state.empty? %>, <%= job.state %> <% end %>
@@ -138,11 +142,13 @@ function showElementsByClass(classray) {
 </div>
 
 
-<div id="section">
-<div id="cvleft">
-	skills<br>
-	<span id="sk_hide_control" class="controls"><a onclick="new Effect.Fade('skills_section');document.getElementById('sk_hide_control').style.display = 'none';document.getElementById('sk_show_control').style.display = 'inline';">hide</a></span>
+<div class="section">
+<div class="cvleft">
+	<div class="cv_title">skills</div>
+	<div class="screen_controls">
+	<!-- span id="sk_hide_control" class="controls"><a onclick="new Effect.Fade('skills_section');document.getElementById('sk_hide_control').style.display = 'none';document.getElementById('sk_show_control').style.display = 'inline';">hide</a></span -->
 	<span id="sk_show_control" class="controls" style="display: none;"><a onclick="new Effect.Appear('skills_section');document.getElementById('sk_show_control').style.display = 'none';document.getElementById('sk_hide_control').style.display = 'inline';">show</a></span>
+	</div>
 </div>
   <div id="skills_section">
 	<% for skill in @skill %>
@@ -150,7 +156,7 @@ function showElementsByClass(classray) {
 	 <div class="dateleft">
 	    <em><%= skill.skilltype %></em><br />
 	 </div>
-	 <div id="cvright">
+	 <div class="cvright">
 		<%= raw skill.skills %><Br />
 		<br />
 	 </div>
@@ -160,21 +166,24 @@ function showElementsByClass(classray) {
 </div>
 -
 
-<div id="section">
-<div id="cvleft">
-	education<br>
-	<span id="ed_hide_control" class="controls"><a onclick="new Effect.Fade('education_section');document.getElementById('ed_hide_control').style.display = 'none';document.getElementById('ed_show_control').style.display = 'inline';">hide</a></span>
+
+<div class="section">
+<div class="cvleft">
+	<div class="cv_title">education</div>
+	<div class="screen_controls">
+	<!-- span id="ed_hide_control" class="controls"><a onclick="new Effect.Fade('education_section');document.getElementById('ed_hide_control').style.display = 'none';document.getElementById('ed_show_control').style.display = 'inline';">hide</a></span -->
 	<span id="ed_show_control" class="controls" style="display: none;"><a onclick="new Effect.Appear('education_section');document.getElementById('ed_show_control').style.display = 'none';document.getElementById('ed_hide_control').style.display = 'inline';">show</a></span>
+</div>
 </div>
   <div id="education_section">
 	<% for school in @schools %>
-  <div id="job">
+  <div class="job">
 	 <div class="dateleft">
-	    <%= school.started %> - <%= school.finished %> 
+	    <%= school.started %> - <%= school.finished %>
 	 </div>
-	 <div id="cvright">
-		<%= school.name %><Br />
-		<%= school.degree %> , <%= school.subject %><br /><br />
+	 <div class="cvright">
+		<div class="school"><%= school.name %></div>
+		<%= school.degree %>, <%= school.subject %><br /><br />
 	 </div>
   </div>
 	<% end %><br />
@@ -188,10 +197,10 @@ function showElementsByClass(classray) {
   <script type="text/javascript">
    showElementsByClass(getElementsByClass('proj_minor'));
    document.getElementById('proj_hide_minor').style.display = 'inline';
-   document.getElementById('proj_show_minor').style.display = 'none';  
-   
+   document.getElementById('proj_show_minor').style.display = 'none';
+
    showElementsByClass(getElementsByClass('publication_minor'));
    document.getElementById('publication_hide_minor').style.display = 'inline';
-   document.getElementById('publication_show_minor').style.display = 'none';  
+   document.getElementById('publication_show_minor').style.display = 'none';
    </script>
 <% end %>

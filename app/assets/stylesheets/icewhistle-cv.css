@@ -1,6 +1,6 @@
 body {
 	background-color: #F0FFF0;
-	
+
 	font-family: Helvetica, Verdana, arial;
 }
 
@@ -10,12 +10,12 @@ body {
 
  img  {
 		border: 2px solid #5D6F0C;
-		text-decoration: none;	
+		text-decoration: none;
 
 }
 
 a {
-		text-decoration: none;	
+		text-decoration: none;
 	color: #5D6F0C;
 }
 
@@ -41,7 +41,7 @@ a {
 	width: 100%;
 	clear: both;
 }
-#bottomwrap { 
+#bottomwrap {
 	clear: both;
 }
 #header-cv {
@@ -56,7 +56,7 @@ a {
 	color: #5D6F0C;
 	text-decoration: none;
 	}
-	
+
 #feeds {
 	padding-top: 8px;
 	font-family: helvetica;
@@ -67,13 +67,13 @@ a {
 	margin-right: 25px;
 	clear: none;
 }
-		
+
 #yield {
 	margin-top: -10px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 1000px;
-	
+
 	font-family: helvetica;
 }
 #frontyield {
@@ -85,7 +85,7 @@ a {
 	width: 58%;
 	font-family: helvetica;
 }
-#cvleft {
+.cvleft {
 	float: left;
 
 	clear: none;
@@ -95,14 +95,23 @@ a {
 	font-size: 12pt;
 }
 
-#section-half {
+.section-half {
 
-  width: 440px;
+  width: 48%;
   float: left;
-	margin-top: 20px;
-	margin-bottom: 10px;
-  margin-right: 40px;
 
+
+}
+
+.cv_title {
+	font-size: 1.3rem;
+	margin: 1.4rem 0 0.4rem 0;
+	text-decoration: underline;
+}
+.screen_controls {
+	float: left;
+	clear:both;
+	margin-bottom: 1rem;
 }
 
 .dateleft {
@@ -122,17 +131,17 @@ a {
 	font-style: italic;
 	font-family: Helvetica, Verdana, Arial;
 	margin: 15px 0px;
-} 
+}
 
-#cvright {
+.cvright {
 	float: left;
 	width: 580px;
 	margin-top: 15px;
 	margin-bottom: 20px;
 }
 
-#cvright-half {
-  
+.cvright-half {
+
   width: 400px;
 }
 
@@ -170,11 +179,11 @@ a {
 .job_minor {
 	display: none;
 }
-#section {
+.section {
 	width: 900px;
 	clear:both;
-	margin-top: 20px;
-	margin-bottom: 10px;
+	margin: 2rem 0 0 0;
+
 }
 
 #education_section {
@@ -197,7 +206,7 @@ a {
 	clear:both;
 }
 #publication_section {
-	width: 900px;
+
 	clear:both;
 }
 
@@ -220,12 +229,28 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-
+.cvleft .cv_title, .cvleft .screen_controls {
+  margin-left: 80px;
+}
 .controls {
-  font-size: 7pt;
+  font-size: 0.7rem;
   cursor: pointer;
+	border: 1px solid #5D6F0C;
+	color: white;
+	background-color: white;
+	margin: 0.2rem 0;
+	padding: 0.4rem;
  }
 
+.controls:hover a {
+	color: white !important;
+}
+.controls:hover  {
+	background-color: #5D6F0C;
+}
+.controls a {
+	color: #5D6F0C !important;
+}
 #navtitle {
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -392,7 +417,7 @@ a {
 
 .col1 .posttitle {
 	font-size: 9pt;
-	font-family: Helvetica, Verdana, Arial;	
+	font-family: Helvetica, Verdana, Arial;
 }
 
 .col3 img {
@@ -400,8 +425,8 @@ a {
 }
 .col3 .posttitle a {
 	font-size: 8pt;
-	font-family: Helvetica, Verdana, Arial;	
-	color: #5D6F0C;  
+	font-family: Helvetica, Verdana, Arial;
+	color: #5D6F0C;
 	text-decoration: none;
 }
 .col3 a:hover {
@@ -410,7 +435,7 @@ a {
 .col3 .sidetitle a {
 		font-size: 8pt;
 		font-family: Helvetica, Verdana, Arial;
-		color: #5D6F0C;  
+		color: #5D6F0C;
 		text-decoration: none;
 }
 
@@ -426,14 +451,14 @@ a {
 
 .rightcolheading a {
 		text-decoration: none;
-			color: #5D6F0C;  
+			color: #5D6F0C;
 }
 
 .rightcolheading a:hover {
 		 color: #ADAF3C;
 }
 .holygrail .col2  a, .holygrail .col1 a {
-	color: #5D6F0C;  
+	color: #5D6F0C;
 	text-decoration: none;
 }
 
@@ -479,7 +504,7 @@ a {
 	width: 14em;
 	float: left;
 
-} 
+}
 
 #frontmiddlecol {
 	float: left;

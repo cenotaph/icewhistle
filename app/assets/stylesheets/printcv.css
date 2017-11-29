@@ -23,22 +23,32 @@ span.controls {
 }
 
 body {
-	background-color: #F0FFF0;
-	
+
+
 	font-family: Helvetica, Verdana, arial;
 }
 
  img  {
 		border: 2px solid #5D6F0C;
-		text-decoration: none;	
+		text-decoration: none;
 
 }
 
 a {
-		text-decoration: none;	
+		text-decoration: none;
 	color: #5D6F0C;
 }
 
+.small {
+  font-size: 0.8rem;
+  padding: 0.4rem 0;
+}
+.space {
+  margin: 0.4rem 0 !important;
+}
+.name {
+  font-size: 1.6rem;
+}
 
 #linksmenu {
 	background-color: #E0DF85;
@@ -57,11 +67,22 @@ a {
 	text-decoration: none;
 }
 
+.dateleft-half, .dateleft {
+  font-style: italic;
+}
+
+.cv_title {
+  font-size: 1.3rem;
+  margin: 1.4rem 0;
+  text-decoration: underline;
+}
+
+
 #topwrap {
 	width: 100%;
 	clear: both;
 }
-#bottomwrap { 
+#bottomwrap {
 	clear: both;
 }
 #header-cv {
@@ -76,7 +97,7 @@ a {
 	color: #5D6F0C;
 	text-decoration: none;
 	}
-	
+
 #feeds {
 	padding-top: 8px;
 	font-family: helvetica;
@@ -87,13 +108,13 @@ a {
 	margin-right: 25px;
 	clear: none;
 }
-		
+
 #yield {
 	margin-top: -10px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 1000px;
-	
+
 	font-family: helvetica;
 }
 #frontyield {
@@ -115,7 +136,7 @@ a {
 	font-size: 12pt;
 }
 
-#section-half {
+.section-half {
 
   width: 440px;
   float: left;
@@ -125,6 +146,9 @@ a {
 
 }
 
+.dateleft {
+  font-size: 0.9rem;
+}
 #dateleft {
 	float: left;
 	margin-left: 80px;
@@ -144,24 +168,36 @@ a {
 	font-style: italic;
 	font-family: Helvetica, Verdana, Arial;
 	margin-top: 15px;
-} 
+}
 
+.cvright {
+  font-size: 0.9rem;
+}
 #cvright {
 	float: left;
 	width: 580px;
-	margin-top: 15px;
+	margin: 0 0 2.2rem 0;
 	margin-bottom: 20px;
 }
 
 #cvright-half {
-  
-  width: 400px;
-}
 
-#job {
+  width: 400px;
+  font-size: 0.9rem;
+  color: #444;
+}
+.school {
+  font-size: 1.04rem;
+}
+p.description {
+  font-size: 0.9rem;
+  color: #444;
+}
+.job {
 	clear: both;
-	margin-top: 10px;
-	margin-bottom: 10px;
+  font-size: 0.9rem;
+	float: left;
+	margin-bottom: 1.5rem;
 }
 #skill {
 	clear: both;
@@ -192,11 +228,12 @@ a {
 .job_minor {
 	display: none;
 }
-#section {
+.section {
 	width: 900px;
+  float: left;
 	clear:both;
-	margin-top: 20px;
-	margin-bottom: 10px;
+	margin: 2rem 0 0 0;
+
 }
 
 #education_section {
@@ -229,7 +266,7 @@ a {
 }
 
 .projectheading {
-	font-size: 1.2em;
+	font-size: 1.1rem;
 }
 
 #linksmenu a {
@@ -413,7 +450,7 @@ a {
 
 .col1 .posttitle {
 	font-size: 9pt;
-	font-family: Helvetica, Verdana, Arial;	
+	font-family: Helvetica, Verdana, Arial;
 }
 
 .col3 img {
@@ -421,8 +458,8 @@ a {
 }
 .col3 .posttitle a {
 	font-size: 8pt;
-	font-family: Helvetica, Verdana, Arial;	
-	color: #5D6F0C;  
+	font-family: Helvetica, Verdana, Arial;
+	color: #5D6F0C;
 	text-decoration: none;
 }
 .col3 a:hover {
@@ -431,7 +468,7 @@ a {
 .col3 .sidetitle a {
 		font-size: 8pt;
 		font-family: Helvetica, Verdana, Arial;
-		color: #5D6F0C;  
+		color: #5D6F0C;
 		text-decoration: none;
 }
 
@@ -447,14 +484,14 @@ a {
 
 .rightcolheading a {
 		text-decoration: none;
-			color: #5D6F0C;  
+			color: #5D6F0C;
 }
 
 .rightcolheading a:hover {
 		 color: #ADAF3C;
 }
 .holygrail .col2  a, .holygrail .col1 a {
-	color: #5D6F0C;  
+	color: #5D6F0C;
 	text-decoration: none;
 }
 
@@ -500,7 +537,7 @@ a {
 	width: 14em;
 	float: left;
 
-} 
+}
 
 #frontmiddlecol {
 	float: left;
