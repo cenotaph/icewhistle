@@ -111,9 +111,26 @@ h3.section_heading {
   padding: 1.25rem 0;
 }
 
-
+.page_body {
+  p {
+    margin-bottom: 1.25rem;
+  }
+}
 
 .post_sidebar {
   border-left: 1px solid #999;
   padding-left: 2.5rem;
+}
+
+footer.footer {
+  background-color: #666;
+  a {
+    color: white;
+    &:visited {
+      color: #DDD;
+    }
+    &:hover {
+      color: #c7d67e;
+    }
+  }
 }
