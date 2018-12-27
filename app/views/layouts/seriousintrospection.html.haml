@@ -22,45 +22,52 @@
           ga('create', 'UA-8528342-3', 'auto');
           ga('send', 'pageview');
   %body
-    .left_container
-      .title_container
-        %h1.si_title= link_to raw('SERIOUS&nbsp;INTROSPECTION'),'/'
-      .menu
-        %ul.top_menu
-          %li= link_to 'Services', 'http://services.seriousintrospection.fi', target: :_blank
-          %li= link_to 'iTunes', 'https://itunes.apple.com/us/podcast/serious-introspection/id1057015274', target: :_blank
-          %li= link_to 'SI on FB', 'https://www.facebook.com/seriousintrospectionwithjohnwfail/', target: :_blank
-          %li= link_to '#SeriousIntrospection', 'https://twitter.com/search?f=tweets&vertical=default&q=%23SeriousIntrospection', target: :_blank
-          %li.last= link_to 'Mad House', 'http://madhousehelsinki.fi', target: :_blank
-      = yield
-    .variable
-      with John W. Fail is a live show in Helsinki, Finland.
-      = ['Each week, John along with hype man Justin Tyler Tate, interviews people about their creative process and tries to deliver a direct, communicative experience about art and performance.', "The show takes place at Mad House Helsinki's Ihana Baari, and is free to attend.", "You know, we did eight shows in the first season and it was pretty time-consuming, but we're excited to be coming back for more in 2016.", 'We try our best to entertain.' ].shuffle.join(' ')
-      We've made videos available from all episodes of the show here for you to watch.
-      = ["The videos aren't always perfect and the audio even less so, but we hope you still enjoy them.", "We also will occasionally post audio podcasts when we get the time to go more in-depth with people, outside of the public show.", "Next year we will return between February and April for season two; well, it's season two for us, but season three for Mad House, which is a bit confusing.", "The show will probably move to Wednesdays in 2016 but we still need to work out those details."].shuffle.join(' ')
-      But wait, there's more!
-      =  raw ["We are available to be booked for parties, wedding, bar mitzvahs and other events.", "The for-profit arm of Serious Introspection is called <a href='http://services.seriousintrospection.fi/' target='_blank'>SI Services</a> and we're up for anything, really!", "We will come to your event and offer our services for hosting, hyping and media specialisation (live tweeting) for a variable fee."].shuffle.join(' ')
-      If you'd like to find out more about Serious Introspection, you can start by watching these episodes and seeing if it's your cup of tea.
-      = raw ["We have a <a href='https://www.facebook.com/seriousintrospectionwithjohnwfail/' target='_blank'>Facebook page</a> which we use to post info about the upcoming shows and videos as they are released.", "We have made the show available as a podcast via <a href='https://itunes.apple.com/us/podcast/serious-introspection/id1057015274' target='_blank'>iTunes</a> and <a href='http://www.stitcher.com/podcast/serious-introspection' target='_blank'>Stitcher</a>.", "The hashtag <a href='https://twitter.com/search?f=tweets&vertical=default&q=%23SeriousIntrospection' target='_blank'>#SeriousIntrospection</a> contains the running stream of live tweets from our media specialist Ernest Truely (and anyone else who might contribute)."].shuffle.join(' ')
-      So yeah, that's it, pretty much.
-      = raw ["We're trying to keep this page simple, if for no other reason than our cup runneth over with websites already.", "We will announce future events and SI-related matters here so feel free to check back any time."].shuffle.join(' ')
+    .container
+      .columns
+        .column.is-three-fifths.left_container
+          .title_container
+            %h1.si_title= link_to raw('SERIOUS&nbsp;INTROSPECTION'),'/'
+          .is-clearfix
+          .menu
+            %ul.top_menu
+              %li= link_to 'Services', 'https://services.seriousintrospection.fi', target: :_blank
+              %li= link_to 'iTunes', 'https://itunes.apple.com/us/podcast/serious-introspection/id1057015274', target: :_blank
+              %li= link_to 'SI on FB', 'https://www.facebook.com/seriousintrospectionwithjohnwfail/', target: :_blank
+              %li= link_to '#SeriousIntrospection', 'https://twitter.com/search?f=tweets&vertical=default&q=%23SeriousIntrospection', target: :_blank
+              %li.last= link_to 'Mad House', 'https://madhousehelsinki.fi', target: :_blank
+            .is-clearfix
+          = yield
+        .column.right_container
+          with John W. Fail was a live show in Helsinki, Finland from 2015-2016.
+          = ['Each week, John along with hype man Justin Tyler Tate, interviewed people about their creative process and tried to deliver a direct, communicative experience about art and performance.', "The show took place at Mad House Helsinki's Ihana Baari, and was free to attend.", "You know, we did eight shows in the first season and it was pretty time-consuming, but we were excited to come back for more in 2016.", 'We tried our best to entertain.' ].shuffle.join(' ')
+          We've made videos available from all episodes of the show here for you to watch.
+          = ["The videos aren't always perfect and the audio even less so, but we hope you still enjoy them.", "We also will occasionally post audio podcasts when we get the time to go more in-depth with people, outside of the public show.", "The show is indefinitely on hiatus as Justin moved away and other projects took over."].shuffle.join(' ')
+          But wait, there's more!
+          =  raw ["We are still available to be booked for parties, wedding, bar mitzvahs and other events.", "The for-profit arm of Serious Introspection is called <a href='https://services.seriousintrospection.fi/' target='_blank'>SI Services</a> and we're up for anything, really!", "We will come to your event and offer our services for hosting, hyping and media specialisation (live tweeting) for a variable fee."].shuffle.join(' ')
+          If you'd like to find out more about Serious Introspection, you can start by watching these episodes and seeing if it's your cup of tea.
+          = raw ["We have a <a href='https://www.facebook.com/seriousintrospectionwithjohnwfail/' target='_blank'>Facebook page</a> which we use to post info about the upcoming shows and videos as they are released.", "We have made the show available as a podcast via <a href='https://itunes.apple.com/us/podcast/serious-introspection/id1057015274' target='_blank'>iTunes</a> and <a href='http://www.stitcher.com/podcast/serious-introspection' target='_blank'>Stitcher</a>.", "The hashtag <a href='https://twitter.com/search?f=tweets&vertical=default&q=%23SeriousIntrospection' target='_blank'>#SeriousIntrospection</a> contains the running stream of live tweets from our media specialist Ernest Truely (and anyone else who might contribute)."].shuffle.join(' ')
+          So yeah, that's it, pretty much.
+          = raw ["We're trying to keep this page simple, if for no other reason than our cup runneth over with websites already.", "We will announce future events and SI-related matters here so feel free to check back any time."].shuffle.join(' ')
       
 
     / Footer
-    %footer#footer
-      %ul.icons
-        %li
-          %a.icon.fa-twitter{:href => "http://twitter.com/hyksos", target: :_blank}
-            %span.label Twitter
-        %li
-          %a.icon.fa-facebook{:href => "https://www.facebook.com/seriousintrospectionwithjohnwfail/", target: :_blank}
-            %span.label Facebook
-        %li
-          %a.icon.fa-github{:href => "http://github.com/cenotaph", target: :_blank}
-            %span.label GitHub
-        %li
-          %a.icon.fa-envelope-o{:href => "/contact"}
-            %span.label Email
+    %footer.footer
+      .container
+        .columns
+          .column.is-one-fifth
+            %strong Serious Introspection 2015-2016: 
+          .column
+            %a.icon.fa-twitter{:href => "http://twitter.com/hyksos", target: :_blank}
+              %span.label Twitter
+          .column
+            %a.icon.fa-facebook{:href => "https://www.facebook.com/seriousintrospectionwithjohnwfail/", target: :_blank}
+              %span.label Facebook
+          .column
+            %a.icon.fa-github{:href => "http://github.com/cenotaph", target: :_blank}
+              %span.label GitHub
+          .column
+            %a.icon.fa-envelope-o{:href => "/contact"}
+              %span.label Contact
  
     :javascript
       $(document).ready(function() {

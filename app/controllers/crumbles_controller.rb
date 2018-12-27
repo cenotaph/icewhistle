@@ -1,6 +1,6 @@
 class CrumblesController < ApplicationController
   respond_to :html
-  before_filter :authenticate_user!, :only => [:new, :create, :edit, :update, :delete]
+  before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :delete]
 
   def by_date
     @crumbles = Crumble.order('datestamp').group_by{|x| x.datestamp.nil? ? nil : x.datestamp.strftime('%Y') }

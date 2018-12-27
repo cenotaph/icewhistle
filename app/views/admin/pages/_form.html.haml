@@ -1,17 +1,19 @@
-= semantic_form_for [:admin, @page], :html => {:class => "custom", :multipart => true} do |f|
-  .row
-    .small-12.columns= f.input :title
-  .row
-    .small-10.columns= f.input :subtitle
-  .row
-    .small-11.columns= f.input :body, :input_html => {:class => :ckeditor}
-  .row
-    .small-3.columns= f.input :published
-  .row
-    .small-6.columns
-      - unless f.object.new_record?
-        - unless f.object.blank?
-          = image_tag f.object.image.url(:midsize)
-      = f.input :image
-  .row
-    .small-2.columns= f.submit 'Save', :class => [:button, :round]
+= form_for [:admin, @page], :html => {:class => "custom", :multipart => true} do |f|
+  .field
+    %label.label Title:
+    .control= f.text_field :title, class: :input
+  .field
+    %label.label Subtitle
+    .control= f.text_field :subtitle, class: :input
+  .field
+    .control= f.text_area :body, class: [:ckeditor, :text_area]
+  .field
+    %label.label Published?
+    .control= f.check_box :published
+  .field
+    - unless f.object.new_record?
+      - unless f.object.blank?
+        = image_tag f.object.image.url(:midsize) rescue ''
+    = f.file_field :image
+  .field
+    .control= f.submit 'Save', :class => [:button, :round]

@@ -1,9 +1,8 @@
-.row
-  .medium-2.small-12.columns 
-    %h4.subheading Latest tweet:
-  .medium-7.small-12.columns.text-left
-    - twit = twitter_status
-    %h6.subheading= raw twit.first
-  .small-12.medium-3.columns.twitter_column.medium-text-right.small-text-left
-    = link_to 'Follow @hyksos', 'http://twitter.com/hyksos', :class => "twitter-follow-button"
-    %script{:src => "https://platform.twitter.com/widgets.js", :type => "text/javascript"}
+.container
+  %h4.subtitle Latest tweet:
+  - twit = twitter_status
+  .content
+    .is-size-6= raw twit.first
+  = link_to 'Follow @hyksos', 'http://twitter.com/hyksos', :class => "twitter-follow-button"
+  %script{:src => "https://platform.twitter.com/widgets.js", :type => "text/javascript"}
+.is-clearfix

@@ -1,90 +1,87 @@
 - if @post.image?
   - if @post.image_width > 1200
-    .post_banner= image_tag @post.image.url.gsub(/development/, 'production')
+    %figure.image= image_tag @post.image.url.gsub(/development/, 'production')
   - else 
-    .row
-      .small-12.columns.text-left.post_body
-        = image_tag @post.image.url
-.post#post_top
+    %figure.image= image_tag @post.image.url
+.post.container
 
-  .row
-    .columns.text-left.small-centered.medium-10.large-12.large-offset-0
-      %h1= raw @post.title
-      .metadata
-        %em
-          %medium= "posted: " + l(@post.updated_at, :format => :long   )
+  %h1.post_title= raw @post.title
+  %em.date= "posted: " + l(@post.updated_at, :format => :long   )
 
-  - if @post.photos.empty? 
+  - if @post.photos.empty?
+    .columns
+      .column.is-three-fifths
+        - unless @post.audiopodcasts.empty?
+          - @post.audiopodcasts.each do |podcast|
+            .audiocontent.content
+              %audio{src: podcast.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
+        .content.post_body
+
+          = raw @post.body
+          - if @post.extended?
+            %br/
+            = raw @post.extended
+          - unless @post.videos.empty?
+            - @post.videos.each do |video|
+              .videocontent.column
+                %video{src: video.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
+
+          - unless @post.videos.empty? && @post.audiopodcasts.empty?
+            = content_for :jquery do
+              :plain
+                $('video,audio').mediaelementplayer({defaultVideoWidth: "100%", alwaysShowHours: true});   
+          
+      .column.post_sidebar= render :partial => 'post_sidebar'
+        
+
+
+
+  - else
   
-    .row
-      .small-12.large-7.medium-10.medium-offset-1.columns.text-left.post_body.large-offset-0
+    - if @post.photos.size == 1
+      .hero
+        - if @post.photos.first.filename_width < 1200
+          %figure.image= image_tag @post.photos.first.filename.url
+        - else
+          %figure.image= image_tag @post.photos.first.filename.url(:main)
+    - elsif @post.photos.size > 1
+      .carousel
+        - @post.photos.each do |p|
+          - if p.filename_width < 1200
+            %figure.image= image_tag p.filename.url
+          - else
+            %figure.image= image_tag p.filename.url(:main)  
+    .columns
+      .column.is-two-thirds
         - unless @post.audiopodcasts.empty?
           - @post.audiopodcasts.each do |podcast|
             .audiocontent
               %audio{src: podcast.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
-        
-        = raw @post.body
-        - if @post.extended?
-          %br/
-          = raw @post.extended
-        - unless @post.videos.empty?
-          - @post.videos.each do |video|
-            .videocontent
-              %video{src: video.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
+        .content.post_body
+          = raw @post.body
+          - unless @post.extended.blank?
             %br/
-        - unless @post.videos.empty? && @post.audiopodcasts.empty?
-          = content_for :jquery do
-            :plain
-              $('video,audio').mediaelementplayer({defaultVideoWidth: "100%", alwaysShowHours: true});   
-          
-      .small-12.medium-10.large-4.medium-offset-1.columns.sidebar{:'data-sticky-container' => ''}= render :partial => 'post_sidebar'
-        
+            = raw @post.extended
+          - unless @post.videos.empty?
+            - @post.videos.each do |video|
+              .videocontent
+                %video{src: video.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
 
+            = content_for :jquery do
+              :plain
+                $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});   
+                
+      .column.post_sidebar= render :partial => 'post_sidebar'
 
-
-  -else
-    .row
-      .large-12.columns.text-left
-        - if @post.photos.size == 1
-          - if @post.photos.first.filename_width < 1200
-            = image_tag @post.photos.first.filename.url
-          - else
-            = image_tag @post.photos.first.filename.url(:main)
-        - elsif @post.photos.size > 1
-          %ul{:"data-orbit" => ""}
-            - @post.photos.each do |p|
-              %li
-                - if p.filename_width < 1200
-                  = image_tag p.filename.url
-                - else
-                  = image_tag p.filename.url(:main)  
-
-    .row{:"data-equalizer" => ""}
-      .large-7.small-12.columns.text-left.post_body{:"data-equalizer-watch" => ""}
-        = raw @post.body
-        - unless @post.extended.blank?
-          %br/
-          = raw @post.extended
-        - unless @post.videos.empty?
-          - @post.videos.each do |video|
-            .videocontent
-              %video{src: video.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
-
-          = content_for :jquery do
-            :plain
-              $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});   
-              
-      .small-12.large-offset-1.columns.sidebar{:"data-equalizer-watch" => "", :'data-sticky-container' => ''}= render :partial => 'post_sidebar'
-
-  .row.prev_next
-    .large-5.columns
+  .prev_next.columns
+    .column.has-text-left
       - unless @post.previous_post.nil?
         %h6 Previous post:
         .link
           = link_to @post.previous_post.title, @post.previous_post
           .date= @post.previous_post.created_at.strftime('%d %B %Y')
         
-    .large-5.columns.large-offset-2.text-right
+    .column.has-text-right
       - unless @post.next_post.nil?
         %h6 Next post:
         .link

@@ -1,55 +1,37 @@
-.contact_form
-  .row.expanded.expanded
-    .columns
-      %h2 Contact
-
-  = form_for @message, :url => contact_path, :html => {:"data-abide" => ""} do |form|
-    #input
-      .row.expanded
-        .small-10.medium-9.columns
-          .row.expanded
-            .small-2.columns
-              %label{:for => "name"} Your name:
-            .small-9.columns
-              %small.error You must enter your name.
-              = form.text_field :name,  :required => ""
-      .row.expanded
-        .small-10.medium-9.columns
-          .row.expanded
-            .small-2.columns
-              %label{:for => "email"} Your email address:
-            .small-9.columns
-              %small.error A valid email address is required.
-              = form.text_field :email,  :required => ""
-      .row.expanded
-        .small-10.medium-9.columns
-          .row.expanded
-            .small-2.columns
-              %label{:for => "subject"} Subject:
-            .small-9.columns
-              %small.error You must enter a subject.
-              = form.text_field :subject,   :required => ""
-      .row.expanded
-        .small-10.medium-9.columns
-          .row.expanded
-            .small-2.columns
-              %label{:for => "message"} Your message:
-            .small-9.columns= form.text_area :body,  {:class => 'formw', :size => "50x30"}
-      .row.expanded
-        .small-10.medium-9.columns
-          .row.expanded
-            .small-2.columns
-              .comment_content Are you human?
-              %label{:for => "captcha"} &nbsp;
-            .small-9.columns
-              - if @message.errors.messages[:base]
-                %small.error{:style => "display: block"}= @message.errors.messages[:base].join('; ')
-              = recaptcha_tags(:display => {:theme => 'clean', :tabindex => 10})
-      .row.expanded
-        .small-10.medium-9.columns
-          .row.expanded
-            .small-2.columns &nbsp;
-            .small-9.columns= submit_tag 'Send', :class => [:button, :small, :round]
-  = content_for :jquery do
-    :plain
-    
+.contact_form.container.post
+  .columns
+    .column.is-half.is-offset-3
+      %h2.title Contact John W. Fail
+  .columns
+    .column.is-half.is-offset-3
+      = form_for @message, :url => contact_path, :html => {:"data-abide" => ""} do |form|
+        #input
+          .field
+            %label.label Your name:
+            %small.error You must enter your name.
+            .control
+              = form.text_field :name,  :required => "", class: :input
+          .field
+            %label.label Your email address:
+            %small.error A valid email address is required.
+            .control
+              = form.text_field :email,  :required => "", class: :input
+          .field
+            %label.label Subject:
+            %small.error You must enter a subject.
+            .control
+              = form.text_field :subject,   :required => "", class: :input
+          .field
+            %label.label Your message:
+            .control= form.text_area :body,  {:class => 'textarea', :size => "50x30"}
+          .field
+            %label.label Are you human?
+            - if @message.errors.messages[:base]
+              %small.error{:style => "display: block"}= @message.errors.messages[:base].join('; ')
+            = recaptcha_tags(:display => {:theme => 'clean', :tabindex => 10})
+          .field
+            .control
+              %button.button.is-link Send
+    = content_for :jquery do
+      :plain
+      

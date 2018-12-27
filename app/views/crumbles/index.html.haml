@@ -1,30 +1,24 @@
-
-.row
-  .small-3.columns
-    %h3 Archives
-    %p  
-      Viewing as list.
-      = link_to 'View by date', by_date_crumbles_path  
-  .small-9.columns
-    %br/
-    %br/
-    %medium
+.post.container
+  .columns
+    .column
+      %h3.title Archives
+      .subtitle.is-size-6
+        Viewing as list.
+        = link_to 'View by date', by_date_crumbles_path, class: :button
+  .columns
+    .content.is-size-6
       This section is to post sketches, recordings, writings or other odds and ends.  It functions as both a sketchpad and a personal archive. I'm uploading old posters, handbills and other things I've collected here,  for lack of any better place to put it.
 
-  .small-12.columns.text-center
-    = paginate @crumbles
+
+  .columns.post
+    .column= paginate @crumbles
 
   
-- @crumbles.in_groups_of(3).each do |group|
-  .row.crumble_row{:"data-equalizer" => ""}
-    - group.each do |crumble|
-      - next if crumble.nil?
-      .small-4.columns= render :partial => 'crumble', :locals => {:crumble => crumble}
+  - @crumbles.in_groups_of(3).each do |group|
+    .columns
+      - group.each do |crumble|
+        - next if crumble.nil?
+        .column= render :partial => 'crumble', :locals => {:crumble => crumble}
       
-.row
-  .small-4.columns &nbsp;
-  .small-4.columns.text-center
-    = paginate @crumbles
-  .small-4.columns &nbsp;   
-    
-= paginate @crumbles
+  .columns.post
+    .column= paginate @crumbles

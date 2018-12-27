@@ -1,26 +1,26 @@
-.posts
-  .row
-    .small-2.columns
-      %h3 Posts
-    .small-4.columns
-      = form_tag(search_index_path, :method => :get) do
-        = text_field_tag("search", params[:search].blank? ? 'Search...' : params[:search], :size => 10)
+.post.container
   
-    .small-6.columns.text-center
-      = paginate @posts
+  .level
+    .level-left
+      .level-item
+        %h1.title All posts
+      .level-item
+        = form_tag(search_index_path, :method => :get) do
+          = text_field_tag("search", params[:search].blank? ? 'Search...' : params[:search], :size => 10)
+  .level
+    .level-left
+      .level-item= paginate @posts
 
-    
+  
   - @posts.in_groups_of(3).each do |group|
-    .row.post_row.index{:"data-equalizer" => ""}
+    .columns
       - group.each do |post|
         - next if post.nil?
-        .small-4.columns= render :partial => 'posts/post_excerpt', :locals => {:post => post}
+        .column.is-one-third= render :partial => 'posts/post_excerpt', :locals => {:post => post}
       
-  .row
-    .small-4.columns &nbsp;
-    .small-4.columns.text-center
-      = paginate @posts
-    .small-4.columns &nbsp;   
+  .columns
+    = paginate @posts
+  .is-clearfix
   
   = content_for :jquery do
     :plain

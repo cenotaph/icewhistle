@@ -1,15 +1,14 @@
 
-.post_title= link_to crumble.title, crumble
-%medium
+%h3.subtitle= link_to crumble.title, crumble
+.date
   = 'posted ' + time_ago_in_words(crumble.created_at) + ' ago; '
   - unless crumble.datestamp.blank?
     =  "from " + crumble.datestamp.strftime('%d %B %Y')
-.post_body
+.post_body.post
   - if crumble.icon?
-    = image_tag crumble.icon.url(:main)
+    %figure.image= image_tag crumble.icon.url(:main).gsub(/development/, 'production')
   - if crumble.category == 1
-    = image_tag(crumble.attachment.main.url)
-    %br/
+    %figure.image= image_tag(crumble.attachment.main.url)
     = link_to '[full size]', crumble.attachment.url
     %br/
     
@@ -24,7 +23,8 @@
 
     
 
-  %p= raw(Nokogiri::HTML.parse(crumble.body.gsub(/\<span\>/, '<p>').gsub(/\<\/span\>/, '</p>')).css('p').first.text) rescue raw(truncate_html(crumble.body, :length => 1500))
+  .content.post_body
+    = raw(Nokogiri::HTML.parse(crumble.body.gsub(/\<span\>/, '<p>').gsub(/\<\/span\>/, '</p>')).css('p').first.text) rescue raw(truncate_html(crumble.body, :length => 1500))
   = link_to 'Read more', crumble, :class => [:button, :tiny]
 
 

@@ -1,5 +1,6 @@
-.text-center
+.hero
   = link_to 'http://blindness.icewhistle.com/' do
-    = image_tag post.image.url(:wide)
+    %figure.image= image_tag post.image.url(:wide).gsub(/development/, 'production')
+    %h3.section_heading From the blog:    
     .inner_text
       = raw post.title + "..."

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_filter :authenticate_user!, :only => [:new, :create, :edit, :update, :delete]
+  before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :delete]
 
   def index
     @posts = Post.includes(:comments).published.order('created_at DESC').page(params[:page]).per(6)

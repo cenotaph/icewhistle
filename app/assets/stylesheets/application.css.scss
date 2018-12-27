@@ -1,0 +1,119 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ *= require_self
+ *= require mediaelement_rails
+ *= require mediaelement_rails/mejs-skins
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:300,400,700"');
+$body-family: 'Open Sans', sans-serif;
+$navbar-height: 4rem;
+$link: #5D7104;
+
+@import "bulma";
+@import 'slick';
+@import 'slick-theme';
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0.75rem 0 0.25rem 0;
+  &:not(:last-child) {
+    margin: 0.75rem 0 0.25rem 0;
+  }
+}
+.date {
+  font-size: 0.8rem;
+}
+.container.has-text-centered, section#recent_posts, .post {
+  padding: 1.5rem 0;
+}
+
+nav.navbar {
+  border-bottom: 1px solid $link;
+}
+
+.navbar-brand a.navbar-item img {
+  padding-left: 0.5rem;
+}
+
+section#acedia, section#tweet_front, section#less_recent, section#disclaimer {
+  padding: 1.5rem 0;
+  border-top: 1px solid #c7d67e;
+  border-bottom: 1px solid #c7d67e;
+}
+
+section#tweet_front {
+  background-color: #85a205;
+  color: white;
+}
+section#bookmarks_front, .related {
+  padding: 0.75rem 0;
+}
+h1.post_title {
+  margin-bottom: 0rem;
+  color: #4a4a4a;
+  font-size: 2.65rem;
+  font-weight: 400;
+  line-height: 1.25;
+
+}
+
+small.error {
+  display: none;
+}
+h3.section_heading {
+  margin-bottom: 1.25rem;
+  color: #4a4a4a;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.blindness_wrapper {
+  position: relative;
+  .section_heading {
+    margin-left: 15px;
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    top: 25px;
+    padding: 5px;
+  }
+  .inner_text {
+    margin-left: 15px;
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    top: 80px;
+    font-size: 30px;
+    font-size: 2.8rem;
+    line-height: 40px;
+    background-color: #333;
+    background-color: rgba(90,90,90,0.6);
+    padding: 5px;
+  }
+}
+
+.content.post_body {
+  padding: 1.25rem 0;
+}
+
+
+
+.post_sidebar {
+  border-left: 1px solid #999;
+  padding-left: 2.5rem;
+}

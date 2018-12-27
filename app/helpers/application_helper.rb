@@ -160,7 +160,7 @@ module ApplicationHelper
     if post.tag_list.blank?
       ""
     else
-      "<h4>Tags:</h4> " + post.tags.collect{|x| link_to(x, {:controller => 'tags', :action => 'show', :id => x.name})}.join(', ')
+      "<h3 class='subtitle'>Tags:</h3> " + post.tags.collect{|x| link_to(x, {:controller => 'tags', :action => 'show', :id => x.name})}.join(', ')
     end
   end
   

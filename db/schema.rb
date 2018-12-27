@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,350 +10,348 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118110616) do
+ActiveRecord::Schema.define(version: 2018_10_17_110644) do
 
-  create_table "audiopodcasts", force: :cascade do |t|
-    t.string   "url",          limit: 255
-    t.integer  "item_id",      limit: 4
-    t.string   "item_type",    limit: 255
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.integer  "bytes",        limit: 8
-    t.string   "content_type", limit: 255
+  create_table "audiopodcasts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "url"
+    t.integer "item_id"
+    t.string "item_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "bytes"
+    t.string "content_type"
+    t.index ["item_type", "item_id"], name: "index_audiopodcasts_on_item_type_and_item_id"
   end
 
-  add_index "audiopodcasts", ["item_type", "item_id"], name: "index_audiopodcasts_on_item_type_and_item_id", using: :btree
-
-  create_table "blogimages", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "filename",   limit: 255
+  create_table "blogimages", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "name"
+    t.string "filename"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "cached_feeds", force: :cascade do |t|
-    t.string   "uri",         limit: 2048
-    t.text     "parsed_feed", limit: 16777215
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+  create_table "cached_feeds", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "uri", limit: 2048
+    t.text "parsed_feed", limit: 16777215
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "cashes", force: :cascade do |t|
-    t.string   "source",             limit: 255
-    t.string   "title",              limit: 255
-    t.string   "link_url",           limit: 255
-    t.text     "content",            limit: 65535
-    t.integer  "order",              limit: 4
+  create_table "cashes", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "source"
+    t.string "title"
+    t.string "link_url"
+    t.text "content"
+    t.integer "order"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image",              limit: 255
-    t.integer  "image_size",         limit: 4
-    t.integer  "image_width",        limit: 4
-    t.integer  "image_height",       limit: 4
-    t.string   "image_content_type", limit: 255
-    t.boolean  "hidden",                           default: false, null: false
+    t.string "image"
+    t.integer "image_size"
+    t.integer "image_width"
+    t.integer "image_height"
+    t.string "image_content_type"
+    t.boolean "hidden", default: false, null: false
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.integer  "link_id",       limit: 4
-    t.string   "name",          limit: 255
+  create_table "categories", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.integer "link_id"
+    t.string "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "imagefilename", limit: 50
+    t.string "imagefilename", limit: 50
   end
 
-  create_table "ckeditor_assets", force: :cascade do |t|
-    t.string   "data_file_name",    limit: 255, null: false
-    t.string   "data_content_type", limit: 255
-    t.integer  "data_file_size",    limit: 4
-    t.integer  "assetable_id",      limit: 4
-    t.string   "assetable_type",    limit: 30
-    t.string   "type",              limit: 30
+  create_table "ckeditor_assets", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "data_file_name", null: false
+    t.string "data_content_type"
+    t.integer "data_file_size"
+    t.integer "assetable_id"
+    t.string "assetable_type", limit: 30
+    t.string "type", limit: 30
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
+    t.index ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
   end
 
-  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
-  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
-
-  create_table "comments", force: :cascade do |t|
-    t.integer  "item_id",    limit: 4
-    t.text     "body",       limit: 65535
+  create_table "comments", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.integer "item_id"
+    t.text "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "realname",   limit: 100
-    t.string   "email",      limit: 100
-    t.string   "item_type",  limit: 255
+    t.string "realname", limit: 100
+    t.string "email", limit: 100
+    t.string "item_type"
   end
 
-  create_table "crumbles", force: :cascade do |t|
-    t.string   "title",                   limit: 255
-    t.integer  "category",                limit: 4
-    t.string   "icon",                    limit: 255
-    t.string   "icon_content_type",       limit: 255
-    t.integer  "icon_file_size",          limit: 4
+  create_table "crumbles", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "title"
+    t.integer "category"
+    t.string "icon"
+    t.string "icon_content_type"
+    t.integer "icon_file_size"
     t.datetime "icon_updated_at"
-    t.string   "attachment",              limit: 255
-    t.string   "attachment_content_type", limit: 255
-    t.integer  "attachment_file_size",    limit: 4
+    t.string "attachment"
+    t.string "attachment_content_type"
+    t.integer "attachment_file_size"
     t.datetime "attachment_updated_at"
-    t.text     "description",             limit: 65535
+    t.text "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "slug",                    limit: 255
-    t.date     "datestamp"
+    t.string "slug"
+    t.date "datestamp"
+    t.index ["slug"], name: "index_crumbles_on_slug", unique: true
   end
 
-  add_index "crumbles", ["slug"], name: "index_crumbles_on_slug", unique: true, using: :btree
-
-  create_table "friendly_id_slugs", force: :cascade do |t|
-    t.string   "slug",           limit: 255, null: false
-    t.integer  "sluggable_id",   limit: 4,   null: false
-    t.string   "sluggable_type", limit: 50
-    t.string   "scope",          limit: 255
+  create_table "friendly_id_slugs", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
     t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
-  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
-  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
-  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
-
-  create_table "groupings", force: :cascade do |t|
-    t.string   "name",       limit: 255
+  create_table "groupings", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "jobs", force: :cascade do |t|
-    t.string   "started",     limit: 255
-    t.string   "finished",    limit: 255
-    t.string   "employer",    limit: 255
-    t.string   "department",  limit: 255
-    t.string   "address1",    limit: 255
-    t.string   "address2",    limit: 255
-    t.string   "city",        limit: 255
-    t.string   "state",       limit: 255
-    t.string   "postcode",    limit: 255
-    t.string   "country",     limit: 255
-    t.string   "title",       limit: 255
-    t.text     "description", limit: 65535
-    t.boolean  "major"
+  create_table "jobs", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "started"
+    t.string "finished"
+    t.string "employer"
+    t.string "department"
+    t.string "address1"
+    t.string "address2"
+    t.string "city"
+    t.string "state"
+    t.string "postcode"
+    t.string "country"
+    t.string "title"
+    t.text "description"
+    t.boolean "major"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "realdate"
-    t.float    "sortorder",   limit: 24
+    t.float "sortorder"
   end
 
-  create_table "links", force: :cascade do |t|
-    t.string   "name",          limit: 255
-    t.text     "description",   limit: 65535
-    t.string   "url",           limit: 255
+  create_table "links", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "category_id",   limit: 4
-    t.string   "imagefilename", limit: 60
-    t.integer  "sortorder",     limit: 4
+    t.integer "category_id"
+    t.string "imagefilename", limit: 60
+    t.integer "sortorder"
   end
 
-  create_table "pages", force: :cascade do |t|
-    t.string   "title",              limit: 255
-    t.string   "subtitle",           limit: 255
-    t.text     "body",               limit: 65535
-    t.boolean  "published"
-    t.string   "image",              limit: 255
-    t.string   "image_content_type", limit: 255
-    t.integer  "image_height",       limit: 4
-    t.integer  "image_width",        limit: 4
-    t.integer  "image_size",         limit: 4
-    t.string   "slug",               limit: 255
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+  create_table "pages", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.string "subtitle"
+    t.text "body"
+    t.boolean "published"
+    t.string "image"
+    t.string "image_content_type"
+    t.integer "image_height"
+    t.integer "image_width"
+    t.integer "image_size"
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "photos", force: :cascade do |t|
-    t.string   "filename",              limit: 255
-    t.integer  "filename_width",        limit: 4
-    t.integer  "filename_height",       limit: 4
-    t.string   "filename_content_type", limit: 255
-    t.integer  "filename_size",         limit: 4
-    t.string   "item_type",             limit: 255
-    t.integer  "item_id",               limit: 4
-    t.string   "title",                 limit: 255
-    t.text     "caption",               limit: 65535
+  create_table "photos", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "filename"
+    t.integer "filename_width"
+    t.integer "filename_height"
+    t.string "filename_content_type"
+    t.integer "filename_size"
+    t.string "item_type"
+    t.integer "item_id"
+    t.string "title"
+    t.text "caption"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["item_type", "item_id"], name: "index_photos_on_item_type_and_item_id"
   end
 
-  add_index "photos", ["item_type", "item_id"], name: "index_photos_on_item_type_and_item_id", using: :btree
-
-  create_table "posts", force: :cascade do |t|
-    t.string   "title",              limit: 255
-    t.text     "body",               limit: 65535
+  create_table "posts", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "grouping_id",        limit: 4
-    t.text     "extended",           limit: 65535
-    t.string   "slug",               limit: 255
-    t.string   "enclosure_url",      limit: 255
-    t.string   "enclosure_type",     limit: 255
-    t.integer  "enclosure_length",   limit: 8
-    t.boolean  "published",                        default: false
-    t.string   "image",              limit: 255
-    t.integer  "image_size",         limit: 4
-    t.string   "image_content_type", limit: 255
-    t.integer  "image_width",        limit: 4
-    t.integer  "image_height",       limit: 4
+    t.integer "grouping_id"
+    t.text "extended"
+    t.string "slug"
+    t.string "enclosure_url"
+    t.string "enclosure_type"
+    t.bigint "enclosure_length"
+    t.boolean "published", default: false
+    t.string "image"
+    t.integer "image_size"
+    t.string "image_content_type"
+    t.integer "image_width"
+    t.integer "image_height"
+    t.index ["slug"], name: "index_posts_on_slug", unique: true
   end
 
-  add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true, using: :btree
-
-  create_table "projects", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.string   "projecttype", limit: 100
-    t.string   "url1",        limit: 255
-    t.string   "started",     limit: 255
-    t.string   "finished",    limit: 255
-    t.string   "url2",        limit: 255
-    t.text     "description", limit: 65535
-    t.boolean  "major"
+  create_table "projects", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "name"
+    t.string "projecttype", limit: 100
+    t.string "url1"
+    t.string "started"
+    t.string "finished"
+    t.string "url2"
+    t.text "description"
+    t.boolean "major"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "sortorder",   limit: 24
+    t.float "sortorder"
   end
 
-  create_table "publications", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.string   "format",      limit: 255
-    t.string   "publisher",   limit: 255
-    t.string   "date",        limit: 255
-    t.text     "description", limit: 65535
-    t.boolean  "major"
+  create_table "publications", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "title"
+    t.string "format"
+    t.string "publisher"
+    t.string "date"
+    t.text "description"
+    t.boolean "major"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "realdate"
-    t.string   "icon",        limit: 255
-    t.float    "sortorder",   limit: 24
+    t.string "icon"
+    t.float "sortorder"
   end
 
-  create_table "releases", force: :cascade do |t|
-    t.string   "title",        limit: 255
-    t.string   "art1",         limit: 255
-    t.string   "art2",         limit: 255
-    t.string   "art3",         limit: 255
-    t.string   "art4",         limit: 255
-    t.string   "art5",         limit: 255
-    t.date     "release_date"
+  create_table "releases", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "title"
+    t.string "art1"
+    t.string "art2"
+    t.string "art3"
+    t.string "art4"
+    t.string "art5"
+    t.date "release_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "retrospections", force: :cascade do |t|
-    t.string   "ip_address",             limit: 255
-    t.string   "name",                   limit: 255
-    t.integer  "age",                    limit: 4
-    t.integer  "episodes_attended",      limit: 4
-    t.integer  "episodes_watched",       limit: 4
-    t.integer  "best_cast",              limit: 4
-    t.string   "best_guest",             limit: 255
-    t.integer  "nationality",            limit: 4
-    t.integer  "humour",                 limit: 4
-    t.integer  "karaoke",                limit: 4
-    t.integer  "music",                  limit: 4
-    t.integer  "introspection",          limit: 4
-    t.integer  "segment_1_culture",      limit: 4
-    t.integer  "segment_2_dance",        limit: 4
-    t.integer  "segment_3_distribution", limit: 4
-    t.integer  "segment_4_mailbag",      limit: 4
-    t.integer  "segment_5_mjtrivia",     limit: 4
-    t.integer  "segment_6_showtell",     limit: 4
-    t.integer  "segment_7_siivous",      limit: 4
-    t.integer  "segment_8_trivia",       limit: 4
-    t.integer  "segment_9_visitortasks", limit: 4
-    t.integer  "segment_10_justin",      limit: 4
-    t.integer  "segment_11_sigame",      limit: 4
-    t.text     "additional_comments",    limit: 65535
-    t.string   "email",                  limit: 255
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+  create_table "retrospections", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "ip_address"
+    t.string "name"
+    t.integer "age"
+    t.integer "episodes_attended"
+    t.integer "episodes_watched"
+    t.integer "best_cast"
+    t.string "best_guest"
+    t.integer "nationality"
+    t.integer "humour"
+    t.integer "karaoke"
+    t.integer "music"
+    t.integer "introspection"
+    t.integer "segment_1_culture"
+    t.integer "segment_2_dance"
+    t.integer "segment_3_distribution"
+    t.integer "segment_4_mailbag"
+    t.integer "segment_5_mjtrivia"
+    t.integer "segment_6_showtell"
+    t.integer "segment_7_siivous"
+    t.integer "segment_8_trivia"
+    t.integer "segment_9_visitortasks"
+    t.integer "segment_10_justin"
+    t.integer "segment_11_sigame"
+    t.text "additional_comments"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "schools", force: :cascade do |t|
-    t.string   "started",    limit: 24
-    t.string   "finished",   limit: 24
-    t.string   "name",       limit: 255
-    t.string   "degree",     limit: 255
-    t.string   "subject",    limit: 255
+  create_table "schools", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "started", limit: 24
+    t.string "finished", limit: 24
+    t.string "name"
+    t.string "degree"
+    t.string "subject"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "skills", force: :cascade do |t|
-    t.text     "skills",     limit: 65535
+  create_table "skills", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.text "skills"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "skilltype",  limit: 50
+    t.string "skilltype", limit: 50
   end
 
-  create_table "songs", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.text     "description", limit: 65535
-    t.text     "lyrics",      limit: 65535
-    t.integer  "track",       limit: 4
-    t.string   "mp3",         limit: 255
-    t.integer  "release_id",  limit: 4
+  create_table "songs", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.text "lyrics"
+    t.integer "track"
+    t.string "mp3"
+    t.integer "release_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "taggings", force: :cascade do |t|
-    t.integer  "tag_id",        limit: 4,   null: false
-    t.integer  "taggable_id",   limit: 4,   null: false
-    t.string   "taggable_type", limit: 255, null: false
-    t.string   "context",       limit: 255
-    t.integer  "tagger_id",     limit: 4
-    t.string   "tagger_type",   limit: 255
+  create_table "taggings", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.integer "tag_id", null: false
+    t.integer "taggable_id", null: false
+    t.string "taggable_type", null: false
+    t.string "context"
+    t.integer "tagger_id"
+    t.string "tagger_type"
     t.datetime "created_at"
+    t.index ["context"], name: "index_taggings_on_context"
+    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
+    t.index ["tag_id", "taggable_id", "taggable_type"], name: "index_taggings_on_tag_id_and_taggable_id_and_taggable_type", unique: true
+    t.index ["tag_id"], name: "index_taggings_on_tag_id"
+    t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
+    t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy"
+    t.index ["taggable_id"], name: "index_taggings_on_taggable_id"
+    t.index ["taggable_type"], name: "index_taggings_on_taggable_type"
+    t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type"
+    t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
   end
 
-  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
-  add_index "taggings", ["tag_id", "taggable_id", "taggable_type"], name: "index_taggings_on_tag_id_and_taggable_id_and_taggable_type", unique: true, using: :btree
-  add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
-
-  create_table "tags", force: :cascade do |t|
-    t.string  "name",           limit: 255
-    t.integer "taggings_count", limit: 4,   default: 0
+  create_table "tags", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "name", collation: "utf8_bin"
+    t.integer "taggings_count", default: 0
+    t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
-  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
-
-  create_table "users", force: :cascade do |t|
-    t.string   "username",                  limit: 40
-    t.string   "name",                      limit: 100, default: ""
-    t.string   "email",                     limit: 100
-    t.string   "encrypted_password",        limit: 128, default: "", null: false
-    t.string   "password_salt",             limit: 255, default: "", null: false
+  create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "username", limit: 40
+    t.string "name", limit: 100, default: ""
+    t.string "email", limit: 100
+    t.string "encrypted_password", limit: 128, default: "", null: false
+    t.string "password_salt", default: "", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "remember_token",            limit: 40
+    t.string "remember_token", limit: 40
     t.datetime "remember_token_expires_at"
-    t.string   "confirmation_token",        limit: 255
-    t.string   "confirmed_at",              limit: 255
+    t.string "confirmation_token"
+    t.string "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "reset_password_token",      limit: 255
+    t.string "reset_password_token"
     t.datetime "remember_created_at"
+    t.index ["username"], name: "index_users_on_login", unique: true
   end
 
-  add_index "users", ["username"], name: "index_users_on_login", unique: true, using: :btree
-
-  create_table "videos", force: :cascade do |t|
-    t.string   "url",          limit: 255
-    t.string   "item_type",    limit: 255
-    t.integer  "item_id",      limit: 4
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.integer  "bytes",        limit: 8
-    t.string   "content_type", limit: 255
+  create_table "videos", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "url"
+    t.string "item_type"
+    t.integer "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "bytes"
+    t.string "content_type"
   end
 
 end

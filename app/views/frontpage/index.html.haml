@@ -1,46 +1,55 @@
-%div{:"data-sticky-container" => ''}
-  %nav#magellan.columns.sticky{:'data-sticky' => '',   :'data-margin-top' => 7, :'data-sticky-on' => 'medium'}
-    %ul.horizontal.menu.expanded{:"data-magellan" =>  ''}
-      %li.first= link_to @posts.first.title, "#top#{@posts.first.id.to_s}"
-      
-      %li= link_to 'Recent posts', "#recent_posts"
-      %li= link_to 'Blindness', '#blindness_container'
-      %li= link_to 'Less recent posts', '#less_recent'
-      %li= link_to 'Recently read', '#bookmarks_front'
+-# %nav#anchors.bd-anchors.is-active.is-fixed-top
+-#   %p Nav:
+-#   %ul.bd-anchors-list
+-#     %li= link_to @posts.first.title, "#top#{@posts.first.id.to_s}"
+-#     %li= link_to 'Recent posts', "#recent_posts"
+-#     %li= link_to 'Blindness', '#blindness_container'
+-#     %li= link_to 'Less recent posts', '#less_recent'
+-#     %li= link_to 'Recently read', '#bookmarks_front'
 
 
 
-%section{id: "top#{@posts.first.id.to_s}", :"data-magellan-target" => "top#{@posts.first.id.to_s}"}       
-.full_width_post.text-center{:id => "top#{@posts.first.id.to_s}"}= render :partial => 'full_width_post', :locals => {:post => @posts.first }
+%section.hero{id: "top#{@posts.first.id.to_s}"}
+  = render :partial => 'full_width_post', :locals => {:post => @posts.first }
     
-%div#acedia= render :partial => 'acedia'
+%section#acedia= render :partial => 'acedia'
 
 
 
 
-%section#recent_posts.row{:"data-equalizer" => "outer", :"data-magellan-target" => "recent_posts"}
-  .columns.text-center
-    - @posts[1..2].each do |post|
-      .small-12.medium-12.large-6.columns.post_outer{:"data-equalizer-watch" => "outer"}= render :partial => 'image_top_post', :locals => {:post => post}
-%div#tweet_front= render :partial => 'tweet'
+%section#recent_posts
+  .container
+    %h3.section_heading Previous posts...
+    .columns.is-4.is-variable
+      - @posts[1..2].each do |post|
+        .column= render :partial => 'image_top_post', :locals => {:post => post}
+
+%section#tweet_front= render :partial => 'tweet'
 
 - Cash.visible.where(:source => "blindness").where("image_width > 760").order(order: :desc).limit(1).each do |bp|
-  %section#blindness_container.blindness_wrapper{:"data-magellan-target" => "blindness_container"}= render :partial => 'blindness_image', :locals => {:post => bp}
+  %section#blindness_container
+    .blindness_wrapper= render :partial => 'blindness_image', :locals => {:post => bp}
 
 
-%section#less_recent.row{:"data-magellan-target" => "less_recent"}
-  - @posts[3..5].each do |post|
-    .large-4.columns{:"data-equalizer-watch" => "outer2"}= render :partial => 'title_top_post', :locals => {:post => post}
-  .columns.text-center
-    %h6= link_to 'Older posts', posts_path(:page => 2), class: [:button, :tiny]
+%section#less_recent.row
+  .container
+    %h3.section_heading Even older posts...
+    .columns
+      - @posts[3..5].each do |post|
+        .column= render :partial => 'title_top_post', :locals => {:post => post}
+  .container
+    .columns
+      .column
+        %h6.subtitle= link_to 'Older posts', posts_path(:page => 2), class: [:button, :tiny]
 
 
-#bookmarks_front{:style => 'background-color: #F2F27C', :"data-magellan-target" => "bookmarks_front"}= render :partial => 'bookmark', :locals => {:link => Cash.where(:source => 'bookmarks').order('created_at DESC').limit(25) }
-#disclaimer
-  .row
-    .small-9.columns
-      %p Icewhistle.com is the website of John W. Fail since 2007. 
+%section#bookmarks_front{:style => 'background-color: #F2F27C'}= render :partial => 'bookmark', :locals => {:link => Cash.where(:source => 'bookmarks').order('created_at DESC').limit(25) }
 
-      %medium Contact via email link on site footer.
+%section#disclaimer
+  .container
+    %p.is-size-6
+      Icewhistle.com is the website of John W. Fail since 2007. 
+    %p
+      %em Contact via email link on site footer.
 
 

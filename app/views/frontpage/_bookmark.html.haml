@@ -1,11 +1,11 @@
-- unless link[0].nil?
-  .row.bookmarks
-    .small-12.medium-2.columns 
-      %h4.subheading Recently bookmarked:
-      = link_to "All bookmarks", 'https://www.evernote.com/pub/johnwfail/bookmarks/',:class => [:button, :tiny]
-    .small-12.medium-10.columns.text-left.bookmark_list
-      %span.bookmark.first= link_to raw(link[0].title), link[0].link_url
-      = " / "
-      = raw link[1..9].map{|x| "<span class='bookmark'><a href=\"#{x.link_url}\">#{x.title}</a></span>" }.join(' / ')
+.container
+  - unless link[0].nil?
+    %h4.subtitle.is-size-5 Recently bookmarked:
+
+  .bookmark_list
+    %span.bookmark.first= link_to raw(link[0].title), link[0].link_url
+    = " / "
+    = raw link[1..9].map{|x| "<span class='bookmark'><a href=\"#{x.link_url}\">#{x.title}</a></span>" }.join(' / ')
 
 
+  = link_to "All bookmarks", 'https://www.evernote.com/pub/johnwfail/bookmarks/',:class => [:button, :tiny]

@@ -1,32 +1,29 @@
 
-    
+
 - if post.image? && post.photos.empty?
-  .row{:"data-equalizer" => 'inner'}
-    .small-12.columns
-      .cropped= image_tag post.image.url(:main).gsub('development', 'production')
+  %figure.image= image_tag post.image.url(:main).gsub('development', 'production')
 - elsif !post.photos.empty?
-  .row
-    .small-12.columns.text-center
-      - if post.photos.size == 1
-        .cropped= image_tag post.photos.first.filename.url(:main)
-      - elsif post.photos.size > 1
-        %ul{:"data-orbit" => ""}
-          - post.photos.each do |p|
-            %li
-              = image_tag p.filename.url(:main) 
-.text-center.post
-  %h3.subheading= link_to raw(post.title), post
-.row
-  .columns.small-12
-    %medium
-      %em= "posted " +  l(post.updated_at, :format => :long)
-        
-.row          
-  .small-12.columns.text-center
-    %p
-      - if Nokogiri::HTML.parse(post.body).css('p').empty?
-        = raw post.body
-      - else
-        = raw Nokogiri::HTML.parse(post.body).css('p').first.text
-    = link_to 'Read more', post, :class => [:button, :tiny]
+  %figure.image
+    - if post.photos.size == 1
+      = image_tag post.photos.first.filename.url(:main)
+    - elsif post.photos.size > 1
+      .carousel
+        - post.photos.each do |p|
+          %div= image_tag p.filename.url(:main).gsub('development', 'production')
+
+      = content_for :jquery do
+        :plain
+          $('.carousel').slick();
+
+%h2.subtitle.is-size-4= link_to raw(post.title), post
+%medium.date
+  %em= "posted " +  l(post.updated_at, :format => :long)
     
+.content
+  %p
+    - if Nokogiri::HTML.parse(post.body).css('p').empty?
+      = raw post.body
+    - else
+      = raw Nokogiri::HTML.parse(post.body).css('p').first.text
+  = link_to 'Read more', post, :class => [:button, :tiny]
+  

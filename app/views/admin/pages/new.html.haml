@@ -1,4 +1,7 @@
-.row
-  .small-12.columns
-    %h2= t :new_page
-= render :partial => 'form'
+.container
+  .columns
+    .columns.is-two-thirds.is-offset-2
+      %h2.title= t :new_page
+  .columns
+    .columns.is-two-thirds.is-offset-2
+      = render :partial => 'form'

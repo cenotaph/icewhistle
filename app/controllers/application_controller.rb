@@ -4,7 +4,7 @@
 class ApplicationController < ActionController::Base
 
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  #before_filter :load_sidebars
+  #before_action :load_sidebars
 
 
   def get_layout

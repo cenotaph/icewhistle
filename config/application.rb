@@ -29,7 +29,7 @@ module Icewhistle
     # you must remove the Active Record framework.
     # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
     config.action_mailer.delivery_method = :smtp
-    config.active_record.raise_in_transactional_callbacks = true
+
     config.action_mailer.smtp_settings = {
       :address => 'mail.cenotaph.org',
       :port => 587,

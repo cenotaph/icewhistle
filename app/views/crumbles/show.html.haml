@@ -1,36 +1,37 @@
-
-.post
-  .row
-    .columns.text-left
-      %h1= @crumble.title
-      %em
-        %medium= "posted: " + l(@crumble.created_at, :format => :long   )
-        %medium= "; from: " + @crumble.datestamp.strftime('%d %B %Y')
+.post.container
+  .columns
+    .column
+      %h3.title= @crumble.title
+      %em.date
+        = "posted: " + l(@crumble.created_at, :format => :long   )
+        = "; from: " + @crumble.datestamp.strftime('%d %B %Y')
         
 
-  .row
-    .small-7.columns
-      = image_tag @crumble.icon.url(:main)
-      - if @crumble.category == 1
-        = image_tag(@crumble.attachment.main.url)
-        %br/
-        = link_to '[full size]', @crumble.attachment.url
-        %br/
-      - if @crumble.category == 2
-        .videocontent
-          %audio{src: @crumble.attachment.url, style: 'width: 100%'} 
-          -#, crumble.attachment.url, :class => :sm2_button, :rel => :nofollow
-        = content_for :jquery do
-          :plain
-            $('video,audio').mediaelementplayer({defaultVideoWidth: "90%"});
+  .post
+    .columns
+      .column.is-three-fifths
+        - if @crumble.icon?
+          %figure.image= image_tag @crumble.icon.url(:main)
+        - if @crumble.category == 1
+          %figure.image= image_tag(@crumble.attachment.main.url)
+          %br/
+          = link_to '[full size]', @crumble.attachment.url
+          %br/
+        - if @crumble.category == 2
+          .videocontent
+            %audio{src: @crumble.attachment.url, style: 'width: 100%'} 
+            -#, crumble.attachment.url, :class => :sm2_button, :rel => :nofollow
+          = content_for :jquery do
+            :plain
+              $('video,audio').mediaelementplayer({defaultVideoWidth: "90%"});
 
-      - if @crumble.attachment_content_type =~ /pdf$/i
-        %br/
-        = link_to '[download PDF]', @crumble.attachment.url
-        %br/     
-      .post_body= raw @crumble.try(:description)         
-    .small-5.columns.sidebar= render :partial => 'crumble_sidebar'
+        - if @crumble.attachment_content_type =~ /pdf$/i
+          %br/
+          = link_to '[download PDF]', @crumble.attachment.url
+          %br/     
+        .post_body= raw @crumble.try(:description)         
+      .column.post_sidebar= render :partial => 'crumble_sidebar'
 
 
-      
+        
 

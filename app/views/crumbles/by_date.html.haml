@@ -1,18 +1,29 @@
-.column_header crumbles / archive
-
-%p 
-  Viewing by date.  
-  = link_to 'View as list.', crumbles_path
-  
-%ul
-  - @crumbles.each do |c_group|
-    - if c_group.first.nil?
-      %li undated
-    - else
-      %li= c_group.first
-    %ul
-      - c_group.last.each do |c|
-        %li
-          = link_to c.title, c
-          = c.datestamp.blank? ? '' : c.datestamp.strftime('%d %B')
-          
+.container.post
+  .columns
+    .column
+      %h3.title Archives
+      .subtitle
+        Viewing by date.  
+        = link_to 'View as list.', crumbles_path, class: :button
+  .columns
+    .content.is-size-6
+      This section is to post sketches, recordings, writings or other odds and ends.  It functions as both a sketchpad and a personal archive. I'm uploading old posters, handbills and other things I've collected here,  for lack of any better place to put it. 
+    .is-clearfix     
+  .columns
+    .columns
+      %ul
+        - @crumbles.each do |c_group|
+          - if c_group.first.nil?
+            %li
+              %strong undated
+          - else
+            %li
+              %strong= c_group.first
+          %ul
+            - c_group.last.each do |c|
+              %li
+                = link_to c.title, c
+                = c.datestamp.blank? ? '' : c.datestamp.strftime('%d %B')
+            
+  .columns.is-clearfix
+    &nbsp;            

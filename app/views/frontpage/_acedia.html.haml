@@ -1,31 +1,31 @@
-.acedia
-  .row
-    .small-12.columns.text-left
-      #mc_embed_signup
-        %form#mc-embedded-subscribe-form.validate{:action => "//fail.us12.list-manage.com/subscribe/post?u=f59423a6fc45ef468b3ed9c2a&amp;id=9bef430f80", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
-          #mc_embed_signup_scroll
-            %h3 Subscribe to Acedia!
-            %p
-              %em Acedia
-              is an email newsletter I send no more than once per week, detailing my thoughts, observations, media intake, and other news. It is loosely modelled after the now-defunct
-              %em The New Vulgate
-              by Joe Carducci and Warren Ellis's
-              %em Orbital Operations. Acedia
-              exists because I prefer email over Facebook/Twitter and other Internet communication methods.
-            .mc-field-group
-              %label{:for => "mce-EMAIL"}
-                Your email address
-              %input#mce-EMAIL.required.email{:name => "EMAIL", :type => "email", :value => ""}/
+.acedia.container
+  #mc_embed_signup
+    %form#mc-embedded-subscribe-form.validate{:action => "//fail.us12.list-manage.com/subscribe/post?u=f59423a6fc45ef468b3ed9c2a&amp;id=9bef430f80", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
+      #mc_embed_signup_scroll
+        %h3.subtitle Subscribe to Acedia!
+        %p.content.is-size-6
+          %em Acedia
+          is an email newsletter I send very rarely, no more than once per week (but more like a few times a year), which details my thoughts, observations, media intake, and other news. It is loosely modelled after the now-defunct
+          %em The New Vulgate
+          by Joe Carducci and Warren Ellis's
+          %em Orbital Operations. Acedia
+          exists because I prefer email over Facebook/Twitter and other Internet communication methods.
 
-            %div{"aria-hidden" => "true", :style => "position: absolute; left: -5000px;"}
-              %input{:name => "b_f59423a6fc45ef468b3ed9c2a_9bef430f80", :tabindex => "-1", :type => "text", :value => ""}/
-            .clear
-              %input#mc-embedded-subscribe.button.small{:name => "subscribe", :type => "submit", :value => "Subscribe"}/
-            #mce-responses.clear
-              #mce-error-response.response{:style => "display:none"}
-              #mce-success-response.response{:style => "display:none"}              
-      %script{:src => "//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js", :type => "text/javascript"}
-      :javascript
-        (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
-      / End mc_embed_signup
-      
+
+          %label{:for => "mce-EMAIL"}
+            %p.is-size-7 Your email address:
+          .field.is-pulled-left
+            %input#mce-EMAIL.required.input.email.is-pulled-left{:name => "EMAIL", :type => "email", :value => ""}/
+          .is-pulled-left{:'aria-hidden' => true, style: 'position: absolute; left: -5000px'}
+            %input{:name => "b_f59423a6fc45ef468b3ed9c2a_9bef430f80", :tabindex => "-1", :type => "text", :value => ""}/
+        .is-pulled-left
+          %button#mc-embedded-subscribe.button.is-link.small{:name => "subscribe", :type => "submit", :value => "Subscribe"}Subscribe
+          #mce-responses.clear
+            #mce-error-response.response{:style => "display:none"}
+            #mce-success-response.response{:style => "display:none"}
+  .is-clearfix
+  %script{:src => "//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js", :type => "text/javascript"}
+  :javascript
+    (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+  / End mc_embed_signup
+  

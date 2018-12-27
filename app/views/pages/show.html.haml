@@ -1,8 +1,17 @@
-
-%article#main.page_show
-  %header{class: @page.image.nil? ? false : (@page.image_width < 980 ? 'small' : false), style: @page.image.nil? ? false : 'background-image:  url("' + @page.image.url(:main) + '");'}
-    %h2= @page.title
-    %p= @page.subtitle
-  %section.wrapper.style5.page
-    .inner
+.container.post
+  .columns
+    .column
+      %h2.title= @page.title
+      %h2.subtitle= @page.subtitle
+  
+  .columns
+    .column.is-three-fifths
       = raw @page.body
+
+    - if @page.image?
+      .column.is-two-fifths
+        - if @page.image_width > 1200
+          %figure.image= image_tag @page.image.url.gsub(/development/, 'production')
+        - else 
+          %figure.image= image_tag @page.image.url      
+

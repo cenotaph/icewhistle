@@ -1,30 +1,28 @@
 
-.row{:"data-magellan-destination" => "top#{post.id.to_s}"}
 - if post.image?
   - if post.image_width > 1200
-    = image_tag post.image.url.gsub(/development/, 'production')
+    %figure.image= image_tag post.image.url.gsub(/development/, 'production')
   - else
-    .row    
-      .small-12.medium-9.large-7.columns.small-centered.post_with_topspace= image_tag post.image.url
+    %figure.image= image_tag post.image.url
 - elsif !post.photos.empty?
   %ul{:"data-orbit" => ""}
     - post.photos.each do |p|
       %li
         = image_tag p.filename.url
-.row    
-  .small-12.medium-.large-7.columns.small-centered.post_content
-    %h2.subheader= link_to raw(post.title), post
-    %medium.date
-      %em= "posted " +  l(post.updated_at, :format => :long)
-    .post_body.text-justify.readmore
-      - unless post.audiopodcasts.empty?
-        - post.audiopodcasts.each do |podcast|
-          .audiocontent
-            %audio{src: podcast.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
-      %br{clear: :all}
-      = raw post.body      
-      - if post.extended
-        = link_to 'Read more', post, :class => [:button, :tiny]
+.container.has-text-centered
+  %h2.title= link_to raw(post.title), post
+  %medium.date
+    %em= "posted " +  l(post.updated_at, :format => :long)
+  .column.is-8.is-offset-2.has-text-justified
+
+    - unless post.audiopodcasts.empty?
+      - post.audiopodcasts.each do |podcast|
+        .audiocontent
+          %audio{src: podcast.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
+    %br{clear: :all}
+    .content.readmore= raw post.body      
+    - if post.extended
+      = link_to 'Read more', post, :class => [:button, :tiny]
 - if post.videos.empty?
   = content_for :jquery do
     :plain

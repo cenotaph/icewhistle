@@ -1,13 +1,13 @@
 /*
-
- *= require foundation_and_overrides
- *= require _settings
  *= require_self
+ *= require font-awesome
  *= require mediaelement_rails
+ *= require mediaelement_rails/mejs-skins
 */
 
 $sigreen: #53a842;
 $sigreen2: #18ea22;
+@import "bulma";
 
 body {
   background-color: $sigreen;
@@ -38,21 +38,19 @@ a.readmore-js-toggle {
 }
 
 .left_container {
-  width: 60%;
-  float: left;
   .menu {
-    margin: 0 1rem;
-    float: left;
+    margin: 0;
     border-top: 1px dotted white;
     border-bottom: 1px dotted white;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.64rem;
+    padding: 0.5rem 0;
     ul {
      
       font-family: 'Arial Black', 'Arial', sans-serif;
       list-style-type: none;
       li {
-        padding-right: 1.5vw;
-            font-size: 1.55vw;
+        padding-right: 1.5rem;
+            font-size: 1.25rem;
         &.last {
           padding-right: none;
         }
@@ -68,14 +66,13 @@ a.readmore-js-toggle {
     }
   }
   .title_container {
-    float: right;
     padding-right: 1rem;
     text-align: right;
   }
   h1 {
     text-transform: uppercase;
-    font-size: 3.9vw;
-    text-align: right;
+    font-size: 3.5rem;
+    text-align: left;
     font-family: 'Arial Black', 'Arial', sans-serif;
     color: white;
     a {
@@ -123,10 +120,9 @@ a.readmore-js-toggle {
     }
   }
 }
-.variable {
+.right_container {
   font-family: 'Arial Black', 'Arial', sans-serif;
   color: white;
-  width: 40%;
   padding-top: 2.8rem;
 
   float: left;
@@ -208,33 +204,17 @@ a.readmore-js-toggle {
   }
 }
 
-.audiocontent {
-  float: left;
-  clear: both;
-  margin: 1.5rem auto;
-}
 
-
-footer {
-  clear: both;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  color: white;
+footer.footer {
+  background-color: $sigreen;
+  border-top: 2px solid white;
   ul {
-    list-style-type: none;
     li {
-      float: left;
-      font-size: 1.4rem;
-      
-      a {
-        span.label {
-          background: none;
-        }
-      }
+      float: left ;
+      padding-right: 2rem;
     }
   }
 }
-
 
 // mobile considerations
 @media only screen and (max-width: 40.0625em) {
@@ -255,6 +235,7 @@ footer {
       }
     }
     .post {
+
       h3 {
         font-size: 1.2rem;
         line-height: 1.4rem;
@@ -305,4 +286,16 @@ footer {
   }
   
   
+}
+
+.post {
+  background-color: #FFFFFF;
+  opacity: 0.9;
+  /* padding: 0.5rem 2rem; */
+  position: relative;
+   padding-left: 0.9375rem; 
+   padding-right: 0.9375rem; 
+  /* float: right; */
+  width: 100% !important;
+  margin: 0 !important;
 }

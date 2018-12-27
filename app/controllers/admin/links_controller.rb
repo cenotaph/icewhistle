@@ -1,6 +1,6 @@
 class Admin::LinksController < ApplicationController
   layout 'admin'
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   def authenticate
       authenticate_or_request_with_http_basic do |name, pass|
             #User.authenticate(name, pass)

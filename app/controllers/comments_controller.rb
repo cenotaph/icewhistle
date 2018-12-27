@@ -1,6 +1,6 @@
 # class CommentsController < InheritedResources::Base
 #
-#   before_filter :load_post
+#   before_action :load_post
 #
 #   def load_post
 #     @item = Post.find(params[:post_id]) if params[:post_id]
