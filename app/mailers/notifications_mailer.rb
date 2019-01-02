@@ -10,6 +10,6 @@ class NotificationsMailer < ActionMailer::Base
   def registered_event(event, recipient)
     @event = event
     @recipient = recipient
-    mail(subject: 'You have registered for #{event.name}', to: recipient.email)
+    mail(subject: "You have registered for #{event.name}", to: recipient.email)
   end
 end
