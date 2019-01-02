@@ -1,11 +1,8 @@
 class PagesController < ApplicationController
-  
   layout :get_layout
-    
-    
-  def show  
+   
+  def show
     @page = Page.friendly.find(params[:id])
-    
 
     set_meta_tags :title => @page.title.html_safe, 
       canonical: url_for(@page),

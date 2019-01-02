@@ -1,4 +1,4 @@
-class Cash < ActiveRecord::Base
+class Cash < ApplicationRecord
   mount_uploader :image, ImageUploader
   before_save :update_image_attributes
 

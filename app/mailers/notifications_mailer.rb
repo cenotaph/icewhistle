@@ -7,4 +7,9 @@ class NotificationsMailer < ActionMailer::Base
     mail(:subject => "Icewhistle.com contact form: #{message.subject}")
   end
 
+  def registered_event(event, recipient)
+    @event = event
+    @recipient = recipient
+    mail(subject: 'You have registered for #{event.name')
+  end
 end

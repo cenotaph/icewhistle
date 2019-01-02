@@ -1,4 +1,6 @@
 Icewhistle::Application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
   mount Ckeditor::Engine => '/ckeditor'
 
   resources :crumbles do
@@ -9,7 +11,14 @@ Icewhistle::Application.routes.draw do
   end
   resources :blogimages
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
-
+  namespace :api do
+    namespace :v1 do
+      mount_devise_token_auth_for 'User', at: 'auth'
+      resources :events do
+        resources :registrations
+      end
+    end
+  end
   resources :publications
   match '/contact' => "contact#index", via: :get
   resources :projects
@@ -45,6 +54,7 @@ Icewhistle::Application.routes.draw do
     resources :crumbles
     resources :cashes
     resources :schools
+    resources :events
     resources :jobs
     resources :links
     resources :skills

@@ -1,0 +1,70 @@
+= nested_form_for [:admin, @event], :html => {:multipart => true} do |f|
+  .field
+    %label.label Name of event
+    .control= f.text_field :name, class: :input
+  .field
+    %label.label Location
+    .control= f.text_field :location, class: :input    
+  .field
+    %label.label Description
+    .control= f.text_area :description, :class => :ckeditor
+  .field
+    %label.label Latitude (for map)
+    .control= f.text_field :latitude, class: :input
+  .field
+    %label.label Longitude (for map)
+    .control= f.text_field :longitude, class: :input
+  .field
+    %label.label Start date
+    .control= f.text_field :start_at, class: [:datetime, :input]
+  .field
+    %label.label End at
+    .control= f.text_field :end_at, class: [:datetime, :input]
+  .field
+    %label.label Link to external site #1:
+    .control= f.text_field :link1, class: :input  
+  .field
+    %label.label Link to external site #2:
+    .control= f.text_field :link2, class: :input
+  .field
+    %label.label Additional date or location info:
+    .control= f.text_field :extra_date, class: :input          
+  .field
+    = f.fields_for :photos do |ff|
+      - unless ff.object.filename.blank?
+        %figure.image= image_tag ff.object.filename.url(:midsize)
+      = ff.file_field :filename
+      = ff.link_to_remove 'Remove this'
+  
+    = f.link_to_add 'add one or more images', :photos, class: [:button, :small]
+  -# .field
+  -#   = f.fields_for :videos do |ff|
+  -#     - unless ff.object.blank?
+  -#       = image_tag ff.object.url rescue ''
+  -#       = ff.text_field :url, class: :input
+  -#       = ff.text_field :bytes, class: :input
+  -#       = ff.text_field :content_type, class: :input
+  
+  -#   = f.link_to_add 'add one or more videos', :videos, class: [:button, :small]
+
+    
+  .field
+    %label.label Requires registration?
+    .control= f.check_box :registration
+  .field
+    %label.label Registration limit?
+    .control= f.text_field :reg_limit    
+  .field
+    %label.label Stop registration at:
+    .control= f.text_field :expires, class: [:datetime, :input]
+  .field
+    %label.label Optional question #1:
+    .control= f.text_field :question1, class: :input
+  .field
+    %label.label Optional question #2:
+    .control= f.text_field :question2, class: :input
+  .field
+    %label.label Optional question #3:
+    .control= f.text_field :question3, class: :input          
+  .field
+    .control= f.submit 'Save', class: [:button, 'is-link']

@@ -1,4 +1,4 @@
-class Crumble < ActiveRecord::Base
+class Crumble < ApplicationRecord
   require 'carrierwave/orm/activerecord'
   extend FriendlyId
   friendly_id :title, :use => [:finders, :history, :slugged]

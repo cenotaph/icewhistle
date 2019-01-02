@@ -12,6 +12,10 @@
  *
 
  *= require_self
-
+ *= require flatpickr
+ *= require flatpickr/themes/dark
 */
 
+.post {
+  min-height: 90vh;
+}

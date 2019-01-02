@@ -1,6 +1,6 @@
 class Page < ActiveRecord::Base
   extend FriendlyId
-  friendly_id :title, :use => [:history, :slugged, :finders]
+  friendly_id :title, :use => [:history, :slugged]
   scope :published, -> () { where(published: true) }
   mount_uploader :image, ImageUploader
   before_save :update_image_attributes

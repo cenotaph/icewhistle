@@ -1,0 +1,32 @@
+.post.container
+  .columns
+    .column
+      %h1.title All events
+  .columns= link_to 'New event', new_admin_event_path, class: :button
+  .columns
+    .column
+      =paginate @events   
+
+  .columns
+    .columns
+      %table.table
+        %thead
+          %tr 
+            %th Title
+            %th Date
+            %th Actions
+        %tbody
+          - @events.each do |event|
+            %tr
+              %td= event.name
+              %td
+                = l event.start_at.to_date, :format => :long
+                = " -- "
+                = l event.end_at.to_date, format: :long
+
+              %td.action
+                = link_to 'Show', [:admin, event], :target => :_blank, :class => [:button, :round, :tiny]
+                = link_to 'Edit', edit_admin_event_path(event), :class => [:button, :round, :tiny]
+                = link_to 'Destroy', [:admin, event], :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => [:button, :round, :tiny, :alert]
+.row
+  .small-10.columns= paginate @events          

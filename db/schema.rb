@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_17_110644) do
+ActiveRecord::Schema.define(version: 2019_01_02_132152) do
 
   create_table "audiopodcasts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "url"
@@ -101,6 +101,28 @@ ActiveRecord::Schema.define(version: 2018_10_17_110644) do
     t.string "slug"
     t.date "datestamp"
     t.index ["slug"], name: "index_crumbles_on_slug", unique: true
+  end
+
+  create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.float "latitude"
+    t.float "longitude"
+    t.text "description"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.string "slug"
+    t.text "link1"
+    t.text "link2"
+    t.datetime "expires"
+    t.boolean "registration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "question1"
+    t.text "question2"
+    t.text "question3"
+    t.integer "reg_limit"
+    t.string "extra_date"
   end
 
   create_table "friendly_id_slugs", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -230,6 +252,22 @@ ActiveRecord::Schema.define(version: 2018_10_17_110644) do
     t.float "sortorder"
   end
 
+  create_table "registrations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "event_id"
+    t.string "email"
+    t.string "name"
+    t.string "phone"
+    t.text "question1"
+    t.text "question2"
+    t.text "question3"
+    t.string "website"
+    t.boolean "waiting_list"
+    t.text "comments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_registrations_on_event_id"
+  end
+
   create_table "releases", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "title"
     t.string "art1"
@@ -341,6 +379,15 @@ ActiveRecord::Schema.define(version: 2018_10_17_110644) do
     t.datetime "confirmation_sent_at"
     t.string "reset_password_token"
     t.datetime "remember_created_at"
+    t.string "provider", default: "email", null: false
+    t.string "uid", default: "", null: false
+    t.datetime "reset_password_sent_at"
+    t.boolean "allow_password_change", default: false
+    t.text "tokens"
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
     t.index ["username"], name: "index_users_on_login", unique: true
   end
 
@@ -354,4 +401,5 @@ ActiveRecord::Schema.define(version: 2018_10_17_110644) do
     t.string "content_type"
   end
 
+  add_foreign_key "registrations", "events"
 end

@@ -8,6 +8,7 @@
 # To learn more, check out the guide:
 #
 # http://norman.github.io/friendly_id/file.Guide.html
+require 'friendly_id_overrides'
 
 FriendlyId.defaults do |config|
   # ## Reserved Words
