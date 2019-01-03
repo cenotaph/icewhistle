@@ -31,7 +31,7 @@ class ApplicationController < ActionController::Base
 
   def render_not_found_response(exception)
     respond_to do |format|
-      format.html { render template: "#{Rails.root}/public/404.html" }
+      format.html { render file: "public/404.html", layout: false }
       format.json {
         render json: { errors: [{ detail: exception.message,
                                 title: 'Item not found',
