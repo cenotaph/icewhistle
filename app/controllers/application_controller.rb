@@ -3,9 +3,10 @@
 
 class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-  rescue_from ActionController::UnknownFormat, with: :raise_not_found
-
-
+  rescue_from ActionController::UnknownFormat, with: :render_not_found_response
+  rescue_from ActionView::MissingTemplate do |exception|
+    raise ActionController::RoutingError.new('Not Found')
+  end
   protect_from_forgery
 
   def get_layout
@@ -32,7 +33,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def raise_not_found
-    render(text: 'Not Found', status: :unsupported_media_type)
+    
   end
 
   def render_not_found_response(exception)
@@ -45,6 +46,7 @@ class ApplicationController < ActionController::Base
                               }]
                     }, status: :not_found
         }
+      format.all { render(text: 'Not Found', status: 404) }
     end
   end
 end

@@ -19,6 +19,7 @@ class PostsController < ApplicationController
                   twitter: {card: 'summary', site: '@hyksos'}
     respond_to do |format|
       format.html { render layout: get_layout }
+      format.all  { render(text: 'Not Found', status: :unsupported_media_type) }
     end
   end
   
