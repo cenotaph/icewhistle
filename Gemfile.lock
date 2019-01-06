@@ -508,7 +508,7 @@ GEM
     temple (0.8.0)
     terrapin (0.6.0)
       climate_control (>= 0.0.3, < 1.0)
-    thinking-sphinx (4.0.0)
+    thinking-sphinx (4.1.0)
       activerecord (>= 3.1.0)
       builder (>= 2.1.2)
       innertube (>= 1.0.2)
@@ -644,7 +644,7 @@ DEPENDENCIES
   sass-rails
   shoulda-matchers (~> 3.1)
   simplecov
-  thinking-sphinx
+  thinking-sphinx (~> 4.1)
   truncate_html
   twitter
   uglifier
@@ -654,7 +654,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 2.5.3p105
+   ruby 2.6.0p0
 
 BUNDLED WITH
    1.17.2
