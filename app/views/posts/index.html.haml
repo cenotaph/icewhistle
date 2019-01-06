@@ -6,7 +6,7 @@
         %h1.title All posts
       .level-item
         = form_tag(search_index_path, :method => :get) do
-          = text_field_tag("search", params[:search].blank? ? 'Search...' : params[:search], :size => 10)
+          = text_field_tag("search", params[:search].blank? ? 'Search...' : params[:search], :size => 10, class: :input)
   .level
     .level-left
       .level-item= paginate @posts
