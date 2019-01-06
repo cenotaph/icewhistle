@@ -22,7 +22,7 @@ class FrontpageController < ApplicationController
                     twitter: {card: 'summary', site: '@hyksos'}
       render template: 'frontpage/si_front'                    
     else
-      @posts = Post.published.order('created_at DESC').page(params[:page]).per(10)
+      @posts = Post.published.order('created_at DESC').limit(10)
       @crumbles = Crumble.where("icon is not null").order_by_rand.limit(5).all
       set_meta_tags :title => 'John W. Fail', 
                     canonical: 'http://icewhistle.com/',

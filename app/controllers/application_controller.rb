@@ -3,6 +3,8 @@
 
 class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+  rescue_from ActionController::UnknownFormat, with: :raise_not_found
+
 
   protect_from_forgery
 
@@ -28,6 +30,10 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+
+  def raise_not_found
+    render(text: 'Not Found', status: :unsupported_media_type)
+  end
 
   def render_not_found_response(exception)
     respond_to do |format|

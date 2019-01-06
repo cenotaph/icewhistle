@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-
+  respond_to :html
   before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :delete]
 
   def index
@@ -17,7 +17,9 @@ class PostsController < ApplicationController
                         description: ActionView::Base.full_sanitizer.sanitize(@post.body[0..500]) + "..."
                       }, 
                   twitter: {card: 'summary', site: '@hyksos'}
-    render layout: get_layout
+    respond_to do |format|
+      format.html { render layout: get_layout }
+    end
   end
   
   def new
