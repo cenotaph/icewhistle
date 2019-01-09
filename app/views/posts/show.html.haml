@@ -78,14 +78,14 @@
       - unless @post.previous_post.nil?
         %h6 Previous post:
         .link
-          = link_to @post.previous_post.title, @post.previous_post
+          = link_to @post.previous_post.title.html_safe, @post.previous_post
           .date= @post.previous_post.created_at.strftime('%d %B %Y')
         
     .column.has-text-right
       - unless @post.next_post.nil?
         %h6 Next post:
         .link
-          = link_to @post.next_post.title, @post.next_post
+          = link_to @post.next_post.title.html_safe, @post.next_post
           .date= @post.next_post.created_at.strftime('%d %B %Y')
   %br{:clear => 'all'}
     
