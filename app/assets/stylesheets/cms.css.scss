@@ -19,3 +19,13 @@
 .post {
   min-height: 90vh;
 }
+
+table {
+  tbody {
+    tr.deleted {
+      td {
+        text-decoration: line-through;
+      }
+    }
+  }
+}

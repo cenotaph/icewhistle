@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   belongs_to :grouping
   has_many :comments, :as => :item
-
+  include Discard::Model
   acts_as_taggable_on :tags
   extend FriendlyId
   friendly_id :title, :use => [:history, :slugged, :finders]
@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
   before_save :update_image_attributes
   validates_presence_of :title, :body
   
-  scope :published, -> () { where(published: true) }    
+  scope :published, -> () { where(published: true).where(discarded_at: nil) }    
   accepts_nested_attributes_for :photos, :reject_if => proc {|x| x['filename'].blank? }, :allow_destroy => true
   accepts_nested_attributes_for :videos, :reject_if => proc {|x| x['url'].blank? }, :allow_destroy => true
   accepts_nested_attributes_for :audiopodcasts, :reject_if => proc {|x| x['url'].blank? }, :allow_destroy => true

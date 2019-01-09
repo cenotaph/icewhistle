@@ -5,7 +5,7 @@ class Admin::PostsController < Admin::BaseController
   respond_to :html
 
   def index
-    @posts = Post.order('created_at DESC').page(params[:page]).per(30)
+    @posts = Post.order(' id DESC').page(params[:page]).per(30)
   end
 
   def new
@@ -23,7 +23,7 @@ class Admin::PostsController < Admin::BaseController
 
   def destroy
     @post = Post.friendly.find(params[:id])
-    @post.destroy!
+    @post.discard
     redirect_to admin_posts_path
   end
 

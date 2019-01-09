@@ -6,7 +6,7 @@ class SearchController < ApplicationController
       flash[:notice] = 'Please enter a search term.'
       redirect_to posts_path and return
     else
-      @posts = Post.search(params[:search],:order => 'created_at DESC').to_a.delete_if{|x| !x.published }
+      @posts = Post.search(params[:search],:order => 'created_at DESC').to_a.delete_if{|x| !x.published  }.delete_if{|x| !x.discarded_at.nil? }
       @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(10)
       if @posts.size == 0
       	flash[:notice] = 'Sorry, no results found for '+params[:search]

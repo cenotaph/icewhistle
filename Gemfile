@@ -28,6 +28,7 @@ gem 'country_select'
 gem 'devise'#, github: 'plataformatec/devise', branch: :master
 gem 'devise-encryptable'
 gem 'devise_token_auth'
+gem 'discard', '~> 1.0'
 gem 'etherpad-lite'
 gem 'event-calendar', :require => 'event_calendar'
 gem 'fast_jsonapi'

@@ -12,12 +12,14 @@
       %table
         %thead
           %tr 
+            %th ID
             %th Title
             %th Date
             %th Actions
         %tbody
           - @posts.each do |post|
-            %tr
+            %tr{class: post.discarded? ? 'deleted' : false }
+              %td= post.id.to_s
               %td= post.title
               %td= l post.created_at.to_date, :format => :long
               %td.action

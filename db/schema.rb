@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_02_132152) do
+ActiveRecord::Schema.define(version: 2019_01_09_143451) do
 
   create_table "audiopodcasts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "url"
@@ -106,8 +106,8 @@ ActiveRecord::Schema.define(version: 2019_01_02_132152) do
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.float "latitude"
-    t.float "longitude"
+    t.decimal "latitude", precision: 10, scale: 8
+    t.decimal "longitude", precision: 10, scale: 8
     t.text "description"
     t.datetime "start_at"
     t.datetime "end_at"
@@ -221,6 +221,8 @@ ActiveRecord::Schema.define(version: 2019_01_02_132152) do
     t.string "image_content_type"
     t.integer "image_width"
     t.integer "image_height"
+    t.datetime "discarded_at"
+    t.index ["discarded_at"], name: "index_posts_on_discarded_at"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
   end
 

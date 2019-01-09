@@ -21,4 +21,4 @@
 - if current_user
   = link_to 'edit this post', edit_admin_post_path(@post)
   %br
-  = link_to 'delete this post', @post, :confirm => 'Are you sure?', :method => :delete
+  = link_to 'delete this post', [:admin, @post], :confirm => 'Are you sure?', :method => :delete
