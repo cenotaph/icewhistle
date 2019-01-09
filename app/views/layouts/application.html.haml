@@ -73,7 +73,7 @@
                 = link_to 'Posts', admin_posts_path, class: 'navbar-item'
                 = link_to 'Archives', admin_crumbles_path, class: 'navbar-item'
                 = link_to 'CV', admin_projects_path, class: 'navbar-item'
-                = link_to 'Sign out', '/logout', class: 'navbar-item'
+                = link_to 'Sign out', '/logout', method: :delete, class: 'navbar-item'
           
     %main
       - if flash[:error] || flash[:notice] || flash[:alert]
