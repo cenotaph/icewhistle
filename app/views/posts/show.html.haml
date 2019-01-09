@@ -6,7 +6,7 @@
 .post.container
 
   %h1.post_title= raw @post.title
-  %em.date= "posted: " + l(@post.updated_at, :format => :long   )
+  %em.date= "posted: " + l(@post.created_at, :format => :long   )
 
   - if @post.photos.empty?
     .columns
