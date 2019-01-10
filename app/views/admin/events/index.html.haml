@@ -14,7 +14,9 @@
           %tr 
             %th Title
             %th Date
+            %th Registrations
             %th Actions
+
         %tbody
           - @events.each do |event|
             %tr
@@ -23,7 +25,7 @@
                 = l event.start_at.to_date, :format => :long
                 = " -- "
                 = l event.end_at.to_date, format: :long
-
+              %td= link_to event.registrations.size.to_s, admin_event_registrations_path(event)
               %td.action
                 = link_to 'Show', [:admin, event], :target => :_blank, :class => [:button, :round, :tiny]
                 = link_to 'Edit', edit_admin_event_path(event), :class => [:button, :round, :tiny]

@@ -54,7 +54,9 @@ Icewhistle::Application.routes.draw do
     resources :crumbles
     resources :cashes
     resources :schools
-    resources :events
+    resources :events do
+      resources :registrations
+    end
     resources :jobs
     resources :links
     resources :skills

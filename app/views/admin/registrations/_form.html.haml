@@ -1,0 +1,28 @@
+= form_for [:admin, @event, @registration] do |f|
+  .field
+    %label.label Name
+    .control= f.text_field :name, class: :input
+  .field
+    %label.label Email
+    .control= f.text_field :email, class: :input
+  .field
+    %label.label Phone
+    .control= f.text_field :phone, class: :input
+  .field
+    %label.label Website
+    .control= f.text_field :website, class: :input
+  .field
+    %label.label Question 1:
+    .control= f.text_area :question1, class: :textarea
+
+  .field
+    %label.label Question 2:
+    .control= f.text_area :question2, class: :textarea
+  .field
+    %label.label Question 3:
+    .control= f.text_area :question3, class: :textarea
+  .field
+    %label.label Comments and questions:
+    .control= f.text_area :comments, class: :textarea
+  .field
+    .control= f.submit 'Save', class: [:button, 'is-link'] 

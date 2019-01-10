@@ -1,0 +1,37 @@
+.post.container
+  .columns
+    .column
+      %h1.title
+        Registrations for
+        = @event.name
+  - unless @registrations.empty?
+    .columns
+      .columns
+        %table.table
+          %thead
+            %tr 
+              %th Who
+              %th Contact
+              %th Answers
+              %th Comments
+              %th Actions
+
+          %tbody
+            - @registrations.each do |reg|
+              %tr
+                %td
+                  = reg.name
+                  - unless reg.website.blank?
+                    %p= link_to reg.website, reg.website, target: :_blank
+                %td
+                  = reg.email
+                  %br/
+                  = reg.phone
+                %td
+                  - [reg.question1, reg.question2, reg.question3].each do |q|
+                    - next if q.blank?
+                    = q
+                    %br/
+                %td= reg.comments
+                %td
+                  = link_to 'Edit', edit_admin_event_registration_path(@event, reg), class: [:button, 'is-link']
