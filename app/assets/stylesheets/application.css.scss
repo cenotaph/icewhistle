@@ -135,3 +135,12 @@ footer.footer {
     }
   }
 }
+
+.small_image {
+  background-color: #c7d67e;
+  figure.image {
+    &.smaller {
+      margin: 0 auto;
+    }
+  }
+}

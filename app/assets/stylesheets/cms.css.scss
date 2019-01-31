@@ -18,10 +18,17 @@
 
 .post {
   min-height: 90vh;
+  padding-bottom: 4rem;
 }
 
 table {
   tbody {
+    tr:nth-child(even) {
+      background: #EEE;
+    }
+    td {
+      padding: 0.2rem;
+    }
     tr.deleted {
       td {
         text-decoration: line-through;

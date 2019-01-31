@@ -1,23 +1,21 @@
+.post.container
 
+  .columns
+    .column.is-one-half
 
-.row
-  .eight.columns
-    %h2 sign in
-    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| 
-      .row
-        .small-6.columns
-          = f.label :login
-          = f.text_field :login
-      .row
-        .small-6.columns
-          = f.label :password
-          = f.password_field :password
-      - if devise_mapping.rememberable? 
-        .row
-          .small-6.columns
-            = f.check_box :remember_me
-            = f.label :remember_me
-      .row
-        .small-6.columns= f.submit "Sign in"
-      .row
-        .small-6.columns= render :partial => "devise/shared/links" 
+      %h2 sign in
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| 
+        .field
+          %label.label= f.label :login
+          .control= f.text_field :login
+        .field
+          %label.label= f.label :password
+          .control= f.password_field :password
+        - if devise_mapping.rememberable? 
+          .field
+            %label.label= f.check_box :remember_me
+            .control= f.label :remember_me
+        .field
+          .control=f.submit "Sign in"
+  .columns
+    .columns= render :partial => "devise/shared/links" 
