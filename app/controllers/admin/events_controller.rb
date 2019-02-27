@@ -45,7 +45,7 @@ class Admin::EventsController < Admin::BaseController
   private
 
   def event_params
-    params.require(:event).permit(:name, :location, :latitude, :longitude, :description, :start_at, :end_at, :link1, :link2, :expires, :registration, :question1, :question2, :question3, :reg_limit, :extra_date)
+    params.require(:event).permit(:name, :location, :latitude, :longitude, :description, :start_at, :end_at, :link1, :link2, :expires, :registration, :question1, :question2, :question3, :reg_limit, :extra_date, photos_attributes: %i[id filename _destroy])
   end
  
 end
