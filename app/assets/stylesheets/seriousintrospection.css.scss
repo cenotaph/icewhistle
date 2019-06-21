@@ -71,7 +71,7 @@ a.readmore-js-toggle {
   }
   h1 {
     text-transform: uppercase;
-    font-size: 3.5rem;
+    font-size: 39px;
     text-align: left;
     font-family: 'Arial Black', 'Arial', sans-serif;
     color: white;
@@ -167,6 +167,12 @@ a.readmore-js-toggle {
     width: 100%;
   }
   .post_tags, .prev_next {
+    display: none;
+  }
+  .is-three-fifths {
+    width: 80%;
+  }
+  .post_sidebar {
     display: none;
   }
   .sidebar {
@@ -269,7 +275,7 @@ footer.footer {
   .left_container {
     width: 75%;
     h1.si_title {
-      font-size: 4.9vw;
+      // font-size: 4.9vw;
     }
     .menu {
       ul {
