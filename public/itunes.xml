@@ -29,15 +29,35 @@
 <itunes:category text="Arts">
 </itunes:category>
 
+<item>
+<title>SI special episode at Nida Art Colony - 'The Shutout'</title>
+<link>https://seriousintrospection.fi/posts/serious-introspection-special-episode-nida-the-shutout</link>
+<guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/si_nida.mp4</guid>
+<description>We're back, at least for one night. We did a live reunion show at Nida Art Colony on 29 June 2019, with guests Dafna Maimon and Vytautas Michelkevičius, plus some random people, bespoke karaoke, email quotes taken out of context, ketchup, a failed attempt to get people to drink a cocktail called a 'Tequila Rambo', mild slapstick violence, and lots of live tweeting via #SeriousIntrospection. See you again in three more years!</description>
+
+<category>Podcasts</category>
+<enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/si_audio_002.m4a" length="1757182398" type="video/mp4"/>
+     <pubDate>Wed, 10 Jul 2019 09:07:09 +0000</pubDate>
+
+<itunes:author>John W. Fail</itunes:author>
+
+<itunes:explicit>Yes</itunes:explicit>
+<itunes:subtitle>In the shutout, how will we know the great fall?</itunes:subtitle>
+<itunes:summary>We're back, at least for one night. We did a live reunion show at Nida Art Colony on 29 June 2019, with guests Dafna Maimon and Vytautas Michelkevičius, plus some random people, bespoke karaoke, email quotes taken out of context, ketchup, a failed attempt to get people to drink a cocktail called a 'Tequila Rambo', mild slapstick violence, and lots of live tweeting via #SeriousIntrospection. See you again in three more years!</itunes:summary>
+<itunes:duration>00:56:30</itunes:duration>
+<itunes:keywords>Dafna Maimon,Vytautas Michelkevičius,John W. Fail,Justin Tyler Tate,Ernest Truely,Nida Art Colony,symposium,talk show,live performance,interviews</itunes:keywords>
+
+</item>
+
 
 <item>
 <title>SI podcast #2: Girilal Baars</title>
 <link>http://seriousintrospection.fi/posts/si-audio-podcast-2-girilal-baars</link>
-<guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/si_audio_002.m4a</guid>
+<guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/si_audio_002.m4a</guid>
 <description>My pal Girilal stopped by Helsinki last month and we recorded this conversation, which touched on science fiction, improvisation, being an audience member, and lots more. This is also an attempt to keep the SI podcast feed alive with some occasional content, as enough interesting people pass through my life that I should try to share their ideas with a larger audience, right??</description>
 
 <category>Podcasts</category>
-<enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/si_audio_002.m4a" length="30267723" type="audio/m4a"/>
+<enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/si_audio_002.m4a" length="30267723" type="audio/m4a"/>
      <pubDate>Sat, 06 Aug 2016 09:57:09 +0000</pubDate>
 
 <itunes:author>John W. Fail</itunes:author>
@@ -56,7 +76,7 @@
 <item>
   <title>Serious Introspection S02E08: Marianna Keisalo, Red Brut, and Mental Alaska</title>
   <link>http://seriousintrospection.fi/posts/serious-introspection-series-finale</link>
-  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e08.mp4</guid>
+  <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e08.mp4</guid>
   <description>For the last episode of Serious Introspection, filmed on 13 April 2016, we did a short set as the opening act of the 2016 Lal Lal Lal festival. But first, we brought Marianna Keisalo (last seen in S02E01 back on stage to catch-up on her life as the hardest working standup comedienne/anthropologist in Helsinki. Marijn aka Red Brut was up next, and then we welcomed the Mental Alaska group, organisers of the Lal Lal Lal fest, to officially open the festival and officially close out Serious Introspection.
 
 I don't know if this is the end of the regular weekly shows for sure but at least for the time being - it's an exhausting experience! Keep subscribed to the podcast feed for future audio-only episodes and any occasional one-offs we may end up doing. And I must remind you that SI Services is available to hire for your party, wedding, bar mitzvah or other corporate event.
@@ -64,7 +84,7 @@ I don't know if this is the end of the regular weekly shows for sure but at leas
 Thanks again to Mad House for allowing two seasons of this silliness as well as Justin Tyler Tate (the O.G. Hype Man), Ernest Truely (our meta-media specialist), Lotta Blomberg (SI videographer) and Joosep Tormis (our sound sherpa).</description>
 
   <category>Podcasts</category>
-  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e08.mp4" length="1335439749" type="video/mp4"/>
+  <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e08.mp4" length="1335439749" type="video/mp4"/>
   <pubDate>Sun, 21 Jun 2016 07:29:43 +0000</pubDate>
 
   <itunes:author>John W. Fail</itunes:author>
@@ -84,11 +104,11 @@ Thanks again to Mad House for allowing two seasons of this silliness as well as 
 <item>
   <title>Serious Introspection S02E07: Olaf Möller, Mari Keski-Korsu</title>
   <link>http://seriousintrospection.fi/posts/serious-introspection-season-2-episode-7</link>
-  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e07.mp4</guid>
+  <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e07.mp4</guid>
   <description>It was great to have Tuukka Asplund fill in as Hype Man for the last two episodes of Serious Introspection's second season. In episode 7, we first welcomed the inimitable Olaf Möller to discuss his approach to teaching cinema, Finnish cinema, and some childhood memories. Then we welcomed the equally inimatble Mari Keski-Korsu to talk a bit about her work, the forthcoming 2016 Pixelache Festival, and to demonstrate her study of Baltic sauna whisking techniques. We additionally celebrated this being our last "full" episode, sang a tribute to Justin, and reviewed some festival experiences together with Ernest. And we tried to phone my parents, but they didn't answer. This episode took place way back on the 6th of April, 2016.</description>
 
   <category>Podcasts</category>
-  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e07.mp4" length="2098071778" type="video/mp4"/>
+  <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e07.mp4" length="2098071778" type="video/mp4"/>
   <pubDate>Sat, 20 Jun 2016 07:29:43 +0000</pubDate>
 
   <itunes:author>John W. Fail</itunes:author>
@@ -105,11 +125,11 @@ Thanks again to Mad House for allowing two seasons of this silliness as well as 
 <item>
   <title>SI IHME special #6: Hannu Väisänen and Inga Lace.</title>
   <link>http://seriousintrospection.fi/posts/si-at-ihme-episodes-5-and-6</link>
-  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme06.mp4</guid>
+  <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/ihme06.mp4</guid>
   <description>The final Serious Introspection episode @ IHME 2016 was with manifesto reader Hannu Väisänen and bonus guest Inga Lace.</description>
 
   <category>Podcasts</category>
-  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme06.mp4" length="760731083" type="video/mp4"/>
+  <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/ihme06.mp4" length="760731083" type="video/mp4"/>
   <pubDate>Fri, 19 Jun 2016 07:29:43 +0000</pubDate>
 
   <itunes:author>John W. Fail</itunes:author>
@@ -125,11 +145,11 @@ Thanks again to Mad House for allowing two seasons of this silliness as well as 
 <item>
   <title>SI IHME special #5: Seated/roundtable discussion with Nestori Syrjälä, Pekka and Teija Isorättyä, and Eero Yli-Vakkuri</title>
   <link>http://seriousintrospection.fi/posts/si-at-ihme-episodes-5-and-6</link>
-  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme05.mp4</guid>
+  <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/ihme05.mp4</guid>
   <description>A seated discussion with a handful of artists who were part of the Marathon event that evening: Nestori Syrjälä, Pekka and Teija Isorättyä, and Eero Yli-Vakkuri.</description>
 
   <category>Podcasts</category>
-  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme05.mp4" length="916072359" type="video/mp4"/>
+  <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/ihme05.mp4" length="916072359" type="video/mp4"/>
   <pubDate>Thu, 18 Jun 2016 07:29:43 +0000</pubDate>
 
   <itunes:author>John W. Fail</itunes:author>
@@ -147,11 +167,11 @@ Thanks again to Mad House for allowing two seasons of this silliness as well as 
 <item>
   <title>SI IHME special #4: Pierre Bastien, Hamza Walker, Päivi Raivio and Robin Ellis</title>
   <link>http://seriousintrospection.fi/posts/si-at-ihme-episodes-3-and-4</link>
-  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme04.mp4</guid>
+  <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/ihme04.mp4</guid>
   <description>The fourth Serious Introspection episode @ IHME 2016 featured musician Pierre Bastien, curator Hamza Walker, and artists Päivi Raivio and Robin Ellis.</description>
 
   <category>Podcasts</category>
-  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme04.mp4" length="2420312768" type="video/mp4"/>
+  <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/ihme04.mp4" length="2420312768" type="video/mp4"/>
   <pubDate>Wed, 08 Jun 2016 07:29:43 +0000</pubDate>
 
   <itunes:author>John W. Fail</itunes:author>
@@ -167,11 +187,11 @@ Thanks again to Mad House for allowing two seasons of this silliness as well as 
 <item>
   <title>SI IHME special #3: Jan Verwoert, Stephen Paul Taylor</title>
   <link>http://seriousintrospection.fi/posts/si-at-ihme-episodes-3-and-4</link>
-  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme03.mp4</guid>
+  <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/ihme03.mp4</guid>
   <description>The third Serious Introspection episode @ IHME 2016 featured Stephen Paul Taylor and Jan Verwoert and took place on Saturday, 2 April 2016.</description>
 
   <category>Podcasts</category>
-  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme03.mp4" length="1898151503" type="video/mp4"/>
+  <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/ihme03.mp4" length="1898151503" type="video/mp4"/>
   <pubDate>Tue, 07 Jun 2016 07:29:43 +0000</pubDate>
 
   <itunes:author>John W. Fail</itunes:author>
@@ -188,11 +208,11 @@ Thanks again to Mad House for allowing two seasons of this silliness as well as 
 <item>
   <title>SI IHME special #2: Paula Toppila, Kateřina Šedá</title>
   <link>http://seriousintrospection.fi/posts/si-at-ihme-episodes-1-and-2</link>
-  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme02.mp4</guid>
+  <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/ihme02.mp4</guid>
   <description>The second Serious Introspection episode @ IHME 2016 featured festival director Paula Toppila and IHME 2016 artist Kateřina Šedá. It was a cold outdoor show but we talked about the tram busking project, the approach to art in everyday life, and their expectations for the rest of the festival.</description>
 
   <category>Podcasts</category>
-  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme02.mp4" length="723420388" type="video/mp4"/>
+  <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/ihme02.mp4" length="723420388" type="video/mp4"/>
   <pubDate>Mon, 06 Jun 2016 07:29:43 +0000</pubDate>
 
   <itunes:author>John W. Fail</itunes:author>
@@ -209,11 +229,11 @@ Thanks again to Mad House for allowing two seasons of this silliness as well as 
 <item>
   <title>SI IHME special #1: Pontus Kyander, Aleksis Salusjärvi</title>
   <link>http://seriousintrospection.fi/posts/si-at-ihme-episodes-1-and-2</link>
-  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme01.mp4</guid>
+  <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/ihme01.mp4</guid>
   <description>Here is the first show from the 2016 IHME Päivät festival, which took place on 1 April 2016 at Vanha (Old Student House) in Helsinki. We set up these shows outside, on the 'stage' next to Vanha, and throughout the weekend interviewed a variety of festival participants hoping to promote it to the general public. On Friday, the first show was with Pontus Kyander and Aleksi Salusjärvi, discussing Pontus's forthcoming manifesto and the crisis of Finnish art. We also had a drunken heckler who genuinely believed that Pontus was Elton John.</description>
 
   <category>Podcasts</category>
-  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/ihme01.mp4" length="2025557839" type="video/mp4"/>
+  <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/ihme01.mp4" length="2025557839" type="video/mp4"/>
   <pubDate>Mon, 06 Jun 2016 06:29:43 +0000</pubDate>
 
   <itunes:author>John W. Fail</itunes:author>
@@ -231,11 +251,11 @@ Thanks again to Mad House for allowing two seasons of this silliness as well as 
 <item>
   <title>Serious Introspection S02E06: Kimmo Modig, Hanna Tuulikki</title>
   <link>http://seriousintrospection.fi/posts/serious-introspection-season-2-episode-6</link>
-  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e06.mp4</guid>
+  <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e06.mp4</guid>
   <description>Serious Introspection actually ended awhile ago, but due to general life commitments I've been way behind on getting the videos edited and posted. So with many apologies, here is the belated episode 6 of season two, which actually took place way back in March. I had the flu and almost cancelled the show, but instead I turned up and let Justin take charge, and this turned out to be either the best or worst episode ever depending on your taste. My old friend Hanna Tuulikki, from the UK, was in town to talk about her residency at Saari, and Kimmo Modig came up to help carry the show since I was pretty much delirious. This was also Justin's final show before he escaped to Taiwan!</description>
 
   <category>Podcasts</category>
-  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e06.mp4" length="2577135589" type="video/mp4"/>
+  <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e06.mp4" length="2577135589" type="video/mp4"/>
   <pubDate>Sun, 05 Jun 2016 15:41:24 +0000</pubDate>
 
   <itunes:author>John W. Fail</itunes:author>
@@ -255,13 +275,13 @@ Thanks again to Mad House for allowing two seasons of this silliness as well as 
 <item>
   <title>Serious Introspection S02E05: Marek Pluciennik, 110% and Mirva</title>
   <link>http://seriousintrospection.fi/posts/serious-introspection-season-2-episode-5</link>
-  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e05.mp4</guid>
+  <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e05.mp4</guid>
   <description>We've been a bit behind schedule on editing videos, but here is the video from episode 5, which took place on 23 March 2016. Our guests were 110% (Lachlan and Beth), Marek Pluciennik, and the mysterious Mirva. Agnieszka also joined to talk about our trip to Prague. We had some live performance art, and we talked about film and depression too. Ernest sent in a travel report from Madrid, too.
 
 We'll have the most recent episode edited next week, as well as a slew of shorter episodes from the IHME festival.</description>
 
   <category>Podcasts</category>
-  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e05.mp4" length="2001943628" type="video/mp4"/>
+  <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e05.mp4" length="2001943628" type="video/mp4"/>
   <pubDate>Fri, Apr 1 2016 08:59:33 +0000</pubDate>
 
   <itunes:author>John W. Fail</itunes:author>
@@ -280,11 +300,11 @@ We'll have the most recent episode edited next week, as well as a slew of shorte
   <item>
     <title>Serious Introspection S02E04: Tuukka Asplund and Kira O'Reilly</title>
     <link>http://seriousintrospection.fi/posts/serious-introspection-season-2-episode-4</link>
-    <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e04.mp4</guid>
+    <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e04.mp4</guid>
     <description>Serious Introspection season 2, episode 4 took place on Wednesday, 16 March 2016 at Ihana Baari in Helsinki and featured Tuukka Asplund and Kira O'Reilly as guests. We talked about life in Helsinki, ecology and trans-disciplinary approaches to performance, British complaint culture, and the value of making stuff or not. Also, we sang some karaoke, went to Estonia, tried to call Ernest, and spoke again with my parents.</description>
 
     <category>Podcasts</category>
-    <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e04.mp4" length="2271565233" type="video/mp4"/>
+    <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e04.mp4" length="2271565233" type="video/mp4"/>
     <pubDate>Sat, Mar 19 2016 08:59:33 +0000</pubDate>
 
     <itunes:author>John W. Fail</itunes:author>
@@ -301,13 +321,13 @@ We'll have the most recent episode edited next week, as well as a slew of shorte
   <item>
     <title>Serious Introspection S02E03: Martina Marti and Juuso Paaso</title>
     <link>http://seriousintrospection.fi/posts/serious-introspection-season-2-episode-3</link>
-    <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e03.mp4</guid>
+    <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e03.mp4</guid>
     <description>After some delay (sorry, I am lazy when it comes to my video editing responsibilities), here is season 2, episode 3 from 1 March 2016. Martina Marti was on first to discuss her work Reverie with Gnab Collective, as well as the general balance of being an artirst vs. and administrator, and the different approaches to these topics. Then we had Juuso Paaso, who has been working with the Oranssi Pienlehtiarkisto, here talking about zine culture in Finland and his digitisation efforts.
 
 In addition, Justin and I settled some beef, Juuso and I sang a Daniel Johnston song, and I did a STRONG FIVE about the Uberman Sleep Schedule. Ernest provided his tweets, seen here on-screen and followable @room4error via #SeriousIntrospection.</description>
 
     <category>Podcasts</category>
-    <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e03.mp4" length="2142371582" type="video/mp4"/>
+    <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e03.mp4" length="2142371582" type="video/mp4"/>
     <pubDate>Tue, 15 Mar 2016 15:13:19 +0000</pubDate>
 
     <itunes:author>John W. Fail</itunes:author>
@@ -326,11 +346,11 @@ In addition, Justin and I settled some beef, Juuso and I sang a Daniel Johnston 
   <item>
     <title>Serious Introspection S02E02: Juha Valkapää, Malin Gustavsson and John's parents'</title>
     <link>http://seriousintrospection.fi/posts/serious-introspection-season-2-episode-2</link>
-    <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e02.mp4</guid>
+    <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e02.mp4</guid>
     <description>This week we had Juha Valkeapää to talk about his production 2341 AD, and Malin Gustavsson who explained a bit about her work as a diversity consultant. We also channeled the spirit of a country and western supergroup, phoned John's parents, and met the Pope Urban VII of Mad House Helsinki. As always, it couldn't happen without Justin Tyler Tate (world's best hype man), Ernest Truely (follow @room4error!), video master Lotta Blomberg, and sound master Joosep Tormis.</description>
 
     <category>Podcasts</category>
-    <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e02.mp4" length="1907235417" type="video/mp4"/>
+    <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e02.mp4" length="1907235417" type="video/mp4"/>
     <pubDate>Tue, 1 Mar 2016 09:13:19 +0000</pubDate>
 
     <itunes:author>John W. Fail</itunes:author>
@@ -348,7 +368,7 @@ In addition, Justin and I settled some beef, Juuso and I sang a Daniel Johnston 
   <item>
     <title>Serious Introspection S02E01: Welcome back with Marianna Keisalo, Helen Korpak, Iina Esko and Paola de Ramos</title>
     <link>http://seriousintrospection.fi/posts/serious-introspection-season-2-episode-1</link>
-    <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e01.mp4</guid>
+    <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e01.mp4</guid>
     <description>We started the new season of Serious Introspection last week at Mad House, and we came back strong (I hope). Guests were standup comedienne/anthropologist Marianna Keisalo, Kosminen and Khaos Publishing's Helen Korpak and Iina Esko, and Brasilian artist Paola de Ramos. We debuted some new segments, enjoyed the strange glow of a 4:3 aspect ratio projector, and enjoyed seeing the audience again. Plus, balls.
 
 Here is the video for your enjoyment, featuring embedded tweets courtesy of Ernest (@room4error).
@@ -356,7 +376,7 @@ Here is the video for your enjoyment, featuring embedded tweets courtesy of Erne
 We're off next week but we'll be back on the 24th for a special #ErrEvening night, and also with guest Juha Valkeapää!</description>
 
     <category>Podcasts</category>
-    <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s02e01.mp4" length="2437975027" type="video/mp4"/>
+    <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s02e01.mp4" length="2437975027" type="video/mp4"/>
     <pubDate>Sun, 14 Feb 2016 10:13:19 +0000</pubDate>
 
     <itunes:author>John W. Fail</itunes:author>
@@ -378,13 +398,13 @@ We're off next week but we'll be back on the 24th for a special #ErrEvening nigh
   <item>
     <title>Serious Introspection S01E08: Season finale with Nikos Doulos and Mad House staff</title>
     <link>http://johnw.fail/posts/serious-introspection-episode-8</link>
-    <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e08.mp4</guid>
+    <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e08.mp4</guid>
     <description>Here's the last episode of Serious Introspection, which was by far the best one (from my perspective, at least). We had a large and hungry audience and great guests and a real spirit of absurdity. Guests were Nikos Doulous and some of the Mad House working group (Heidi Backström, Mirva Pulkkinen and Annika Tudeer); also included were statistical analysis, Minor Threat karaoke, and the one-time-only appearance of the 'What is John learning in (an) art school?' segment. We closed with a smashing music video/clip show.
   
      Thanks again to everyone at Mad House - those on stage, Juha Valkeapää, and everyone else - and to Kimmo Modig who launched this enterpise in the first place. We'll be back for Mad House's third season, beginning in February, and we'll post more details as we know them. In the meantime, we are available to be hired for parties, bar mitzvahs and other events via the SI Services enterprise, and you can check out our new standalone website for Serious Introspection at seriousintrospection.fi. </description>
 
     <category>Podcasts</category>
-    <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e08.mp4" length="2015367816" type="video/mp4"/>
+    <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e08.mp4" length="2015367816" type="video/mp4"/>
     <pubDate>Fri, 4 Dec 2015 10:00:19 +0000</pubDate>
 
     <itunes:author>John W. Fail</itunes:author>
@@ -403,13 +423,13 @@ We're off next week but we'll be back on the 24th for a special #ErrEvening nigh
 <item>
   <title>Serious Introspection S01E07: Tero Nauha, Milla Koistinen</title>
   <link>http://johnw.fail/posts/serious-introspection-episode-7</link>
-  <guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e07.mp4</guid>
+  <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e07.mp4</guid>
   <description>Here is this week's episode, with Tero Nauha, Milla Koistinen, Salka Gudmundsdóttir and impromptu guest Tuukka Asplund. We passed out feedback forms to the audience and presented the new for-profit wing of Serious Introspection, SI Services (found at http://services.johnw.fail). 
 
 We were without a sound man for the third consecutive week but did not have Ilpo to save the day, so all of the mics are really hot and the soundboard mix sounds terrible. I tried the best I could with post-processing but this episode is again really hard to listen to. I apologise immensely and almost didn't post this video at all, but figured some bad-sounding documentation is better than nothing.</description>
 
   <category>Podcasts</category>
-  <enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e07.mp4" length="1958079380" type="video/mp4"/>
+  <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e07.mp4" length="1958079380" type="video/mp4"/>
   <pubDate>Fri, 20 Nov 2015 10:00:19 +0000</pubDate>
 
   <itunes:author>John W. Fail</itunes:author>
@@ -428,13 +448,13 @@ We were without a sound man for the third consecutive week but did not have Ilpo
 <item>
 <title>Serious Introspection S01E06: Jaakko Blomberg &amp; the Post-MJ Era Institute of Consciousness</title>
 <link>http://johnw.fail/posts/serious-introspection-episode-6</link>
-<guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e06.mp4</guid>
+<guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e06.mp4</guid>
 <description>Episode six brought together Jaakko Blomberg of Yhteismaa and Ossi Koskelainen, Ilpo Heikkinen &amp; Emmi Venna of the Post-MJ Era Institute of Consciousness. We discussed legacy, openness, social boundaries, memories, divorce, and shark costumes. I unsuccessfully tried to get rid of a Gertrude Stein book, played Michael Jackson trivia, and saw St. Elmo's Fire spitting ions in the ether.
 
 Hey, sorry, we had some tech difficulties again. More camera fuckups and the audio feed was missing some mics, so I had to mix in some camera sound and it's not optimal. I promise we'll get back on track next week, when our trusted technical supervisor will be back. Tero Nauha will be there to talk about his book launch, and we'll try some other hijinks. There's only two episodes left so if you're in Helsinki, please come along! Thanks also to Mad House for letting us do this show in the first place, and please don't miss the rest of Mad House's 2nd season programme.</description>
 
 <category>Podcasts</category>
-<enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e06.mp4" length="2686898378" type="video/mp4"/>
+<enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e06.mp4" length="2686898378" type="video/mp4"/>
 <pubDate>Wed, 11 Nov 2015 19:00:19 +0000</pubDate>
 
 <itunes:author>John W. Fail</itunes:author>
@@ -454,11 +474,11 @@ Hey, sorry, we had some tech difficulties again. More camera fuckups and the aud
 <item>
 <title>SI audio extra: Lin Hixson and Matthew Goulish</title>
 <link>http://johnw.fail/posts/si-extra-lin-hixson-matthew-goulish-audio-podcast</link>
-<guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/si_extra_001.m4a</guid>
+<guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/si_extra_001.m4a</guid>
 <description>Those of you who saw Matthew Goulish on my show last week (or on the video here) know how much I admire his writing and approach to art and performance. I wanted to talk further with him (and with Lin Hixson, who didn't come on stage during episode 5) while they were in Helsinki, so we recorded a conversation which is presented here in podcast format. Among the topics discussed were interruptions, reversing course, limitations, permission, fear, comfort zones, walking across the room 10000 times, respect, skepticism, dogma, generosity, and peripheral consciousness.</description>
 
 <category>Podcasts</category>
-<enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/si_extra_001.m4a" length="107943698" type="audio/m4a"/>
+<enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/si_extra_001.m4a" length="107943698" type="audio/m4a"/>
      <pubDate>Sun, 08 Nov 2015 13:57:09 +0000</pubDate>
 
 <itunes:author>John W. Fail</itunes:author>
@@ -474,11 +494,11 @@ Hey, sorry, we had some tech difficulties again. More camera fuckups and the aud
 <item>
 <title>Serious Introspection S01E05: Matthew Goulish, Ernest Truely, Megan Snowe</title>
 <link>http://johnw.fail/posts/serious-introspection-episode-5</link>
-<guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e05.mp4</guid>
+<guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e05.mp4</guid>
 <description>It's the TECHNICAL DIFFICULTIES episode! With our trusted sound man in Estonia we had to figure it out ourselves, mainly, 'where do they store the microphones?' and thus we started a half-hour late, and I was agitated throughout. It's also the AMERICA episode! With guests Megan Snowe (USA), Ernest Truely (USA), Matthew Goulish (USA) and myself and Justin as always. Special thanks to Ilpo Heikkinen for stepping in and being a pop-up sound guy/saviour. I love him, even if he isn't American.</description>
 
 <category>Podcasts</category>
-<enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e05.mp4" length="2269799811" type="video/mp4"/>
+<enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e05.mp4" length="2269799811" type="video/mp4"/>
 <pubDate>Fri, 06 Nov 2015 08:42:19 +0000</pubDate>
 
 <itunes:author>John W. Fail</itunes:author>
@@ -498,11 +518,11 @@ Next week (10 November) is episiode 6 - the ANTEPENULTIMATE episode! -  starting
 <item>
   <title>Serious Introspection S01E04: Hanne Ivars, Synes Elischka, Harriina Räinä</title>
 <link>http://johnw.fail/posts/serious-introspection-episode-4</link>
-<guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e04.mp4</guid>
+<guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e04.mp4</guid>
 <description>Here's the hastily edited video from this week's episode of Serious Introspection with John W. Fail, which was a good one - featuring Hanne Ivars, Synes Elischka and Harriina Räinä as well as hype man Justin Tyler Tate. We talked about Bruce Conner films, interactivity in art, and how to make fake blood. And we played a game based on my life. There was a camera failure so we didn't have as much footage to work with this time, and I also tried to superimpose Ernest Truely's live tweets on the video, which is maybe funny or maybe annoying. </description>
 
 <category>Podcasts</category>
-<enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e04.mp4" length="1760398350" type="video/mp4"/>
+<enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e04.mp4" length="1760398350" type="video/mp4"/>
 <pubDate>Thu, 29 Oct 2015 07:25:02 +0000</pubDate>
 
 <itunes:author>John W. Fail</itunes:author>
@@ -519,11 +539,11 @@ Next week (10 November) is episiode 6 - the ANTEPENULTIMATE episode! -  starting
 <item>
   <title>Serious Introspection S01E03: Kristinsson &amp; Fredriksson</title>
 <link>http://johnw.fail/posts/serious-introspection-episode-3</link>
-<guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/episode3.mp4</guid>
+<guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/episode3.mp4</guid>
 <description>Here is episode 3, from last week at Ihana Baari. Guests were Kristinsson &amp; Fredriksson, and we attempted a subjective 'trivia' game which flopped due to low audience participation. Thanks to Justin Tyler Tate as always for being a great hype man, and to Lotta Blomberg for taking care of the videographing and editing. </description>
 
 <category>Podcasts</category>
-<enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/episode3.mp4" length="3078624885" type="video/mp4"/>
+<enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/episode3.mp4" length="3078624885" type="video/mp4"/>
 <pubDate>Mon, 26 Oct 2015 20:47:25 +0000</pubDate>
 
 <itunes:author>John W. Fail</itunes:author>
@@ -540,11 +560,11 @@ Next week (10 November) is episiode 6 - the ANTEPENULTIMATE episode! -  starting
 <item>
   <title>Serious Introspection S01E02: Annika Tudeer, Andrew Paterson and Kimmo Modig</title>
 <link>http://johnw.fail/posts/serious-introspection-episode-2</link>
-<guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e02_1.mp4</guid>
+<guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e02_1.mp4</guid>
 <description>Here's episode 2 of Serious Introspection with John W. Fail, my weekly live/talk show at Mad House Helsinki. This week I talked with Annika Tudeer, Andrew Paterson, and Kimmo Modig. It was a significantly more lively show than last time, and I felt way better about it. I apologise for the audio being terrible - it makes this quite hard to listen to, but next week we will ensure that we get a better recording. </description>
 
 <category>Podcasts</category>
-<enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e02_1.mp4" length="1382553689" type="video/mp4"/>
+<enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e02_1.mp4" length="1382553689" type="video/mp4"/>
   <pubDate>Wed, 14 Oct 2015 19:25:54 +0000</pubDate>
 
 <itunes:author>John W. Fail</itunes:author>
@@ -560,11 +580,11 @@ Next week (10 November) is episiode 6 - the ANTEPENULTIMATE episode! -  starting
 <item>
   <title>Serious Introspection S01E01: Zil Lilas, Leena Kela</title>
 <link>http://johnw.fail/posts/serious-introspection-episode-1</link>
-<guid>https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e01.mp4</guid>
+<guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e01.mp4</guid>
 <description>The first episode of Serious Introspection with John W. Fail, with Zil Lilas and Leena Kela (and hype man Justin Tyler Tate).</description>
 
 <category>Podcasts</category>
-<enclosure url="https://s3-eu-west-1.amazonaws.com/icewhistle-content/serious_introspection/s01e01.mp4" length="555474942" type="video/mp4"/>
+<enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/s01e01.mp4" length="555474942" type="video/mp4"/>
 <pubDate>Sun, 11 Oct 2015 15:04:42 +0000</pubDate>
 
 <itunes:author>John W. Fail</itunes:author>

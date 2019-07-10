@@ -12,7 +12,8 @@
     .post
       .row
         %h3= link_to post.title, post
-        %h6= "posted " + post.created_at.strftime("%d %B %Y")
+        .date
+          %em= "posted " + post.created_at.strftime("%d %B %Y")
       - if post.videos.empty?
         - if post.image?
           = image_tag post.image.url.gsub('development', 'production')
