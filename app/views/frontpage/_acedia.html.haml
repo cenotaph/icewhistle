@@ -1,6 +1,6 @@
 .acedia.container
   #mc_embed_signup
-    %form#mc-embedded-subscribe-form.validate{:action => "//fail.us12.list-manage.com/subscribe/post?u=f59423a6fc45ef468b3ed9c2a&amp;id=9bef430f80", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
+    %form#mc-embedded-subscribe-form.validate{:action => "https://fail.us12.list-manage.com/subscribe/post?u=f59423a6fc45ef468b3ed9c2a&amp;id=9bef430f80", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
       #mc_embed_signup_scroll
         %h3.subtitle Subscribe to Acedia!
         %p.content.is-size-6
@@ -10,8 +10,9 @@
           by Joe Carducci and Warren Ellis's
           %em Orbital Operations. Acedia
           exists because I prefer email over Facebook/Twitter and other Internet communication methods.
-
-
+          %br/
+          %small
+            = link_to 'See past issues', 'https://us12.campaign-archive.com/home/?u=f59423a6fc45ef468b3ed9c2a&id=9bef430f80', class: [:button, 'is-small'], style: 'font-size: 0.75rem !important'
           %label{:for => "mce-EMAIL"}
             %p.is-size-7 Your email address:
           .field.is-pulled-left
@@ -19,7 +20,7 @@
           .is-pulled-left{:'aria-hidden' => true, style: 'position: absolute; left: -5000px'}
             %input{:name => "b_f59423a6fc45ef468b3ed9c2a_9bef430f80", :tabindex => "-1", :type => "text", :value => ""}/
         .is-pulled-left
-          %button#mc-embedded-subscribe.button.is-link.small{:name => "subscribe", :type => "submit", :value => "Subscribe"}Subscribe
+          %button#mc-embedded-subscribe.button.is-primary.small{:name => "subscribe", :type => "submit", :value => "Subscribe"}Subscribe
           #mce-responses.clear
             #mce-error-response.response{:style => "display:none"}
             #mce-success-response.response{:style => "display:none"}
