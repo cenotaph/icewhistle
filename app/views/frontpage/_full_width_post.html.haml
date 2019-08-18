@@ -1,4 +1,4 @@
-
+= post.image_width.to_s
 - if post.image?
   - if post.image_width > 1200
     %figure.image= image_tag post.image.url.gsub(/development/, 'production')

@@ -236,12 +236,25 @@ footer.footer {
 
 // mobile considerations
 @media only screen and (max-width: 40.0625em) {
-  
+  .container {
+    padding: 1.25rem;
+  }
+  footer {
+    display: none;
+  }
+  a.readmore-js-toggle {
+    font-size: 0.75rem;
+    cursor: pointer;
+  }
+  .right_container {
+    background-color: $sigreen;
+    
+  }
   .left_container {
     width: 100%;
     text-align: center;
     h1.si_title {
-      font-size: 6vw;
+      font-size: 1rem;
       float: none;
       margin-left: 1rem;
     }
@@ -257,7 +270,15 @@ footer.footer {
       }
     }
     .post {
-
+      .content {
+        ul, p {
+          text-align: left;
+        }
+      }
+      h1.post_title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
       h3 {
         font-size: 1.25rem;
         line-height: 1.4rem;
