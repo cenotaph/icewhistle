@@ -46,7 +46,7 @@ class ApplicationController < ActionController::Base
                               }]
                     }, status: :not_found
         }
-      format.all { render(text: 'Not Found', status: 404) }
+      format.all { render plain: 'Not Found', status: 404 }
     end
   end
 end
