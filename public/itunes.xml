@@ -30,6 +30,33 @@
 </itunes:category>
 
 <item>
+  <title>SI podcast #4: Dispatches from 'block that chain'</title>
+  <link>https://seriousintrospection.fi/posts/si-audio-podcast-4-dispatches-from-block-that-chain</link>
+  <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/si_audio_004.m4a</guid>
+  <description>This episode of the Serious Introspection audio podcast talks with several members of the block that chain worklab that I participated in in Graz, Austria. block that chain is a week-long worklab hosted by the wonderful mur.at to explore the questions, problems, and deeper issues behind blockchain technology. I was delighted to be part of this, as it drew together a mix of artists, hackers, musicians, theorists, and sociologists for an intensive programme to utilise our expertise and perspectives.
+
+The week had no shortage of theoretical discussions which touched on ethics, economics, and technology, while provided me a much-needed alternative viewpoint –– or rather, viewpoints –– to most media coverage of blockchain issues. I talk with Martin Schitter, Bailey Keogh, Michael Mastrototaro, Jurij Smrke and Goran Bečirevič. Notes and links to topics mentioned in the discussion can be found on the SI website, www.seriousintrospection.fi.
+
+ </description>
+
+  <category>Podcasts</category>
+  <enclosure url="https://s3.wasabisys.com/icewhistle-content/serious_introspection/si_audio_004.m4a" length="121186019" type="audio/m4a"/>
+       <pubDate>Sat, 12 Oct 2019 08:32:09 +0000</pubDate>
+
+  <itunes:author>John W. Fail</itunes:author>
+
+  <itunes:explicit>No</itunes:explicit>
+  <itunes:subtitle>Blockchain technology discussed by artists, thinkers, and pranksters</itunes:subtitle>
+  <itunes:summary>This episode of the Serious Introspection audio podcast talks with several members of the block that chain worklab that I participated in in Graz, Austria. block that chain is a week-long worklab hosted by the wonderful mur.at to explore the questions, problems, and deeper issues behind blockchain technology. I was delighted to be part of this, as it drew together a mix of artists, hackers, musicians, theorists, and sociologists for an intensive programme to utilise our expertise and perspectives.
+
+The week had no shortage of theoretical discussions which touched on ethics, economics, and technology, while provided me a much-needed alternative viewpoint –– or rather, viewpoints –– to most media coverage of blockchain issues. I talk with Martin Schitter, Bailey Keogh, Michael Mastrototaro, Jurij Smrke and Goran Bečirevič. Notes and links to topics mentioned in the discussion can be found on the SI website, www.seriousintrospection.fi.</itunes:summary>
+  <itunes:duration>01:20:03</itunes:duration>
+  <itunes:keywords>blockchain,bitcoin,ethereum,mur.at,graz,workshop,John W. Fail,Martin Schitter,Bailey Keogh,Michael Mastrototaro,Konjungate,Jurij Smrke,Goran Bečirevič</itunes:keywords>
+
+</item>
+
+
+<item>
   <title>SI audio podcast #3: Andy Beckerman remembers the wild kindness of David Berman</title>
   <link>https://seriousintrospection.fi/posts/si-audio-podcast-3-andy-beckerman-remembers-the-wild-kindness-of-david-berman</link>
   <guid>https://s3.wasabisys.com/icewhistle-content/serious_introspection/si_audio_berman_beckerman.mp3</guid>

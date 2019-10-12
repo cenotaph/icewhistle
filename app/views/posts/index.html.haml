@@ -7,14 +7,17 @@
       .level-item
         = form_tag(search_index_path, :method => :get) do
           = text_field_tag("search", params[:search].blank? ? 'Search...' : params[:search], :size => 10, class: :input)
-  - if @tag == 'podcast'
+  - if @tag == 'podcast' || @tag == 'video'
     .level.si_podcasts
       .level-left
         .level-item
-          %h1.title Audio podcasts
+          %h1.title= @tag.pluralize
     .columns.si_podcasts
       .column
-        %p Serious Introspection is no longer a live talk show, but an occasional audio podcast. You can subscribe to the podcast feed or check out individual episodes here.
+        - if @tag == 'podcast'
+          %p Serious Introspection is no longer a live talk show, but an occasional audio podcast. You can subscribe to the podcast feed or check out individual episodes here.
+        - if @tag == 'video'
+          %p Video episodes of the Serious Introspection live show are archived here.
   .level
     .level-left
       .level-item= paginate @posts

@@ -20,6 +20,12 @@ a {
   }
 }
 
+.pagination-link.is-current {
+    background-color: $sigreen;
+    border-color: $sigreen2;
+    color: #fff;
+}
+
 a.readmore-js-toggle {
   display: inline !important;
   width: inherit !important;
@@ -37,6 +43,10 @@ a.readmore-js-toggle {
   margin-bottom: 5px;
 }
 
+
+figure.image {
+  margin-bottom: 0.75rem;
+}
 .left_container {
   .menu {
     margin: 0;
@@ -159,6 +169,11 @@ a.readmore-js-toggle {
   }
 
   .index {
+    h3.subtitle {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: 'Arial Black';
+    }
     .post_body {
       small {
         display: none;
