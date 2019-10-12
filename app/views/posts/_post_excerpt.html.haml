@@ -1,5 +1,5 @@
 %h3.subtitle= link_to raw(post.title), post
-.date= l post.updated_at, :format => :long
+.date= post.updated_at.strftime('%d %B %Y')
     
 - if post.image? && post.photos.empty?
   %figure.image= image_tag post.image.url(:main).gsub(/development/, 'production')
@@ -13,7 +13,9 @@
       - post.photos.each do |p|
         %figure.image= image_tag p.filename.url(:main) 
 
-.content.post_body= raw(Nokogiri::HTML.parse(post.body.gsub(/\<span\>/, '<p>').gsub(/\<\/span\>/, '</p>')).css('p').first.text) rescue raw(truncate_html(post.body, :length => 1500))
+.content.post_body
+  -#= raw(Nokogiri::HTML.parse(post.body.gsub(/\<span\>/, '<p>').gsub(/\<\/span\>/, '</p>')).css('p').first.text) rescue raw(truncate_html(post.body, :length => 1500))
+  = raw (truncate_html(post.body, :length => 400))
 = link_to 'Read more', post, :class => [:button, :tiny]
 
 = content_for :jquery do

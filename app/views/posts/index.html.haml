@@ -1,19 +1,27 @@
 .post.container
   
-  .level
+  .level.all_posts
     .level-left
       .level-item
-        %h1.title All posts
+        %h1.title Posts
       .level-item
         = form_tag(search_index_path, :method => :get) do
           = text_field_tag("search", params[:search].blank? ? 'Search...' : params[:search], :size => 10, class: :input)
+  - if @tag == 'podcast'
+    .level.si_podcasts
+      .level-left
+        .level-item
+          %h1.title Audio podcasts
+    .columns.si_podcasts
+      .column
+        %p Serious Introspection is no longer a live talk show, but an occasional audio podcast. You can subscribe to the podcast feed or check out individual episodes here.
   .level
     .level-left
       .level-item= paginate @posts
 
   
   - @posts.in_groups_of(3).each do |group|
-    .columns
+    .columns.index
       - group.each do |post|
         - next if post.nil?
         .column.is-one-third= render :partial => 'posts/post_excerpt', :locals => {:post => post}

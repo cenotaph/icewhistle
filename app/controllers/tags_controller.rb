@@ -11,10 +11,11 @@ class TagsController < ApplicationController
     end
 
     flash[:notice] = 'Showing items tagged with \''+params[:id]+'\':'
+    @tag = params[:id]
     @posts = @posts.sort{|x,y| y.created_at <=> x.created_at }
 
     @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(15)
-    render :template => 'posts/index'
+    render :template => 'posts/index' , layout: get_layout 
   end
   
 end

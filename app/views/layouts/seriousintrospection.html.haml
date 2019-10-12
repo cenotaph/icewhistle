@@ -30,8 +30,9 @@
           .is-clearfix
           .menu
             %ul.top_menu
+              %li= link_to 'Podcasts', '/tags/podcast'
               %li= link_to 'Services', 'https://services.seriousintrospection.fi', target: :_blank
-              %li= link_to 'iTunes', 'https://itunes.apple.com/us/podcast/serious-introspection/id1057015274', target: :_blank
+              %li= link_to 'Subscribe', 'https://itunes.apple.com/us/podcast/serious-introspection/id1057015274', target: :_blank
               %li= link_to 'SI on FB', 'https://www.facebook.com/seriousintrospectionwithjohnwfail/', target: :_blank
               %li= link_to '#SeriousIntrospection', 'https://twitter.com/search?f=tweets&vertical=default&q=%23SeriousIntrospection', target: :_blank
               %li.last= link_to 'Mad House', 'https://madhousehelsinki.fi', target: :_blank
@@ -41,13 +42,13 @@
           .is-hidden-tablet
             Serious Introspection
           with John W. Fail was a live show in Helsinki, Finland from 2015-2016.
-          = ['Each week, John along with hype man Justin Tyler Tate, interviewed people about their creative process and tried to deliver a direct, communicative experience about art and performance.', "The show took place at Mad House Helsinki's Ihana Baari, and was free to attend.", "You know, we did eight shows in the first season and it was pretty time-consuming, but we were excited to come back for more in 2016.", 'We tried our best to entertain.' ].shuffle.join(' ')
+          = ['Each week, John along with hype man Justin Tyler Tate, interviewed people about their creative process and tried to deliver a direct, communicative experience about art and performance.', "The show took place at Mad House Helsinki's Ihana Baari, and was free to attend.", "You know, we did eight shows in the first season and it was pretty time-consuming, but we were excited to come back for eight more in 2016. It's all archived here.", 'We tried our best to entertain.', 'No one is really sure why John hosted a talk show, but a lot of strange things have happened in the universe and this is ultimately pretty insignificant.'].shuffle.join(' ')
           We've made videos available from all episodes of the show here for you to watch.
           = ["The videos aren't always perfect and the audio even less so, but we hope you still enjoy them.", "We also will occasionally post audio podcasts when we get the time to go more in-depth with people, outside of the public show.", "The show is indefinitely on hiatus as Justin moved away and other projects took over."].shuffle.join(' ')
           But wait, there's more!
-          =  raw ["We are still available to be booked for parties, wedding, bar mitzvahs and other events.", "The for-profit arm of Serious Introspection is called <a href='https://services.seriousintrospection.fi/' target='_blank'>SI Services</a> and we're up for anything, really!", "We will come to your event and offer our services for hosting, hyping and media specialisation (live tweeting) for a variable fee."].shuffle.join(' ')
+          =  raw ["We are still available, in theory to be booked for parties, wedding, bar mitzvahs and other events.", "The for-profit arm of Serious Introspection is called <a href='https://services.seriousintrospection.fi/' target='_blank'>SI Services</a> and we're up for anything, really! Now that we all live in different places, it's probably going to be quite an ordeal just to have three white guys host your kid's birthday party. But please believe me when I say that we would really, really love to do this.", "We will come to your event and offer our services for hosting, hyping and media specialisation (live tweeting) for a variable fee."].shuffle.join(' ')
           If you'd like to find out more about Serious Introspection, you can start by watching these episodes and seeing if it's your cup of tea.
-          = raw ["We have a <a href='https://www.facebook.com/seriousintrospectionwithjohnwfail/' target='_blank'>Facebook page</a> which we use to post info about the upcoming shows and videos as they are released.", "We have made the show available as a podcast via <a href='https://itunes.apple.com/us/podcast/serious-introspection/id1057015274' target='_blank'>iTunes</a> and <a href='http://www.stitcher.com/podcast/serious-introspection' target='_blank'>Stitcher</a>.", "The hashtag <a href='https://twitter.com/search?f=tweets&vertical=default&q=%23SeriousIntrospection' target='_blank'>#SeriousIntrospection</a> contains the running stream of live tweets from our media specialist Ernest Truely (and anyone else who might contribute)."].shuffle.join(' ')
+          = raw ["We have a <a href='https://www.facebook.com/seriousintrospectionwithjohnwfail/' target='_blank'>Facebook page</a> which we use to post info about the upcoming shows and videos as they are released.", "We have made the show available as a podcast where people get Podcasts, generally <a href='https://itunes.apple.com/us/podcast/serious-introspection/id1057015274' target='_blank'>iTunes</a> or <a href='http://www.stitcher.com/podcast/serious-introspection' target='_blank'>Stitcher</a>. Try the <a href='https://overcast.fm'>Overcast</a> app, it's really nice.", "The hashtag <a href='https://twitter.com/search?f=tweets&vertical=default&q=%23SeriousIntrospection' target='_blank'>#SeriousIntrospection</a> contains the running stream of live tweets from our media specialist Ernest Truely (and anyone else who might contribute)."].shuffle.join(' ')
           So yeah, that's it, pretty much.
           = raw ["We're trying to keep this page simple, if for no other reason than our cup runneth over with websites already.", "We will announce future events and SI-related matters here so feel free to check back any time."].shuffle.join(' ')
       
@@ -57,7 +58,7 @@
       .container
         .columns
           .column.is-one-fifth
-            %strong Serious Introspection 2015-2016: 
+            %strong Serious Introspection: 
           .column
             %a.icon.fa-twitter{:href => "http://twitter.com/hyksos", target: :_blank}
               %span.label Twitter
