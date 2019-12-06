@@ -106,8 +106,8 @@ ActiveRecord::Schema.define(version: 2019_01_10_122314) do
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.decimal "latitude", precision: 10, scale: 8
-    t.decimal "longitude", precision: 10, scale: 8
+    t.float "latitude"
+    t.float "longitude"
     t.text "description"
     t.datetime "start_at"
     t.datetime "end_at"

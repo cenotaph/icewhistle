@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.6.1'
-gem 'rails', '5.2.2'
+ruby '2.6.5'
+gem 'rails', '5.2.4'
 gem 'mysql2'
 
 gem 'sass-rails'
@@ -23,7 +23,7 @@ gem 'capistrano3-puma'
 gem 'carrierwave'
 gem 'carrierwave-aws'
 gem 'closure_tree'
-gem 'ckeditor'#, '4.1.2'
+gem 'ckeditor', '4.2.4'
 gem 'country_select'
 gem 'devise'#, github: 'plataformatec/devise', branch: :master
 gem 'devise-encryptable'
