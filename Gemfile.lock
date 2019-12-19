@@ -231,8 +231,10 @@ GEM
       haml (>= 4.0, < 6)
       nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
-    http (0.7.4)
-      http-form_data (~> 1.0.0)
+    http (0.9.9)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 1.0.1)
       http_parser.rb (~> 0.6.0)
     http-accept (1.7.0)
     http-cookie (1.0.3)
@@ -615,7 +617,7 @@ DEPENDENCIES
   has_scope
   hpricot
   html2haml
-  http (~> 0.7.3)
+  http
   http_accept_language
   hub
   jbuilder
