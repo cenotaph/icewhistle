@@ -95,7 +95,7 @@ function showElementsByClass(classray) {
 	   <% unless pub.icon.blank? %>
        <%= image_tag(pub.icon, {:align => :left, :height => 50, :style => "margin-right: 5px;"})%>
       <% end %>
-		<em><%= pub.title %></em> (<%= pub.format %>) <%= pub.try(:publisher) %>, <%= pub.date %><br />
+		<em><%= pub.title %></em> (<%= pub.format %>) <%= raw pub.try(:publisher) %>, <%= pub.date %><br />
 		<span class="pubdescription"><%= raw pub.description %></span>
 	</div>
 </div>
