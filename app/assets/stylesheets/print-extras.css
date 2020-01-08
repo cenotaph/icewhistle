@@ -1,0 +1,10 @@
+.print_only {
+  display: block;
+}
+
+.noprint, .screen_controls {
+  display: none;
+}
+p.small {
+  margin: 0.5rem 0;
+}
