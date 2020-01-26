@@ -2,7 +2,7 @@
   %figure.image= image_tag post.image.url(:main).gsub('development', 'production')
 
 %h2.is-size-4.subtitle= link_to post.title, post
-%medium
+%medium.date
   %em= "posted " +  l(post.updated_at, :format => :long)
 
 - unless post.photos.empty?

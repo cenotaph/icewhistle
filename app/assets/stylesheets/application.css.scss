@@ -48,6 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .subtitle {
+  line-height: 1.85rem;
   margin: 0.75rem 0 0.25rem 0;
   &:not(:last-child) {
     margin: 0.75rem 0 0.25rem 0;

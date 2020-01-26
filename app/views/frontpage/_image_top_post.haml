@@ -26,6 +26,6 @@
     - else
       -# = raw truncate_html(Nokogiri::HTML.parse(post.body).css('p').first.text, length: 450)
       -# = raw truncate_html(Nokogiri::HTML.parse(post.body).css('p').to_s, length: 450)
-      = raw truncate_html(Sanitize.fragment(post.body, elements: ['b', 'em', 'strong', 'a', 'p', 'br', 'i', 'italic']), length: 600)
+      = raw truncate_html(Sanitize.fragment(post.body, elements: ['b', 'small', 'em', 'strong', 'a', 'p', 'br', 'i', 'italic']), length: 600)
   = link_to 'Read more', post, :class => [:button, :tiny]
   
