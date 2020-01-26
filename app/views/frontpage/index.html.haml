@@ -26,9 +26,7 @@
 
 %section#tweet_front= render :partial => 'tweet'
 
-- Cash.visible.where(:source => "blindness").where("image_width > 760").order(order: :desc).limit(1).each do |bp|
-  %section#blindness_container
-    .blindness_wrapper= render :partial => 'blindness_image', :locals => {:post => bp}
+
 
 
 %section#less_recent.row
@@ -42,7 +40,9 @@
       .column
         %h6.subtitle= link_to 'Older posts', posts_path(:page => 2), class: [:button, :tiny]
 
-
+- Cash.visible.where(:source => "blindness").where("image_width > 760").order(order: :desc).limit(1).each do |bp|
+  %section#blindness_container
+    .blindness_wrapper= render :partial => 'blindness_image', :locals => {:post => bp}
 %section#bookmarks_front{:style => 'background-color: #F2F27C'}= render :partial => 'bookmark', :locals => {:link => Cash.where(:source => 'bookmarks').order('created_at DESC').limit(25) }
 
 %section#disclaimer

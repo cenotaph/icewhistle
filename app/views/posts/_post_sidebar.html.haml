@@ -15,7 +15,7 @@
           %figure.image= image_tag related.photos.first.filename.url(:midsize).gsub(/development/, 'production')
         %small.date= l related.created_at.to_date, :format => :long
 
-.share_this= render partial: 'shared/share_buttons', locals: {url:  CGI::escape("http://#{request.host}#{request.port != 80 ? ":" + request.port.to_s : ''}#{url_for(@post)}"), title: CGI::escape(@post.title)}
+-# .share_this= render partial: 'shared/share_buttons', locals: {url:  CGI::escape("http://#{request.host}#{request.port != 80 ? ":" + request.port.to_s : ''}#{url_for(@post)}"), title: CGI::escape(@post.title)}
 
 
 - if current_user

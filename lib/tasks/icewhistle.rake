@@ -36,7 +36,7 @@ namespace :icewhistle do
     [ ['http://feeds.feedburner.com/Blindness', 'blindness'],
       # ['http://ptarmigan.ee/feed.rss', 'ptarmigan'],
       # ['http://www.pixelache.ac/feed/', 'pixelache'],
-      ['https://zapier.com/engine/rss/783441/bookmarks/', 'bookmarks']
+      ['https://zapier.com/engine/rss/6566650/bookmarks/', 'bookmarks']
     ].each do |site|
       key = site.last
       cached = Cash.where(:source => key)

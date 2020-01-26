@@ -21,7 +21,7 @@
 - first = Nokogiri::HTML.parse(post.body).css('p')
 .content
   - if !first.blank?
-    = raw Nokogiri::HTML.parse(post.body).search('p')[0..2]
+    = raw truncate_html(Sanitize.fragment(post.body, elements: ['b', 'em', 'strong', 'a', 'p', 'br', 'i', 'italic']), length: 600)
   - else
     = raw first
 = link_to 'Read more', post, :class => [:button, :tiny]

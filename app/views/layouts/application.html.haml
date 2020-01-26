@@ -47,16 +47,19 @@
               = link_to 'Discography', 'http://static.icewhistle.com/discog/', class: 'navbar-item'
               = link_to 'Contact', '/contact', class: 'navbar-item'
           .navbar-item.has-dropdown.is-hoverable
-            %a.navbar-link Past projects
+            %a.navbar-link Work and projects
             .navbar-dropdown
-              = link_to 'Kuusi Palaa', 'https://kuusipalaa.fi', class: 'navbar-item'
-              = link_to 'Temporary', 'https://temporary.fi', class: 'navbar-item'
+              = link_to 'Scarlatti Tilt', 'https://scarlattitilt.com', class: 'navbar-item'
+              .navbar-item
+                = link_to 'Kuusi Palaa', 'https://kuusipalaa.fi'
+                = " / "
+                = link_to 'Temporary', 'https://temporary.fi'
               = link_to 'Serious Introspection', 'https://seriousintrospection.fi', class: 'navbar-item'
               = link_to 'Pixelache Living Spaces', 'http://livingspaces.pixelache.ac/', class: 'navbar-item'
               .navbar-item
-                Ptarmigan: 
+                Ptarmigan:&nbsp;
                 = link_to(' Helsinki', 'https://ptarmigan.fi/')
-                = " | "
+                = " / "
                 = link_to(' Tallinn', 'https://ptarmigan.ee')
               = link_to 'Cenotaph', 'https://cenotaph.org/', class: 'navbar-item'
           .navbar-item.has-dropdown.is-hoverable
@@ -100,10 +103,15 @@
               %li= link_to 'All posts', posts_path
               %li= link_to 'Blindness blog', 'https://blindness.icewhistle.com'
               %li= link_to 'Archival material', crumbles_path
-              %li= link_to 'John W. Fail CV', '/cv'
+              %li
+                John W. Fail:
+                = link_to 'About', page_path('about-me')
+                = " / "
+                = link_to 'CV', '/cv'
               %li= link_to 'Discography', 'http://static.icewhistle.com/discog/'
           .column
             %ul
+              %li= link_to 'Scarlatti Tilt', 'https://scarlattitilt.com', target: :_blank
               %li= link_to 'Kuusi Palaa', 'https://kuusipalaa.fi/', target: :_blank
               %li= link_to 'Temporary', 'https://temporary.fi', target: :_blank
               %li= link_to 'Living Spaces', 'http://livingspaces.pixelache.ac', :target => :_blank

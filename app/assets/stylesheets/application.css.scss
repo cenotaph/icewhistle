@@ -19,14 +19,28 @@
 $body-family: 'Open Sans', sans-serif;
 $navbar-height: 4rem;
 $link: #5D7104;
-
+$lighter: #c7d67e;
 @import "bulma";
 @import 'slick';
 @import 'slick-theme';
 
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+
+.button {
+  background-color: $lighter;
+}
 
 main {
   width: 100%;
+  min-height: 100%;
+  height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+  height: 100%;
+  margin: 0 auto -200px; 
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans Condensed', sans-serif;
@@ -41,10 +55,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 .date {
   font-size: 0.9rem;
-  margin: 0.8rem 0;
+  margin: 0 0 0.8rem 0;
 }
 .container.has-text-centered, section#recent_posts, .post {
-  padding: 1.5rem 0;
+  padding: 2.25rem 0;
+}
+
+section#recent_posts, section#less_recent {
+  .content {
+    margin-top: 1.25rem;
+  }
 }
 
 
@@ -56,19 +76,34 @@ nav.navbar {
   padding-left: 0.5rem;
 }
 
-section#acedia, section#tweet_front, section#less_recent, section#disclaimer {
-  padding: 1.5rem 0;
+section#acedia, section#tweet_front,  section#disclaimer {
+  padding: 1.25rem 0;
+  background-color: #f8f8ff;
   border-top: 1px solid #c7d67e;
   border-bottom: 1px solid #c7d67e;
 }
 
-section#tweet_front {
-  background-color: #85a205;
-  color: white;
+section#disclaimer {
+  margin-bottom: 200px;
 }
+section#less_recent {
+  padding: 2.25rem 0;
+  background-color: white;
+}
+
+section#tweet_front {
+  background-color: #f8f8ff;
+  color: #333;
+  border-top: 2px solid $link;
+  border-bottom: 2px solid $link;
+}
+
+
 section#bookmarks_front, .related {
-  padding: 0.75rem 0;
+  padding: 1.75rem 0;
   border-bottom: 1px #85a205 dotted;
+  // border-top: 1px #85a205 dotted;
+
   h6 {
     margin-bottom: 0.35rem;
     line-height: 1.2;
@@ -141,10 +176,14 @@ h3.section_heading {
 .post_sidebar {
   border-left: 1px solid #999;
   padding-left: 2.5rem;
+  .related:last-of-type {
+    border-bottom: none;
+  }
 }
 
 footer.footer {
   background-color: #666;
+  color: #CCC;
   a {
     color: white;
     &:visited {

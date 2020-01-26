@@ -334,6 +334,8 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
+    nokogumbo (2.0.2)
+      nokogiri (~> 1.8, >= 1.8.4)
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -480,6 +482,10 @@ GEM
     ruby_parser (3.14.1)
       sexp_processor (~> 4.9)
     safe_yaml (1.0.5)
+    sanitize (5.1.0)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.8.0)
+      nokogumbo (~> 2.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.2.1)
@@ -651,6 +657,7 @@ DEPENDENCIES
   rspec-rails (~> 3.5)
   rswag
   rubocop-rspec
+  sanitize
   sass-rails
   shoulda-matchers (~> 3.1)
   simplecov
