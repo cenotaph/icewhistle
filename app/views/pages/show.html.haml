@@ -10,7 +10,7 @@
 
     - if @page.image?
       .column.is-two-fifths
-        - if @page.image_width > 1200
+        - if @page.image_width && @page.image_width > 1200
           %figure.image= image_tag @page.image.url.gsub(/development/, 'production')
         - else 
           %figure.image= image_tag @page.image.url      
