@@ -58,6 +58,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9rem;
   margin: 0 0 0.8rem 0;
 }
+.container {
+  margin-bottom: 200px;
+}
+footer .container {
+  margin-bottom: 0;
+}
 .container.has-text-centered, section#recent_posts, .post {
   padding: 2.25rem 0;
 }
@@ -84,9 +90,9 @@ section#acedia, section#tweet_front,  section#disclaimer {
   border-bottom: 1px solid #c7d67e;
 }
 
-section#disclaimer {
-  margin-bottom: 200px;
-}
+// section#disclaimer {
+//   margin-bottom: 200px;
+// }
 section#less_recent {
   padding: 2.25rem 0;
   background-color: white;
