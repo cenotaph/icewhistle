@@ -40,9 +40,9 @@ namespace :icewhistle do
     ].each do |site|
       key = site.last
       cached = Cash.where(:source => key)
-
-      feed = Feedjira::Feed.fetch_and_parse(site.first)
-      unless feed.class == Fixnum
+      xml = HTTParty.get(site.first).body
+      feed = Feedjira.parse(xml)
+      unless feed.class == Integer
         feed.entries.each_with_index do |item, i|
           if ++i < 6  
             if key == 'bookmarks'
@@ -66,7 +66,7 @@ namespace :icewhistle do
             end
              # puts "link_url is " + link_url#
             link_url = link_url.gsub(/^Original Page:\s*/, '').gsub('Shared from Pocket', '')
-        
+            link_url =  URI.extract(link_url, /http(s)?|mailto/)[0]
             # skip if already in cache
             next unless Cash.find_by(:source => key, :link_url => link_url).nil?
         
