@@ -36,7 +36,7 @@ namespace :icewhistle do
     [ ['http://feeds.feedburner.com/Blindness', 'blindness'],
       # ['http://ptarmigan.ee/feed.rss', 'ptarmigan'],
       # ['http://www.pixelache.ac/feed/', 'pixelache'],
-      ['https://zapier.com/engine/rss/6566650/bookmarks/', 'bookmarks']
+      ['https://zapier.com/engine/rss/6566650/webbookmarks/', 'bookmarks']
     ].each do |site|
       key = site.last
       cached = Cash.where(:source => key)
@@ -53,20 +53,21 @@ namespace :icewhistle do
            
               else
                 link_url = ActionController::Base.helpers.strip_tags(item.summary)
-           
-           
+               
                 
               end
 
 
             else
              
-          
+       
               link_url = item.url
             end
-             # puts "link_url is " + link_url#
+    
             link_url = link_url.gsub(/^Original Page:\s*/, '').gsub('Shared from Pocket', '')
             link_url =  URI.extract(link_url, /http(s)?|mailto/)[0]
+            # puts "link_url is " + link_url
+            
             # skip if already in cache
             next unless Cash.find_by(:source => key, :link_url => link_url).nil?
         
