@@ -13,7 +13,7 @@ gem 'jbuilder'
 # gem 'execjs', :group => :production
 gem 'activemodel-serializers-xml'
 gem 'acts-as-taggable-on', '~> 6.0'
-gem "bulma-rails", "~> 0.7.2"
+gem 'bulma-rails'
 gem 'cancancan'
 gem 'capistrano'#, '3.6.1'
 gem 'capistrano-rails'#, '~> 1.1.0'

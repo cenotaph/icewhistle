@@ -82,7 +82,7 @@ GEM
     bullet (6.1.0)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
-    bulma-rails (0.7.5)
+    bulma-rails (0.8.2)
       sassc (~> 2.0)
     cancancan (3.0.2)
     capistrano (3.11.2)
@@ -174,7 +174,7 @@ GEM
     feedjira (3.1.1)
       loofah (>= 2.3.1)
       sax-machine (>= 1.0)
-    ffi (1.12.2)
+    ffi (1.13.0)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -493,7 +493,7 @@ GEM
       nokogumbo (~> 2.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
-    sassc (2.2.1)
+    sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
       railties (>= 4.0.0)
@@ -589,7 +589,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bullet
-  bulma-rails (~> 0.7.2)
+  bulma-rails
   cancancan
   capistrano
   capistrano-bundler

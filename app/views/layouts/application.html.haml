@@ -37,6 +37,9 @@
           = image_tag('icewhistle_combined.png')
           = image_tag('logo_small.png', width: 220)
         %a.navbar-burger.burger{:'aria-label' => :menu, :'aria-expanded' => false, :'data-target' => :navbarBasic, role: :button}
+          %span{:'aria-hidden' => true}
+          %span{:'aria-hidden' => true}
+          %span{:'aria-hidden' => true}
       #navbarBasic.navbar-menu
         .navbar-end
           .navbar-item.has-dropdown.is-hoverable
@@ -135,5 +138,9 @@
               %li= link_to 'Contact', '/contact'
     :javascript
       $(document).ready(function() {
+        $(".navbar-burger").click(function() {
+          $(".navbar-burger").toggleClass("is-active")
+          $(".navbar-menu").toggleClass("is-active")
+        })
         #{yield :jquery}
       });
