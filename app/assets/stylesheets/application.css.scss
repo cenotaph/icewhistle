@@ -18,6 +18,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:300,400,700"');
 $body-family: 'Open Sans', sans-serif;
 $navbar-height: 4rem;
+$navbar-item-hover-background-color: white;
+$navbar-item-active-background-color: white;
 $link: #5D7104;
 $lighter: #c7d67e;
 @import "bulma";
@@ -78,6 +80,10 @@ nav.navbar {
 
 .navbar-brand a.navbar-item img {
   padding-left: 0.5rem;
+}
+
+.navbar-burger:hover {
+  background-color: white;
 }
 
 section#acedia, section#tweet_front,  section#disclaimer {
@@ -216,4 +222,15 @@ footer.footer {
 #mc-embedded-subscribe.button:hover {
   background-color: #777 !important;
   color: white;
+}
+
+
+// mobile stuff
+@media screen and (max-width: 480px) {
+  main {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 }
