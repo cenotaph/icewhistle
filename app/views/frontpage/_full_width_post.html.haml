@@ -11,7 +11,7 @@
 .container.has-text-centered
   %h2.title= link_to raw(post.title), post
   %medium.date
-    %em= "posted " +  l(post.updated_at, :format => :long)
+    %em= "posted " +  l(post.updated_at.to_date, :format => :long)
   .column.is-8.is-offset-2.has-text-justified
 
     - unless post.audiopodcasts.empty?

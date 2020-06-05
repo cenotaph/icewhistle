@@ -1,12 +1,11 @@
 .post.container
   
-  .level.all_posts
-    .level-left
-      .level-item
-        %h1.title Posts
-      .level-item
-        = form_tag(search_index_path, :method => :get) do
-          = text_field_tag("search", params[:search].blank? ? 'Search...' : params[:search], :size => 10, class: :input)
+  .columns.all_posts
+    .column
+      %h1.title News/posts
+    .column
+      = form_tag(search_index_path, :method => :get) do
+        = text_field_tag("search", params[:search].blank? ? 'Search...' : params[:search], :size => 10, class: :input)
   - if @tag == 'podcast' || @tag == 'video'
     .level.si_podcasts
       .level-left
@@ -18,10 +17,6 @@
           %p Serious Introspection is no longer a live talk show, but an occasional audio podcast. You can subscribe to the podcast feed or check out individual episodes here.
         - if @tag == 'video'
           %p Video episodes of the Serious Introspection live show are archived here.
-  .level
-    .level-left
-      .level-item= paginate @posts
-
   
   - @posts.in_groups_of(3).each do |group|
     .columns.index

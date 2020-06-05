@@ -62,6 +62,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .post.container {
   margin-bottom: 200px;
+  .index {
+    margin-bottom: 5rem;
+  }
 }
 .container.has-text-centered, section#recent_posts, .post {
   padding: 2.25rem 0;
@@ -231,6 +234,19 @@ footer.footer {
     .container {
       padding-left: 1rem;
       padding-right: 1rem;
+      &.post {
+        .index {
+          margin-bottom: 1rem;
+          .column {
+            padding-bottom: 1.5rem;
+            border-bottom: 2px dotted #c7d67e;
+          }
+        }
+        h1 {
+          font-size: 1.8rem;
+        }
+      }
+
     }
   }
 }

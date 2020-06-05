@@ -8,7 +8,7 @@
 
   %h1.post_title= raw @post.title
   .date
-    %em= "posted: " + l(@post.created_at, :format => :long   )
+    %em= "posted: " + l(@post.created_at.to_date, :format => :long   )
 
   - if @post.photos.empty?
     .columns
