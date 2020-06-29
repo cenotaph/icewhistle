@@ -46,11 +46,11 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with(:truncation)
   end
   # # start the transaction strategy as examples are run
-  # config.around(:each) do |example|
-  #   DatabaseCleaner.cleaning do
-  #     example.run
-  #   end
-  # end
+  config.around(:each) do |example|
+    DatabaseCleaner.cleaning do
+      example.run
+    end
+  end
   if Bullet.enable?
    config.before(:each) do
      Bullet.start_request

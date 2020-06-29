@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Registration, type: :model do
   context 'with validations' do
-    it { is_expected.to validate_presence_of(:name) }
-    it { is_expected.to validate_presence_of(:email) }
-    it { is_expected.to validate_presence_of(:phone) }
-    it { is_expected.to validate_uniqueness_of(:email) }
+    it { should validate_presence_of(:name) }
+    it { should validate_presence_of(:email) }
+    it { should validate_presence_of(:phone) }
+    it { should validate_uniqueness_of(:email).case_insensitive }
   end
 
   it 'has a valid factory' do

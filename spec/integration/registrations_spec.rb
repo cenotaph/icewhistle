@@ -12,8 +12,9 @@ describe 'Registrations API' do
       parameter name: :registration, in: :body, schema: { '$ref': '#/definitions/registration_object' }
 
       before(:all) do
+        Faker::UniqueGenerator.clear
         @event = FactoryBot.create(:event)
-        reg = FactoryBot.create(:registration, event: @event)
+        reg = FactoryBot.build(:registration, event: @event)
         @registration = { registration:  reg  }
       end
 
