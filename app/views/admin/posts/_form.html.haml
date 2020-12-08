@@ -53,7 +53,9 @@
     = f.link_to_add 'add one or more audio attachments', :audiopodcasts, class: [:button, :small]
           
   .field
-    .small-6.control= f.check_box :published
+    .small-6.control
+      %label.label Published?
+      = f.check_box :published
       
   .field
     .small-6.control= f.submit 'Save', class: [:small, :round, :button] 
