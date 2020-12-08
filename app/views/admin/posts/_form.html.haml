@@ -30,9 +30,9 @@
     = f.fields_for :videos do |ff|
       - unless ff.object.blank?
         = image_tag ff.object.url rescue ''
-        = ff.text_field :url, class: :input
-        = ff.text_field :bytes, class: :input
-        = ff.text_field :content_type, class: :input
+        = ff.text_field :url, class: :input, label: 'URL to video'
+        = ff.text_field :bytes, class: :input, label: 'SIZE of video in bytes'
+        = ff.text_field :content_type, class: :input, label: 'Video MIME type'
   
     = f.link_to_add 'add one or more videos', :videos, class: [:button, :small]
 
