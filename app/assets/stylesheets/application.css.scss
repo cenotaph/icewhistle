@@ -230,6 +230,10 @@ footer.footer {
 
 // mobile stuff
 @media screen and (max-width: 480px) {
+
+  .mejs-container {
+    max-height: 220px;
+  }
   main {
     .container {
       padding-left: 1rem;
