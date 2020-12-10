@@ -39,7 +39,9 @@
         %label.label
           Video MIME type:
         = ff.text_field :content_type, class: :input, label: 'Video MIME type'
-  
+        %label.label
+          = ff.check_box :progressive_video
+          Is this a progressive/adaptive video?
     = f.link_to_add 'add one or more videos', :videos, class: [:button, :small]
 
   .field

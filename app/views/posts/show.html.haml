@@ -24,14 +24,47 @@
             %br/
             = raw @post.extended
           - unless @post.videos.empty?
-            - @post.videos.each do |video|
-              .videocontent.column
-                %video{src: video.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
+            - @post.videos.each do |video|              
+              - if video.progressive_video
+                %video{:controls => "", :poster => "#{video.url}/poster.jpg", :preload => "none"}
+                  %source{:src => "#{video.url}/index.m3u8", :type => "application/vnd.apple.mpegurl"}
+                  %source{:src => "#{video.url}/progressive.mp4", :type => "video/mp4; codecs=\"avc1.4d401f, mp4a.40.2\""}
+              - else
+                .videocontent.column
+                  %video{src: video.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
 
           - unless @post.videos.empty? && @post.audiopodcasts.empty?
             = content_for :jquery do
               :plain
-                $('video,audio').mediaelementplayer({defaultVideoWidth: "100%", alwaysShowHours: true});   
+
+                $('video,audio').mediaelementplayer({
+                  renderers: ['native_hls'], 
+                  defaultVideoWidth: "100%", alwaysShowHours: true,
+                  hls: {
+                    debug: true
+                  },
+                  success: function(media, node, instance) {
+                    // Use the conditional to detect if you are using `native_hls` renderer for that given media;
+                    // otherwise, you don't need it
+                    if (Hls !== undefined) {
+                      media.addEventListener(Hls.Events.MEDIA_ATTACHED, function () {
+                        // All the code when this event is reached...
+                        console.log('Media attached!');
+                      });
+
+                      // Manifest file was parsed, invoke loading method
+                      media.addEventListener(Hls.Events.MANIFEST_PARSED, function () {
+                        // All the code when this event is reached...
+                        console.log('Manifest parsed!');
+
+                      });
+
+                      media.addEventListener(Hls.Events.FRAG_PARSING_METADATA, function (event, data) {
+                        // All the code when this event is reached...
+                        console.log(data);
+                      });
+                    }
+                  }});   
           
       .column.post_sidebar= render :partial => 'post_sidebar'
         
@@ -66,12 +99,16 @@
             = raw @post.extended
           - unless @post.videos.empty?
             - @post.videos.each do |video|
-              .videocontent
-                %video{src: video.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
+
+              - if video.progressive_video == true
+
+              - else
+                .videocontent
+                  %video{src: video.url, style: "width: 100%; height: 100%", width: "100%", height: "100%"}
 
             = content_for :jquery do
               :plain
-                $('video,audio').mediaelementplayer({defaultVideoWidth: "100%"});   
+                $('video,audio').mediaelementplayer({renderers: ['native_hls'], defaultVideoWidth: "100%"});   
                 
       .column.post_sidebar= render :partial => 'post_sidebar'
 
@@ -90,4 +127,4 @@
           = link_to @post.next_post.title.html_safe, @post.next_post
           .date= @post.next_post.created_at.strftime('%d %B %Y')
   %br{:clear => 'all'}
-    
+  
