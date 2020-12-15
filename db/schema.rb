@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_10_184907) do
+ActiveRecord::Schema.define(version: 2020_12_15_115715) do
 
   create_table "audiopodcasts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "url"
@@ -223,6 +223,7 @@ ActiveRecord::Schema.define(version: 2020_12_10_184907) do
     t.integer "image_width"
     t.integer "image_height"
     t.datetime "discarded_at"
+    t.string "password"
     t.index ["discarded_at"], name: "index_posts_on_discarded_at"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
   end

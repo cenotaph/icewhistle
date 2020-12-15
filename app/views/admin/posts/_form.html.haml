@@ -53,7 +53,11 @@
         = ff.text_field :content_type, class: :input
   
     = f.link_to_add 'add one or more audio attachments', :audiopodcasts, class: [:button, :small]
-          
+
+  .field
+    .small-6.control
+      %label.label Hide behind password?
+      = f.text_field :password
   .field
     .small-6.control
       %label.label Published?

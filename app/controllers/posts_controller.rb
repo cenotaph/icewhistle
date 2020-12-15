@@ -1,13 +1,14 @@
 class PostsController < ApplicationController
   respond_to :html
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :delete]
-
+  before_action :get_and_check_password, only: [:show]
   def index
     @posts = Post.includes(:comments).published.order('created_at DESC').page(params[:page]).per(6)
   end
 
   def show
-    @post = Post.friendly.find(params[:id])
+    
+
     if @post.discarded? && !user_signed_in?
       flash[:notice] = 'This post has been deleted.'
       redirect_to '/posts' and return
@@ -30,4 +31,17 @@ class PostsController < ApplicationController
     redirect_to new_admin_post_path
   end
 
+  private
+
+  def get_and_check_password
+    @post = Post.friendly.find(params[:id])
+    if @post.password
+      authenticate_or_request_with_http_basic do |username, password|
+        username == 'friend' && password == @post.password
+      end
+    else
+      return true
+    end    
+  end
+  
 end
